@@ -1,14 +1,16 @@
+# -*- coding: utf-8 -*-
 # ============================================================
 # HabitFactory 일본 보험뉴스 자동 발송 스크립트
 # 매일 아침 8시(KST) 자동 실행 → hantaek.hong@habitfactory.co
 # ============================================================
-# 필요 패키지: pip install anthropic requests feedparser
+# 필요 패키지: pip install anthropic feedparser
 # ============================================================
 
 import os, json, re, smtplib, feedparser
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import datetime
+from urllib.parse import quote
 import anthropic
 
 # ── 환경변수로 관리 (GitHub Secrets에 등록) ──────────────────
@@ -27,7 +29,8 @@ RSS_QUERIES = {
 }
 
 def fetch_rss(query: str, max_items=8) -> list[dict]:
-    url = f"https://news.google.com/rss/search?q={query}&hl=ja&gl=JP&ceid=JP:ja"
+    encoded_query = quote(query, safe="")
+    url = f"https://news.google.com/rss/search?q={encoded_query}&hl=ja&gl=JP&ceid=JP:ja"
     feed = feedparser.parse(url)
     items = []
     for entry in feed.entries[:max_items]:
@@ -79,7 +82,6 @@ Output ONLY valid JSON (no markdown):
         messages=[{"role": "user", "content": prompt}]
     )
     raw = msg.content[0].text
-    # JSON 추출
     cb = re.search(r"```(?:json)?\s*([\s\S]*?)\s*```", raw)
     if cb:
         return json.loads(cb.group(1))
@@ -98,7 +100,7 @@ def build_html_email(data: dict) -> str:
         items = [n for n in data["news"] if n["category"] == key]
         if not items: continue
         rows += f'<tr><td colspan="2" style="background:{color};color:white;padding:10px 16px;font-weight:bold;">{label}</td></tr>'
-        for i, item in enumerate(items):
+        for item in items:
             rows += f"""
             <tr style="border-bottom:1px solid #eee;">
               <td style="padding:14px 16px;width:28px;text-align:center;font-weight:bold;color:{color};">{item['rank']}</td>
@@ -109,7 +111,6 @@ def build_html_email(data: dict) -> str:
                 <div style="background:#F9FAFB;padding:8px 10px;border-radius:6px;margin-top:6px;font-size:13px;color:#374151;">{item['summary_ko']}</div>
               </td>
             </tr>"""
-
     return f"""
     <html><body style="font-family:sans-serif;background:#F0F2F5;padding:20px;">
       <div style="max-width:680px;margin:0 auto;background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
@@ -130,7 +131,6 @@ def send_email(subject: str, html_body: str):
     msg["From"]    = GMAIL_USER
     msg["To"]      = RECV_EMAIL
     msg.attach(MIMEText(html_body, "html", "utf-8"))
-
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
         s.login(GMAIL_USER, GMAIL_APP_PW)
         s.sendmail(GMAIL_USER, RECV_EMAIL, msg.as_string())
@@ -149,9 +149,8 @@ def main():
     print("🤖 AI 번역/분류 중...")
     data = select_and_translate(all_articles[:32], sent_keys)
 
-    # 중복 제거
-    new_keys = [n["url"] or n["title_ja"] for n in data["news"]]
-    data["news"] = [n for n in data["news"] if (n["url"] or n["title_ja"]) not in set(sent_keys)]
+    new_keys = [n.get("url") or n.get("title_ja", "") for n in data["news"]]
+    data["news"] = [n for n in data["news"] if (n.get("url") or n.get("title_ja")) not in set(sent_keys)]
 
     if not data["news"]:
         print("⚠️ 모든 뉴스가 이미 발송됐습니다.")
@@ -162,7 +161,6 @@ def main():
 
     print("📧 이메일 발송 중...")
     send_email(subject, build_html_email(data))
-
     save_sent_history(sent_keys + new_keys)
     print(f"📝 이력 저장 완료 ({len(sent_keys + new_keys)}건)")
 
