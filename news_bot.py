@@ -6,11 +6,12 @@
 # 필요 패키지: pip install anthropic feedparser
 # ============================================================
 
-import os, json, re, smtplib, feedparser
+import os, json, re, smtplib, requests
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import datetime
 from urllib.parse import quote
+from xml.etree import ElementTree as ET
 import anthropic
 
 # ── 환경변수로 관리 (GitHub Secrets에 등록) ──────────────────
@@ -31,16 +32,21 @@ RSS_QUERIES = {
 def fetch_rss(query: str, max_items=8) -> list[dict]:
     encoded_query = quote(query, safe="")
     url = f"https://news.google.com/rss/search?q={encoded_query}&hl=ja&gl=JP&ceid=JP:ja"
-    feed = feedparser.parse(url)
+    headers = {"User-Agent": "Mozilla/5.0"}
+    res = requests.get(url, headers=headers, timeout=10)
+    res.raise_for_status()
+
+    root = ET.fromstring(res.content)
+    ns = {"media": "http://search.yahoo.com/mrss/"}
     items = []
-    for entry in feed.entries[:max_items]:
-        items.append({
-            "title":  re.sub(r" - [^-]+$", "", entry.title),
-            "url":    entry.link,
-            "pub":    entry.get("published", "")[:16],
-            "source": entry.get("source", {}).get("title", "Google News"),
-            "hint":   query,
-        })
+    for item in root.findall(".//item")[:max_items]:
+        title = item.findtext("title") or ""
+        title = re.sub(r" - [^-]+$", "", title)
+        link  = item.findtext("link") or ""
+        pub   = (item.findtext("pubDate") or "")[:16]
+        source_el = item.find("source")
+        source = source_el.text if source_el is not None else "Google News"
+        items.append({"title": title, "url": link, "pub": pub, "source": source, "hint": query})
     return items
 
 def load_sent_history() -> list[str]:
