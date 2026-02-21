@@ -21,7 +21,7 @@ jobs:
           python-version: "3.11"
 
       - name: 패키지 설치
-        run: pip install anthropic feedparser
+        run: pip install anthropic requests
 
       # 이전 발송 이력 파일 복원 (캐시)
       - name: 발송 이력 복원
