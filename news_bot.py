@@ -62,37 +62,51 @@ def save_sent_history(history: list[str]):
 def select_and_translate(articles: list[dict], sent_keys: list[str]) -> dict:
     exclude_block = ""
     if sent_keys:
-        exclude_block = f"\n이미 발송된 항목 (제외 필수):\n" + "\n".join(sent_keys[-60:])
+        exclude_block = "Already sent (exclude these):\n" + "\n".join(sent_keys[-30:])
 
-    articles_json = json.dumps(articles, ensure_ascii=False)
-    prompt = f"""You are a Japanese insurance industry news analyst.
-Select and categorize exactly 10 articles from the input:
-- top: 1 (most impactful)
-- agency: 3 (保険代理店 M&A, regulation, management)
-- insurtech: 3 (AI, digital, InsurTech startups)
-- insurer: 3 (生保・損保 management, products, regulation)
-{exclude_block}
+    # 기사 목록을 간략하게 줄여서 토큰 절약
+    slim = [{"i": i, "t": a["title"], "u": a["url"], "s": a["source"], "p": a["pub"]}
+            for i, a in enumerate(articles[:24])]
 
-For each: keep original URL, translate title to Korean, write 2~3 sentence Korean summary.
+    prompt = f"""You are a Japanese insurance news analyst.
+From the articles below, select 10 and return ONLY a JSON object.
 
-Input articles:
-{articles_json}
+Rules:
+- top: 1, agency: 3, insurtech: 3, insurer: 3
+- Keep original URL exactly
+- title_ko: Korean translation
+- summary_ko: 2 sentence Korean summary (keep SHORT)
+- {exclude_block}
 
-Output ONLY valid JSON (no markdown):
-{{"fetch_date":"...","news":[{{"category":"top","rank":1,"title_ja":"...","title_ko":"...","summary_ko":"...","source":"...","url":"...","published":"..."}},...(10 items total)]}}"""
+Articles: {json.dumps(slim, ensure_ascii=False)}
+
+Return ONLY this JSON (no explanation, no markdown):
+{{"fetch_date":"2025/02","news":[{{"category":"top","rank":1,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"agency","rank":2,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"agency","rank":3,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"agency","rank":4,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"insurtech","rank":5,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"insurtech","rank":6,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"insurtech","rank":7,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"insurer","rank":8,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"insurer","rank":9,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"insurer","rank":10,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}}]}}"""
 
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
     msg = client.messages.create(
         model="claude-sonnet-4-20250514",
-        max_tokens=4000,
+        max_tokens=6000,
         messages=[{"role": "user", "content": prompt}]
     )
-    raw = msg.content[0].text
+    raw = msg.content[0].text.strip()
+    print(f"API 응답 길이: {len(raw)}자")
+
+    # JSON 추출 (다단계 시도)
+    # 1) 코드블록 안
     cb = re.search(r"```(?:json)?\s*([\s\S]*?)\s*```", raw)
     if cb:
-        return json.loads(cb.group(1))
+        try: return json.loads(cb.group(1))
+        except: pass
+    # 2) { } 범위
     s, e = raw.find("{"), raw.rfind("}")
-    return json.loads(raw[s:e+1])
+    if s != -1 and e > s:
+        try: return json.loads(raw[s:e+1])
+        except Exception as ex:
+            print(f"JSON 파싱 실패: {ex}")
+            print(f"응답 앞부분: {raw[:300]}")
+            raise
+    raise ValueError("JSON을 찾을 수 없습니다")
 
 def build_html_email(data: dict) -> str:
     cats = [
