@@ -9,9 +9,10 @@
 import os, json, re, smtplib, requests
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from urllib.parse import quote
 from xml.etree import ElementTree as ET
+from email.utils import parsedate_to_datetime
 import anthropic
 
 # ── 환경변수로 관리 (GitHub Secrets에 등록) ──────────────────
@@ -37,13 +38,24 @@ def fetch_rss(query: str, max_items=8) -> list[dict]:
     res.raise_for_status()
 
     root = ET.fromstring(res.content)
-    ns = {"media": "http://search.yahoo.com/mrss/"}
     items = []
+    cutoff = datetime.now(timezone.utc) - timedelta(days=7)  # 7일 이내만 수집
+
     for item in root.findall(".//item")[:max_items]:
-        title = item.findtext("title") or ""
-        title = re.sub(r" - [^-]+$", "", title)
-        link  = item.findtext("link") or ""
-        pub   = (item.findtext("pubDate") or "")[:16]
+        title  = item.findtext("title") or ""
+        title  = re.sub(r" - [^-]+$", "", title)
+        link   = item.findtext("link") or ""
+        pub_str = item.findtext("pubDate") or ""
+
+        # 날짜 파싱 및 필터링
+        try:
+            pub_dt = parsedate_to_datetime(pub_str)
+            if pub_dt < cutoff:
+                continue  # 30일 이전 기사 제외
+            pub = pub_dt.strftime("%Y/%m/%d")
+        except:
+            pub = pub_str[:10]
+
         source_el = item.find("source")
         source = source_el.text if source_el is not None else "Google News"
         items.append({"title": title, "url": link, "pub": pub, "source": source, "hint": query})
