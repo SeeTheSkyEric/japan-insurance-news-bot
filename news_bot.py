@@ -39,7 +39,7 @@ def fetch_rss(query: str, max_items=8) -> list[dict]:
 
     root = ET.fromstring(res.content)
     items = []
-    cutoff = datetime.now(timezone.utc) - timedelta(days=7)  # 7일 이내만 수집
+    cutoff = datetime.now(timezone.utc) - timedelta(days=30)  # 30일 이내만 수집
 
     for item in root.findall(".//item")[:max_items]:
         title  = item.findtext("title") or ""
@@ -86,13 +86,13 @@ From the articles below, select 10 and return ONLY a JSON object.
 Rules:
 - top: 1, agency: 3, insurtech: 3, insurer: 3
 - Keep original URL exactly
-- title_ko: Korean translation
-- summary_ko: 2 sentence Korean summary (keep SHORT)
+- title_ko: Korean translation (max 30 chars)
+- summary_ko: 1 SHORT Korean sentence only, NO commas, NO quotes inside
 - {exclude_block}
 
 Articles: {json.dumps(slim, ensure_ascii=False)}
 
-Return ONLY this JSON (no explanation, no markdown):
+Return ONLY valid JSON, no markdown, no explanation:
 {{"fetch_date":"2025/02","news":[{{"category":"top","rank":1,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"agency","rank":2,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"agency","rank":3,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"agency","rank":4,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"insurtech","rank":5,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"insurtech","rank":6,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"insurtech","rank":7,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"insurer","rank":8,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"insurer","rank":9,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"insurer","rank":10,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}}]}}"""
 
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
@@ -110,15 +110,27 @@ Return ONLY this JSON (no explanation, no markdown):
     if cb:
         try: return json.loads(cb.group(1))
         except: pass
-    # 2) { } 범위
+
+    # 2) { } 범위 직접 파싱
     s, e = raw.find("{"), raw.rfind("}")
     if s != -1 and e > s:
-        try: return json.loads(raw[s:e+1])
-        except Exception as ex:
-            print(f"JSON 파싱 실패: {ex}")
-            print(f"응답 앞부분: {raw[:300]}")
-            raise
-    raise ValueError("JSON을 찾을 수 없습니다")
+        try:
+            return json.loads(raw[s:e+1])
+        except:
+            pass
+
+    # 3) 특수문자 정리 후 재시도
+    cleaned = raw[s:e+1] if s != -1 and e > s else raw
+    # 문자열 값 안의 줄바꿈 제거
+    cleaned = re.sub(r'(?<=: ")(.*?)(?="[,\}])',
+                     lambda m: m.group(0).replace('\n', ' ').replace('\r', ''),
+                     cleaned, flags=re.DOTALL)
+    try:
+        return json.loads(cleaned)
+    except Exception as ex:
+        print(f"JSON 파싱 최종 실패: {ex}")
+        print(f"응답 전체:\n{raw}")
+        raise ValueError(f"JSON 파싱 실패: {ex}")
 
 def build_html_email(data: dict) -> str:
     cats = [
