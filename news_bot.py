@@ -74,63 +74,72 @@ def save_sent_history(history: list[str]):
 def select_and_translate(articles: list[dict], sent_keys: list[str]) -> dict:
     exclude_block = ""
     if sent_keys:
-        exclude_block = "Already sent (exclude these):\n" + "\n".join(sent_keys[-30:])
+        exclude_block = "Exclude these already-sent URLs:\n" + "\n".join(sent_keys[-30:])
 
-    # 기사 목록을 간략하게 줄여서 토큰 절약
     slim = [{"i": i, "t": a["title"], "u": a["url"], "s": a["source"], "p": a["pub"]}
             for i, a in enumerate(articles[:24])]
 
+    # JSON 대신 파이프(|) 구분자 텍스트 형식으로 요청 → 파싱 안정성 극대화
     prompt = f"""You are a Japanese insurance news analyst.
-From the articles below, select 10 and return ONLY a JSON object.
+From the articles below, select exactly 10 articles.
+Categories: top=1, agency=3, insurtech=3, insurer=3
+{exclude_block}
+
+Articles:
+{json.dumps(slim, ensure_ascii=False)}
+
+Output exactly 10 lines, one per article, in this exact format (pipe-separated, no extra lines):
+CATEGORY|RANK|TITLE_JA|TITLE_KO|SUMMARY_KO|SOURCE|URL|PUBLISHED
 
 Rules:
-- top: 1, agency: 3, insurtech: 3, insurer: 3
-- Keep original URL exactly
-- title_ko: Korean translation (max 30 chars)
-- summary_ko: 1 SHORT Korean sentence only, NO commas, NO quotes inside
-- {exclude_block}
+- CATEGORY: top / agency / insurtech / insurer
+- RANK: 1 to 10
+- TITLE_JA: original Japanese title
+- TITLE_KO: Korean translation
+- SUMMARY_KO: one short Korean sentence (no pipe character)
+- SOURCE: media name
+- URL: exact original URL
+- PUBLISHED: date from article
 
-Articles: {json.dumps(slim, ensure_ascii=False)}
-
-Return ONLY valid JSON, no markdown, no explanation:
-{{"fetch_date":"2025/02","news":[{{"category":"top","rank":1,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"agency","rank":2,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"agency","rank":3,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"agency","rank":4,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"insurtech","rank":5,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"insurtech","rank":6,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"insurtech","rank":7,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"insurer","rank":8,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"insurer","rank":9,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}},{{"category":"insurer","rank":10,"title_ja":"","title_ko":"","summary_ko":"","source":"","url":"","published":""}}]}}"""
+Output only the 10 lines, nothing else."""
 
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
     msg = client.messages.create(
         model="claude-sonnet-4-20250514",
-        max_tokens=6000,
+        max_tokens=4000,
         messages=[{"role": "user", "content": prompt}]
     )
     raw = msg.content[0].text.strip()
-    print(f"API 응답 길이: {len(raw)}자")
+    print(f"API 응답:\n{raw[:500]}")
 
-    # JSON 추출 (다단계 시도)
-    # 1) 코드블록 안
-    cb = re.search(r"```(?:json)?\s*([\s\S]*?)\s*```", raw)
-    if cb:
-        try: return json.loads(cb.group(1))
-        except: pass
+    # 파이프 구분자로 파싱
+    news_list = []
+    today = datetime.now().strftime("%Y/%m/%d")
+    for line in raw.splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        parts = line.split("|")
+        if len(parts) < 7:
+            continue
+        news_list.append({
+            "category":   parts[0].strip().lower(),
+            "rank":       int(parts[1].strip()) if parts[1].strip().isdigit() else len(news_list)+1,
+            "title_ja":   parts[2].strip(),
+            "title_ko":   parts[3].strip(),
+            "summary_ko": parts[4].strip(),
+            "source":     parts[5].strip(),
+            "url":        parts[6].strip(),
+            "published":  parts[7].strip() if len(parts) > 7 else today,
+        })
 
-    # 2) { } 범위 직접 파싱
-    s, e = raw.find("{"), raw.rfind("}")
-    if s != -1 and e > s:
-        try:
-            return json.loads(raw[s:e+1])
-        except:
-            pass
+    if not news_list:
+        raise ValueError(f"파싱 실패 - 응답:\n{raw}")
 
-    # 3) 특수문자 정리 후 재시도
-    cleaned = raw[s:e+1] if s != -1 and e > s else raw
-    # 문자열 값 안의 줄바꿈 제거
-    cleaned = re.sub(r'(?<=: ")(.*?)(?="[,\}])',
-                     lambda m: m.group(0).replace('\n', ' ').replace('\r', ''),
-                     cleaned, flags=re.DOTALL)
-    try:
-        return json.loads(cleaned)
-    except Exception as ex:
-        print(f"JSON 파싱 최종 실패: {ex}")
-        print(f"응답 전체:\n{raw}")
-        raise ValueError(f"JSON 파싱 실패: {ex}")
+    return {
+        "fetch_date": datetime.now().strftime("%Y年%m月%d日"),
+        "news": news_list
+    }
 
 def build_html_email(data: dict) -> str:
     cats = [
