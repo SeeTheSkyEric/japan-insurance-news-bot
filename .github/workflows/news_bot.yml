@@ -1,0 +1,39 @@
+# .github/workflows/news_bot.yml
+# 매일 오전 8시(KST = UTC+9) → UTC 기준 23:00에 실행
+
+name: 일본 보험뉴스 자동 발송
+
+on:
+  schedule:
+    - cron: "0 23 * * 1-5"   # 월~금 UTC 23:00 = KST 08:00
+  workflow_dispatch:           # 수동 실행 버튼도 활성화
+
+jobs:
+  send-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 코드 체크아웃
+        uses: actions/checkout@v4
+
+      - name: Python 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 패키지 설치
+        run: pip install anthropic feedparser
+
+      # 이전 발송 이력 파일 복원 (캐시)
+      - name: 발송 이력 복원
+        uses: actions/cache@v4
+        with:
+          path: sent_news_history.json
+          key: sent-news-history-${{ github.run_id }}
+          restore-keys: sent-news-history-
+
+      - name: 뉴스봇 실행
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_USER:        ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PW:      ${{ secrets.GMAIL_APP_PW }}
+        run: python news_bot.py
