@@ -346,14 +346,26 @@ def main():
     sent_keys = load_sent_history()
 
     print("🤖 AI 번역/분류 중...")
-    data = select_and_translate(all_articles, sent_keys)
+    data = select_and_translate(all_articles, [])  # 테스트 중: 중복 제외 비활성화
 
-    # 중복 제거
-    new_keys  = [n.get("url") or n.get("title_ja", "") for n in data["news"]]
-    data["news"] = [n for n in data["news"] if (n.get("url") or n.get("title_ja")) not in set(sent_keys)]
+    # 테스트 중: 중복 제거 비활성화
+    # new_keys  = [n.get("url") or n.get("title_ja", "") for n in data["news"]]
+    # data["news"] = [n for n in data["news"] if (n.get("url") or n.get("title_ja")) not in set(sent_keys)]
+
+    new_keys = [n.get("url") or n.get("title_ja", "") for n in data["news"]]
 
     if not data["news"]:
-        print("⚠️ 모든 뉴스가 이미 발송됐습니다.")
+        print("⚠️ 뉴스가 없습니다.")
+        if SLACK_WEBHOOK_URL:
+            requests.post(SLACK_WEBHOOK_URL, json={
+                "blocks": [{
+                    "type": "section",
+                    "text": {
+                        "type": "mrkdwn",
+                        "text": f"🇯🇵 *오늘의 일본 보험 뉴스* — {today}\n\n⚠️ 오늘은 선별된 보험 뉴스가 없습니다."
+                    }
+                }]
+            }, timeout=10)
         return
 
     today   = datetime.now().strftime("%Y年%m月%d日")
