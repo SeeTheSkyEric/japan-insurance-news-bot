@@ -187,7 +187,7 @@ Output only the selected lines, nothing else."""
         alt_src = parts[9].strip() if len(parts) > 9 and parts[9].strip() else ""
         # alt_url이 원본과 같으면 None으로 처리
         news_list.append({
-            "category":   parts[0].strip().lower(),
+            "category":   normalize_category(parts[0]),
             "rank":       int(parts[1].strip()) if parts[1].strip().isdigit() else len(news_list) + 1,
             "title_ja":   parts[2].strip(),
             "title_ko":   parts[3].strip(),
@@ -209,7 +209,18 @@ Output only the selected lines, nothing else."""
     }
 
 
-def load_sent_history() -> list[str]:
+def normalize_category(cat: str) -> str:
+    """AI가 카테고리명을 다르게 반환해도 정규화"""
+    cat = cat.lower().strip()
+    if any(x in cat for x in ["agency", "代理店", "대리점"]):
+        return "agency"
+    if any(x in cat for x in ["insur", "tech", "디지털", "digital"]):
+        return "insurtech"
+    if any(x in cat for x in ["insurer", "company", "보험사", "生保", "損保"]):
+        return "insurer"
+    if any(x in cat for x in ["regul", "規制", "규제", "fsa", "법"]):
+        return "regulation"
+    return cat  # 그 외는 그대로
     if os.path.exists(SENT_HISTORY_FILE):
         with open(SENT_HISTORY_FILE) as f:
             return json.load(f)
@@ -259,7 +270,7 @@ def build_html(data: dict, for_web=False) -> str:
 <body style="font-family:sans-serif;background:#F0F2F5;padding:20px;margin:0;">
   <div style="max-width:700px;margin:0 auto;background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1);">
     <div style="background:linear-gradient(135deg,#1a1a2e,#16213e);padding:24px 28px;color:white;">
-      <h1 style="margin:0;font-size:20px;">🇯🇵 일본 보험뉴스 10선</h1>
+      <h1 style="margin:0;font-size:20px;">🇯🇵 일본 보험뉴스</h1>
       <p style="margin:6px 0 0;opacity:.7;font-size:13px;">HabitFactory Global Team · {data['fetch_date']}</p>
     </div>
     <table style="width:100%;border-collapse:collapse;">{rows}</table>
