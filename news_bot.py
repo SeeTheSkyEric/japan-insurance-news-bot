@@ -191,8 +191,9 @@ Output only the selected lines, nothing else."""
     if not news_list:
         raise ValueError(f"파싱 실패:\n{raw}")
 
+    JST = timezone(timedelta(hours=9))
     return {
-        "fetch_date": datetime.now().strftime("%Y年%m月%d日"),
+        "fetch_date": datetime.now(JST).strftime("%Y年%m月%d日"),
         "news": news_list,
     }
 
