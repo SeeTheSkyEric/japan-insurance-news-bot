@@ -100,7 +100,7 @@ def select_and_translate(articles: list[dict], sent_keys: list[str]) -> dict:
         exclude_block = "Exclude these already-sent URLs:\n" + "\n".join(sent_keys[-30:])
 
     slim = [
-        {"i": i, "t": a["title"], "u": a["url"], "s": a["source"], "p": a["pub"]}
+        {"i": i, "t": a["title"], "u": a["url"], "s": a["source"], "p": a["pub"], "free": a.get("free", True)}
         for i, a in enumerate(articles[:30])
     ]
 
@@ -112,11 +112,6 @@ Categories:
 - insurtech: InsureTech 관련 (AI, digital, startups, tech innovation)
 - insurer: 보험사 관련 (insurance company management, products, financials)
 - regulation: 규제 관련 (FSA rules, legal changes, compliance, government policy)
-
-Rules:
-- Each category MUST have at least 1 article
-- Include MORE articles per category if they are highly important (max 4 per category)
-- ONLY include articles with HIGH business impact - skip trivial or PR-only news
 
 Selection priority criteria (higher = more important):
 ★★★ HIGHEST PRIORITY:
@@ -146,6 +141,15 @@ AVOID:
   - Articles without concrete numbers, deals, or policy implications
   - Repetitive coverage of already-known events
 
+IMPORTANT - For each selected article, also find the best alternative free source:
+- Search for a similar/related free article covering the same topic
+- alt_url: URL of a free alternative article on the same topic (use Google News, NHK, Nikkei free section, Reuters Japan, etc.)
+- If no good alternative exists, set alt_url to same as url
+- alt_source: name of the alternative source
+
+Rules:
+- Each category MUST have at least 1 article
+- Include MORE articles per category if they are highly important (max 4 per category)
 - Keep original URL exactly as given
 - title_ko: Korean translation
 - summary_ko: one short Korean sentence (no pipe character)
@@ -155,7 +159,7 @@ Articles:
 {json.dumps(slim, ensure_ascii=False)}
 
 Output pipe-separated lines only (no header, no blank lines):
-CATEGORY|RANK|TITLE_JA|TITLE_KO|SUMMARY_KO|SOURCE|URL|PUBLISHED
+CATEGORY|RANK|TITLE_JA|TITLE_KO|SUMMARY_KO|SOURCE|URL|PUBLISHED|ALT_URL|ALT_SOURCE
 
 Output only the selected lines, nothing else."""
 
@@ -169,7 +173,8 @@ Output only the selected lines, nothing else."""
     print(f"API 응답:\n{raw[:600]}")
 
     news_list = []
-    today = datetime.now().strftime("%Y/%m/%d")
+    JST = timezone(timedelta(hours=9))
+    today = datetime.now(JST).strftime("%Y/%m/%d")
     for line in raw.splitlines():
         line = line.strip()
         if not line or "|" not in line:
@@ -177,6 +182,10 @@ Output only the selected lines, nothing else."""
         parts = line.split("|")
         if len(parts) < 7:
             continue
+        url     = parts[6].strip()
+        alt_url = parts[8].strip() if len(parts) > 8 and parts[8].strip() else url
+        alt_src = parts[9].strip() if len(parts) > 9 and parts[9].strip() else ""
+        # alt_url이 원본과 같으면 None으로 처리
         news_list.append({
             "category":   parts[0].strip().lower(),
             "rank":       int(parts[1].strip()) if parts[1].strip().isdigit() else len(news_list) + 1,
@@ -184,8 +193,10 @@ Output only the selected lines, nothing else."""
             "title_ko":   parts[3].strip(),
             "summary_ko": parts[4].strip(),
             "source":     parts[5].strip(),
-            "url":        parts[6].strip(),
+            "url":        url,
             "published":  parts[7].strip() if len(parts) > 7 else today,
+            "alt_url":    alt_url if alt_url != url else "",
+            "alt_source": alt_src,
         })
 
     if not news_list:
@@ -226,11 +237,17 @@ def build_html(data: dict, for_web=False) -> str:
             continue
         rows += f'<tr><td colspan="2" style="background:{color};color:white;padding:10px 16px;font-weight:bold;font-size:15px;">{label}</td></tr>'
         for item in items:
-            rows += f"""<tr style="border-bottom:1px solid #eee;">
+            alt_link = ""
+        if item.get("alt_url"):
+            alt_src = item.get("alt_source") or "무료 기사"
+            alt_link = f'<br><a href="{item["alt_url"]}" style="color:#059669;font-size:12px;text-decoration:none;">🔓 유사 무료 기사 보기 ({alt_src}) →</a>'
+
+        rows += f"""<tr style="border-bottom:1px solid #eee;">
   <td style="padding:14px 16px;vertical-align:top;">
     <a href="{item['url']}" style="color:#1D4ED8;font-weight:bold;font-size:15px;text-decoration:none;line-height:1.5;">{item['title_ko']}</a><br>
     <span style="color:#6B7280;font-size:13px;">🇯🇵 {item['title_ja']}</span><br>
-    <span style="color:#9CA3AF;font-size:12px;">📅 {item['published']} · 📰 {item['source']}</span><br>
+    <span style="color:#9CA3AF;font-size:12px;">📅 {item['published']} · 📰 {item['source']}</span>
+    {alt_link}<br>
     <div style="background:#F9FAFB;padding:8px 10px;border-radius:6px;margin-top:6px;font-size:13px;color:#374151;">{item['summary_ko']}</div>
   </td>
 </tr>"""
