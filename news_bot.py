@@ -220,7 +220,17 @@ def normalize_category(cat: str) -> str:
         return "insurer"
     if any(x in cat for x in ["regul", "規制", "규제", "fsa", "법"]):
         return "regulation"
-    return cat  # 그 외는 그대로
+    return cat
+
+def load_sent_history() -> list[str]:
+    if os.path.exists(SENT_HISTORY_FILE):
+        with open(SENT_HISTORY_FILE) as f:
+            return json.load(f)
+    return []
+
+def save_sent_history(history: list[str]):
+    with open(SENT_HISTORY_FILE, "w") as f:
+        json.dump(history[-200:], f, ensure_ascii=False, indent=2)
     if os.path.exists(SENT_HISTORY_FILE):
         with open(SENT_HISTORY_FILE) as f:
             return json.load(f)
