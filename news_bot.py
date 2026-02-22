@@ -373,12 +373,13 @@ def main():
 
     # 이메일 발송 제거됨
 
+    # 결과를 캐시 파일로 저장 (slack_notify.py가 읽어서 발송)
+    with open("news_cache.json", "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print("✅ news_cache.json 저장 완료")
+
     # GitHub Pages HTML 저장
     save_web_page(data)
-
-    # 슬랙 발송
-    if GITHUB_PAGES_URL:
-        send_slack(today, GITHUB_PAGES_URL, data["news"])
 
     save_sent_history(sent_keys + new_keys)
     print(f"📝 이력 저장 완료 ({len(sent_keys + new_keys)}건)")
