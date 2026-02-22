@@ -33,10 +33,10 @@ jobs:
           key: sent-news-history-${{ github.run_id }}
           restore-keys: sent-news-history-
 
-      - name: 뉴스봇 실행
+      - name: 뉴스봇 실행 (HTML 생성까지)
         env:
           ANTHROPIC_API_KEY:  ${{ secrets.ANTHROPIC_API_KEY }}
-          SLACK_WEBHOOK_URL:  ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_URL:  ""
           GITHUB_PAGES_URL:   https://seetheskyeric.github.io/japan-insurance-news-bot
         run: python news_bot.py
 
@@ -47,3 +47,9 @@ jobs:
           git add docs/index.html
           git diff --cached --quiet || git commit -m "뉴스 페이지 업데이트 $(date +'%Y-%m-%d')"
           git push
+
+      - name: 슬랙 발송 (HTML push 완료 후)
+        env:
+          SLACK_WEBHOOK_URL:  ${{ secrets.SLACK_WEBHOOK_URL }}
+          GITHUB_PAGES_URL:   https://seetheskyeric.github.io/japan-insurance-news-bot
+        run: python slack_notify.py
