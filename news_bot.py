@@ -20,15 +20,17 @@ SENT_HISTORY_FILE = "sent_news_history.json"
 GITHUB_PAGES_URL  = os.environ.get("GITHUB_PAGES_URL", "")    # 예: https://seetheskyeric.github.io/japan-insurance-news-bot
 # ─────────────────────────────────────────────────────────────
 
-# 일반 RSS 검색어
+# 일반 RSS 검색어 - 중요 키워드 강화
 RSS_QUERIES = [
-    "保険代理店",
-    "インシュアテック 保険 AI",
-    "生命保険 損害保険 最新",
-    "保険会社 規制 金融庁",
+    "保険代理店 M&A OR 規制 OR 金融庁 OR 経営効率",
+    "インシュアテック 資金調達 OR 新サービス OR AI OR 大量導入",
+    "生命保険 損害保険 決算 OR 新商品 OR 規制 OR DX",
+    "保険業界 DX OR デジタル OR 改革 OR 自動化",
+    "金融庁 保険 規制 OR 監督 OR 改正 OR ガイドライン",
+    "保険 AI OR データ活用 OR 業務改善 OR コスト削減",
 ]
 
-# 보험 전문 언론 헤드라인 검색 (Google News에서 해당 매체명 포함 기사 검색)
+# 보험 전문 언론 헤드라인 검색
 SPECIALTY_MEDIA_QUERIES = [
     "保険毎日新聞",
     "インシュアランス 保険",
@@ -103,27 +105,59 @@ def select_and_translate(articles: list[dict], sent_keys: list[str]) -> dict:
     ]
 
     prompt = f"""You are a Japanese insurance news analyst.
-From the articles below, select exactly 10 articles.
-Categories: top=1, agency=3, insurtech=3, insurer=3
+From the articles below, select the most important articles and categorize them.
+
+Categories:
+- agency: 보험대리점 관련 (agency M&A, management, sales channels)
+- insurtech: InsureTech 관련 (AI, digital, startups, tech innovation)
+- insurer: 보험사 관련 (insurance company management, products, financials)
+- regulation: 규제 관련 (FSA rules, legal changes, compliance, government policy)
+
+Rules:
+- Each category MUST have at least 1 article
+- Include MORE articles per category if they are highly important (max 4 per category)
+- ONLY include articles with HIGH business impact - skip trivial or PR-only news
+
+Selection priority criteria (higher = more important):
+★★★ HIGHEST PRIORITY:
+  - Regulatory changes by FSA (金融庁) that affect insurance sales or agency operations
+  - Large-scale M&A or consolidation among insurance companies or agencies
+  - Industry-wide statistics or reports showing major market shifts
+  - New laws or compliance requirements with broad industry impact
+
+★★ HIGH PRIORITY:
+  - InsureTech products/services newly adopted at scale by insurers or agencies
+  - Expected or confirmed mass adoption of digital tools improving operational efficiency
+  - AI or data-driven solutions that significantly reduce costs or improve underwriting
+  - New insurance products targeting emerging risks (cyber, climate, health tech)
+  - Major funding rounds or IPOs by InsureTech startups with insurance industry relevance
+  - Management efficiency improvements (cost reduction, automation, workflow reform)
+  - Partnerships between InsureTechs and major insurers or agency networks
+
+★ MEDIUM PRIORITY:
+  - Financial results (earnings) of major insurers with notable YoY changes
+  - New distribution channel strategies or agency network restructuring
+  - Customer behavior shifts affecting insurance demand
+  - Regional or niche market developments with growth potential
+
+AVOID:
+  - Minor local events or single-branch news
+  - Pure PR or press releases without business substance
+  - Articles without concrete numbers, deals, or policy implications
+  - Repetitive coverage of already-known events
+
+- Keep original URL exactly as given
+- title_ko: Korean translation
+- summary_ko: one short Korean sentence (no pipe character)
 {exclude_block}
 
 Articles:
 {json.dumps(slim, ensure_ascii=False)}
 
-Output exactly 10 lines in pipe-separated format (no header, no blank lines):
+Output pipe-separated lines only (no header, no blank lines):
 CATEGORY|RANK|TITLE_JA|TITLE_KO|SUMMARY_KO|SOURCE|URL|PUBLISHED
 
-Rules:
-- CATEGORY: top / agency / insurtech / insurer
-- RANK: 1 to 10
-- TITLE_JA: original Japanese title
-- TITLE_KO: Korean translation
-- SUMMARY_KO: one short Korean sentence (no pipe character inside)
-- SOURCE: media name
-- URL: exact original URL from input
-- PUBLISHED: date
-
-Output only the 10 lines, nothing else."""
+Output only the selected lines, nothing else."""
 
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
     msg = client.messages.create(
@@ -177,10 +211,10 @@ def save_sent_history(history: list[str]):
 
 # ── HTML 생성 (이메일 + 웹페이지 공용) ───────────────────────
 CATS = [
-    ("top",       "🏆 TOP 뉴스",       "#FF6B35"),
     ("agency",    "🏢 보험대리점 관련", "#2E86AB"),
-    ("insurtech", "💡 인슈어테크 관련", "#8B5CF6"),
+    ("insurtech", "💡 InsureTech 관련", "#8B5CF6"),
     ("insurer",   "🏦 보험사 관련",     "#059669"),
+    ("regulation","⚖️ 규제 관련",       "#DC2626"),
 ]
 
 def build_html(data: dict, for_web=False) -> str:
@@ -236,17 +270,31 @@ def save_web_page(data: dict):
     print("✅ docs/index.html 저장 완료")
 
 
-def send_slack(fetch_date: str, page_url: str):
+def send_slack(fetch_date: str, page_url: str, news_list: list):
     if not SLACK_WEBHOOK_URL:
         print("⏭ SLACK_WEBHOOK_URL 미설정 — 슬랙 발송 건너뜀")
         return
+
+    # 카테고리별 요약
+    cat_labels = {
+        "agency":     "🏢 보험대리점",
+        "insurtech":  "💡 InsureTech",
+        "insurer":    "🏦 보험사",
+        "regulation": "⚖️ 규제",
+    }
+    summary = ""
+    for key, label in cat_labels.items():
+        items = [n for n in news_list if n["category"] == key]
+        if items:
+            summary += f"\n{label} ({len(items)}건)"
+
     payload = {
         "blocks": [
             {
                 "type": "section",
                 "text": {
                     "type": "mrkdwn",
-                    "text": f"🇯🇵 *오늘의 일본 보험 뉴스* — {fetch_date}\n<{page_url}|📰 기사 헤드라인 보기>"
+                    "text": f"🇯🇵 *오늘의 일본 보험 뉴스* — {fetch_date}{summary}\n\n<{page_url}|📰 전체 기사 헤드라인 보기>"
                 }
             }
         ]
@@ -300,7 +348,7 @@ def main():
 
     # 슬랙 발송
     if GITHUB_PAGES_URL:
-        send_slack(today, GITHUB_PAGES_URL)
+        send_slack(today, GITHUB_PAGES_URL, data["news"])
 
     save_sent_history(sent_keys + new_keys)
     print(f"📝 이력 저장 완료 ({len(sent_keys + new_keys)}건)")
