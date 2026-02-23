@@ -17,13 +17,14 @@ import anthropic
 # ── 환경변수 ─────────────────────────────────────────────────
 ANTHROPIC_API_KEY = os.environ["ANTHROPIC_API_KEY"]
 SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL", "")
+NEWSAPI_KEY       = os.environ.get("NEWSAPI_KEY", "")       # newsapi.org API key
 SENT_HISTORY_FILE = "sent_news_history.json"
 GITHUB_PAGES_URL  = os.environ.get("GITHUB_PAGES_URL", "")
 JST = timezone(timedelta(hours=9))
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
 # ─────────────────────────────────────────────────────────────
 
-# ── RSS 검색어 (정밀 설계) ───────────────────────────────────
+# ── 검색어 ───────────────────────────────────────────────────
 AGENCY_QUERIES = [
     "保険代理店 M&A OR 買収 OR 統合 OR 事業承継",
     "乗合代理店 OR 保険ショップ OR 来店型保険ショップ",
@@ -46,6 +47,15 @@ REGULATION_QUERIES = [
 ]
 RSS_QUERIES = AGENCY_QUERIES + INSURTECH_QUERIES + INSURER_QUERIES + REGULATION_QUERIES
 
+# NewsAPI용 검색어 (간결하게 — API가 OR을 직접 지원)
+NEWSAPI_QUERIES = [
+    "保険代理店",
+    "インシュアテック OR 保険 AI",
+    "生命保険 OR 損害保険",
+    "金融庁 保険",
+    "保険 DX OR デジタル",
+]
+
 # ── 카테고리 설정 ────────────────────────────────────────────
 CATS = [
     ("agency",     "🏢 보험대리점 관련", "#2E86AB"),
@@ -65,7 +75,7 @@ BANK_EXCLUDE_KEYWORDS = [
 
 
 # ═══════════════════════════════════════════════════════════
-# 소스 1: Google News RSS
+# 소스 A: Google News RSS 검색
 # ═══════════════════════════════════════════════════════════
 def resolve_url(url: str) -> str:
     try:
@@ -75,14 +85,14 @@ def resolve_url(url: str) -> str:
         return url
 
 
-def fetch_rss(query: str, max_items=8, days=7) -> list[dict]:
+def fetch_google_rss(query: str, max_items=8, days=7) -> list[dict]:
     encoded = quote(query, safe="")
     url = f"https://news.google.com/rss/search?q={encoded}&hl=ja&gl=JP&ceid=JP:ja"
     try:
         res = requests.get(url, headers=HEADERS, timeout=10)
         res.raise_for_status()
     except Exception as e:
-        print(f"    ⚠️ RSS 실패 ({query[:20]}): {e}")
+        print(f"    ⚠️ Google RSS 실패 ({query[:30]}): {e}")
         return []
 
     root = ET.fromstring(res.content)
@@ -101,7 +111,6 @@ def fetch_rss(query: str, max_items=8, days=7) -> list[dict]:
             pub = pub_dt.strftime("%Y/%m/%d")
         except Exception:
             pub = pub_str[:10]
-
         source_el = item.find("source")
         source = source_el.text.strip() if source_el is not None else "Google News"
         real_url = resolve_url(link) if link else ""
@@ -110,111 +119,108 @@ def fetch_rss(query: str, max_items=8, days=7) -> list[dict]:
 
 
 # ═══════════════════════════════════════════════════════════
-# 소스 2: 保険毎日新聞 (homai.co.jp) — 오늘의 종이면 크롤링
+# 소스 B: NewsAPI.org (무료 100건/일)
 # ═══════════════════════════════════════════════════════════
-def fetch_homai() -> list[dict]:
-    """保険毎日新聞 메인 페이지에서 '오늘의 종이면' 헤드라인 추출"""
+def fetch_newsapi(query: str, max_items=10, days=7) -> list[dict]:
+    if not NEWSAPI_KEY:
+        return []
+    from_date = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
+    url = "https://newsapi.org/v2/everything"
+    params = {
+        "q": query,
+        "language": "ja",
+        "from": from_date,
+        "sortBy": "relevancy",
+        "pageSize": max_items,
+        "apiKey": NEWSAPI_KEY,
+    }
+    try:
+        res = requests.get(url, params=params, timeout=10)
+        res.raise_for_status()
+        data = res.json()
+    except Exception as e:
+        print(f"    ⚠️ NewsAPI 실패 ({query[:30]}): {e}")
+        return []
+
+    items = []
+    for art in data.get("articles", []):
+        title = (art.get("title") or "").strip()
+        if not title or title == "[Removed]":
+            continue
+        # "[Removed]" 기사 제외, 출처명 정리
+        source = art.get("source", {}).get("name", "NewsAPI")
+        pub_str = art.get("publishedAt", "")[:10].replace("-", "/")
+        items.append({
+            "title": title,
+            "url": art.get("url", ""),
+            "pub": pub_str,
+            "source": source,
+        })
+    return items
+
+
+# ═══════════════════════════════════════════════════════════
+# 소스 C: 전문매체 헤드라인 크롤링 → Google 재검색
+# ═══════════════════════════════════════════════════════════
+def crawl_homai_headlines() -> list[str]:
     url = "https://homai.co.jp/"
     try:
         res = requests.get(url, headers=HEADERS, timeout=10)
         res.raise_for_status()
         res.encoding = res.apparent_encoding
     except Exception as e:
-        print(f"    ⚠️ homai.co.jp 접속 실패: {e}")
+        print(f"    ⚠️ homai.co.jp 실패: {e}")
         return []
 
     soup = BeautifulSoup(res.text, "html.parser")
-    items = []
-    today = datetime.now(JST).strftime("%Y/%m/%d")
-
-    # 오늘의 종이면 영역에서 텍스트 추출
-    # 페이지 전체에서 면(面) 정보가 포함된 텍스트를 찾음
+    headlines = []
     for el in soup.find_all(["p", "div", "li", "span", "a"]):
         text = el.get_text(strip=True)
-        # "N면" 패턴이 있는 헤드라인을 추출 (1面, 2面, 3面...)
         if re.match(r"^[0-9０-９]{1,2}面", text) and len(text) > 5:
-            # 면 번호 제거하고 제목만 추출
             title = re.sub(r"^[0-9０-９]{1,2}面\s*", "", text).strip()
-            if title and len(title) > 3:
-                link = el.get("href") or el.find_parent("a")
-                href = ""
-                if link:
-                    href = link if isinstance(link, str) else (link.get("href") or "")
-                    if href and not href.startswith("http"):
-                        href = "https://homai.co.jp" + href
-
-                items.append({
-                    "title": title,
-                    "url": href or "https://homai.co.jp/",
-                    "pub": today,
-                    "source": "保険毎日新聞",
-                })
-
-    # 면 패턴으로 못 찾으면, 일반 기사 링크에서 추출
-    if not items:
+            if title and len(title) > 5:
+                headlines.append(title)
+    if not headlines:
         for a in soup.find_all("a", href=True):
             text = a.get_text(strip=True)
-            # 보험 관련 키워드가 포함된 링크
             if any(kw in text for kw in ["保険", "損保", "生保", "代理店", "金融庁"]) and len(text) > 8:
-                href = a["href"]
-                if not href.startswith("http"):
-                    href = "https://homai.co.jp" + href
-                items.append({
-                    "title": text,
-                    "url": href,
-                    "pub": today,
-                    "source": "保険毎日新聞",
-                })
-
-    print(f"    保険毎日新聞: {len(items)}건 수집")
-    return items
+                headlines.append(text)
+    print(f"    保険毎日新聞: {len(headlines)}건 헤드라인")
+    return headlines
 
 
-# ═══════════════════════════════════════════════════════════
-# 소스 3: inswatch (inswatch.co.jp) — 최신호 목차 크롤링
-# ═══════════════════════════════════════════════════════════
-def fetch_inswatch() -> list[dict]:
-    """inswatch 메인 페이지에서 최신호 목차 추출"""
+def crawl_inswatch_headlines() -> list[str]:
     url = "https://www.inswatch.co.jp/"
     try:
         res = requests.get(url, headers=HEADERS, timeout=10)
         res.raise_for_status()
         res.encoding = res.apparent_encoding
     except Exception as e:
-        print(f"    ⚠️ inswatch.co.jp 접속 실패: {e}")
+        print(f"    ⚠️ inswatch.co.jp 실패: {e}")
         return []
 
     soup = BeautifulSoup(res.text, "html.parser")
-    items = []
-    today = datetime.now(JST).strftime("%Y/%m/%d")
-
-    # 최신호 목차에서 【N】패턴의 기사 제목 추출
+    headlines = []
     page_text = soup.get_text()
-    # 【0】～【9】패턴으로 기사 분리
     pattern = r"【[０-９0-9]+】(.+?)(?=【[０-９0-9]+】|執筆者|$)"
     matches = re.findall(pattern, page_text, re.DOTALL)
-
     for match in matches:
-        # 제목과 부제 추출 (＝...＝ 패턴)
         title_match = re.search(r"＝(.+?)＝", match)
-        if title_match:
-            title = title_match.group(1).strip()
-        else:
-            title = match.strip()[:100]
-
-        # 줄바꿈/공백 정리
+        title = title_match.group(1).strip() if title_match else match.strip()[:100]
         title = re.sub(r"\s+", " ", title).strip()
+        if title and len(title) > 5:
+            headlines.append(title)
+    print(f"    inswatch: {len(headlines)}건 헤드라인")
+    return headlines
 
-        if title and len(title) > 3:
-            items.append({
-                "title": title,
-                "url": "https://www.inswatch.co.jp/",
-                "pub": today,
-                "source": "inswatch",
-            })
 
-    print(f"    inswatch: {len(items)}건 수집")
-    return items
+def search_by_headline(headline: str) -> list[dict]:
+    """헤드라인으로 Google News + NewsAPI 동시 검색"""
+    q = headline[:40]
+    results = fetch_google_rss(q, max_items=3, days=14)
+    if NEWSAPI_KEY:
+        results += fetch_newsapi(q, max_items=3, days=14)
+    return results
 
 
 # ═══════════════════════════════════════════════════════════
@@ -240,65 +246,42 @@ def select_and_translate(articles: list[dict], sent_keys: list[str]) -> dict:
 
     slim = [
         {"i": i, "t": a["title"], "u": a["url"], "s": a["source"], "p": a["pub"]}
-        for i, a in enumerate(articles[:50])  # 전문매체 추가로 50건까지 확장
+        for i, a in enumerate(articles[:50])
     ]
 
     prompt = f"""You are a Japanese insurance news analyst.
 From the articles below, select the most important articles and categorize them.
 
-Categories (select EXACTLY up to 3 articles per category, total max 12 articles):
-- agency: 보험대리점 관련 (agency M&A, management, sales channels) — EXCLUDE bank/banking articles (銀行, バンク, 信用金庫, 銀行窓販, 窓口販売)
-- insurtech: InsureTech 관련 (AI, digital, startups, tech innovation in INSURANCE industry only)
-- insurer: 보험사 관련 (insurance company management, products, financials)
-- regulation: 규제 관련 (FSA rules, legal changes, compliance, government policy)
+Categories (select EXACTLY up to 3 articles per category, total max 12):
+- agency: 보험대리점 관련 — EXCLUDE bank articles (銀行, バンク, 信用金庫, 窓口販売)
+- insurtech: InsureTech 관련 (MUST be insurance-specific, not general IT)
+- insurer: 보험사 관련
+- regulation: 규제 관련
 
-Selection priority criteria (higher = more important):
-★★★ HIGHEST PRIORITY:
-  - Regulatory changes by FSA (金融庁) that affect insurance sales or agency operations
-  - Large-scale M&A or consolidation among insurance companies or agencies
-  - Industry-wide statistics or reports showing major market shifts
+Selection priority:
+★★★ Regulatory changes by FSA, large M&A, industry-wide shifts
+★★  InsureTech adoption, AI/data in insurance, major funding
+★    Insurer financials, distribution strategies
 
-★★ HIGH PRIORITY:
-  - InsureTech products/services adopted by insurers or agencies (MUST be insurance-specific)
-  - AI or data-driven solutions in insurance underwriting, claims, or distribution
-  - Major funding rounds by InsureTech startups
-  - Partnerships between InsureTechs and major insurers
-
-★ MEDIUM PRIORITY:
-  - Financial results of major insurers with notable changes
-  - New distribution channel strategies
-  - Customer behavior shifts affecting insurance demand
-
-AVOID:
-  - General IT/tech news NOT specific to insurance industry
-  - Minor local events or single-branch news
-  - Pure PR without business substance
-
-IMPORTANT: Articles from 保険毎日新聞 and inswatch are from specialized insurance media — prioritize these as they are highly relevant.
-
-For each selected article, also find the best alternative free source:
-- alt_url: URL of a free alternative article on the same topic
-- If no good alternative exists, set alt_url to same as url
-- alt_source: name of the alternative source
+AVOID: General IT news, minor local events, pure PR
 
 Rules:
-- Each category MUST have at least 1 article, MAX 3 articles
-- For agency category: EXCLUDE any articles about banks (銀行, 信用金庫, 窓口販売)
-- Keep original URL exactly as given
-- title_ko: Korean translation of title
-- summary_ko: one short Korean sentence (NO pipe character "|")
+- Each category: 1-3 articles
+- agency: EXCLUDE bank articles
+- title_ko: Korean translation
+- summary_ko: one short Korean sentence (NO pipe "|")
+- Keep original URL exactly
 {exclude_block}
 
 Articles:
 {json.dumps(slim, ensure_ascii=False)}
 
 Output pipe-separated lines only (no header, no blank lines, no markdown):
-CATEGORY|RANK|TITLE_JA|TITLE_KO|SUMMARY_KO|SOURCE|URL|PUBLISHED|ALT_URL|ALT_SOURCE
+CATEGORY|RANK|TITLE_JA|TITLE_KO|SUMMARY_KO|SOURCE|URL|PUBLISHED
 
 Output only the selected lines, nothing else."""
 
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-
     for attempt in range(2):
         try:
             msg = client.messages.create(
@@ -316,7 +299,6 @@ Output only the selected lines, nothing else."""
 
     news_list = []
     today = datetime.now(JST).strftime("%Y/%m/%d")
-
     for line in raw.splitlines():
         line = line.strip()
         if not line or "|" not in line:
@@ -324,11 +306,6 @@ Output only the selected lines, nothing else."""
         parts = line.split("|")
         if len(parts) < 7:
             continue
-
-        url     = parts[6].strip()
-        alt_url = parts[8].strip() if len(parts) > 8 and parts[8].strip() else url
-        alt_src = parts[9].strip() if len(parts) > 9 and parts[9].strip() else ""
-
         news_list.append({
             "category":   normalize_category(parts[0]),
             "rank":       int(parts[1].strip()) if parts[1].strip().isdigit() else len(news_list) + 1,
@@ -336,16 +313,14 @@ Output only the selected lines, nothing else."""
             "title_ko":   parts[3].strip(),
             "summary_ko": parts[4].strip(),
             "source":     parts[5].strip(),
-            "url":        url,
+            "url":        parts[6].strip(),
             "published":  parts[7].strip() if len(parts) > 7 else today,
-            "alt_url":    alt_url if alt_url != url else "",
-            "alt_source": alt_src,
         })
 
     if not news_list:
         raise ValueError(f"파싱 실패:\n{raw}")
 
-    # 후처리: agency에서 은행 관련 제외
+    # 후처리: agency 은행 제외
     news_list = [
         n for n in news_list
         if not (n["category"] == "agency" and any(
@@ -353,37 +328,28 @@ Output only the selected lines, nothing else."""
             for kw in BANK_EXCLUDE_KEYWORDS
         ))
     ]
-
-    # 후처리: 카테고리별 최대 3건 제한
-    filtered = []
-    cat_count = {}
+    # 후처리: 카테고리별 최대 3건
+    filtered, cat_count = [], {}
     for n in news_list:
-        cat = n["category"]
-        cat_count[cat] = cat_count.get(cat, 0) + 1
-        if cat_count[cat] <= 3:
+        c = n["category"]
+        cat_count[c] = cat_count.get(c, 0) + 1
+        if cat_count[c] <= 3:
             filtered.append(n)
-    news_list = filtered
 
-    return {
-        "fetch_date": datetime.now(JST).strftime("%Y年%m月%d日"),
-        "news": news_list,
-    }
+    return {"fetch_date": datetime.now(JST).strftime("%Y年%m月%d日"), "news": filtered}
 
 
-# ── 이력 관리 ────────────────────────────────────────────────
+# ── 이력/HTML/Slack ──────────────────────────────────────────
 def load_sent_history() -> list[str]:
     if os.path.exists(SENT_HISTORY_FILE):
         with open(SENT_HISTORY_FILE) as f:
             return json.load(f)
     return []
 
-
 def save_sent_history(history: list[str]):
     with open(SENT_HISTORY_FILE, "w") as f:
         json.dump(history[-200:], f, ensure_ascii=False, indent=2)
 
-
-# ── HTML 생성 ────────────────────────────────────────────────
 def build_html(data: dict, for_web=False) -> str:
     rows = ""
     for key, label, color in CATS:
@@ -392,23 +358,16 @@ def build_html(data: dict, for_web=False) -> str:
             continue
         rows += f'<tr><td colspan="2" style="background:{color};color:white;padding:10px 16px;font-weight:bold;font-size:15px;">{label}</td></tr>'
         for item in items:
-            alt_link = ""
-            if item.get("alt_url"):
-                alt_src = item.get("alt_source") or "무료 기사"
-                alt_link = f'<br><a href="{item["alt_url"]}" style="color:#059669;font-size:12px;text-decoration:none;">🔓 유사 무료 기사 보기 ({alt_src}) →</a>'
             rows += f"""<tr style="border-bottom:1px solid #eee;">
   <td style="padding:14px 16px;vertical-align:top;">
     <a href="{item['url']}" style="color:#1D4ED8;font-weight:bold;font-size:15px;text-decoration:none;line-height:1.5;">{item['title_ko']}</a><br>
     <span style="color:#6B7280;font-size:13px;">🇯🇵 {item['title_ja']}</span><br>
-    <span style="color:#9CA3AF;font-size:12px;">📅 {item['published']} · 📰 {item['source']}</span>
-    {alt_link}<br>
+    <span style="color:#9CA3AF;font-size:12px;">📅 {item['published']} · 📰 {item['source']}</span><br>
     <div style="background:#F9FAFB;padding:8px 10px;border-radius:6px;margin-top:6px;font-size:13px;color:#374151;">{item['summary_ko']}</div>
   </td>
 </tr>"""
-
     meta = '<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">' if for_web else ""
     refresh = '<meta http-equiv="refresh" content="3600">' if for_web else ""
-
     return f"""<html><head>{meta}{refresh}</head>
 <body style="font-family:sans-serif;background:#F0F2F5;padding:20px;margin:0;">
   <div style="max-width:700px;margin:0 auto;background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1);">
@@ -421,20 +380,16 @@ def build_html(data: dict, for_web=False) -> str:
   </div>
 </body></html>"""
 
-
 def save_web_page(data: dict):
     os.makedirs("docs", exist_ok=True)
     with open("docs/index.html", "w", encoding="utf-8") as f:
         f.write(build_html(data, for_web=True))
-    print("  ✅ docs/index.html 저장 완료")
+    print("  ✅ docs/index.html 저장")
 
-
-# ── Slack 발송 ───────────────────────────────────────────────
 def send_slack(data: dict, page_url: str):
     if not SLACK_WEBHOOK_URL:
-        print("  ⏭ SLACK_WEBHOOK_URL 미설정 — 건너뜀")
+        print("  ⏭ SLACK_WEBHOOK_URL 미설정")
         return
-
     blocks = [
         {"type": "header", "text": {"type": "plain_text", "text": f"🇯🇵 일본 보험뉴스 — {data['fetch_date']}"}},
     ]
@@ -448,17 +403,14 @@ def send_slack(data: dict, page_url: str):
             lines.append(f"      _{item['summary_ko']}_")
         lines.append("")
         blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": "\n".join(lines)}})
-
     if page_url:
         blocks.append({"type": "divider"})
         blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": f"📰 <{page_url}|전체 기사 헤드라인 보기 →>"}})
-
     try:
         res = requests.post(SLACK_WEBHOOK_URL, json={"blocks": blocks}, timeout=10)
-        print(f"  ✅ 슬랙 발송 {'완료' if res.status_code == 200 else '실패: ' + str(res.status_code)}")
+        print(f"  ✅ 슬랙 {'완료' if res.status_code == 200 else '실패: ' + str(res.status_code)}")
     except Exception as e:
         print(f"  ⚠️ 슬랙 에러: {e}")
-
 
 def send_slack_no_news():
     if not SLACK_WEBHOOK_URL:
@@ -470,30 +422,55 @@ def send_slack_no_news():
     }, timeout=10)
 
 
-# ── 메인 ─────────────────────────────────────────────────────
+# ═══════════════════════════════════════════════════════════
+# 메인
+# ═══════════════════════════════════════════════════════════
 def main():
     print("=" * 50)
-    print(f"🇯🇵 일본 보험뉴스 봇 — {datetime.now(JST).strftime('%Y-%m-%d %H:%M KST')}")
+    print(f"🇯🇵 일본 보험뉴스 봇 — {datetime.now(JST).strftime('%Y-%m-%d %H:%M')}")
     print("=" * 50)
 
-    all_articles, seen_urls = [], set()
+    all_articles, seen_urls, seen_titles = [], set(), set()
 
-    # ① 전문매체 크롤링 (우선순위 높음)
-    print("\n📰 전문매체 크롤링...")
-    for a in fetch_homai():
-        if a["url"] not in seen_urls:
-            all_articles.append(a); seen_urls.add(a["url"])
-
-    for a in fetch_inswatch():
-        if a["title"] not in {x["title"] for x in all_articles}:  # 제목 기준 중복 제거
+    def add(a):
+        if a["url"] and a["url"] not in seen_urls and a["title"] not in seen_titles:
             all_articles.append(a)
+            seen_urls.add(a["url"])
+            seen_titles.add(a["title"])
 
-    # ② Google News RSS
-    print("\n📡 Google News RSS 수집...")
+    # ──────────────────────────────────────────────────────
+    # STEP 1: 전문매체 헤드라인 → Google+NewsAPI 재검색
+    # ──────────────────────────────────────────────────────
+    print("\n📰 STEP 1: 전문매체 헤드라인 크롤링...")
+    headlines = crawl_homai_headlines() + crawl_inswatch_headlines()
+
+    if headlines:
+        print(f"\n🔍 STEP 1b: 헤드라인 → Google+NewsAPI 검색 ({len(headlines)}건)...")
+        for hl in headlines:
+            for a in search_by_headline(hl):
+                add(a)
+        print(f"    전문매체 기반: {len(all_articles)}건 확보")
+
+    # ──────────────────────────────────────────────────────
+    # STEP 2: Google News RSS 키워드 검색
+    # ──────────────────────────────────────────────────────
+    print(f"\n📡 STEP 2: Google News 키워드 검색...")
     for q in RSS_QUERIES:
-        for a in fetch_rss(q, max_items=8, days=7):
-            if a["url"] not in seen_urls:
-                all_articles.append(a); seen_urls.add(a["url"])
+        for a in fetch_google_rss(q, max_items=8, days=7):
+            add(a)
+    print(f"    Google News 후: {len(all_articles)}건")
+
+    # ──────────────────────────────────────────────────────
+    # STEP 3: NewsAPI 키워드 검색 (보충)
+    # ──────────────────────────────────────────────────────
+    if NEWSAPI_KEY:
+        print(f"\n📡 STEP 3: NewsAPI 키워드 검색...")
+        for q in NEWSAPI_QUERIES:
+            for a in fetch_newsapi(q, max_items=10, days=7):
+                add(a)
+        print(f"    NewsAPI 후: {len(all_articles)}건")
+    else:
+        print("\n  ⏭ NEWSAPI_KEY 미설정 — NewsAPI 건너뜀")
 
     print(f"\n  📊 총 {len(all_articles)}개 기사 수집")
     if not all_articles:
@@ -501,36 +478,35 @@ def main():
         send_slack_no_news()
         return
 
-    # ③ AI 선별/번역
+    # ──────────────────────────────────────────────────────
+    # STEP 4: AI 선별/번역
+    # ──────────────────────────────────────────────────────
     # sent_keys = load_sent_history()  # TODO: 테스트 완료 후 활성화
     sent_keys = []
-    print("\n🤖 AI 선별/번역 중...")
+    print("\n🤖 STEP 4: AI 선별/번역...")
     data = select_and_translate(all_articles, sent_keys)
-
     new_keys = [n.get("url") or n.get("title_ja", "") for n in data["news"]]
-    # data["news"] = [n for n in data["news"]
-    #                 if (n.get("url") or n.get("title_ja")) not in set(sent_keys)]
 
     if not data["news"]:
-        print("  ⚠️ 새로운 뉴스 없음")
+        print("  ⚠️ 뉴스 없음")
         send_slack_no_news()
         return
 
-    # ④ 결과 요약
     print(f"\n📋 선별 결과:")
     for key, label in CAT_SLACK_LABELS.items():
         cnt = len([n for n in data["news"] if n["category"] == key])
         print(f"  {label}: {cnt}건")
     print(f"  합계: {len(data['news'])}건")
 
-    # ⑤ 저장 및 발송
+    # ──────────────────────────────────────────────────────
+    # STEP 5: 저장 및 발송
+    # ──────────────────────────────────────────────────────
     with open("news_cache.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     print("\n  ✅ news_cache.json 저장")
-
     save_web_page(data)
 
-    print("\n📤 Slack 발송...")
+    print("\n📤 STEP 5: Slack 발송...")
     send_slack(data, GITHUB_PAGES_URL)
 
     save_sent_history(sent_keys + new_keys)
