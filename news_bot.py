@@ -73,6 +73,18 @@ BANK_EXCLUDE_KEYWORDS = [
     "銀行", "バンク", "bank", "信用金庫", "信金", "銀行窓販", "窓口販売",
 ]
 
+# 한국 언론 제외 (일본어 기사를 발행하는 한국 매체)
+KOREAN_MEDIA_EXCLUDE = [
+    "조선일보", "중앙일보", "동아일보", "한국경제", "매일경제", "연합뉴스",
+    "한겨레", "경향신문", "서울신문", "아시아경제", "뉴시스", "뉴스1",
+    "Chosun", "JoongAng", "Dong-A", "Hankyoreh", "Yonhap",
+    "Korea Herald", "Korea Times", "KBS", "MBC", "SBS",
+    "코리아", "korea", "Korean", "한국", "聯合ニュース",
+    "朝鮮日報", "中央日報", "東亜日報", "韓国経済",
+    ".kr/", "chosun.com", "joongang.co", "donga.com",
+    "hankyung.com", "mk.co.kr", "yna.co.kr", "hani.co.kr",
+]
+
 
 # ═══════════════════════════════════════════════════════════
 # 소스 A: Google News RSS 검색
@@ -432,8 +444,14 @@ def main():
 
     all_articles, seen_urls, seen_titles = [], set(), set()
 
+    def is_korean_media(a):
+        src = a.get("source", "") + " " + a.get("url", "")
+        return any(kw in src for kw in KOREAN_MEDIA_EXCLUDE)
+
     def add(a):
         if a["url"] and a["url"] not in seen_urls and a["title"] not in seen_titles:
+            if is_korean_media(a):
+                return  # 한국 언론 제외
             all_articles.append(a)
             seen_urls.add(a["url"])
             seen_titles.add(a["title"])
