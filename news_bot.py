@@ -17,10 +17,11 @@ import anthropic
 ANTHROPIC_API_KEY = os.environ["ANTHROPIC_API_KEY"]
 SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL", "")
 SENT_HISTORY_FILE = "sent_news_history.json"
-GITHUB_PAGES_URL  = os.environ.get("GITHUB_PAGES_URL", "")    # 예: https://seetheskyeric.github.io/japan-insurance-news-bot
+GITHUB_PAGES_URL  = os.environ.get("GITHUB_PAGES_URL", "")
+JST = timezone(timedelta(hours=9))
 # ─────────────────────────────────────────────────────────────
 
-# 일반 RSS 검색어 - 중요 키워드 강화
+# 일반 RSS 검색어
 RSS_QUERIES = [
     "保険代理店 M&A OR 規制 OR 金融庁 OR 経営効率",
     "インシュアテック 資金調達 OR 新サービス OR AI OR 大量導入",
@@ -38,6 +39,21 @@ SPECIALTY_MEDIA_QUERIES = [
     "ニッキン 保険",
 ]
 
+# ── 카테고리 설정 ────────────────────────────────────────────
+CATS = [
+    ("agency",     "🏢 보험대리점 관련", "#2E86AB"),
+    ("insurtech",  "💡 InsureTech 관련", "#8B5CF6"),
+    ("insurer",    "🏦 보험사 관련",     "#059669"),
+    ("regulation", "⚖️ 규제 관련",       "#DC2626"),
+]
+
+CAT_SLACK_LABELS = {
+    "agency":     "🏢 보험대리점",
+    "insurtech":  "💡 InsureTech",
+    "insurer":    "🏦 보험사",
+    "regulation": "⚖️ 규제",
+}
+
 
 def resolve_url(url: str) -> str:
     """Google News 리다이렉트 URL → 실제 기사 URL로 변환"""
@@ -45,21 +61,22 @@ def resolve_url(url: str) -> str:
         res = requests.get(
             url, allow_redirects=True, timeout=6,
             headers={"User-Agent": "Mozilla/5.0"},
-            stream=True  # 본문 다운로드 없이 헤더만
+            stream=True,
         )
         return res.url
-    except:
+    except Exception:
         return url
 
 
-def fetch_rss(query: str, max_items=6, days=15) -> list[dict]:
+def fetch_rss(query: str, max_items=6, days=2) -> list[dict]:
+    """Google News RSS에서 기사 수집 (기본 2일)"""
     encoded = quote(query, safe="")
     url = f"https://news.google.com/rss/search?q={encoded}&hl=ja&gl=JP&ceid=JP:ja"
     try:
         res = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
         res.raise_for_status()
     except Exception as e:
-        print(f"RSS 수집 실패 ({query}): {e}")
+        print(f"  ⚠️ RSS 수집 실패 ({query}): {e}")
         return []
 
     root = ET.fromstring(res.content)
@@ -77,13 +94,12 @@ def fetch_rss(query: str, max_items=6, days=15) -> list[dict]:
             if pub_dt < cutoff:
                 continue
             pub = pub_dt.strftime("%Y/%m/%d")
-        except:
+        except Exception:
             pub = pub_str[:10]
 
         source_el = item.find("source")
         source = source_el.text.strip() if source_el is not None else "Google News"
 
-        # 실제 URL로 변환
         real_url = resolve_url(link) if link else ""
 
         items.append({
@@ -94,20 +110,35 @@ def fetch_rss(query: str, max_items=6, days=15) -> list[dict]:
     return items
 
 
+def normalize_category(cat: str) -> str:
+    """AI가 카테고리명을 다르게 반환해도 정규화"""
+    cat = cat.lower().strip()
+    if any(x in cat for x in ["agency", "代理店", "대리점"]):
+        return "agency"
+    if any(x in cat for x in ["insur", "tech", "디지털", "digital"]):
+        return "insurtech"
+    if any(x in cat for x in ["insurer", "company", "보험사", "生保", "損保"]):
+        return "insurer"
+    if any(x in cat for x in ["regul", "規制", "규제", "fsa", "법", "금융"]):
+        return "regulation"
+    return cat
+
+
 def select_and_translate(articles: list[dict], sent_keys: list[str]) -> dict:
+    """Claude API로 뉴스 선별 + 번역"""
     exclude_block = ""
     if sent_keys:
         exclude_block = "Exclude these already-sent URLs:\n" + "\n".join(sent_keys[-30:])
 
     slim = [
-        {"i": i, "t": a["title"], "u": a["url"], "s": a["source"], "p": a["pub"], "free": a.get("free", True)}
+        {"i": i, "t": a["title"], "u": a["url"], "s": a["source"], "p": a["pub"]}
         for i, a in enumerate(articles[:30])
     ]
 
     prompt = f"""You are a Japanese insurance news analyst.
 From the articles below, select the most important articles and categorize them.
 
-Categories:
+Categories (select 2-4 articles per category, total ~10-14 articles):
 - agency: 보험대리점 관련 (agency M&A, management, sales channels)
 - insurtech: InsureTech 관련 (AI, digital, startups, tech innovation)
 - insurer: 보험사 관련 (insurance company management, products, financials)
@@ -122,59 +153,62 @@ Selection priority criteria (higher = more important):
 
 ★★ HIGH PRIORITY:
   - InsureTech products/services newly adopted at scale by insurers or agencies
-  - Expected or confirmed mass adoption of digital tools improving operational efficiency
   - AI or data-driven solutions that significantly reduce costs or improve underwriting
   - New insurance products targeting emerging risks (cyber, climate, health tech)
-  - Major funding rounds or IPOs by InsureTech startups with insurance industry relevance
-  - Management efficiency improvements (cost reduction, automation, workflow reform)
+  - Major funding rounds or IPOs by InsureTech startups
   - Partnerships between InsureTechs and major insurers or agency networks
 
 ★ MEDIUM PRIORITY:
-  - Financial results (earnings) of major insurers with notable YoY changes
+  - Financial results of major insurers with notable YoY changes
   - New distribution channel strategies or agency network restructuring
   - Customer behavior shifts affecting insurance demand
-  - Regional or niche market developments with growth potential
 
 AVOID:
   - Minor local events or single-branch news
   - Pure PR or press releases without business substance
   - Articles without concrete numbers, deals, or policy implications
-  - Repetitive coverage of already-known events
 
-IMPORTANT - For each selected article, also find the best alternative free source:
-- Search for a similar/related free article covering the same topic
-- alt_url: URL of a free alternative article on the same topic (use Google News, NHK, Nikkei free section, Reuters Japan, etc.)
+For each selected article, also find the best alternative free source:
+- alt_url: URL of a free alternative article on the same topic (Google News, NHK, Reuters Japan, etc.)
 - If no good alternative exists, set alt_url to same as url
 - alt_source: name of the alternative source
 
 Rules:
-- Each category MUST have at least 1 article
-- Include MORE articles per category if they are highly important (max 4 per category)
+- Each category MUST have at least 2 articles
 - Keep original URL exactly as given
-- title_ko: Korean translation
-- summary_ko: one short Korean sentence (no pipe character)
+- title_ko: Korean translation of title
+- summary_ko: one short Korean sentence (NO pipe character "|")
 {exclude_block}
 
 Articles:
 {json.dumps(slim, ensure_ascii=False)}
 
-Output pipe-separated lines only (no header, no blank lines):
+Output pipe-separated lines only (no header, no blank lines, no markdown):
 CATEGORY|RANK|TITLE_JA|TITLE_KO|SUMMARY_KO|SOURCE|URL|PUBLISHED|ALT_URL|ALT_SOURCE
 
 Output only the selected lines, nothing else."""
 
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-    msg = client.messages.create(
-        model="claude-sonnet-4-20250514",
-        max_tokens=3000,
-        messages=[{"role": "user", "content": prompt}]
-    )
-    raw = msg.content[0].text.strip()
-    print(f"API 응답:\n{raw[:600]}")
+
+    # 재시도 로직 (최대 2회)
+    for attempt in range(2):
+        try:
+            msg = client.messages.create(
+                model="claude-sonnet-4-20250514",
+                max_tokens=3000,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            raw = msg.content[0].text.strip()
+            print(f"  API 응답 (attempt {attempt+1}):\n  {raw[:300]}...")
+            break
+        except Exception as e:
+            print(f"  ⚠️ API 호출 실패 (attempt {attempt+1}): {e}")
+            if attempt == 1:
+                raise
 
     news_list = []
-    JST = timezone(timedelta(hours=9))
     today = datetime.now(JST).strftime("%Y/%m/%d")
+
     for line in raw.splitlines():
         line = line.strip()
         if not line or "|" not in line:
@@ -182,10 +216,11 @@ Output only the selected lines, nothing else."""
         parts = line.split("|")
         if len(parts) < 7:
             continue
+
         url     = parts[6].strip()
         alt_url = parts[8].strip() if len(parts) > 8 and parts[8].strip() else url
         alt_src = parts[9].strip() if len(parts) > 9 and parts[9].strip() else ""
-        # alt_url이 원본과 같으면 None으로 처리
+
         news_list.append({
             "category":   normalize_category(parts[0]),
             "rank":       int(parts[1].strip()) if parts[1].strip().isdigit() else len(news_list) + 1,
@@ -202,54 +237,26 @@ Output only the selected lines, nothing else."""
     if not news_list:
         raise ValueError(f"파싱 실패:\n{raw}")
 
-    JST = timezone(timedelta(hours=9))
     return {
         "fetch_date": datetime.now(JST).strftime("%Y年%m月%d日"),
         "news": news_list,
     }
 
 
-def normalize_category(cat: str) -> str:
-    """AI가 카테고리명을 다르게 반환해도 정규화"""
-    cat = cat.lower().strip()
-    if any(x in cat for x in ["agency", "代理店", "대리점"]):
-        return "agency"
-    if any(x in cat for x in ["insur", "tech", "디지털", "digital"]):
-        return "insurtech"
-    if any(x in cat for x in ["insurer", "company", "보험사", "生保", "損保"]):
-        return "insurer"
-    if any(x in cat for x in ["regul", "規制", "규제", "fsa", "법"]):
-        return "regulation"
-    return cat
-
+# ── 이력 관리 ────────────────────────────────────────────────
 def load_sent_history() -> list[str]:
     if os.path.exists(SENT_HISTORY_FILE):
         with open(SENT_HISTORY_FILE) as f:
             return json.load(f)
     return []
 
-def save_sent_history(history: list[str]):
-    with open(SENT_HISTORY_FILE, "w") as f:
-        json.dump(history[-200:], f, ensure_ascii=False, indent=2)
-    if os.path.exists(SENT_HISTORY_FILE):
-        with open(SENT_HISTORY_FILE) as f:
-            return json.load(f)
-    return []
-
 
 def save_sent_history(history: list[str]):
     with open(SENT_HISTORY_FILE, "w") as f:
         json.dump(history[-200:], f, ensure_ascii=False, indent=2)
 
 
-# ── HTML 생성 (이메일 + 웹페이지 공용) ───────────────────────
-CATS = [
-    ("agency",    "🏢 보험대리점 관련", "#2E86AB"),
-    ("insurtech", "💡 InsureTech 관련", "#8B5CF6"),
-    ("insurer",   "🏦 보험사 관련",     "#059669"),
-    ("regulation","⚖️ 규제 관련",       "#DC2626"),
-]
-
+# ── HTML 생성 (GitHub Pages용) ───────────────────────────────
 def build_html(data: dict, for_web=False) -> str:
     rows = ""
     for key, label, color in CATS:
@@ -257,13 +264,15 @@ def build_html(data: dict, for_web=False) -> str:
         if not items:
             continue
         rows += f'<tr><td colspan="2" style="background:{color};color:white;padding:10px 16px;font-weight:bold;font-size:15px;">{label}</td></tr>'
-        for item in items:
-            alt_link = ""
-        if item.get("alt_url"):
-            alt_src = item.get("alt_source") or "무료 기사"
-            alt_link = f'<br><a href="{item["alt_url"]}" style="color:#059669;font-size:12px;text-decoration:none;">🔓 유사 무료 기사 보기 ({alt_src}) →</a>'
 
-        rows += f"""<tr style="border-bottom:1px solid #eee;">
+        for item in items:
+            # ✅ FIX: alt_link 처리를 루프 안으로 이동
+            alt_link = ""
+            if item.get("alt_url"):
+                alt_src = item.get("alt_source") or "무료 기사"
+                alt_link = f'<br><a href="{item["alt_url"]}" style="color:#059669;font-size:12px;text-decoration:none;">🔓 유사 무료 기사 보기 ({alt_src}) →</a>'
+
+            rows += f"""<tr style="border-bottom:1px solid #eee;">
   <td style="padding:14px 16px;vertical-align:top;">
     <a href="{item['url']}" style="color:#1D4ED8;font-weight:bold;font-size:15px;text-decoration:none;line-height:1.5;">{item['title_ko']}</a><br>
     <span style="color:#6B7280;font-size:13px;">🇯🇵 {item['title_ja']}</span><br>
@@ -274,7 +283,7 @@ def build_html(data: dict, for_web=False) -> str:
 </tr>"""
 
     meta = '<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">' if for_web else ""
-    refresh = '<meta http-equiv="refresh" content="3600">' if for_web else ""  # 웹페이지는 1시간마다 자동 새로고침
+    refresh = '<meta http-equiv="refresh" content="3600">' if for_web else ""
 
     return f"""<html><head>{meta}{refresh}</head>
 <body style="font-family:sans-serif;background:#F0F2F5;padding:20px;margin:0;">
@@ -289,121 +298,148 @@ def build_html(data: dict, for_web=False) -> str:
 </body></html>"""
 
 
-def send_email(subject: str, html_body: str):
-    msg = MIMEMultipart("alternative")
-    msg["Subject"] = subject
-    msg["From"]    = GMAIL_USER
-    msg["To"]      = RECV_EMAIL
-    msg.attach(MIMEText(html_body, "html", "utf-8"))
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
-        s.login(GMAIL_USER, GMAIL_APP_PW)
-        s.sendmail(GMAIL_USER, RECV_EMAIL, msg.as_string())
-    print(f"✅ 이메일 발송 완료 → {RECV_EMAIL}")
-
-
 def save_web_page(data: dict):
     """GitHub Pages용 HTML 파일 저장"""
     os.makedirs("docs", exist_ok=True)
     with open("docs/index.html", "w", encoding="utf-8") as f:
         f.write(build_html(data, for_web=True))
-    print("✅ docs/index.html 저장 완료")
+    print("  ✅ docs/index.html 저장 완료")
 
 
-def send_slack(fetch_date: str, page_url: str, news_list: list):
+# ── Slack 발송 (헤드라인 포함) ────────────────────────────────
+def send_slack(data: dict, page_url: str):
     if not SLACK_WEBHOOK_URL:
-        print("⏭ SLACK_WEBHOOK_URL 미설정 — 슬랙 발송 건너뜀")
+        print("  ⏭ SLACK_WEBHOOK_URL 미설정 — 슬랙 발송 건너뜀")
         return
 
-    # 카테고리별 요약
-    cat_labels = {
-        "agency":     "🏢 보험대리점",
-        "insurtech":  "💡 InsureTech",
-        "insurer":    "🏦 보험사",
-        "regulation": "⚖️ 규제",
-    }
-    summary = ""
-    for key, label in cat_labels.items():
+    fetch_date = data["fetch_date"]
+    news_list  = data["news"]
+
+    # 카테고리별 헤드라인 블록 생성
+    blocks = [
+        {
+            "type": "header",
+            "text": {"type": "plain_text", "text": f"🇯🇵 일본 보험뉴스 — {fetch_date}"}
+        },
+    ]
+
+    for key, label in CAT_SLACK_LABELS.items():
         items = [n for n in news_list if n["category"] == key]
-        if items:
-            summary += f"\n{label} ({len(items)}건)"
+        if not items:
+            continue
 
-    payload = {
-        "blocks": [
-            {
-                "type": "section",
-                "text": {
-                    "type": "mrkdwn",
-                    "text": f"🇯🇵 *오늘의 일본 보험 뉴스* — {fetch_date}{summary}\n\n<{page_url}|📰 전체 기사 헤드라인 보기>"
-                }
-            }
-        ]
-    }
-    res = requests.post(SLACK_WEBHOOK_URL, json=payload, timeout=10)
-    if res.status_code == 200:
-        print("✅ 슬랙 발송 완료")
-    else:
-        print(f"⚠️ 슬랙 발송 실패: {res.status_code} {res.text}")
+        lines = [f"*{label}* ({len(items)}건)"]
+        for i, item in enumerate(items, 1):
+            lines.append(f"  {i}. <{item['url']}|{item['title_ko']}>")
+            lines.append(f"      _{item['summary_ko']}_")
+        lines.append("")  # 빈 줄로 카테고리 구분
+
+        blocks.append({
+            "type": "section",
+            "text": {"type": "mrkdwn", "text": "\n".join(lines)}
+        })
+
+    # 전체 기사 보기 링크
+    if page_url:
+        blocks.append({"type": "divider"})
+        blocks.append({
+            "type": "section",
+            "text": {"type": "mrkdwn", "text": f"📰 <{page_url}|전체 기사 헤드라인 보기 →>"}
+        })
+
+    payload = {"blocks": blocks}
+    try:
+        res = requests.post(SLACK_WEBHOOK_URL, json=payload, timeout=10)
+        if res.status_code == 200:
+            print("  ✅ 슬랙 발송 완료")
+        else:
+            print(f"  ⚠️ 슬랙 발송 실패: {res.status_code} {res.text}")
+    except Exception as e:
+        print(f"  ⚠️ 슬랙 발송 에러: {e}")
 
 
+def send_slack_no_news():
+    """뉴스가 없을 때 알림"""
+    if not SLACK_WEBHOOK_URL:
+        return
+    today = datetime.now(JST).strftime("%Y年%m月%d日")
+    requests.post(SLACK_WEBHOOK_URL, json={
+        "blocks": [{
+            "type": "section",
+            "text": {"type": "mrkdwn", "text": f"🇯🇵 *일본 보험뉴스* — {today}\n\n⚠️ 오늘은 선별된 보험 뉴스가 없습니다."}
+        }]
+    }, timeout=10)
+
+
+# ── 메인 ─────────────────────────────────────────────────────
 def main():
-    print("📡 RSS 수집 중...")
+    print("=" * 50)
+    print(f"🇯🇵 일본 보험뉴스 봇 시작 — {datetime.now(JST).strftime('%Y-%m-%d %H:%M KST')}")
+    print("=" * 50)
+
+    # 1. RSS 수집
+    print("\n📡 RSS 수집 중...")
     all_articles, seen_urls = [], set()
 
-    # 일반 RSS
     for q in RSS_QUERIES:
-        for a in fetch_rss(q, max_items=6, days=15):
+        for a in fetch_rss(q, max_items=6, days=2):
             if a["url"] not in seen_urls:
-                all_articles.append(a); seen_urls.add(a["url"])
+                all_articles.append(a)
+                seen_urls.add(a["url"])
 
-    # 보험 전문 언론 RSS
     print("📰 보험 전문 언론 검색 중...")
     for q in SPECIALTY_MEDIA_QUERIES:
-        for a in fetch_rss(q, max_items=4, days=15):
+        for a in fetch_rss(q, max_items=4, days=2):
             if a["url"] not in seen_urls:
-                all_articles.append(a); seen_urls.add(a["url"])
+                all_articles.append(a)
+                seen_urls.add(a["url"])
 
-    print(f"총 {len(all_articles)}개 기사 수집")
+    print(f"  총 {len(all_articles)}개 기사 수집")
 
-    sent_keys = load_sent_history()
-
-    print("🤖 AI 번역/분류 중...")
-    data = select_and_translate(all_articles, [])  # 테스트 중: 중복 제외 비활성화
-
-    # 테스트 중: 중복 제거 비활성화
-    # new_keys  = [n.get("url") or n.get("title_ja", "") for n in data["news"]]
-    # data["news"] = [n for n in data["news"] if (n.get("url") or n.get("title_ja")) not in set(sent_keys)]
-
-    new_keys = [n.get("url") or n.get("title_ja", "") for n in data["news"]]
-
-    if not data["news"]:
-        print("⚠️ 뉴스가 없습니다.")
-        if SLACK_WEBHOOK_URL:
-            requests.post(SLACK_WEBHOOK_URL, json={
-                "blocks": [{
-                    "type": "section",
-                    "text": {
-                        "type": "mrkdwn",
-                        "text": f"🇯🇵 *오늘의 일본 보험 뉴스* — {today}\n\n⚠️ 오늘은 선별된 보험 뉴스가 없습니다."
-                    }
-                }]
-            }, timeout=10)
+    if not all_articles:
+        print("⚠️ 수집된 기사가 없습니다.")
+        send_slack_no_news()
         return
 
-    today   = datetime.now().strftime("%Y年%m月%d日")
-    subject = f"[HabitFactory] 일본 보험뉴스 10선 — {today}"
+    # 2. AI 선별/번역
+    sent_keys = load_sent_history()
+    print("\n🤖 AI 선별/번역 중...")
+    data = select_and_translate(all_articles, sent_keys)
 
-    # 이메일 발송 제거됨
+    # 3. 중복 제거
+    new_keys = [n.get("url") or n.get("title_ja", "") for n in data["news"]]
+    data["news"] = [n for n in data["news"]
+                    if (n.get("url") or n.get("title_ja")) not in set(sent_keys)]
 
-    # 결과를 캐시 파일로 저장 (slack_notify.py가 읽어서 발송)
+    if not data["news"]:
+        print("⚠️ 새로운 뉴스가 없습니다 (전부 이미 발송됨).")
+        send_slack_no_news()
+        return
+
+    # 4. 결과 요약 출력
+    print(f"\n📋 선별 결과:")
+    for key, label in CAT_SLACK_LABELS.items():
+        cnt = len([n for n in data["news"] if n["category"] == key])
+        print(f"  {label}: {cnt}건")
+    print(f"  합계: {len(data['news'])}건")
+
+    # 5. 캐시 저장
     with open("news_cache.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-    print("✅ news_cache.json 저장 완료")
+    print("\n  ✅ news_cache.json 저장 완료")
 
-    # GitHub Pages HTML 저장
+    # 6. GitHub Pages HTML 저장
     save_web_page(data)
 
+    # 7. Slack 발송
+    print("\n📤 Slack 발송 중...")
+    send_slack(data, GITHUB_PAGES_URL)
+
+    # 8. 이력 저장
     save_sent_history(sent_keys + new_keys)
-    print(f"📝 이력 저장 완료 ({len(sent_keys + new_keys)}건)")
+    print(f"  📝 이력 저장 완료 ({len(sent_keys + new_keys)}건)")
+
+    print("\n✅ 완료!")
 
 
 if __name__ == "__main__":
