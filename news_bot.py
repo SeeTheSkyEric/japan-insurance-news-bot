@@ -402,17 +402,18 @@ def main():
         return
 
     # 2. AI 선별/번역
-    sent_keys = load_sent_history()
+    # sent_keys = load_sent_history()  # TODO: 테스트 완료 후 활성화
+    sent_keys = []
     print("\n🤖 AI 선별/번역 중...")
     data = select_and_translate(all_articles, sent_keys)
 
-    # 3. 중복 제거
+    # 3. 중복 제거 — 테스트 중 비활성화
     new_keys = [n.get("url") or n.get("title_ja", "") for n in data["news"]]
-    data["news"] = [n for n in data["news"]
-                    if (n.get("url") or n.get("title_ja")) not in set(sent_keys)]
+    # data["news"] = [n for n in data["news"]
+    #                 if (n.get("url") or n.get("title_ja")) not in set(sent_keys)]
 
     if not data["news"]:
-        print("⚠️ 새로운 뉴스가 없습니다 (전부 이미 발송됨).")
+        print("⚠️ 새로운 뉴스가 없습니다.")
         send_slack_no_news()
         return
 
