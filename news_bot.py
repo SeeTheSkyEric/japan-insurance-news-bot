@@ -21,22 +21,53 @@ GITHUB_PAGES_URL  = os.environ.get("GITHUB_PAGES_URL", "")
 JST = timezone(timedelta(hours=9))
 # ─────────────────────────────────────────────────────────────
 
-# 일반 RSS 검색어
-RSS_QUERIES = [
-    "保険代理店 M&A OR 規制 OR 金融庁 OR 経営効率",
-    "インシュアテック 資金調達 OR 新サービス OR AI OR 大量導入",
-    "生命保険 損害保険 決算 OR 新商品 OR 規制 OR DX",
-    "保険業界 DX OR デジタル OR 改革 OR 自動化",
-    "金融庁 保険 規制 OR 監督 OR 改正 OR ガイドライン",
-    "保険 AI OR データ活用 OR 業務改善 OR コスト削減",
+# ── RSS 검색어 (카테고리별 확장) ────────────────────────────
+# 보험대리점 (agency)
+AGENCY_QUERIES = [
+    "保険代理店 M&A OR 買収 OR 統合 OR 再編 OR 事業承継",
+    "乗合代理店 OR 保険ショップ OR 来店型保険ショップ OR 独立系代理店",
+    "代理店 手数料 OR 収益構造 OR 生産性 OR 経営改善 OR DX",
+    "代理店 不正 OR 行政処分 OR 業務停止 OR コンプライアンス",
 ]
+
+# 인슈어테크 (insurtech)
+INSURTECH_QUERIES = [
+    "インシュアテック 資金調達 OR 新サービス OR AI OR スタートアップ",
+    "保険 DX OR デジタル化 OR 自動化 OR RPA OR API OR SaaS",
+    "オンライン保険 OR ダイレクト保険 OR 保険アプリ OR デジタル募集",
+    "AIアンダーライティング OR リスクスコアリング OR 行動データ 保険",
+]
+
+# 보험사 (insurer)
+INSURER_QUERIES = [
+    "生命保険会社 OR 損害保険会社 決算 OR 収益 OR 戦略 OR 提携",
+    "東京海上 OR 三井住友海上 OR 損保ジャパン 戦略 OR GA OR 代理店",
+    "日本生命 OR 第一生命 決算 OR 新商品 OR 海外展開",
+    "保険会社 資本政策 OR ソルベンシーマージン OR 海外展開",
+]
+
+# 규제 (regulation)
+REGULATION_QUERIES = [
+    "金融庁 保険 監督指針 OR 行政処分 OR 検査 OR 代理店管理",
+    "保険業法 改正 OR 募集管理体制 OR 適合性原則 OR 説明義務",
+    "顧客本位の業務運営 OR 手数料開示 OR ガバナンス強化",
+    "金融審議会 保険 OR 不正販売 OR 代理店管理強化",
+]
+
+RSS_QUERIES = AGENCY_QUERIES + INSURTECH_QUERIES + INSURER_QUERIES + REGULATION_QUERIES
 
 # 보험 전문 언론 헤드라인 검색
 SPECIALTY_MEDIA_QUERIES = [
     "保険毎日新聞",
     "インシュアランス 保険",
     "日本保険新聞",
+    "保険市場TIMES",
     "ニッキン 保険",
+]
+
+# 은행 관련 제외 키워드 (대리점 카테고리에서 제외)
+BANK_EXCLUDE_KEYWORDS = [
+    "銀行", "バンク", "bank", "信用金庫", "信金", "銀行窓販", "窓口販売",
 ]
 
 # ── 카테고리 설정 ────────────────────────────────────────────
@@ -138,8 +169,8 @@ def select_and_translate(articles: list[dict], sent_keys: list[str]) -> dict:
     prompt = f"""You are a Japanese insurance news analyst.
 From the articles below, select the most important articles and categorize them.
 
-Categories (select 2-4 articles per category, total ~10-14 articles):
-- agency: 보험대리점 관련 (agency M&A, management, sales channels)
+Categories (select EXACTLY up to 3 articles per category, total max 12 articles):
+- agency: 보험대리점 관련 (agency M&A, management, sales channels) — EXCLUDE bank/banking articles (銀行, バンク, 信用金庫, 銀行窓販, 窓口販売)
 - insurtech: InsureTech 관련 (AI, digital, startups, tech innovation)
 - insurer: 보험사 관련 (insurance company management, products, financials)
 - regulation: 규제 관련 (FSA rules, legal changes, compliance, government policy)
@@ -174,7 +205,8 @@ For each selected article, also find the best alternative free source:
 - alt_source: name of the alternative source
 
 Rules:
-- Each category MUST have at least 2 articles
+- Each category MUST have at least 1 article, MAX 3 articles
+- For agency category: EXCLUDE any articles about banks (銀行, 信用金庫, 窓口販売)
 - Keep original URL exactly as given
 - title_ko: Korean translation of title
 - summary_ko: one short Korean sentence (NO pipe character "|")
@@ -236,6 +268,25 @@ Output only the selected lines, nothing else."""
 
     if not news_list:
         raise ValueError(f"파싱 실패:\n{raw}")
+
+    # 후처리: agency 카테고리에서 은행 관련 기사 제외
+    news_list = [
+        n for n in news_list
+        if not (n["category"] == "agency" and any(
+            kw in (n["title_ja"] + n["title_ko"] + n["summary_ko"])
+            for kw in BANK_EXCLUDE_KEYWORDS
+        ))
+    ]
+
+    # 후처리: 카테고리별 최대 3건 제한
+    filtered = []
+    cat_count = {}
+    for n in news_list:
+        cat = n["category"]
+        cat_count[cat] = cat_count.get(cat, 0) + 1
+        if cat_count[cat] <= 3:
+            filtered.append(n)
+    news_list = filtered
 
     return {
         "fetch_date": datetime.now(JST).strftime("%Y年%m月%d日"),
