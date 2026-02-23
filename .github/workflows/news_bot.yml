@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: "3.11"
       - name: 패키지 설치
-        run: pip install anthropic requests
+        run: pip install anthropic requests beautifulsoup4
       - name: 발송 이력 복원
         uses: actions/cache@v4
         with:
