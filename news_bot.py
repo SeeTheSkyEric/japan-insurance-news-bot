@@ -433,14 +433,14 @@ def main():
     all_articles, seen_urls = [], set()
 
     for q in RSS_QUERIES:
-        for a in fetch_rss(q, max_items=6, days=2):
+        for a in fetch_rss(q, max_items=8, days=7):
             if a["url"] not in seen_urls:
                 all_articles.append(a)
                 seen_urls.add(a["url"])
 
     print("📰 보험 전문 언론 검색 중...")
     for q in SPECIALTY_MEDIA_QUERIES:
-        for a in fetch_rss(q, max_items=4, days=2):
+        for a in fetch_rss(q, max_items=6, days=7):
             if a["url"] not in seen_urls:
                 all_articles.append(a)
                 seen_urls.add(a["url"])
