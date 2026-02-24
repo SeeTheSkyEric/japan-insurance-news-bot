@@ -97,6 +97,21 @@ def resolve_url(url: str) -> str:
         return url
 
 
+def is_url_alive(url: str) -> bool:
+    """URL이 유효한지 확인 (404 등 에러 페이지 제외)"""
+    if not url:
+        return False
+    try:
+        res = requests.head(url, headers=HEADERS, timeout=6, allow_redirects=True)
+        return res.status_code < 400
+    except Exception:
+        try:
+            res = requests.get(url, headers=HEADERS, timeout=6, allow_redirects=True, stream=True)
+            return res.status_code < 400
+        except Exception:
+            return False
+
+
 def fetch_google_rss(query: str, max_items=8, days=7) -> list[dict]:
     encoded = quote(query, safe="")
     url = f"https://news.google.com/rss/search?q={encoded}&hl=ja&gl=JP&ceid=JP:ja"
@@ -402,22 +417,19 @@ def send_slack(data: dict, page_url: str):
     if not SLACK_WEBHOOK_URL:
         print("  ⏭ SLACK_WEBHOOK_URL 미설정")
         return
-    blocks = [
-        {"type": "header", "text": {"type": "plain_text", "text": f"🇯🇵 일본 보험뉴스 — {data['fetch_date']}"}},
-    ]
+
+    # 카테고리별 건수 요약
+    summary_parts = []
     for key, label in CAT_SLACK_LABELS.items():
-        items = [n for n in data["news"] if n["category"] == key]
-        if not items:
-            continue
-        lines = [f"*{label}* ({len(items)}건)"]
-        for i, item in enumerate(items, 1):
-            lines.append(f"  {i}. <{item['url']}|{item['title_ko']}>")
-            lines.append(f"      _{item['summary_ko']}_")
-        lines.append("")
-        blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": "\n".join(lines)}})
-    if page_url:
-        blocks.append({"type": "divider"})
-        blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": f"📰 <{page_url}|전체 기사 헤드라인 보기 →>"}})
+        cnt = len([n for n in data["news"] if n["category"] == key])
+        if cnt:
+            summary_parts.append(f"{label} {cnt}건")
+    summary = " · ".join(summary_parts)
+
+    blocks = [
+        {"type": "section", "text": {"type": "mrkdwn",
+            "text": f"🇯🇵 *일본 보험뉴스* — {data['fetch_date']}\n{summary}\n\n<{page_url}|📰 기사 헤드라인 보기 →>"}},
+    ]
     try:
         res = requests.post(SLACK_WEBHOOK_URL, json={"blocks": blocks}, timeout=10)
         print(f"  ✅ 슬랙 {'완료' if res.status_code == 200 else '실패: ' + str(res.status_code)}")
@@ -499,11 +511,14 @@ def main():
     # ──────────────────────────────────────────────────────
     # STEP 4: AI 선별/번역
     # ──────────────────────────────────────────────────────
-    # sent_keys = load_sent_history()  # TODO: 테스트 완료 후 활성화
-    sent_keys = []
-    print("\n🤖 STEP 4: AI 선별/번역...")
+    sent_keys = load_sent_history()
+    print(f"\n🤖 STEP 4: AI 선별/번역... (이력 {len(sent_keys)}건)")
     data = select_and_translate(all_articles, sent_keys)
     new_keys = [n.get("url") or n.get("title_ja", "") for n in data["news"]]
+
+    # 중복 제거 (이미 발송된 기사 제외)
+    data["news"] = [n for n in data["news"]
+                    if (n.get("url") or n.get("title_ja")) not in set(sent_keys)]
 
     if not data["news"]:
         print("  ⚠️ 뉴스 없음")
@@ -515,6 +530,17 @@ def main():
         cnt = len([n for n in data["news"] if n["category"] == key])
         print(f"  {label}: {cnt}건")
     print(f"  합계: {len(data['news'])}건")
+
+    # URL 유효성 검증 (404 제거)
+    print(f"\n🔗 URL 검증 중...")
+    valid_news = []
+    for n in data["news"]:
+        if is_url_alive(n["url"]):
+            valid_news.append(n)
+        else:
+            print(f"    ❌ 제외 (404): {n['title_ja'][:40]}")
+    data["news"] = valid_news
+    print(f"  검증 후: {len(data['news'])}건")
 
     # ──────────────────────────────────────────────────────
     # STEP 5: 저장 및 발송
