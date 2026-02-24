@@ -1,10 +1,11 @@
 # .github/workflows/news_bot.yml
-# 매일 오전 8시(KST = UTC+9) → UTC 기준 23:00에 실행
 name: 일본 보험뉴스 자동 발송
+
 on:
   schedule:
-    - cron: "0 23 * * 1-5"   # 월~금 UTC 23:00 = KST 08:00
-  workflow_dispatch:           # 수동 실행 버튼
+    - cron: "0 23 * * 0-4"
+  workflow_dispatch:
+
 jobs:
   send-news:
     runs-on: ubuntu-latest
@@ -13,12 +14,15 @@ jobs:
     steps:
       - name: 코드 체크아웃
         uses: actions/checkout@v4
+
       - name: Python 설치
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
       - name: 패키지 설치
         run: pip install anthropic requests beautifulsoup4
+
       - name: 발송 이력 복원
         uses: actions/cache@v4
         with:
@@ -42,7 +46,7 @@ jobs:
           git diff --cached --quiet || git commit -m "뉴스 페이지 업데이트 $(date +'%Y-%m-%d')"
           git push
 
-      - name: Post 발송 이력 복원
+      - name: 발송 이력 저장
         uses: actions/cache@v4
         with:
           path: sent_news_history.json
