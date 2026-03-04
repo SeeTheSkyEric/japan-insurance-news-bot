@@ -1,11 +1,8 @@
-# .github/workflows/news_bot.yml
 name: 일본 보험뉴스 자동 발송
-
 on:
   schedule:
     - cron: "0 23 * * 0-4"
   workflow_dispatch:
-
 jobs:
   send-news:
     runs-on: ubuntu-latest
@@ -23,12 +20,7 @@ jobs:
       - name: 패키지 설치
         run: pip install anthropic requests beautifulsoup4
 
-      - name: 발송 이력 복원
-        uses: actions/cache@v4
-        with:
-          path: sent_news_history.json
-          key: sent-news-history-${{ github.run_id }}
-          restore-keys: sent-news-history-
+      # ❌ 캐시 steps 삭제 — docs/sent_news_history.json을 git에서 직접 관리
 
       - name: 뉴스봇 실행 (HTML 생성 + 슬랙 발송)
         env:
@@ -38,17 +30,10 @@ jobs:
           GITHUB_PAGES_URL:  https://seetheskyeric.github.io/japan-insurance-news-bot
         run: python news_bot.py
 
-      - name: GitHub Pages HTML 배포 (Push)
+      - name: GitHub Pages HTML + 이력 파일 배포 (Push)
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/index.html
+          git add docs/index.html docs/sent_news_history.json   # ← 이력 파일도 함께 커밋
           git diff --cached --quiet || git commit -m "뉴스 페이지 업데이트 $(date +'%Y-%m-%d')"
           git push
-
-      - name: 발송 이력 저장
-        uses: actions/cache@v4
-        with:
-          path: sent_news_history.json
-          key: sent-news-history-${{ github.run_id }}
-          restore-keys: sent-news-history-
