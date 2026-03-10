@@ -1,9 +1,25 @@
-[
-  "https://news.google.com/rss/articles/CBMiakFVX3lxTE5lbUxiSGRmeHlMUlZfdzkyNmNuSXlDZzRFblkxLU8tal9fOFo5WFhlZDJJdjVYOUdaSGVzYlExU292Y2JsY29pNS1WckRkY3pwTlIwOWw4d09ib19uWllnQTU1emFTZjNoQ3c?oc=5&hl=en-US&gl=US&ceid=US:en",
-  "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9PbEVRcU5ZTC1nWm90Y0RGQWgwdE4xYUJOb2pDMzlsWC1QQlBGdUMyeHZ5N0xkS0RBemdPTGhyQ1FtZFdPTFUtM2dIUDZqeFV5NUY1c2ROcXBWVjQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-  "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBxLXJySDJITTJNdXhUdG04VUx5UEhnSW1QY1dST3piOW1zRDVHaDlmcFk4M2J4cEhHbmZTUV9XTUZtZENBaTNqSG52R2prdGVSd2dTcW5TaGdFQnBpNVFadQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-  "https://news.google.com/rss/articles/CBMiSkFVX3lxTE50VlhIOWwySFU2ek9Ea082RDFyVG9NVTVFRnlldHpEdDMzdDltcG5DZzZiMUJrbEZzS2pwaXhaRHhWWXU2NUE2TUhR?oc=5&hl=en-US&gl=US&ceid=US:en",
-  "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5BVWdhYURyX3N4YXlYRWFzRk1rMzJnay05amVSeW1ZbXVJMm1jRHJDRTJELWpySjVHMkxJb3VvTlJPaWtsQ01aMHpuT2tzUEl2a3Ew?oc=5&hl=en-US&gl=US&ceid=US:en",
-  "https://news.google.com/rss/articles/CBMiakFVX3lxTE9neTRnOGpuRkdXSzdpYmFzSHFxTFJDVXUtTURvX2FPTTNiaHBNM0hxY3c3bmdRazR2Y2k3TFYxNHEtX0doNUp6LW5kQXVYbjY0aFVENzlQNWdraUpDMlVMVGFvUENQV3I1YXc?oc=5&hl=en-US&gl=US&ceid=US:en",
-  "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5BUjBFeWZwUWF3dV9wOGIwNnU0MzktWHh6ckYtb3lPSDZwUG50VkdPUlQ5WDBtV2g0LTRHdjFzdzN0eno1SEhYZWExWlfSAU9BVV95cUxOT0tYMl9DSU9QMzUweGI0N25vOExsaFZRaWtGcEk0SGYtZm1IVFlPQ3VHd1BxQ1lHTjJuM0dVSGJDN2VPSTF4aFphdXI4VDYw?oc=5&hl=en-US&gl=US&ceid=US:en"
-]
+{
+  "urls": [
+    "https://news.google.com/rss/articles/CBMiakFVX3lxTE5lbUxiSGRmeHlMUlZfdzkyNmNuSXlDZzRFblkxLU8tal9fOFo5WFhlZDJJdjVYOUdaSGVzYlExU292Y2JsY29pNS1WckRkY3pwTlIwOWw4d09ib19uWllnQTU1emFTZjNoQ3c?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9PbEVRcU5ZTC1nWm90Y0RGQWgwdE4xYUJOb2pDMzlsWC1QQlBGdUMyeHZ5N0xkS0RBemdPTGhyQ1FtZFdPTFUtM2dIUDZqeFV5NUY1c2ROcXBWVjQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBxLXJySDJITTJNdXhUdG04VUx5UEhnSW1QY1dST3piOW1zRDVHaDlmcFk4M2J4cEhHbmZTUV9XTUZtZENBaTNqSG52R2prdGVSd2dTcW5TaGdFQnBpNVFadQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/articles/CBMiSkFVX3lxTE50VlhIOWwySFU2ek9Ea082RDFyVG9NVTVFRnlldHpEdDMzdDltcG5DZzZiMUJrbEZzS2pwaXhaRHhWWXU2NUE2TUhR?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5BVWdhYURyX3N4YXlYRWFzRk1rMzJnay05amVSeW1ZbXVJMm1jRHJDRTJELWpySjVHMkxJb3VvTlJPaWtsQ01aMHpuT2tzUEl2a3Ew?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/articles/CBMiakFVX3lxTE9neTRnOGpuRkdXSzdpYmFzSHFxTFJDVXUtTURvX2FPTTNiaHBNM0hxY3c3bmdRazR2Y2k3TFYxNHEtX0doNUp6LW5kQXVYbjY0aFVENzlQNWdraUpDMlVMVGFvUENQV3I1YXc?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5BUjBFeWZwUWF3dV9wOGIwNnU0MzktWHh6ckYtb3lPSDZwUG50VkdPUlQ5WDBtV2g0LTRHdjFzdzN0eno1SEhYZWExWlfSAU9BVV95cUxOT0tYMl9DSU9QMzUweGI0N25vOExsaFZRaWtGcEk0SGYtZm1IVFlPQ3VHd1BxQ1lHTjJuM0dVSGJDN2VPSTF4aFphdXI4VDYw?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/articles/CBMiekFVX3lxTE1NUi1ocXhoc2xsdEFRTkYydnhwYU1XVW9RZkJYNlJXWVpCQmdxaGRPbUljUTY4RlRwSzh3c0wwYmZkSDU3U3JqdVM3Uy1TcnVKRFZmR1BlVFlEM2M3ZzZuR2pFSmVxSEJCWVBUcGsxNS05SmRyMm9KTVBB?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1USTFSRzFMbTdRLTR6ZFNmc0pVcGI3ZlhTa2M1eWVrT2lhSUVwR2ZuX2JtbGRoV291WFQ4MEpaYWxwdWNlc1FLd3hiNA?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/articles/CBMiakFVX3lxTE5ubWVoRDlzRE9EYlpRWE1jSklrYy1OX3B4M0V6YjE3eW9SNG5kV0Gabm1SSmVGNmN1ZlBmQUdKeG5pVkhiNm9XQi1pYTc2V2FIZ3M1VjRFQ0JuT3c1NWY5TXBSdWNKUjMyQ1E?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9maUw4Z01EQ0pORTVvYW5QTkY0a19XTG9PaVB3VFhucXJFb0Z1ZUZGUV9WNWxoTXlVcGxyT3hNOEdxNXJENmg0MDNYbGMtYS0tR2lv?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9fRkVOdXlJQzY5c20zOUd2bnhscXFXRVcxZ1VRUmhKVkxYNVNiZjQ0SjhMU3pGb3dOLWlhamJxVkVlOXh4UWk4NnJmam9fNkE?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/articles/CBMic0FVX3lxTE9mZXhFRVZ3cUVXN3ZjBFJXY0hJcXhmX0FwOUlHbkplTW5ldWF1V21NUTY4dmdhSEVlblpRU2RUcHVrc0o3US05dmtXbHVaMGRwQlBaTTlKb1dNc256SVFSWGtHNl9vT0tyXzdkc0lZMWRPd2c?oc=5&hl=en-US&gl=US&ceid=US:en"
+  ],
+  "titles": [
+    "ニュートン・フィナンシャル・コンサルティング、「生命保険乗合代理店業務品質評価運営」認定を継続",
+    "日本マイクロソフト、フィンテック・インシュアテック領域における協業プログラムを開始",
+    "損保ジャパンとSOMPOリスク、ドローン×AI解析で森林調査サービスを低コスト化",
+    "東京海上日動、コンタクトセンターの主要業務にAI導入--CTCとPKSHAが支援",
+    "2026年保険業法改正に備えた新しい記録管理システム『保険のキロク』の導入事例",
+    "2026年6月保険業法改正に対応、録音するだけで「意向把握・比較推奨販売記録」を自動作成 保険代理店向けAIシステム"
+  ]
+}
