@@ -3,7 +3,7 @@
 # HabitFactory 일본 보험뉴스 자동 발송 스크립트
 # 매일 아침 8시(KST) 자동 실행
 # ============================================================
-# pip install google-generativeai requests beautifulsoup4
+# pip install google-genai requests beautifulsoup4
 # ============================================================
 
 import os, json, re, requests
@@ -13,7 +13,7 @@ from urllib.parse import quote
 from xml.etree import ElementTree as ET
 from email.utils import parsedate_to_datetime
 from bs4 import BeautifulSoup
-import google.generativeai as genai                          # ← 변경
+from google import genai                                     # ← 변경
 
 # ── 환경변수 ─────────────────────────────────────────────────
 GEMINI_API_KEY    = os.environ["GEMINI_API_KEY"]             # ← 변경
@@ -25,11 +25,7 @@ JST = timezone(timedelta(hours=9))
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
 
 # ── Gemini 클라이언트 초기화 ──────────────────────────────── # ← 변경
-genai.configure(api_key=GEMINI_API_KEY)
-gemini = genai.GenerativeModel(
-    model_name="gemini-2.5-flash-preview-04-17",
-    generation_config=genai.GenerationConfig(temperature=0.2, max_output_tokens=3000),
-)
+gemini_client = genai.Client(api_key=GEMINI_API_KEY)
 # ─────────────────────────────────────────────────────────────
 
 # ── 검색어 ───────────────────────────────────────────────────
@@ -336,7 +332,10 @@ Output only the selected lines, nothing else."""
 
     for attempt in range(2):                                 # ← 변경 (여기서부터)
         try:
-            response = gemini.generate_content(prompt)
+            response = gemini_client.models.generate_content(
+                model="gemini-2.5-flash",
+                contents=prompt,
+            )
             raw = response.text.strip()
             # 혹시 마크다운 펜스 제거
             if raw.startswith("```"):
