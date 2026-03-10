@@ -27,7 +27,7 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/
 # ── Gemini 클라이언트 초기화 ──────────────────────────────── # ← 변경
 genai.configure(api_key=GEMINI_API_KEY)
 gemini = genai.GenerativeModel(
-    model_name="gemini-1.5-flash",
+    model_name="gemini-2.0-flash",
     generation_config=genai.GenerationConfig(temperature=0.2, max_output_tokens=3000),
 )
 # ─────────────────────────────────────────────────────────────
