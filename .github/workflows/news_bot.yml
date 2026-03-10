@@ -21,7 +21,7 @@ jobs:
           python-version: '3.11'
 
       - name: 패키지 설치
-        run: pip install google-generativeai requests beautifulsoup4
+        run: pip install google-genai requests beautifulsoup4
 
       - name: 뉴스봇 실행
         env:
