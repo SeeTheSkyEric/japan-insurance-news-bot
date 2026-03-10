@@ -3,7 +3,7 @@
 # HabitFactory 일본 보험뉴스 자동 발송 스크립트
 # 매일 아침 8시(KST) 자동 실행
 # ============================================================
-# pip install anthropic requests beautifulsoup4
+# pip install google-generativeai requests beautifulsoup4
 # ============================================================
 
 import os, json, re, requests
@@ -13,16 +13,23 @@ from urllib.parse import quote
 from xml.etree import ElementTree as ET
 from email.utils import parsedate_to_datetime
 from bs4 import BeautifulSoup
-import anthropic
+import google.generativeai as genai                          # ← 변경
 
 # ── 환경변수 ─────────────────────────────────────────────────
-ANTHROPIC_API_KEY = os.environ["ANTHROPIC_API_KEY"]
+GEMINI_API_KEY    = os.environ["GEMINI_API_KEY"]             # ← 변경
 SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL", "")
 NEWSAPI_KEY       = os.environ.get("NEWSAPI_KEY", "")
 SENT_HISTORY_FILE = "docs/sent_news_history.json"
 GITHUB_PAGES_URL  = os.environ.get("GITHUB_PAGES_URL", "")
 JST = timezone(timedelta(hours=9))
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+
+# ── Gemini 클라이언트 초기화 ──────────────────────────────── # ← 변경
+genai.configure(api_key=GEMINI_API_KEY)
+gemini = genai.GenerativeModel(
+    model_name="gemini-1.5-flash",
+    generation_config=genai.GenerationConfig(temperature=0.2, max_output_tokens=3000),
+)
 # ─────────────────────────────────────────────────────────────
 
 # ── 검색어 ───────────────────────────────────────────────────
@@ -252,7 +259,7 @@ def load_sent_history() -> dict:
     if os.path.exists(SENT_HISTORY_FILE):
         with open(SENT_HISTORY_FILE) as f:
             data = json.load(f)
-            if isinstance(data, list):  # 기존 포맷 호환
+            if isinstance(data, list):
                 return {"urls": data, "titles": []}
             return data
     return {"urls": [], "titles": []}
@@ -284,7 +291,6 @@ def select_and_translate(articles: list[dict], sent_history: dict) -> dict:
     sent_urls   = sent_history.get("urls", [])
     sent_titles = sent_history.get("titles", [])
 
-    # 방법 B: AI 프롬프트에 이미 발송된 URL + 제목 모두 전달
     exclude_block = ""
     if sent_urls:
         exclude_block += "Exclude these already-sent URLs:\n" + "\n".join(sent_urls[-60:]) + "\n"
@@ -328,21 +334,21 @@ CATEGORY|RANK|TITLE_JA|TITLE_KO|SUMMARY_KO|SOURCE|URL|PUBLISHED
 
 Output only the selected lines, nothing else."""
 
-    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-    for attempt in range(2):
+    for attempt in range(2):                                 # ← 변경 (여기서부터)
         try:
-            msg = client.messages.create(
-                model="claude-sonnet-4-20250514",
-                max_tokens=3000,
-                messages=[{"role": "user", "content": prompt}],
-            )
-            raw = msg.content[0].text.strip()
+            response = gemini.generate_content(prompt)
+            raw = response.text.strip()
+            # 혹시 마크다운 펜스 제거
+            if raw.startswith("```"):
+                raw = raw.split("```")[1]
+                if raw.startswith("json") or raw.startswith("text"):
+                    raw = raw.split("\n", 1)[1]
             print(f"  API 응답 (attempt {attempt+1}):\n  {raw[:400]}...")
             break
         except Exception as e:
             print(f"  ⚠️ API 실패 (attempt {attempt+1}): {e}")
             if attempt == 1:
-                raise
+                raise                                        # ← 변경 (여기까지)
 
     news_list = []
     today = datetime.now(JST).strftime("%Y/%m/%d")
@@ -367,7 +373,6 @@ Output only the selected lines, nothing else."""
     if not news_list:
         raise ValueError(f"파싱 실패:\n{raw}")
 
-    # 후처리: agency 은행 제외
     news_list = [
         n for n in news_list
         if not (n["category"] == "agency" and any(
@@ -376,7 +381,6 @@ Output only the selected lines, nothing else."""
         ))
     ]
 
-    # 방법 A: URL 완전일치 OR 제목 유사도 80% 이상이면 중복 제외
     sent_url_set = set(sent_urls)
     news_list = [
         n for n in news_list
@@ -384,7 +388,6 @@ Output only the selected lines, nothing else."""
         and not is_duplicate(n.get("title_ja", ""), sent_titles, threshold=0.8)
     ]
 
-    # 카테고리별 최대 3건
     filtered, cat_count = [], {}
     for n in news_list:
         c = n["category"]
@@ -484,7 +487,6 @@ def main():
             seen_urls.add(a["url"])
             seen_titles.add(a["title"])
 
-    # STEP 1: 전문매체 헤드라인 크롤링
     print("\n📰 STEP 1: 전문매체 헤드라인 크롤링...")
     headlines = crawl_homai_headlines() + crawl_inswatch_headlines()
     if headlines:
@@ -494,14 +496,12 @@ def main():
                 add(a)
         print(f"    전문매체 기반: {len(all_articles)}건 확보")
 
-    # STEP 2: Google News RSS 키워드 검색
     print(f"\n📡 STEP 2: Google News 키워드 검색...")
     for q in RSS_QUERIES:
         for a in fetch_google_rss(q, max_items=8, days=7):
             add(a)
     print(f"    Google News 후: {len(all_articles)}건")
 
-    # STEP 3: NewsAPI 키워드 검색
     if NEWSAPI_KEY:
         print(f"\n📡 STEP 3: NewsAPI 키워드 검색...")
         for q in NEWSAPI_QUERIES:
@@ -517,7 +517,6 @@ def main():
         send_slack_no_news()
         return
 
-    # STEP 4: AI 선별/번역 (방법 A+B 중복 제거 적용)
     sent_history = load_sent_history()
     print(f"\n🤖 STEP 4: AI 선별/번역... (이력 URL {len(sent_history['urls'])}건, 제목 {len(sent_history['titles'])}건)")
     data = select_and_translate(all_articles, sent_history)
@@ -533,7 +532,6 @@ def main():
         print(f"  {label}: {cnt}건")
     print(f"  합계: {len(data['news'])}건")
 
-    # URL 유효성 검증
     print(f"\n🔗 URL 검증 중...")
     valid_news = []
     for n in data["news"]:
@@ -544,7 +542,6 @@ def main():
     data["news"] = valid_news
     print(f"  검증 후: {len(data['news'])}건")
 
-    # STEP 5: 저장 및 발송
     with open("news_cache.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     print("\n  ✅ news_cache.json 저장")
@@ -553,7 +550,6 @@ def main():
     print("\n📤 STEP 5: Slack 발송...")
     send_slack(data, GITHUB_PAGES_URL)
 
-    # 이력 업데이트: URL + 제목 분리 저장
     new_urls   = [n["url"]      for n in data["news"] if n.get("url")]
     new_titles = [n["title_ja"] for n in data["news"] if n.get("title_ja")]
     save_sent_history({
