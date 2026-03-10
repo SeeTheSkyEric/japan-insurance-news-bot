@@ -20,7 +20,7 @@ GEMINI_API_KEY    = os.environ["GEMINI_API_KEY"]             # ← 변경
 SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL", "")
 NEWSAPI_KEY       = os.environ.get("NEWSAPI_KEY", "")
 SENT_HISTORY_FILE = "docs/sent_news_history.json"
-GITHUB_PAGES_URL  = os.environ.get("GITHUB_PAGES_URL", "")
+GITHUB_PAGES_URL  = os.environ.get("GITHUB_PAGES_URL", "https://seetheskyeric.github.io/japan-insurance-news-bot/")
 JST = timezone(timedelta(hours=9))
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
 
