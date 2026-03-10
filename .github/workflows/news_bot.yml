@@ -1,39 +1,40 @@
-name: 일본 보험뉴스 자동 발송
+name: 일본 보험뉴스 자동 발송  # 파일명: news_bot.yml
+
 on:
   schedule:
-    - cron: "0 23 * * 0-4"
+    - cron: '0 23 * * 0-4'   # 평일 KST 08:00 (UTC 23:00, 일~목)
   workflow_dispatch:
+
 jobs:
   send-news:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
-      - name: 코드 체크아웃
+      - name: 레포 체크아웃
         uses: actions/checkout@v4
 
-      - name: Python 설치
+      - name: Python 설정
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: '3.11'
 
       - name: 패키지 설치
-        run: pip install anthropic requests beautifulsoup4
+        run: pip install google-generativeai requests beautifulsoup4
 
-      # ❌ 캐시 steps 삭제 — docs/sent_news_history.json을 git에서 직접 관리
-
-      - name: 뉴스봇 실행 (HTML 생성 + 슬랙 발송)
+      - name: 뉴스봇 실행
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY:    ${{ secrets.GEMINI_API_KEY }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           NEWSAPI_KEY:       ${{ secrets.NEWSAPI_KEY }}
-          GITHUB_PAGES_URL:  https://seetheskyeric.github.io/japan-insurance-news-bot
+          GITHUB_PAGES_URL:  ${{ secrets.GITHUB_PAGES_URL }}
         run: python news_bot.py
 
-      - name: GitHub Pages HTML + 이력 파일 배포 (Push)
+      - name: HTML + 히스토리 커밋 & 푸시
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/index.html docs/sent_news_history.json   # ← 이력 파일도 함께 커밋
-          git diff --cached --quiet || git commit -m "뉴스 페이지 업데이트 $(date +'%Y-%m-%d')"
+          git add docs/index.html docs/sent_news_history.json
+          git diff --cached --quiet || git commit -m "chore: 일본 보험뉴스 자동 업데이트 $(date +'%Y-%m-%d')"
           git push
