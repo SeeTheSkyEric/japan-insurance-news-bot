@@ -104,7 +104,31 @@ def is_duplicate(article_title: str, sent_titles: list[str], threshold=0.8) -> b
 # 소스 A: Google News RSS 검색
 # ═══════════════════════════════════════════════════════════
 def resolve_url(url: str) -> str:
+    """Google News 리다이렉트 URL → 실제 기사 URL로 변환"""
+    if not url:
+        return url
     try:
+        # Google News URL인 경우 특별 처리
+        if "news.google.com" in url:
+            res = requests.get(
+                url,
+                allow_redirects=True,
+                timeout=10,
+                headers={
+                    **HEADERS,
+                    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                    "Accept-Language": "ja,en-US;q=0.7,en;q=0.3",
+                },
+            )
+            # 최종 URL이 여전히 Google이면 HTML에서 실제 URL 추출 시도
+            if "news.google.com" in res.url:
+                soup = BeautifulSoup(res.text, "html.parser")
+                for a in soup.find_all("a", href=True):
+                    href = a["href"]
+                    if href.startswith("http") and "google.com" not in href:
+                        return href
+            return res.url
+        # 일반 URL
         res = requests.get(url, allow_redirects=True, timeout=6, headers=HEADERS, stream=True)
         return res.url
     except Exception:
