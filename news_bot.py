@@ -112,29 +112,45 @@ def resolve_url(url: str) -> str:
     """Google News 리다이렉트 URL → 실제 기사 URL로 변환"""
     if not url:
         return url
-    try:
-        # Google News URL인 경우 특별 처리
-        if "news.google.com" in url:
-            res = requests.get(
-                url,
-                allow_redirects=True,
-                timeout=10,
-                headers={
-                    **HEADERS,
-                    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-                    "Accept-Language": "ja,en-US;q=0.7,en;q=0.3",
-                },
-            )
-            # 최종 URL이 여전히 Google이면 HTML에서 실제 URL 추출 시도
-            if "news.google.com" in res.url:
-                soup = BeautifulSoup(res.text, "html.parser")
-                for a in soup.find_all("a", href=True):
-                    href = a["href"]
-                    if href.startswith("http") and "google.com" not in href:
-                        return href
+    if "news.google.com" not in url:
+        try:
+            res = requests.get(url, allow_redirects=True, timeout=6, headers=HEADERS, stream=True)
             return res.url
-        # 일반 URL
-        res = requests.get(url, allow_redirects=True, timeout=6, headers=HEADERS, stream=True)
+        except Exception:
+            return url
+    try:
+        gnews_headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "ja,en-US;q=0.7,en;q=0.3",
+            "Referer": "https://news.google.com/",
+        }
+        res = requests.get(url, allow_redirects=True, timeout=10, headers=gnews_headers)
+        if "news.google.com" not in res.url:
+            return res.url
+        soup = BeautifulSoup(res.text, "html.parser")
+        # meta refresh 태그 확인
+        meta = soup.find("meta", attrs={"http-equiv": "refresh"})
+        if meta and meta.get("content"):
+            content = meta["content"]
+            if "url=" in content.lower():
+                actual = content.split("url=", 1)[1].strip()
+                if actual.startswith("http"):
+                    return actual
+        # JavaScript window.location 확인
+        for script in soup.find_all("script"):
+            text = script.string or ""
+            if "window.location" in text:
+                match = re.search(r'window\.location\s*=\s*["\']([^"\']+)["\']', text)
+                if match:
+                    redirect = match.group(1)
+                    if redirect.startswith("http") and "google.com" not in redirect:
+                        return redirect
+        # a 태그에서 실제 URL 추출
+        for a in soup.find_all("a", href=True):
+            href = a["href"]
+            if href.startswith("http") and "google.com" not in href:
+                return href
         return res.url
     except Exception:
         return url
