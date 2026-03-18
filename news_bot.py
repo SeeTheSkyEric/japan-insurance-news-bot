@@ -22,7 +22,12 @@ NEWSAPI_KEY       = os.environ.get("NEWSAPI_KEY", "")
 SENT_HISTORY_FILE = "docs/sent_news_history.json"
 GITHUB_PAGES_URL  = os.environ.get("GITHUB_PAGES_URL") or "https://seetheskyeric.github.io/japan-insurance-news-bot/"
 JST = timezone(timedelta(hours=9))
-HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "ja,en-US;q=0.7,en;q=0.3",
+    "Accept-Encoding": "gzip, deflate, br",
+}
 
 # ── Gemini 클라이언트 초기화 ──────────────────────────────── # ← 변경
 gemini_client = genai.Client(api_key=GEMINI_API_KEY)
