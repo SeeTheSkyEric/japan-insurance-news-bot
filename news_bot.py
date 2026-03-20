@@ -118,7 +118,7 @@ def is_duplicate(article_title: str, sent_titles: list[str], threshold=0.8) -> b
     return False
 
 # ═══════════════════════════════════════════════════════════
-# URL 유효성 체크 (resolve_url 제거 — Google News URL 그대로 사용)
+# URL 유효성 체크
 # ═══════════════════════════════════════════════════════════
 def is_url_alive(url: str) -> bool:
     if not url:
@@ -151,7 +151,9 @@ def fetch_google_rss(query: str, max_items=8, days=7) -> list[dict]:
     for item in root.findall(".//item")[:max_items]:
         title = item.findtext("title") or ""
         title = re.sub(r" - [^-]+$", "", title).strip()
-        link = item.findtext("link") or ""   # ← Google News URL 그대로 사용 (변환 안 함)
+        link = item.findtext("link") or ""
+        # ✅ 수정 1: /rss/articles/ → /articles/ 로 변환하여 브라우저에서 정상 작동
+        link = link.replace("/rss/articles/", "/articles/")
         pub_str = item.findtext("pubDate") or ""
         try:
             pub_dt = parsedate_to_datetime(pub_str)
@@ -322,7 +324,7 @@ IMPORTANT: Prioritize news that is:
 Rules:
 - Each category: exactly the number specified above
 - title_ko: natural Korean translation of the Japanese title
-- summary_ko: one concise Korean sentence explaining why this matters (NO pipe "|" character)
+- summary_ko: Write 3~4 Korean sentences covering — ① what happened (사건/발표 내용), ② key figures or details if available (금액/규모/회사명 등), ③ background context (배경 및 경위), ④ impact on insurance agencies or insurers (업계 영향). Do NOT use pipe "|" character anywhere in the summary.
 - Keep original URL exactly as provided
 - Prefer recent, high-impact, industry-specific news
 
@@ -411,15 +413,19 @@ def build_html(data: dict, for_web=False) -> str:
         items = [n for n in data["news"] if n["category"] == key]
         if not items:
             continue
-        rows += f'<tr><td colspan="2" style="background:{color};color:white;padding:10px 16px;font-weight:bold;font-size:15px;">{label}</td></tr>'
+        rows += f'<tr><td style="background:{color};color:white;padding:10px 16px;font-weight:bold;font-size:15px;">{label}</td></tr>'
         for item in items:
-            title_style = "color:#D97706;font-weight:bold;font-size:17px;text-decoration:none;line-height:1.5;" if key == "top" else "color:#1D4ED8;font-weight:bold;font-size:15px;text-decoration:none;line-height:1.5;"
+            title_style = (
+                "color:#D97706;font-weight:bold;font-size:17px;text-decoration:none;line-height:1.5;"
+                if key == "top" else
+                "color:#1D4ED8;font-weight:bold;font-size:15px;text-decoration:none;line-height:1.5;"
+            )
             rows += f"""<tr style="border-bottom:1px solid #eee;">
   <td style="padding:14px 16px;vertical-align:top;">
     <a href="{item['url']}" style="{title_style}">{item['title_ko']}</a><br>
     <span style="color:#6B7280;font-size:13px;">🇯🇵 {item['title_ja']}</span><br>
-    <span style="color:#9CA3AF;font-size:12px;">📅 {item['published']} · 📰 {item['source']}</span><br>
-    <div style="background:#F9FAFB;padding:8px 10px;border-radius:6px;margin-top:6px;font-size:13px;color:#374151;">{item['summary_ko']}</div>
+    <span style="color:#9CA3AF;font-size:12px;">📅 {item['published']} · 📰 {item['source']}</span>
+    <div style="background:#F9FAFB;padding:10px 12px;border-radius:6px;margin-top:8px;font-size:13px;color:#374151;line-height:1.8;">{item['summary_ko']}</div>
   </td>
 </tr>"""
     meta    = '<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">' if for_web else ""
@@ -562,7 +568,7 @@ def main():
         print(f"  {label}: {cnt}건")
     print(f"  합계: {len(data['news'])}건")
 
-    # Google News URL은 항상 살아있으므로 URL 검증은 간소화
+    # Google News URL은 항상 살아있으므로 URL 검증 간소화
     print(f"\n🔗 URL 검증 중...")
     valid_news = []
     for n in data["news"]:
