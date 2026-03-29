@@ -3,7 +3,7 @@
 # HabitFactory 일본 보험뉴스 자동 발송 스크립트
 # 매일 아침 8시(KST) 자동 실행
 # ============================================================
-# pip install google-genai requests beautifulsoup4
+# pip install anthropic requests beautifulsoup4
 # ============================================================
 import os, json, re, requests
 from datetime import datetime, timezone, timedelta
@@ -12,10 +12,10 @@ from urllib.parse import quote
 from xml.etree import ElementTree as ET
 from email.utils import parsedate_to_datetime
 from bs4 import BeautifulSoup
-from google import genai
+import anthropic
 
 # ── 환경변수 ────────────────────────────────────────────────
-GEMINI_API_KEY    = os.environ["GEMINI_API_KEY"]
+ANTHROPIC_API_KEY = os.environ["ANTHROPIC_API_KEY"]
 SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL", "")
 NEWSAPI_KEY       = os.environ.get("NEWSAPI_KEY", "")
 SENT_HISTORY_FILE = "docs/sent_news_history.json"
@@ -28,8 +28,8 @@ HEADERS = {
     "Accept-Encoding": "gzip, deflate, br",
 }
 
-# ── Gemini 클라이언트 초기화 ──────────────────────────────
-gemini_client = genai.Client(api_key=GEMINI_API_KEY)
+# ── Claude 클라이언트 초기화 ──────────────────────────────
+claude_client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
 # ── 검색어 ──────────────────────────────────────────────────
 
@@ -152,7 +152,6 @@ def fetch_google_rss(query: str, max_items=8, days=7) -> list[dict]:
         title = item.findtext("title") or ""
         title = re.sub(r" - [^-]+$", "", title).strip()
         link = item.findtext("link") or ""
-        # ✅ 수정 1: /rss/articles/ → /articles/ 로 변환하여 브라우저에서 정상 작동
         link = link.replace("/rss/articles/", "/articles/")
         pub_str = item.findtext("pubDate") or ""
         try:
@@ -340,11 +339,12 @@ Output only the 10 selected lines, nothing else."""
 
     for attempt in range(2):
         try:
-            response = gemini_client.models.generate_content(
-                model="gemini-2.5-flash",
-                contents=prompt,
+            message = claude_client.messages.create(
+                model="claude-haiku-4-5-20251001",
+                max_tokens=4000,
+                messages=[{"role": "user", "content": prompt}]
             )
-            raw = response.text.strip()
+            raw = message.content[0].text.strip()
             if raw.startswith("```"):
                 raw = raw.split("```")[1]
             if raw.startswith("json") or raw.startswith("text"):
@@ -513,7 +513,7 @@ def main():
             seen_urls.add(a["url"])
             seen_titles.add(a["title"])
 
-    # ── STEP 0: Google News 일본 세션 "保険" 직접 검색 (우선순위 최상) ──
+    # ── STEP 0: Google News 일본 세션 "保険" 직접 검색 ──
     print("\n🔍 STEP 0: Google News 일본 세션 '保険' 직접 검색...")
     for q in GOOGLE_NEWS_PRIORITY_QUERIES:
         for a in fetch_google_rss(q, max_items=20, days=3):
