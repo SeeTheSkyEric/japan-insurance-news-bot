@@ -3,7 +3,7 @@
 # HabitFactory 일본 보험뉴스 자동 발송 스크립트
 # 매일 아침 8시(KST) 자동 실행
 # ============================================================
-# pip install anthropic requests beautifulsoup4
+# pip install google-genai requests beautifulsoup4
 # ============================================================
 import os, json, re, requests
 from datetime import datetime, timezone, timedelta
@@ -12,10 +12,10 @@ from urllib.parse import quote
 from xml.etree import ElementTree as ET
 from email.utils import parsedate_to_datetime
 from bs4 import BeautifulSoup
-import anthropic
+from google import genai
 
 # ── 환경변수 ────────────────────────────────────────────────
-ANTHROPIC_API_KEY = os.environ["ANTHROPIC_API_KEY"]
+GEMINI_API_KEY    = os.environ["GEMINI_API_KEY"]
 SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL", "")
 NEWSAPI_KEY       = os.environ.get("NEWSAPI_KEY", "")
 SENT_HISTORY_FILE = "docs/sent_news_history.json"
@@ -28,12 +28,11 @@ HEADERS = {
     "Accept-Encoding": "gzip, deflate, br",
 }
 
-# ── Claude 클라이언트 초기화 ──────────────────────────────
-claude_client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+# ── Gemini 클라이언트 초기화 ──────────────────────────────
+gemini_client = genai.Client(api_key=GEMINI_API_KEY)
 
 # ── 검색어 ──────────────────────────────────────────────────
 
-# 우선순위 최상: Google News 일본 세션 "保険" 직접 검색
 GOOGLE_NEWS_PRIORITY_QUERIES = [
     "保険",
     "生命保険 OR 損害保険",
@@ -339,12 +338,11 @@ Output only the 10 selected lines, nothing else."""
 
     for attempt in range(2):
         try:
-            message = claude_client.messages.create(
-                model="claude-haiku-4-5-20251001",
-                max_tokens=4000,
-                messages=[{"role": "user", "content": prompt}]
+            response = gemini_client.models.generate_content(
+                model="gemini-2.5-flash",
+                contents=prompt,
             )
-            raw = message.content[0].text.strip()
+            raw = response.text.strip()
             if raw.startswith("```"):
                 raw = raw.split("```")[1]
             if raw.startswith("json") or raw.startswith("text"):
@@ -379,7 +377,6 @@ Output only the 10 selected lines, nothing else."""
     if not news_list:
         raise ValueError(f"파싱 실패:\n{raw}")
 
-    # agency 카테고리에서 은행 관련 기사 제거
     news_list = [
         n for n in news_list
         if not (
@@ -388,7 +385,6 @@ Output only the 10 selected lines, nothing else."""
         )
     ]
 
-    # 이미 발송된 기사 제거
     sent_url_set = set(sent_urls)
     news_list = [
         n for n in news_list
@@ -396,7 +392,6 @@ Output only the 10 selected lines, nothing else."""
         and not is_duplicate(n.get("title_ja", ""), sent_titles, threshold=0.8)
     ]
 
-    # 카테고리별 최대 개수 적용 (top:1, agency:3, insurtech:3, insurer:3)
     filtered, cat_count = [], {}
     for n in news_list:
         c = n["category"]
@@ -513,14 +508,12 @@ def main():
             seen_urls.add(a["url"])
             seen_titles.add(a["title"])
 
-    # ── STEP 0: Google News 일본 세션 "保険" 직접 검색 ──
     print("\n🔍 STEP 0: Google News 일본 세션 '保険' 직접 검색...")
     for q in GOOGLE_NEWS_PRIORITY_QUERIES:
         for a in fetch_google_rss(q, max_items=20, days=3):
             add(a)
     print(f"  STEP 0 완료: {len(all_articles)}건 확보")
 
-    # ── STEP 1: 전문매체 헤드라인 크롤링 ──
     print("\n📰 STEP 1: 전문매체 헤드라인 크롤링...")
     headlines = crawl_homai_headlines() + crawl_inswatch_headlines()
     if headlines:
@@ -530,14 +523,12 @@ def main():
                 add(a)
         print(f"  전문매체 기반: {len(all_articles)}건 확보")
 
-    # ── STEP 2: Google News 키워드 검색 ──
     print(f"\n📡 STEP 2: Google News 키워드 검색...")
     for q in RSS_QUERIES:
         for a in fetch_google_rss(q, max_items=8, days=7):
             add(a)
     print(f"  Google News 후: {len(all_articles)}건")
 
-    # ── STEP 3: NewsAPI ──
     if NEWSAPI_KEY:
         print(f"\n📡 STEP 3: NewsAPI 키워드 검색...")
         for q in NEWSAPI_QUERIES:
@@ -568,7 +559,6 @@ def main():
         print(f"  {label}: {cnt}건")
     print(f"  합계: {len(data['news'])}건")
 
-    # Google News URL은 항상 살아있으므로 URL 검증 간소화
     print(f"\n🔗 URL 검증 중...")
     valid_news = []
     for n in data["news"]:
