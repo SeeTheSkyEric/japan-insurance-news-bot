@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 import re
 
 # ─── 설정 ────────────────────────────────────────────────────────────────────
-GOOGLE_API_KEY      = os.environ.get("GOOGLE_API_KEY") or ""
+GOOGLE_API_KEY = os.environ.get("GEMINI_API_KEY") or ""
 NEWSAPI_KEY         = os.environ.get("NEWSAPI_KEY") or ""
 SLACK_WEBHOOK_URL   = os.environ.get("SLACK_WEBHOOK_VIETNAM") or ""
 
