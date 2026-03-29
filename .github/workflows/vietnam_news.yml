@@ -26,7 +26,7 @@ jobs:
 
       - name: Run Vietnam News Bot
         env:
-          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
           SLACK_WEBHOOK_VIETNAM: ${{ secrets.SLACK_WEBHOOK_VIETNAM }}
         run: |
