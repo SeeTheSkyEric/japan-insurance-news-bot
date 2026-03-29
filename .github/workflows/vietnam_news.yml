@@ -29,13 +29,14 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
           SLACK_WEBHOOK_VIETNAM: ${{ secrets.SLACK_WEBHOOK_VIETNAM }}
+          GITHUB_PAGES_URL: https://seetheskyeric.github.io/japan-insurance-news-bot/vietnam.html
         run: |
           python vietnam/vietnam_news.py
 
-      - name: Commit updated history
+      - name: Commit updated files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add docs/vietnam_sent_history.json || true
-          git diff --staged --quiet || git commit -m "Update Vietnam news history [$(date '+%Y-%m-%d')]"
+          git add docs/vietnam.html docs/vietnam_sent_history.json || true
+          git diff --staged --quiet || git commit -m "Update Vietnam news [$(date '+%Y-%m-%d')]"
           git push || true
