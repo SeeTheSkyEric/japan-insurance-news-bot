@@ -10,14 +10,29 @@ from bs4 import BeautifulSoup
 import re
 
 # ─── 설정 ────────────────────────────────────────────────────────────────────
-GEMINI_API_KEY      = os.environ.get("GEMINI_API_KEY") or ""
-NEWSAPI_KEY         = os.environ.get("NEWSAPI_KEY") or ""
-SLACK_WEBHOOK_URL   = os.environ.get("SLACK_WEBHOOK_VIETNAM") or ""
+GEMINI_API_KEY    = os.environ.get("GEMINI_API_KEY") or ""
+NEWSAPI_KEY       = os.environ.get("NEWSAPI_KEY") or ""
+SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_VIETNAM") or ""
+GITHUB_PAGES_URL  = os.environ.get("GITHUB_PAGES_URL") or "https://seetheskyeric.github.io/japan-insurance-news-bot/vietnam.html"
 
 gemini_client = genai.Client(api_key=GEMINI_API_KEY)
 
 HISTORY_FILE = "docs/vietnam_sent_history.json"
 MAX_HISTORY  = 500
+
+# ─── 카테고리 설정 ────────────────────────────────────────────────────────────
+CATS = [
+    ("top",       "🔥 오늘의 TOP 뉴스",  "#F59E0B"),
+    ("agency",    "🏢 보험대리점 관련",  "#2E86AB"),
+    ("insurtech", "💡 인슈어테크 관련",  "#8B5CF6"),
+    ("insurer",   "🏦 보험사 관련",      "#059669"),
+]
+CAT_SLACK_LABELS = {
+    "top":       "🔥 TOP 뉴스",
+    "agency":    "🏢 보험대리점",
+    "insurtech": "💡 인슈어테크",
+    "insurer":   "🏦 보험사",
+}
 
 # ─── 중복 방지 ────────────────────────────────────────────────────────────────
 def load_history():
@@ -202,7 +217,7 @@ def select_and_translate_news(articles, history):
 {articles_text}
 
 반드시 아래 JSON 형식으로만 응답하세요. JSON 외 다른 텍스트는 절대 포함하지 마세요:
-{{"top":{{"number":1,"title_ko":"한국어 번역 제목","summary_ko":"2-3문장 한국어 요약","url":"URL"}},"agency":[{{"number":2,"title_ko":"제목","summary_ko":"요약","url":"URL"}},{{"number":3,"title_ko":"제목","summary_ko":"요약","url":"URL"}},{{"number":4,"title_ko":"제목","summary_ko":"요약","url":"URL"}}],"insurtech":[{{"number":5,"title_ko":"제목","summary_ko":"요약","url":"URL"}},{{"number":6,"title_ko":"제목","summary_ko":"요약","url":"URL"}},{{"number":7,"title_ko":"제목","summary_ko":"요약","url":"URL"}}],"insurer":[{{"number":8,"title_ko":"제목","summary_ko":"요약","url":"URL"}},{{"number":9,"title_ko":"제목","summary_ko":"요약","url":"URL"}},{{"number":10,"title_ko":"제목","summary_ko":"요약","url":"URL"}}]}}"""
+{{"top":{{"number":1,"title_ko":"한국어 번역 제목","summary_ko":"2-3문장 한국어 요약","url":"URL","source":"출처","published":""}},"agency":[{{"number":2,"title_ko":"제목","summary_ko":"요약","url":"URL","source":"출처","published":""}},{{"number":3,"title_ko":"제목","summary_ko":"요약","url":"URL","source":"출처","published":""}},{{"number":4,"title_ko":"제목","summary_ko":"요약","url":"URL","source":"출처","published":""}}],"insurtech":[{{"number":5,"title_ko":"제목","summary_ko":"요약","url":"URL","source":"출처","published":""}},{{"number":6,"title_ko":"제목","summary_ko":"요약","url":"URL","source":"출처","published":""}},{{"number":7,"title_ko":"제목","summary_ko":"요약","url":"URL","source":"출처","published":""}}],"insurer":[{{"number":8,"title_ko":"제목","summary_ko":"요약","url":"URL","source":"출처","published":""}},{{"number":9,"title_ko":"제목","summary_ko":"요약","url":"URL","source":"출처","published":""}},{{"number":10,"title_ko":"제목","summary_ko":"요약","url":"URL","source":"출처","published":""}}]}}"""
 
     try:
         response = gemini_client.models.generate_content(
@@ -220,34 +235,87 @@ def select_and_translate_news(articles, history):
         print(f"[Gemini 오류] {e}")
         return None
 
-# ─── 슬랙 전송 ────────────────────────────────────────────────────────────────
+# ─── HTML 생성 (일본봇과 동일한 스타일) ──────────────────────────────────────
 
-def build_slack_message(news_data, today_str):
-    blocks = [
-        {"type": "header", "text": {"type": "plain_text", "text": f"🇻🇳 베트남 보험 10대 뉴스 | {today_str}"}},
-        {"type": "divider"},
-    ]
-    top = news_data.get("top", {})
-    if top:
-        blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": f"*🔥 오늘의 TOP 뉴스*\n\n*<{top['url']}|{top['title_ko']}>*\n{top.get('summary_ko', '')}"}})
-        blocks.append({"type": "divider"})
-    for cat, emoji, label in [("agency", "🏢", "보험대리점"), ("insurtech", "💡", "인슈어테크"), ("insurer", "🏦", "보험사")]:
-        items = news_data.get(cat, [])
-        if items:
-            text = f"*{emoji} {label}*\n\n"
-            for i, item in enumerate(items, 1):
-                text += f"*{i}. <{item['url']}|{item['title_ko']}>*\n{item.get('summary_ko', '')}\n\n"
-            blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": text.strip()}})
-            blocks.append({"type": "divider"})
-    blocks.append({"type": "context", "elements": [{"type": "mrkdwn", "text": "📌 _해빗팩토리 베트남 보험 뉴스봇 | 매 영업일 오전 8시 (KST)_"}]})
-    return {"blocks": blocks}
+def build_html(news_data, fetch_date, for_web=False):
+    rows = ""
+    for key, label, color in CATS:
+        if key == "top":
+            items = [news_data.get("top")] if news_data.get("top") else []
+        else:
+            items = news_data.get(key, [])
+        if not items:
+            continue
+        rows += f'<tr><td style="background:{color};color:white;padding:10px 16px;font-weight:bold;font-size:15px;">{label}</td></tr>'
+        for item in items:
+            title_style = (
+                "color:#D97706;font-weight:bold;font-size:17px;text-decoration:none;line-height:1.5;"
+                if key == "top" else
+                "color:#1D4ED8;font-weight:bold;font-size:15px;text-decoration:none;line-height:1.5;"
+            )
+            pub = item.get("published", "")
+            source = item.get("source", "")
+            rows += f"""<tr style="border-bottom:1px solid #eee;">
+  <td style="padding:14px 16px;vertical-align:top;">
+    <a href="{item['url']}" style="{title_style}">{item['title_ko']}</a><br>
+    <span style="color:#9CA3AF;font-size:12px;">{'📅 ' + pub + ' · ' if pub else ''}📰 {source}</span>
+    <div style="background:#F9FAFB;padding:10px 12px;border-radius:6px;margin-top:8px;font-size:13px;color:#374151;line-height:1.8;">{item['summary_ko']}</div>
+  </td>
+</tr>"""
 
-def send_to_slack(message):
+    meta    = '<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">' if for_web else ""
+    refresh = '<meta http-equiv="refresh" content="3600">' if for_web else ""
+    return f"""<html><head>{meta}{refresh}</head>
+<body style="font-family:sans-serif;background:#F0F2F5;padding:20px;margin:0;">
+<div style="max-width:700px;margin:0 auto;background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1);">
+  <div style="background:linear-gradient(135deg,#c8102e,#ff6b35);padding:24px 28px;color:white;">
+    <h1 style="margin:0;font-size:20px;">🇻🇳 베트남 보험뉴스 TOP 10</h1>
+    <p style="margin:6px 0 0;opacity:.7;font-size:13px;">HabitFactory Global Team · {fetch_date}</p>
+  </div>
+  <table style="width:100%;border-collapse:collapse;">{rows}</table>
+  <div style="padding:16px;text-align:center;color:#9CA3AF;font-size:12px;">© HabitFactory Global Team</div>
+</div>
+</body></html>"""
+
+def save_web_page(news_data, fetch_date):
+    os.makedirs("docs", exist_ok=True)
+    with open("docs/vietnam.html", "w", encoding="utf-8") as f:
+        f.write(build_html(news_data, fetch_date, for_web=True))
+    print("  ✅ docs/vietnam.html 저장")
+
+# ─── 슬랙 전송 (일본봇과 동일한 스타일) ──────────────────────────────────────
+
+def send_to_slack(news_data, fetch_date, page_url):
     if not SLACK_WEBHOOK_URL:
         print("[슬랙] SLACK_WEBHOOK_VIETNAM 환경변수가 없습니다.")
         return False
+
+    # TOP 뉴스
+    top = news_data.get("top", {})
+    top_line = ""
+    if top:
+        top_line = f"\n\n🔥 *오늘의 TOP 뉴스*\n<{top['url']}|{top['title_ko']}>\n_{top.get('summary_ko', '')}_"
+
+    # 카테고리별 건수
+    summary_parts = []
+    for key, label in CAT_SLACK_LABELS.items():
+        if key == "top":
+            continue
+        items = news_data.get(key, [])
+        if items:
+            summary_parts.append(f"{label} {len(items)}건")
+    summary = " · ".join(summary_parts)
+
+    text = (
+        f"🇻🇳 *베트남 보험뉴스 TOP 10* — {fetch_date}"
+        f"{top_line}"
+        f"\n\n{summary}"
+        f"\n\n<{page_url}|📰 전체 기사 보기 →>"
+    )
+
+    blocks = [{"type": "section", "text": {"type": "mrkdwn", "text": text}}]
     try:
-        resp = requests.post(SLACK_WEBHOOK_URL, json=message, timeout=15)
+        resp = requests.post(SLACK_WEBHOOK_URL, json={"blocks": blocks}, timeout=15)
         if resp.status_code == 200:
             print("[슬랙] 전송 성공!")
             return True
@@ -261,26 +329,36 @@ def send_to_slack(message):
 # ─── 메인 ─────────────────────────────────────────────────────────────────────
 
 def main():
-    today_str = datetime.now().strftime("%Y년 %m월 %d일")
+    fetch_date = datetime.now().strftime("%Y年%m月%d日")
+    today_str  = datetime.now().strftime("%Y년 %m월 %d일")
     print(f"=== 베트남 보험 뉴스봇 시작: {today_str} ===")
+
     history = load_history()
     print(f"[히스토리] {len(history)}건 로드")
+
     articles = collect_all_news()
     if not articles:
         print("[오류] 수집된 뉴스가 없습니다.")
         return
+
     filtered = [a for a in articles if not is_duplicate(a["title"], history)]
     print(f"[필터링] 히스토리 중복 제거 후 {len(filtered)}건 남음")
     if len(filtered) < 10:
         print("[경고] 후보 뉴스 10건 미만. 전체 사용.")
         filtered = articles
+
     print("\n[Gemini] 10대 뉴스 선정 및 번역 중...")
     news_data = select_and_translate_news(filtered[:80], history)
     if not news_data:
         print("[오류] Gemini 응답 실패")
         return
-    message = build_slack_message(news_data, today_str)
-    success = send_to_slack(message)
+
+    # GitHub Pages HTML 저장
+    save_web_page(news_data, fetch_date)
+
+    # 슬랙 전송 (일본봇 스타일)
+    success = send_to_slack(news_data, fetch_date, GITHUB_PAGES_URL)
+
     if success:
         new_titles = []
         for section in ["top", "agency", "insurtech", "insurer"]:
@@ -293,6 +371,7 @@ def main():
         history.extend([t for t in new_titles if t])
         save_history(history)
         print(f"[히스토리] {len(new_titles)}건 추가 저장 완료")
+
     print("=== 완료 ===")
 
 if __name__ == "__main__":
