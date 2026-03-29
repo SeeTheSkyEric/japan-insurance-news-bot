@@ -2,10 +2,8 @@ name: Vietnam Insurance News Bot
 
 on:
   schedule:
-    # 매 영업일 오전 8시 KST = UTC 23:00 (전날)
-    # 월~금 (UTC 기준 일~목)
     - cron: '0 23 * * 0-4'
-  workflow_dispatch:  # 수동 실행 가능
+  workflow_dispatch:
 
 jobs:
   send-vietnam-news:
@@ -32,12 +30,12 @@ jobs:
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
           SLACK_WEBHOOK_VIETNAM: ${{ secrets.SLACK_WEBHOOK_VIETNAM }}
         run: |
-          python vietnam/vietn- name: Commit updated history
+          python vietnam/vietnam_news.py
+
+      - name: Commit updated history
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add docs/vietnam_sent_history.json || true
           git diff --staged --quiet || git commit -m "Update Vietnam news history [$(date '+%Y-%m-%d')]"
           git push || true
-
-
