@@ -22,11 +22,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests feedparser anthropic beautifulsoup4
+          pip install requests feedparser google-genai beautifulsoup4
 
       - name: Run Vietnam News Bot
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
           SLACK_WEBHOOK_VIETNAM: ${{ secrets.SLACK_WEBHOOK_VIETNAM }}
         run: |
