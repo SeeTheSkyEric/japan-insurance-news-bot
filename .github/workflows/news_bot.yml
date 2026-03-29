@@ -16,10 +16,10 @@ jobs:
         with:
           python-version: '3.11'
       - name: 패키지 설치
-        run: pip install anthropic requests beautifulsoup4
+        run: pip install google-genai requests beautifulsoup4
       - name: 뉴스봇 실행
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           NEWSAPI_KEY:       ${{ secrets.NEWSAPI_KEY }}
           GITHUB_PAGES_URL:  ${{ secrets.GITHUB_PAGES_URL }}
