@@ -5,16 +5,16 @@ import requests
 import feedparser
 from datetime import datetime, timedelta
 from difflib import SequenceMatcher
-import anthropic
+from google import genai
 from bs4 import BeautifulSoup
 import re
 
 # ─── 설정 ────────────────────────────────────────────────────────────────────
-ANTHROPIC_API_KEY   = os.environ.get("ANTHROPIC_API_KEY") or ""
+GEMINI_API_KEY      = os.environ.get("GEMINI_API_KEY") or ""
 NEWSAPI_KEY         = os.environ.get("NEWSAPI_KEY") or ""
 SLACK_WEBHOOK_URL   = os.environ.get("SLACK_WEBHOOK_VIETNAM") or ""
 
-client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+gemini_client = genai.Client(api_key=GEMINI_API_KEY)
 
 HISTORY_FILE = "docs/vietnam_sent_history.json"
 MAX_HISTORY  = 500
@@ -176,7 +176,7 @@ def collect_all_news():
     print(f"\n[수집 완료] 총 {len(unique)}건 (URL 중복 제거 후)")
     return unique
 
-# ─── AI 분석 (Claude Haiku) ───────────────────────────────────────────────────
+# ─── AI 분석 (Gemini) ─────────────────────────────────────────────────────────
 
 def select_and_translate_news(articles, history):
     history_titles = "\n".join(f"- {t}" for t in history[-100:]) if history else "없음"
@@ -188,11 +188,6 @@ def select_and_translate_news(articles, history):
 해빗팩토리는 시그널파이낸셜랩(보험대리점)을 자회사로 두고 있으며, 베트남 보험대리점 인수 및 AI/디지털 역량 활용을 통한 해외 진출을 추진하고 있습니다.
 
 아래 뉴스 목록에서 오늘의 베트남 보험 업계 10대 뉴스를 선정해 주세요.
-
-선정 기준:
-- 보험사 및 보험대리점에 영향을 미칠 수 있는 뉴스 우선
-- 베트남 보험 시장 전문 매체 뉴스를 우선 반영
-- 이미 보낸 뉴스와 유사한 내용은 제외
 
 카테고리 구성 (반드시 준수):
 1. top: 그날 가장 중요한 뉴스 1개
@@ -210,20 +205,19 @@ def select_and_translate_news(articles, history):
 {{"top":{{"number":1,"title_ko":"한국어 번역 제목","summary_ko":"2-3문장 한국어 요약","url":"URL"}},"agency":[{{"number":2,"title_ko":"제목","summary_ko":"요약","url":"URL"}},{{"number":3,"title_ko":"제목","summary_ko":"요약","url":"URL"}},{{"number":4,"title_ko":"제목","summary_ko":"요약","url":"URL"}}],"insurtech":[{{"number":5,"title_ko":"제목","summary_ko":"요약","url":"URL"}},{{"number":6,"title_ko":"제목","summary_ko":"요약","url":"URL"}},{{"number":7,"title_ko":"제목","summary_ko":"요약","url":"URL"}}],"insurer":[{{"number":8,"title_ko":"제목","summary_ko":"요약","url":"URL"}},{{"number":9,"title_ko":"제목","summary_ko":"요약","url":"URL"}},{{"number":10,"title_ko":"제목","summary_ko":"요약","url":"URL"}}]}}"""
 
     try:
-        message = client.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=4000,
-            messages=[{"role": "user", "content": prompt}]
+        response = gemini_client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt,
         )
-        raw = message.content[0].text.strip()
+        raw = response.text.strip()
         raw = re.sub(r"^```json\s*", "", raw)
         raw = re.sub(r"^```\s*", "", raw)
         raw = re.sub(r"\s*```$", "", raw)
         result = json.loads(raw)
-        print("[Claude] 10대 뉴스 선정 완료")
+        print("[Gemini] 10대 뉴스 선정 완료")
         return result
     except Exception as e:
-        print(f"[Claude 오류] {e}")
+        print(f"[Gemini 오류] {e}")
         return None
 
 # ─── 슬랙 전송 ────────────────────────────────────────────────────────────────
@@ -280,10 +274,10 @@ def main():
     if len(filtered) < 10:
         print("[경고] 후보 뉴스 10건 미만. 전체 사용.")
         filtered = articles
-    print("\n[Claude] 10대 뉴스 선정 및 번역 중...")
+    print("\n[Gemini] 10대 뉴스 선정 및 번역 중...")
     news_data = select_and_translate_news(filtered[:80], history)
     if not news_data:
-        print("[오류] Claude 응답 실패")
+        print("[오류] Gemini 응답 실패")
         return
     message = build_slack_message(news_data, today_str)
     success = send_to_slack(message)
