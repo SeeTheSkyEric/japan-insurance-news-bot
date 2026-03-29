@@ -32,12 +32,12 @@ jobs:
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
           SLACK_WEBHOOK_VIETNAM: ${{ secrets.SLACK_WEBHOOK_VIETNAM }}
         run: |
-          python vietnam/vietnam_news.py
-
-      - name: Commit updated history
+          python vietnam/vietn- name: Commit updated history
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add docs/vietnam_sent_history.json
+          git add docs/vietnam_sent_history.json || true
           git diff --staged --quiet || git commit -m "Update Vietnam news history [$(date '+%Y-%m-%d')]"
-          git push
+          git push || truem_news.py
+
+
