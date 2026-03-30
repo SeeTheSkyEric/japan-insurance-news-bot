@@ -22,17 +22,33 @@ MAX_HISTORY  = 500
 
 # ─── 카테고리 설정 ────────────────────────────────────────────────────────────
 CATS = [
-    ("top",       "🔥 오늘의 TOP 뉴스",  "#F59E0B"),
-    ("agency",    "🏢 보험대리점 관련",  "#2E86AB"),
-    ("insurtech", "💡 인슈어테크 관련",  "#8B5CF6"),
-    ("insurer",   "🏦 보험사 관련",      "#059669"),
+    ("top",       "🔥 오늘의 TOP 뉴스",       "#F59E0B"),
+    ("bvl",       "⭐ BVL 관련 뉴스",          "#DC2626"),
+    ("agency",    "🏢 보험대리점 관련",         "#2E86AB"),
+    ("insurtech", "💡 인슈어테크 관련",         "#8B5CF6"),
+    ("insurer",   "🏦 보험사 관련",             "#059669"),
 ]
 CAT_SLACK_LABELS = {
     "top":       "🔥 TOP 뉴스",
+    "bvl":       "⭐ BVL",
     "agency":    "🏢 보험대리점",
     "insurtech": "💡 인슈어테크",
     "insurer":   "🏦 보험사",
 }
+
+# BVL 관련 검색 키워드
+BVL_QUERIES_VI = [
+    "Bảo Việt Life",
+    "Bảo Việt nhân thọ",
+    "Tập đoàn Bảo Việt",
+    "BVL bảo hiểm",
+    "Bảo Việt Holdings",
+]
+BVL_QUERIES_EN = [
+    "Bao Viet Life insurance",
+    "Bao Viet Holdings Vietnam",
+    "BVL Vietnam insurance",
+]
 
 # ─── 중복 방지 ────────────────────────────────────────────────────────────────
 def load_history():
@@ -156,6 +172,34 @@ def fetch_thoibaotaichinh(max_items=10):
         print(f"  [thoibaotaichinhvietnam] 오류: {e}")
         return []
 
+def fetch_bvl_news():
+    """바오비엣라이프(BVL) 전용 뉴스 수집"""
+    print("\n  [BVL 전용 수집 시작]")
+    bvl_articles = []
+    seen_urls = set()
+
+    for q in BVL_QUERIES_VI:
+        for a in fetch_google_news_rss(q, lang="vi", country="VN", max_items=8):
+            if a["url"] not in seen_urls:
+                seen_urls.add(a["url"])
+                bvl_articles.append(a)
+        time.sleep(0.5)
+
+    for q in BVL_QUERIES_EN:
+        for a in fetch_google_news_rss(q, lang="en", country="US", max_items=5):
+            if a["url"] not in seen_urls:
+                seen_urls.add(a["url"])
+                bvl_articles.append(a)
+        if NEWSAPI_KEY:
+            for a in fetch_newsapi(q, max_items=5):
+                if a["url"] not in seen_urls:
+                    seen_urls.add(a["url"])
+                    bvl_articles.append(a)
+        time.sleep(0.5)
+
+    print(f"  [BVL 전용] 총 {len(bvl_articles)}건 수집")
+    return bvl_articles
+
 def collect_all_news():
     print("\n[뉴스 수집 시작]")
     all_articles = []
@@ -181,6 +225,7 @@ def collect_all_news():
     all_articles += fetch_newsapi("Vietnam insurance", max_items=15)
     all_articles += fetch_newsapi("Vietnam insurtech bancassurance", max_items=10)
     all_articles += fetch_thoibaotaichinh(max_items=10)
+
     seen_urls = set()
     unique = []
     for a in all_articles:
@@ -192,6 +237,49 @@ def collect_all_news():
     return unique
 
 # ─── AI 분석 (Gemini) ─────────────────────────────────────────────────────────
+
+def select_bvl_news(bvl_articles, history, max_items=3):
+    """BVL 관련 뉴스 번역 및 선정 (최대 3건, 없으면 0건)"""
+    if not bvl_articles:
+        return []
+
+    history_titles = "\n".join(f"- {t}" for t in history[-100:]) if history else "없음"
+    articles_text = ""
+    for i, a in enumerate(bvl_articles):
+        articles_text += f"{i+1}. [{a['source']}] {a['title']}\n   URL: {a['url']}\n"
+
+    prompt = f"""당신은 베트남 보험 업계 전문 애널리스트입니다.
+
+아래는 베트남 최대 국영 생명보험사 바오비엣라이프(Bảo Việt Life, BVL) 및 바오비엣 그룹 관련 뉴스 후보입니다.
+실제로 BVL 또는 바오비엣 그룹과 직접 관련된 뉴스만 최대 {max_items}건 선정해 주세요.
+관련 없는 뉴스는 선정하지 마세요. 뉴스가 없으면 빈 배열을 반환하세요.
+
+이미 보낸 뉴스 (중복 제외):
+{history_titles}
+
+후보 뉴스:
+{articles_text}
+
+반드시 아래 JSON 배열 형식으로만 응답하세요:
+[{{"number":1,"title_ko":"한국어 번역 제목","summary_ko":"2-3문장 한국어 요약","url":"URL","source":"출처","published":""}}]
+
+관련 뉴스가 없으면: []"""
+
+    try:
+        response = gemini_client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt,
+        )
+        raw = response.text.strip()
+        raw = re.sub(r"^```json\s*", "", raw)
+        raw = re.sub(r"^```\s*", "", raw)
+        raw = re.sub(r"\s*```$", "", raw)
+        result = json.loads(raw)
+        print(f"[Gemini] BVL 뉴스 {len(result)}건 선정")
+        return result if isinstance(result, list) else []
+    except Exception as e:
+        print(f"[Gemini BVL 오류] {e}")
+        return []
 
 def select_and_translate_news(articles, history):
     history_titles = "\n".join(f"- {t}" for t in history[-100:]) if history else "없음"
@@ -235,22 +323,28 @@ def select_and_translate_news(articles, history):
         print(f"[Gemini 오류] {e}")
         return None
 
-# ─── HTML 생성 (일본봇과 동일한 스타일) ──────────────────────────────────────
+# ─── HTML 생성 ────────────────────────────────────────────────────────────────
 
-def build_html(news_data, fetch_date, for_web=False):
+def build_html(news_data, bvl_news, fetch_date, for_web=False):
     rows = ""
     for key, label, color in CATS:
-        if key == "top":
+        if key == "bvl":
+            items = bvl_news
+        elif key == "top":
             items = [news_data.get("top")] if news_data.get("top") else []
         else:
             items = news_data.get(key, [])
+
         if not items:
             continue
+
         rows += f'<tr><td style="background:{color};color:white;padding:10px 16px;font-weight:bold;font-size:15px;">{label}</td></tr>'
         for item in items:
             title_style = (
                 "color:#D97706;font-weight:bold;font-size:17px;text-decoration:none;line-height:1.5;"
                 if key == "top" else
+                "color:#DC2626;font-weight:bold;font-size:15px;text-decoration:none;line-height:1.5;"
+                if key == "bvl" else
                 "color:#1D4ED8;font-weight:bold;font-size:15px;text-decoration:none;line-height:1.5;"
             )
             pub = item.get("published", "")
@@ -277,15 +371,15 @@ def build_html(news_data, fetch_date, for_web=False):
 </div>
 </body></html>"""
 
-def save_web_page(news_data, fetch_date):
+def save_web_page(news_data, bvl_news, fetch_date):
     os.makedirs("docs", exist_ok=True)
     with open("docs/vietnam.html", "w", encoding="utf-8") as f:
-        f.write(build_html(news_data, fetch_date, for_web=True))
+        f.write(build_html(news_data, bvl_news, fetch_date, for_web=True))
     print("  ✅ docs/vietnam.html 저장")
 
-# ─── 슬랙 전송 (일본봇과 동일한 스타일) ──────────────────────────────────────
+# ─── 슬랙 전송 ────────────────────────────────────────────────────────────────
 
-def send_to_slack(news_data, fetch_date, page_url):
+def send_to_slack(news_data, bvl_news, fetch_date, page_url):
     if not SLACK_WEBHOOK_URL:
         print("[슬랙] SLACK_WEBHOOK_VIETNAM 환경변수가 없습니다.")
         return False
@@ -296,10 +390,17 @@ def send_to_slack(news_data, fetch_date, page_url):
     if top:
         top_line = f"\n\n🔥 *오늘의 TOP 뉴스*\n<{top['url']}|{top['title_ko']}>\n_{top.get('summary_ko', '')}_"
 
+    # BVL 뉴스
+    bvl_line = ""
+    if bvl_news:
+        bvl_line = "\n\n⭐ *BVL 관련 뉴스*"
+        for item in bvl_news:
+            bvl_line += f"\n• <{item['url']}|{item['title_ko']}>"
+
     # 카테고리별 건수
     summary_parts = []
     for key, label in CAT_SLACK_LABELS.items():
-        if key == "top":
+        if key in ("top", "bvl"):
             continue
         items = news_data.get(key, [])
         if items:
@@ -309,6 +410,7 @@ def send_to_slack(news_data, fetch_date, page_url):
     text = (
         f"🇻🇳 *베트남 보험뉴스 TOP 10* — {fetch_date}"
         f"{top_line}"
+        f"{bvl_line}"
         f"\n\n{summary}"
         f"\n\n<{page_url}|📰 전체 기사 보기 →>"
     )
@@ -336,6 +438,7 @@ def main():
     history = load_history()
     print(f"[히스토리] {len(history)}건 로드")
 
+    # 일반 뉴스 수집
     articles = collect_all_news()
     if not articles:
         print("[오류] 수집된 뉴스가 없습니다.")
@@ -347,17 +450,25 @@ def main():
         print("[경고] 후보 뉴스 10건 미만. 전체 사용.")
         filtered = articles
 
+    # BVL 전용 뉴스 수집
+    bvl_raw = fetch_bvl_news()
+
+    # Gemini: 일반 10대 뉴스 선정
     print("\n[Gemini] 10대 뉴스 선정 및 번역 중...")
     news_data = select_and_translate_news(filtered[:80], history)
     if not news_data:
         print("[오류] Gemini 응답 실패")
         return
 
-    # GitHub Pages HTML 저장
-    save_web_page(news_data, fetch_date)
+    # Gemini: BVL 뉴스 선정 (별도 호출)
+    print("\n[Gemini] BVL 뉴스 선정 중...")
+    bvl_news = select_bvl_news(bvl_raw, history, max_items=3)
 
-    # 슬랙 전송 (일본봇 스타일)
-    success = send_to_slack(news_data, fetch_date, GITHUB_PAGES_URL)
+    # GitHub Pages HTML 저장
+    save_web_page(news_data, bvl_news, fetch_date)
+
+    # 슬랙 전송
+    success = send_to_slack(news_data, bvl_news, fetch_date, GITHUB_PAGES_URL)
 
     if success:
         new_titles = []
@@ -368,6 +479,8 @@ def main():
             elif isinstance(item, list):
                 for i in item:
                     new_titles.append(i.get("title_ko", ""))
+        for item in bvl_news:
+            new_titles.append(item.get("title_ko", ""))
         history.extend([t for t in new_titles if t])
         save_history(history)
         print(f"[히스토리] {len(new_titles)}건 추가 저장 완료")
