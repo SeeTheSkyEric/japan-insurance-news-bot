@@ -362,7 +362,7 @@ def build_html(news_data, bvl_news, fetch_date, for_web=False):
     return f"""<html><head>{meta}{refresh}</head>
 <body style="font-family:sans-serif;background:#F0F2F5;padding:20px;margin:0;">
 <div style="max-width:700px;margin:0 auto;background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1);">
-  <div style="background:linear-gradient(135deg,#c8102e,#ff6b35);padding:24px 28px;color:white;">
+  <div style="background:linear-gradient(135deg,#1a1a2e,#16213e);padding:24px 28px;color:white;">
     <h1 style="margin:0;font-size:20px;">🇻🇳 베트남 보험뉴스 TOP 10</h1>
     <p style="margin:6px 0 0;opacity:.7;font-size:13px;">HabitFactory Global Team · {fetch_date}</p>
   </div>
