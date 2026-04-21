@@ -5,7 +5,7 @@
 # ============================================================
 # pip install google-genai requests beautifulsoup4
 # ============================================================
-import os, json, re, requests
+import os, json, re, requests, time
 from datetime import datetime, timezone, timedelta
 from difflib import SequenceMatcher
 from urllib.parse import quote
@@ -336,7 +336,8 @@ CATEGORY|RANK|TITLE_JA|TITLE_KO|SUMMARY_KO|SOURCE|URL|PUBLISHED
 
 Output only the 10 selected lines, nothing else."""
 
-    for attempt in range(2):
+    MAX_RETRIES = 5
+    for attempt in range(MAX_RETRIES):
         try:
             response = gemini_client.models.generate_content(
                 model="gemini-2.5-flash",
@@ -351,7 +352,11 @@ Output only the 10 selected lines, nothing else."""
             break
         except Exception as e:
             print(f"  ⚠️ API 실패 (attempt {attempt+1}): {e}")
-            if attempt == 1:
+            if attempt < MAX_RETRIES - 1:
+                wait = 30 * (attempt + 1)  # 30초, 60초, 90초, 120초
+                print(f"  ⏳ {wait}초 후 재시도...")
+                time.sleep(wait)
+            else:
                 raise
 
     news_list = []
