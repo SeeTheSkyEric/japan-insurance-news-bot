@@ -1,8 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/rss/articles/CBMiakFVX3lxTE5lbUxiSGRmeHlMUlZfdzkyNmNuSXlDZzRFblkxLU8tal9fOFo5WFhlZDJJdjVYOUdaSGVzYlExU292Y2JsY29pNS1WckRkY3pwTlIwOWw4d09ib19uWllnQTU1emFTZjNoQ3c?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9PbEVRcU5ZTC1nWm90Y0RGQWgwdE4xYUJOb2pDMzlsWC1QQlBGdUMyeHZ5N0xkS0RBemdPTGhyQ1FtZFdPTFUtM2dIUDZqeFV5NUY1c2ROcXBWVjQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBxLXJySDJITTJNdXhUdG04VUx5UEhnSW1QY1dST3piOW1zRDVHaDlmcFk4M2J4cEhHbmZTUV9XTUZtZENBaTNqSG52R2prdGVSd2dTcW5TaGdFQnBpNVFadQ?oc=5&hl=en-US&gl=US&ceid=US:en",
     "https://news.google.com/rss/articles/CBMiSkFVX3lxTE50VlhIOWwySFU2ek9Ea082RDFyVG9NVTVFRnlldHpEdDMzdDltcG5DZzZiMUJrbEZzS2pwaXhaRHhWWXU2NUE2TUhR?oc=5&hl=en-US&gl=US&ceid=US:en",
     "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5BVWdhYURyX3N4YXlYRWFzRk1rMzJnay05amVSeW1ZbXVJMm1jRHJDRTJELWpySjVHMkxJb3VvTlJPaWtsQ01aMHpuT2tzUEl2a3Ew?oc=5&hl=en-US&gl=US&ceid=US:en",
     "https://news.google.com/rss/articles/CBMiakFVX3lxTE9neTRnOGpuRkdXSzdpYmFzSHFxTFJDVXUtTURvX2FPTTNiaHBNM0hxY3c3bmdRazR2Y2k3TFYxNHEtX0doNUp6LW5kQXVYbjY0aFVENzlQNWdraUpDMlVMVGFvUENQV3I1YXc?oc=5&hl=en-US&gl=US&ceid=US:en",
@@ -196,7 +193,13 @@
     "https://news.google.com/articles/CBMiZEFVX3lxTE1xOFdjaW1iWEpVUVUxUV9Sc3hPaDd0dTVtMlhQUzJWT3B6OEltbWxvOEhwdToyV1dNTGFxYzVnWmtfR0hNTFZrVVhqMWlvQ00wTFpsSWlZX0F6QUs1YWN4WTd6Y1o?oc=5",
     "https://news.google.com/articles/CBMiVkFVX3lxTE1yQ3hXN0oxQTRnQTlFaHRqVWxsXy0xNkp5THlEdTZiZml6TmdjYUpNTGFxQVhuTFN6bmlhTzJvXzJVZmRqMkxtcTJYZS1NMEQwenVOS3pR?oc=5",
     "https://news.google.com/articles/CBMif0FVX3lxTFBnb2lkZlNvOGVqQ1I1RHFmU1FWRFZaaFFhMGZrNDFRbUkyWmtpRFBMV1NKS3Ntd0VINERINm9lZ2pnTXVqZk1KWXI3ZFB1clZLX2hGUk1EQVJiQVhoSWtCeWF3V3F1YUduNDBZbmhrOFVHYjFOZ0gxUTVrTlhfZ3M?oc=5",
-    "https://news.google.com/articles/CBMiZEFVX3lxTE9rNlNhU0FWaDA1RnVTemI5TUdpclo3ci1ydXBHZk9NWlBiZFEtcXNlWG1jMFBpNVgwWnpRZjMyTWhnS3BQNjNocUZYOEtENUxhNEtERllLMi1MWWxWV2lFRE82X0s?oc=5"
+    "https://news.google.com/articles/CBMiZEFVX3lxTE9rNlNhU0FWaDA1RnVTemI5TUdpclo3ci1ydXBHZk9NWlBiZFEtcXNlWG1jMFBpNVgwWnpRZjMyTWhnS3BQNjNocUZYOEtENUxhNEtERllLMi1MWWxWV2lFRE82X0s?oc=5",
+    "https://news.google.com/articles/CBMiXkFVX3lxTE1SaFBMNkZhQmVxSDFFMzVNRXpfSndzX0prRUhqeGtuNlc4Y2ZmYjR5QTN0bWFWS1RDQjh4em5HQUF5Qms4c0J5VDA1eERUb0xPZklxRFZkV250M05LQ1E?oc=5",
+    "https://news.google.com/articles/CBMiaEFVX3lxTE5Hclh3bFZQVjZ3dUJnd3o3TEpaalNWMkpRN3k4bk1jMTY4dEZNOVFnT2RoYkhkcVJBRzFXbU9sWDFuYUV6V2I5Wm9oOHliaEhiT1VheHFzbVVSNGV2bTdrMFREN2dyZV9E?oc=5",
+    "https://news.google.com/articles/CBMid0FVX3lxTE5Fdi04UUxrUnJhVGNNXzB4bmJrWU0zMWNxYUtabUJHWF9NQUVLNUNfVFBUVExZWGdIT0I0ZWRLNVRZa2hSMEU4SXQ2d0lWaVo1Y0R3dXZyVlIwaGVtTHg5SDdiY3dybkx1NkRaYXZXeDZxZmdhQThB?oc=5",
+    "https://news.google.com/articles/CBMiX0FVX3lxTE9RZkhiQzlUNUZnQ3BOckNfcklIbFdVOEJXNXo4cUtwbGpMVlVRS3IyNTNSbEJqSEs4dUxTRUowa1M4TDlEVm5GekloR19XclpMOUlwT3pldUlfdzVSOHVV?oc=5",
+    "https://news.google.com/articles/CBMiakFVX3lxTFB4cWxvTllXU0tJTlVQX1NKOUxFSENLdS12akpRSklibkw0VzhWUHVIWVU0UjRYNVdraFVBbzFpUG9reHQxckpOWnFXc2JEcW5seG0xVWphWDg1RGloOWptMmNvSEtGck5ORlE?oc=5",
+    "https://news.google.com/articles/CBMiU0FVX3lxTFBGQm9kSzZQWW5QSHNaUEdQTHVlc0NxWENJb2M5OXFFYjN5S3RuYXZqSk5xdm05bUc4MjJINThIcG1tZXhVMVFiNVo3allhYS1kWFk4?oc=5"
   ],
   "titles": [
     "ニュートン・フィナンシャル・コンサルティング、「生命保険乗合代理店業務品質評価運営」認定を継続",
@@ -388,6 +391,12 @@
     "顧客から３１億円だまし取ったプルデンシャル生命、営業職員の完全歩合制の報酬形態を見直し…得丸博充社長が記者会見で表明",
     "自動車保険事業に参入したテスラ、業種の垣根をくずしていく「AI時代の経済メカニズム」とは？",
     "リップル社、韓国の教保生命保険と提携。トークン化国債決済の実証へ（あたらしい経済）",
-    "プルデンシャル生命、新規契約の販売自粛期間を１８０日延長…新たに７００件の被害申し出や相談も"
+    "プルデンシャル生命、新規契約の販売自粛期間を１８０日延長…新たに７００件の被害申し出や相談も",
+    "健保法等改正案 衆院厚労委で賛成多数で可決 17項目の附帯決議採択",
+    "プルデンシャル元社員 「魔法のような」もうけ話の実態とは",
+    "プルデンシャル生命「自粛期間を180日間に延長」で“営業社員が営業できない”問題 「勝手な保険営業を防ぐため、分単位での行動入力が課される」厳格管理",
+    "日本の生保業界は変化に適応できず､殻に閉じこもっていた／保険はもっとシンプルに安くできると確信した",
+    "Finatext、変額年金保険のデジタル化を牽引する三井住友海上プライマリー生命保険株式会社「ＡＨＡＲＡ」の接続銀行拡大を技術支援",
+    "日本のインシュアテック市場：2035年までの世界の業界規模、シェア、発展、動向、成長、需要、機会および主要メーカー分析である。"
   ]
 }
