@@ -1,10 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/rss/articles/CBMiSkFVX3lxTE50VlhIOWwySFU2ek9Ea082RDFyVG9NVTVFRnlldHpEdDMzdDltcG5DZzZiMUJrbEZzS2pwaXhaRHhWWXU2NUE2TUhR?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5BVWdhYURyX3N4YXlYRWFzRk1rMzJnay05amVSeW1ZbXVJMm1jRHJDRTJELWpySjVHMkxJb3VvTlJPaWtsQ01aMHpuT2tzUEl2a3Ew?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/articles/CBMiakFVX3lxTE9neTRnOGpuRkdXSzdpYmFzSHFxTFJDVXUtTURvX2FPTTNiaHBNM0hxY3c3bmdRazR2Y2k3TFYxNHEtX0doNUp6LW5kQXVYbjY0aFVENzlQNWdraUpDMlVMVGFvUENQV3I1YXc?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5BUjBFeWZwUWF3dV9wOGIwNnU0MzktWHh6ckYtb3lPSDZwUG50VkdPUlQ5WDBtV2g0LTRHdjFzdzN0eno1SEhYZWExWlfSAU9BVV95cUxOT0tYMl9DSU9QMzUweGI0N25vOExsaFZRaWtGcEk0SGYtZm1IVFlPQ3VHd1BxQ1lHTjJuM0dVSGJDN2VPSTF4aFphdXI4VDYw?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/articles/CBMiekFVX3lxTE1NUi1ocXhoc2xsdEFRTkYydnhwYU1XVW9RZkJYNlJXWVpCQmdxaGRPbUljUTY4RlRwSzh3c0wwYmZkSDU3U3JqdVM3Uy1TcnVKRFZmR1BlVFlEM2M3ZzZuR2pFSmVxSEJCWVBUcGsxNS05SmRyMm9KTVBB?oc=5&hl=en-US&gl=US&ceid=US:en",
     "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1USTFSRzFMbTdRLTR6ZFNmc0pVcGI3ZlhTa2M1eWVrT2lhSUVwR2ZuX2JtbGRoV291WFQ4MEpaYWxwdWNlc1FLd3hiNA?oc=5&hl=en-US&gl=US&ceid=US:en",
     "https://news.google.com/rss/articles/CBMiakFVX3lxTE5ubWVoRDlzRE9EYlpRWE1jSklrYy1OX3B4M0V6YjE3eW9SNG5kV0Gabm1SSmVGNmN1ZlBmQUdKeG5pVkhiNm9XQi1pYTc2V2FIZ3M1VjRFQ0JuT3c1NWY5TXBSdWNKUjMyQ1E?oc=5&hl=en-US&gl=US&ceid=US:en",
     "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9maUw4Z01EQ0pORTVvYW5QTkY0a19XTG9PaVB3VFhucXJFb0Z1ZUZGUV9WNWxoTXlVcGxyT3hNOEdxNXJENmg0MDNYbGMtYS0tR2lv?oc=5&hl=en-US&gl=US&ceid=US:en",
@@ -199,10 +194,14 @@
     "https://news.google.com/articles/CBMid0FVX3lxTE5Fdi04UUxrUnJhVGNNXzB4bmJrWU0zMWNxYUtabUJHWF9NQUVLNUNfVFBUVExZWGdIT0I0ZWRLNVRZa2hSMEU4SXQ2d0lWaVo1Y0R3dXZyVlIwaGVtTHg5SDdiY3dybkx1NkRaYXZXeDZxZmdhQThB?oc=5",
     "https://news.google.com/articles/CBMiX0FVX3lxTE9RZkhiQzlUNUZnQ3BOckNfcklIbFdVOEJXNXo4cUtwbGpMVlVRS3IyNTNSbEJqSEs4dUxTRUowa1M4TDlEVm5GekloR19XclpMOUlwT3pldUlfdzVSOHVV?oc=5",
     "https://news.google.com/articles/CBMiakFVX3lxTFB4cWxvTllXU0tJTlVQX1NKOUxFSENLdS12akpRSklibkw0VzhWUHVIWVU0UjRYNVdraFVBbzFpUG9reHQxckpOWnFXc2JEcW5seG0xVWphWDg1RGloOWptMmNvSEtGck5ORlE?oc=5",
-    "https://news.google.com/articles/CBMiU0FVX3lxTFBGQm9kSzZQWW5QSHNaUEdQTHVlc0NxWENJb2M5OXFFYjN5S3RuYXZqSk5xdm05bUc4MjJINThIcG1tZXhVMVFiNVo3allhYS1kWFk4?oc=5"
+    "https://news.google.com/articles/CBMiU0FVX3lxTFBGQm9kSzZQWW5QSHNaUEdQTHVlc0NxWENJb2M5OXFFYjN5S3RuYXZqSk5xdm05bUc4MjJINThIcG1tZXhVMVFiNVo3allhYS1kWFk4?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTE4tUHhuankyWXNveXdTZ3ZXdXAwMjFkMEZVaGdPcHhHSEN0bkJNQXh5a1gzN3FfZWsySzJ3N0V2T1NPWmVUa2RFZFpxS3g5S2JndUhUbzhDc1pzN0wzRk9uZUZuOGRxRjJuN3hNbA?oc=5",
+    "https://news.google.com/articles/CBMiRkFVX3lxTE5XZHoyeDBZVUY4aElMd1I0UU9SUFRpc2NwbDU3aUFYOENtUFVlaGs3N1NLTF82dWtpREtmLVNDWGt3X3B3R2c?oc=5",
+    "https://news.google.com/articles/CBMiakFVX3lxTE8zZUJZRE1GekNXZDVFamoxbXdxWVpmSmNaQkNxd2FEdlZwc1hIbTdnQm1OWExPWnRNRmw4Wng2VnVhOW9XY1h6a2VkeVl3LTVJMEl3MmQ0SHMwX0RERGIyakVjOUNjWHFUd3c?oc=5",
+    "https://news.google.com/articles/CBMiakFVX3lxTE95Nm1sRE9BMGlINDN1SzdWR2RSVFRBcVdBWU9halpTN0VTVWVsTjAwUnVGUFU2bVliWHNPVnlWYmZPX295TmlLQ3JwbFp1cWtveFVNUlljRnZCTVk1Z01YS0FiUHBrQ19YeVE?oc=5",
+    "https://news.google.com/articles/CBMiakFVX3lxTE1ZSWtHVUhuckxfcC1lb2ROWTdwREd2b2c1b1U2cGE1WllOUjdEN2NkU1Uza2swckZVbnlRSFNLdF9TVmpXMS1CVVI4RThsRHlRUmJmUU9TVkRiQnU1TzlUMWZ4LVFpUUx4cVE?oc=5"
   ],
   "titles": [
-    "ニュートン・フィナンシャル・コンサルティング、「生命保険乗合代理店業務品質評価運営」認定を継続",
     "日本マイクロソフト、フィンテック・インシュアテック領域における協業プログラムを開始",
     "損保ジャパンとSOMPOリスク、ドローン×AI解析で森林調査サービスを低コスト化",
     "東京海上日動、コンタクトセンターの主要業務にAI導入--CTCとPKSHAが支援",
@@ -397,6 +396,11 @@
     "プルデンシャル生命「自粛期間を180日間に延長」で“営業社員が営業できない”問題 「勝手な保険営業を防ぐため、分単位での行動入力が課される」厳格管理",
     "日本の生保業界は変化に適応できず､殻に閉じこもっていた／保険はもっとシンプルに安くできると確信した",
     "Finatext、変額年金保険のデジタル化を牽引する三井住友海上プライマリー生命保険株式会社「ＡＨＡＲＡ」の接続銀行拡大を技術支援",
-    "日本のインシュアテック市場：2035年までの世界の業界規模、シェア、発展、動向、成長、需要、機会および主要メーカー分析である。"
+    "日本のインシュアテック市場：2035年までの世界の業界規模、シェア、発展、動向、成長、需要、機会および主要メーカー分析である。",
+    "東京海上日動など損保3社、トヨタへの出向者による情報漏洩を発表",
+    "日本損害保険協会「代理店業務品質評価本部」設置",
+    "【favy 資金調達リリース】favy シリーズDセカンドクローズとして住友生命保険相互会社・アイキューブドベンチャーズから資金調達。来店データを活用した新広告サービス「favy Ads」の提供を開始",
+    "シェルパ、シリーズB Final Closeとして東京海上グループより資金調達を実施",
+    "【事例公開】日本生命保険相互会社、営業職員約50,000名が活用する教材をデジタル化｜全国1,400拠点における教育の均質化と可視化により、お客様への提供価値向上を加速"
   ]
 }
