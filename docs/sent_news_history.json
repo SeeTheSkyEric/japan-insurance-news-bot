@@ -1,12 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9TZXRtRUFLRDN5WnJOWEYwcm04UENTMTV2c29mR3hfZjQ2NUtwRHZlTDVRcVZxWU9qYmNNVW0zb2Q2NUZ1YTZhMWUzLTIzQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/articles/CBMibEFVX3lxTFBiWVZvLTZUTmR6YjVvalJXV0djMFNyV01Qb0MwUkhEdzBHVTM5MkFZd0VkSnQ0ZTBvWVNTemtxNjUzdTlEMm5TNWNoN2w0V2tVeGNKQ0pOak00c3lCdUQ0LXBRVlpSMnZzR191WQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/articles/CBMiYAFVX3lxTFBoZlpnSnl6RFNOT1JsTldTNVBJZGVTREJNdW9QMURXdUxaUG5NUFJUQlphVGpMVFp3cjloc2N3bFowRTNPdEhhMlFUd090bXBnRjJPckg5QzFnY0lyRXJRLQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/articles/CBMibEFVX3lxTE5FQjc4eUpVbEhvQ3dFQjl4Z2UxQ0xyLWFkbG5LaVRJXzZhM29saUNEZkZuQXpTWHRNYW5lMzBrenpsN1BRSl8yaDFSRC12b0hoQXUyQmgzclpVTTVrR3dDSVdRaFp6dUoyQndOTw?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/articles/CBMibEFVX3lxTE1IMHd1RS1FbGRxakYzb29xSHp4aU9VNVNXMHFBTlVMd080WEV0cWtvdFdFbXl2X3RneXpZV0R2UmpVcXRpTWh4U1A2cm1EUmpQbTFxSVZLZUNYU0dpMjJwdm90LXdYTkpvX3BidQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9zSzVTQzZxbW9qS2xpZHR2MHVIVHIxYXhXWXQ5VjZZd05UWFFPd0dPbWJYWXZtanJQRUM0VHNwZ01TYm1tS1RXbTZZVGw?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/articles/CBMiWkFVX3lxTE0xSm9LVTdKMW9VQy1SQzlqMEItRGZYcERaZHc3N2kxX211WHplT1lkNkFFVmhUNVNoUHJ6QWJaS3poazZSUlZTRXRQUkd3ODZOeEowMk1BbUktQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
     "https://news.google.com/rss/articles/CBMiakFVX3lxTFBhWEpTODdneDNPU3p2X1E3WWc2NWJjQ1hTMmdjSDNkRUNoSXNuNWRXUGFZbFlEMG8yODBRRHQ2NWpBU2pqc25pNjotcnVlazc2MEFXMDZEcjBpZGc2QWZIYXZGc0ZpS0Y3bmc?oc=5&hl=en-US&gl=US&ceid=US:en",
     "https://news.google.com/rss/articles/CBMiakFVX3lxTE1yeUJRZHdZRXhvUVVVT1JXUmkyeWJRcG5BQUNYXzl3WTRuV1RnNWJaUWlsanFSdVhCbVZEVG1ST280Q2V4c0lybGtrVmtJSTMzdXZFbFVzSkFGY3dhQTVySEpTcnNoSWhhN2c?oc=5&hl=en-US&gl=US&ceid=US:en",
     "https://news.google.com/rss/articles/CBMihgFBVV95cUxOcjBaVDh5ZGJMdFc4YkF5WWJnVGczS3NBMXp4UGNESXNrbUREM281d093S0VLQ0g1N192c0sxa2N1RkZIdFhyeWtwMTc1dW84U2x6UVN0OFR1MmoxWjJqYlF2aEVQNE5LQ0lHWDZCSDFDN0tVc0NVUjg2QzJzQ0p2WkF2N195dw?oc=5&hl=en-US&gl=US&ceid=US:en",
@@ -199,16 +192,16 @@
     "https://news.google.com/articles/CBMiS0FVX3lxTE5GRjZGQ3hNR29YcTNTdVBUVEVvUmEzNThhUnFsOUstVTRSLXU4MG51dW00bGMwdXJvMWp1RlV0MktnZ0tEbFpzWlcyOA?oc=5",
     "https://news.google.com/articles/CBMiqgRBVV95cUxQekVKckY3dk5fSUUzc1NLWl8tNnFBNE9IWkFlNGtmZUFxcVN0QmJnREJoUVZwOU5ZZEM0T1NOUHY3TkloLWlWY1BYZFZKUmJERV9LeFlWN01qS05GMEtHRm80RHRpbk9xRjdrclZKWUZxSWx4SWpvamlrclhJT2RIc0ZnZE1CUXppMDZGN1pWbVhLTkp6MUtyNWRyUEUzVkNDR2NOeFM0RGVPSEhPWVcxZWVVdVlYSDdIbFFYVDMxa1otM0YzWTlXYkJJdWd6YnVIN1VXNnV3aWdWbEU0bDlJYkJ6Q0QyYUFXVmZNelhwUFFWbXlqREZuSmlwNEMyV05SQy1aTEpxVWxJWVBLY1RyZWdxVm9ncS0tRjctd0l1cHgxWDRuZVVfVU1TcU1YOVg0Ynpua182YVdOVHd0VXVtc3k0OEZlRjAwWS12ZzRjdDNBZ2JGZzhwOUJSU1lpTUR0Y0JnUlI4b1BzYmtYR1U0b3ZxVmRfcmpBWUs4NGlEbXg4MjA0Q0FfMlB2MWdCcUM1dFpGcnZpZXVMTnhlMVFWaE9RRjJQcmN0cDBlV0xWSzRjVDd2Y3M5a3BaMU5GNTFHSTh2UVFobGN1RHlnYkJRMGM4N29xdUt0UExmUjJBZnRTeDlZZWZ3V3o4MWRaM3YyOERQckVtU3RUOXNEUnBHTmVaX291cWlJVzJWQmlZck1xTXNPYXEzRTZDNFNQWmd5UE5zdVU1MEdLdw?oc=5",
     "https://news.google.com/articles/CBMiW0FVX3lxTE1ROEtNaXVSLUZVdWJ3QWV3TW5yRnpKbmhjS0ZZdmtFMVpGeGl2T2o1bTZqUDhrWlJmVnBuMzBrMF9vQlJ2OHh6ODFKempmNmVoNWpCV3hpR0V1RlU?oc=5",
-    "https://news.google.com/articles/CBMiR0FVX3lxTFBuQmFUY2M5eS1qUGQ5dFctV19tNjRBUWwteTBOUWp6NnhvSHFPRXZ1RWVoTnFVb2tfSmZmb0d2SURjWEsxV01v?oc=5"
+    "https://news.google.com/articles/CBMiR0FVX3lxTFBuQmFUY2M5eS1qUGQ5dFctV19tNjRBUWwteTBOUWp6NnhvSHFPRXZ1RWVoTnFVb2tfSmZmb0d2SURjWEsxV01v?oc=5",
+    "https://news.google.com/articles/CBMiSEFVX3lxTE9hamdPRXg4UjRmOVRvSHNtMkJrQmZXbmFsQkVlSGlmUWIxZThQR1JiNDBnT1RZWVljMGtFbUFHX1ljQ0JxcVZzdg?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTE5DWkVlUWV3cmtDREh6WWExOUR0ejhtb0o2YktRNXd0MjlKeEExQ2VoOTBuc0xMLUVyS250VFlKalhHMDF2WkU0MmR6Zi1XWnUzMU5MdXFjcGN3ODViZ1NSUHpiRDhOSl9HNXRkOQ?oc=5",
+    "https://news.google.com/articles/CBMiVkFVX3lxTE5SQWVjOHhDbFQ3S2JjdkVNQ0tISldOaElTdXU3LWJaU24wUjlWRjhEZUp2ZEZFLWdUYzk4VDVvbmlOb0ZFNDlmT0U4S3F4QmRFMmxHMWhR?oc=5",
+    "https://news.google.com/articles/CBMiiwFBVV95cUxNUXRhaEhMbmlDdVpPN09OcGJBTlJmYjRVVTF6UjNpNjhDejAyTk9mZXhYdk1NeU1DVmxqMFFVb3RhYUEyUFp3UU1KdzUyclpOd256VzAzRG54WGJVU2dqMTNNa3d6V0YxQk0tX0hyVElOMHNwLW9tdWNuMnkwZ0l5ZGxQVi1uRi1Nci13?oc=5",
+    "https://news.google.com/articles/CBMiS0FVX3lxTE8yMU50VUxjSlp2dEZ1US1IWkwtRERBeGFEYUdsbllQaHYxWEkyZHE0V3V6bE05cFZRRHo4QnFGY3RlRlJ1bjMtY0NSdw?oc=5",
+    "https://news.google.com/articles/CBMiU0FVX3lxTE1fUkVPNUpIb2FQdkpoLUdpQ1dVUVd6ZjlWSGNjcDZnZGVMUE1mUmZVVzBPdHZuc2d3QW4xSi1nV1g2YWxiSHdnak1WYjAyaGZrYmZv?oc=5",
+    "https://news.google.com/articles/CBMijgFBVV95cUxQZEd2UTd3M01QeDAwbVJiZkcyMkFPaEdYanRpbHFXRGN3MlB6VjNma3ZSbWo3SGxRNTZKWjFVMDgyWkFfQklaVlV0bzR0RzhiNm10czNTVkw1dWQ2UGk3T3VFbGNhWWhSel_3MHBIbzk5V0VVdnJxU20yVWFKT2JTSWRVQU9KeUFyVHFLLTV3?oc=5"
   ],
   "titles": [
-    "M&A案件情報 お問い合わせ B-0684310 保険代理店",
-    "損保ジャパン、保険加入者にひょうの警告通知 東芝の予測技術活用",
-    "【５％】 スタンレーについて、日本生命保険は保有割合が5％を超えたと報告 [大量保有報告書]",
-    "共栄火災、元代理店店主が7740万円詐取 保険証券を偽造 - 日本経済新聞",
-    "米政権主導の中東海運保険、主要提携先に損保大手チャブ",
-    "サイバー保険の日本市場（2026年～2034年）、市場規模（パッケージ、スタンドアローン）・分析レポートを発表",
-    "清水町と三井住友海上が包括連携協定 災害支援や住民サービス向上へ",
     "年金・満期返戻金等の支払調書におけるマイナポータル連携を開始",
     "自動車事故連絡システム「ＳＯＭＰＯあんしん事故連絡」の提供開始",
     "損保ジャパン、個人向け「雹災アラートサービス」の実証開始",
@@ -401,6 +394,13 @@
     "《ベテラン営業マンは「絶対に署名できません」》プルデンシャル生命保険「退職願兼誓約書」の中身",
     "Tim Venturesは、保険技術とデジタルアイデンティティ分野への新たな進出を目指すWalllifeに投資した。",
     "ライフネット生命、JALとの戦略提携でマイル活用の生命保険など開発へ 航空・決済・通信で「Embedded」加速へ…",
-    "シンガポールオンライン保険市場2035年までに40億757万米ドル到達見通し フィンテック融合で加速する次世代保険成長 CAGR22.53"
+    "シンガポールオンライン保険市場2035年までに40億757万米ドル到達見通し フィンテック融合で加速する次世代保険成長 CAGR22.53",
+    "船社・港湾・保険が板挟み、米中制裁衝突",
+    "アフラック生命など5社、代理店取引の是正進捗公表 便宜供与を防止",
+    "外資系生保が再び仕掛ける「高額手数料」合戦、代理店ビジネス消耗戦激化の行方（2ページ目）",
+    "若いがん患者の生存率は「どの医療保険に入っているか」に左右されている",
+    "損保ジャパンなど、脳波測定しフォークリフトの事故抑制するプログラム開発へ",
+    "【ドコモスマート保険ナビ】2026年5月更新 最新版 ■医療保険■がん保険■生命保険 おすすめ人気ランキング公開のお知らせ",
+    "終身医療保険に加入するなら、どこの「ネット保険」が正解？大手5社の商品を徹底比較！"
   ]
 }
