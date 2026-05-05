@@ -1,11 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/rss/articles/CBMiakFVX3lxTFBhWEpTODdneDNPU3p2X1E3WWc2NWJjQ1hTMmdjSDNkRUNoSXNuNWRXUGFZbFlEMG8yODBRRHQ2NWpBU2pqc25pNjotcnVlazc2MEFXMDZEcjBpZGc2QWZIYXZGc0ZpS0Y3bmc?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/articles/CBMiakFVX3lxTE1yeUJRZHdZRXhvUVVVT1JXUmkyeWJRcG5BQUNYXzl3WTRuV1RnNWJaUWlsanFSdVhCbVZEVG1ST280Q2V4c0lybGtrVmtJSTMzdXZFbFVzSkFGY3dhQTVySEpTcnNoSWhhN2c?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/articles/CBMihgFBVV95cUxOcjBaVDh5ZGJMdFc4YkF5WWJnVGczS3NBMXp4UGNESXNrbUREM281d093S0VLQ0g1N192c0sxa2N1RkZIdFhyeWtwMTc1dW84U2x6UVN0OFR1MmoxWjJqYlF2aEVQNE5LQ0lHWDZCSDFDN0tVc0NVUjg2QzJzQ0p2WkF2N195dw?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBvWTduN19Ia2FBSDdxQmtIQm50WDlVVldkaFNHNjBJcG80Zl9WeTQ2OXFiNDR5S0RGZWNXbUtXOGloQlNLTmRGaTRVWGE1akhtSlhSR3pEOXR6aTQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5rdzZWdlI3WkFkcjJlcDV0ZUJacm9JRFM5X1ZRc0RkaEFrMXRQOGlRMFBiSVl3VEJmZlhoV0YyeWVucDZfZ2hQZEtJSnY?oc=5&hl=ja&gl=JP&ceid=JP:ja",
-    "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1jMERjY3RSeG9CUENpaWVlbzJRdXFsa3B6ZkFDTVNPVjlZZUZVaHpYWngzUUNzVFQ4UjVOazhzeC0zX2c3M1J0OG9OY0toRGk1TXYzQmIyOHFyZl9VQzVBY1NPcw?oc=5&hl=ja&gl=JP&ceid=JP:ja",
     "https://news.google.com/rss/rss/articles/CBMif0FVX3lxTE9WdlhXbG5zcEFRZy1kYlBoUFAtYXNabjRQVmNCaGp1cTJaYTByUWRrWHd0ZW12ZldUUmY2M3JoLW5DZnNNbnFCYXV1QnlveHRMQlc0SHA3RFB6bVNpOUlYTjUwNUpHNHhoR1FBTVpwUEZGTEFma2FEZG9QUVBzVVk?oc=5&hl=ja&gl=JP&ceid=JP:ja",
     "https://news.google.com/rss/articles/CBMidkFVX3lxTE5oWVFiM250TXNUclU4Y1RtM1lEbWEtTkctUk1wZlppc3pnRnRUQS0tM21qeGRvUXJvcFpVcFQyT3BmNmNQWkY5SGJGRFpQQ2RPVFE0bWtfaFVRRjlEZEdSMGd5akJITmwzVUhEVkZWZWh1TTBfUWc?oc=5&hl=ja&gl=JP&ceid=JP:ja",
     "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5vN29sS2dHaTFUOWp6ODloSDNfRmJqV0owTGNfNi1WRGtpbm0wY1hrcW9WVnhxc2lSS0dVS0dZTWZxNWpycWI5aXVBSzZwdE5uVnhad0c3SkstZWVhRm9v?oc=5&hl=ja&gl=JP&ceid=JP:ja",
@@ -199,15 +193,15 @@
     "https://news.google.com/articles/CBMiiwFBVV95cUxNUXRhaEhMbmlDdVpPN09OcGJBTlJmYjRVVTF6UjNpNjhDejAyTk9mZXhYdk1NeU1DVmxqMFFVb3RhYUEyUFp3UU1KdzUyclpOd256VzAzRG54WGJVU2dqMTNNa3d6V0YxQk0tX0hyVElOMHNwLW9tdWNuMnkwZ0l5ZGxQVi1uRi1Nci13?oc=5",
     "https://news.google.com/articles/CBMiS0FVX3lxTE8yMU50VUxjSlp2dEZ1US1IWkwtRERBeGFEYUdsbllQaHYxWEkyZHE0V3V6bE05cFZRRHo4QnFGY3RlRlJ1bjMtY0NSdw?oc=5",
     "https://news.google.com/articles/CBMiU0FVX3lxTE1fUkVPNUpIb2FQdkpoLUdpQ1dVUVd6ZjlWSGNjcDZnZGVMUE1mUmZVVzBPdHZuc2d3QW4xSi1nV1g2YWxiSHdnak1WYjAyaGZrYmZv?oc=5",
-    "https://news.google.com/articles/CBMijgFBVV95cUxQZEd2UTd3M01QeDAwbVJiZkcyMkFPaEdYanRpbHFXRGN3MlB6VjNma3ZSbWo3SGxRNTZKWjFVMDgyWkFfQklaVlV0bzR0RzhiNm10czNTVkw1dWQ2UGk3T3VFbGNhWWhSel_3MHBIbzk5V0VVdnJxU20yVWFKT2JTSWRVQU9KeUFyVHFLLTV3?oc=5"
+    "https://news.google.com/articles/CBMijgFBVV95cUxQZEd2UTd3M01QeDAwbVJiZkcyMkFPaEdYanRpbHFXRGN3MlB6VjNma3ZSbWo3SGxRNTZKWjFVMDgyWkFfQklaVlV0bzR0RzhiNm10czNTVkw1dWQ2UGk3T3VFbGNhWWhSel_3MHBIbzk5V0VVdnJxU20yVWFKT2JTSWRVQU9KeUFyVHFLLTV3?oc=5",
+    "https://news.google.com/articles/CBMiYkFVX3lxTE95eS1JRVN6NFVaUVRKYU5xajY2c0R5d1oycmo2NzlaeHV1dFNIclZpcWlzQmkzVzA0Qng5UURuS2RBYkFfMnBuSk1USGNLLUNWR1pFVjJZNU12QlFTcWFrSVpR?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTE1ua3pHdlFCVzZzVXYydEVhYVpPU2RZcExxRnVKcmd2UnRzekppLWhsVUFFbzFvU0FnOHEzeC1aUEtaZzVPTk1GVDJPQU5ub2xGQzZTSjlVNG9fcm9iTGtORl9xRVhiWUlSemUxcA?oc=5",
+    "https://news.google.com/articles/CBMijgFBVV95cUxNX3prNGVlekdMNGZLQUFoclVISk94bS1qMlNRNlNvejZGc1B4d1ZGeG1DQXVPUzVtRENvLUVlY1JleUhFMGRzTWhUdmpGSm94cmNqVms3b056QjhCUDNhZjV2Q1NZU3h5eWlHdnkxZGtrYVJTVUpnZU5ZdHA2SXdVS0VTNGhJbUplVmhibXFn?oc=5",
+    "https://news.google.com/articles/CBMia0FVX3lxTE9vSC1vVmpScnVva21JTTVTVnhzcjhPS2l3eFN2alR0cEJfcXR1TzZueFFnMktpSm5Da1ZnRGFwdndZdEZxZjFBNG15UmRVTG5kN3AtdF9RQ003LXgwcDhjZk9MZDA4SlJmR2M4?oc=5",
+    "https://news.google.com/articles/CBMihgFBVV95cUxPakRVUlRfQ25mcExMcmdIZS1ZSHNLQTFvUThSVmZDTllSQk5HUXgzYkZGNW9EZGtIcGs3RHk5dFFoMldydDFFeE9RaVNhVEx3UTg1N29TbzVaMlRtNEw5QWNXWGQ1QmN2ZkE2YTdUc3B1YjdrME1SMXRkQmktRm9JTi1DUVRpZw?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTE9WOHhPVmpONkxlOXhUWnRseUJzRmQ3ZG5haGdnSGU5YlhNYVVKU2hKSUE0VjVQaG0zZm80bnRWckNWeV9CeFNuNXpuWURwMUMzMVYzYVZvdEVRUnp5b0lReVFtOUNRZ0NFeFpTMA?oc=5"
   ],
   "titles": [
-    "年金・満期返戻金等の支払調書におけるマイナポータル連携を開始",
-    "自動車事故連絡システム「ＳＯＭＰＯあんしん事故連絡」の提供開始",
-    "損保ジャパン、個人向け「雹災アラートサービス」の実証開始",
-    "損保ジャパン、VARIETASの「AI面接官」を導入",
-    "事故ると最悪な「無保険車」増加の懸念？ 街から消える“自賠責”の窓口 ビッグモーター事件の思わぬ余波（2/2 ページ）",
-    "損保ジャパン、生成AIを活用した代理店業務品質評価システムを開発",
     "まだまだ伸びしろがありそうなネット保険業界に投資するなら？【坂本慎太郎の街歩き投資ラボ】（週プレNEWS）",
     "宇宙旅行に「安心」を 三井住友海上、JAXAと保険開発 打ち上げ時のけがの治療を補償",
     "損保ジャパン、「SOMPOあんしん事故連絡」開始…GPS・写真アップロード機能搭載",
@@ -401,6 +395,12 @@
     "若いがん患者の生存率は「どの医療保険に入っているか」に左右されている",
     "損保ジャパンなど、脳波測定しフォークリフトの事故抑制するプログラム開発へ",
     "【ドコモスマート保険ナビ】2026年5月更新 最新版 ■医療保険■がん保険■生命保険 おすすめ人気ランキング公開のお知らせ",
-    "終身医療保険に加入するなら、どこの「ネット保険」が正解？大手5社の商品を徹底比較！"
+    "終身医療保険に加入するなら、どこの「ネット保険」が正解？大手5社の商品を徹底比較！",
+    "県民の健康増進 取り組みを支援 本間生保県協会会長",
+    "国保の保険料「加入者が偏り負担感」 社労士が解説",
+    "マイナ保険証なら「医療費30万円」でも、窓口で払うのは“8万円”だけ!? 40代「年収400万円」ですが、今後“自己負担上限額が増える”って本当ですか？ 制度の仕組みを解説",
+    "第一生命、生成AIとクラウド移行で帳票処理を刷新 選んだサービスは？：運用コストを約50％削減",
+    "JAL、ライフネット生命 資本業務提携を締結、生命保険にマイル活用",
+    "東京海上がCCSのリスクコンサル 保険開発も視野"
   ]
 }
