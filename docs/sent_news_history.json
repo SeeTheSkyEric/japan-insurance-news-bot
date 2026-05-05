@@ -1,10 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/rss/rss/articles/CBMif0FVX3lxTE9WdlhXbG5zcEFRZy1kYlBoUFAtYXNabjRQVmNCaGp1cTJaYTByUWRrWHd0ZW12ZldUUmY2M3JoLW5DZnNNbnFCYXV1QnlveHRMQlc0SHA3RFB6bVNpOUlYTjUwNUpHNHhoR1FBTVpwUEZGTEFma2FEZG9QUVBzVVk?oc=5&hl=ja&gl=JP&ceid=JP:ja",
-    "https://news.google.com/rss/articles/CBMidkFVX3lxTE5oWVFiM250TXNUclU4Y1RtM1lEbWEtTkctUk1wZlppc3pnRnRUQS0tM21qeGRvUXJvcFpVcFQyT3BmNmNQWkY5SGJGRFpQQ2RPVFE0bWtfaFVRRjlEZEdSMGd5akJITmwzVUhEVkZWZWh1TTBfUWc?oc=5&hl=ja&gl=JP&ceid=JP:ja",
-    "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5vN29sS2dHaTFUOWp6ODloSDNfRmJqV0owTGNfNi1WRGtpbm0wY1hrcW9WVnhxc2lSS0dVS0dZTWZxNWpycWI5aXVBSzZwdE5uVnhad0c3SkstZWVhRm9v?oc=5&hl=ja&gl=JP&ceid=JP:ja",
-    "https://news.google.com/rss/articles/CBMia0FVX3lxTE5wWUc1bjhTZkFoQTdxLTM2V08taVZaSXpaNjNVNjFMVFZUZ1RaOVdSWVEwaGozQU44LVBDTzZKbU1wMFZ2MEQ1ZEFyME9VNzFGMWt2dGVIeFp3NU9GdGl6QkRCS25aMmlxV2xF?oc=5&hl=ja&gl=JP&ceid=JP:ja",
-    "https://news.google.com/rss/articles/CBMiakFVX3lxTE1YMWdtbjNaSGV4NldsNkQ0N2JrWkoyVXNnbVZwVHpJU3UxME51LUstR2h0YVhLQy1YLWY5bV84aWVXLXk3Y1FtcXZVemtUS1FKM0RNMVJ2UEprR0hEc0NPQU1aMmRBYm8wV2c?oc=5&hl=ja&gl=JP&ceid=JP:ja",
     "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1UNEpkTnkyRElhTVVaUVhxX3VUTnlXdGJFcU02U2dFV2JZMDE4WFQ4UVVKZGo2T3g1UWpvSE45aXk3UThGeTVCVk0zUzRPdw?oc=5&hl=ja&gl=JP&ceid=JP:ja",
     "https://news.google.com/rss/articles/CBMiYkFVX3lxTE4tWmpDTDk1am44X1lUbThmNlNKVlZMdC1mT2ctOVZWcnBXOVRHeU1QcW0wUS1qZ2ZnMFNuY1dqV2RqVlBUSmNhYWNfcUQxMlAzdzFhOHFzZmRXSTU1ejN1STZR?oc=5&hl=ja&gl=JP&ceid=JP:ja",
     "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBjUDQ0TVFiaW9rR3hEZ01yZzNjSzhzZHlLa294T180UmxSeFo0R19ISTk0X0VqZWQxQ1pIcnptQTVJbXdsVk1JRHQ2X0t4cUszakVDaA?oc=5",
@@ -199,14 +194,14 @@
     "https://news.google.com/articles/CBMijgFBVV95cUxNX3prNGVlekdMNGZLQUFoclVISk94bS1qMlNRNlNvejZGc1B4d1ZGeG1DQXVPUzVtRENvLUVlY1JleUhFMGRzTWhUdmpGSm94cmNqVms3b056QjhCUDNhZjV2Q1NZU3h5eWlHdnkxZGtrYVJTVUpnZU5ZdHA2SXdVS0VTNGhJbUplVmhibXFn?oc=5",
     "https://news.google.com/articles/CBMia0FVX3lxTE9vSC1vVmpScnVva21JTTVTVnhzcjhPS2l3eFN2alR0cEJfcXR1TzZueFFnMktpSm5Da1ZnRGFwdndZdEZxZjFBNG15UmRVTG5kN3AtdF9RQ003LXgwcDhjZk9MZDA4SlJmR2M4?oc=5",
     "https://news.google.com/articles/CBMihgFBVV95cUxPakRVUlRfQ25mcExMcmdIZS1ZSHNLQTFvUThSVmZDTllSQk5HUXgzYkZGNW9EZGtIcGs3RHk5dFFoMldydDFFeE9RaVNhVEx3UTg1N29TbzVaMlRtNEw5QWNXWGQ1QmN2ZkE2YTdUc3B1YjdrME1SMXRkQmktRm9JTi1DUVRpZw?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTE9WOHhPVmpONkxlOXhUWnRseUJzRmQ3ZG5haGdnSGU5YlhNYVVKU2hKSUE0VjVQaG0zZm80bnRWckNWeV9CeFNuNXpuWURwMUMzMVYzYVZvdEVRUnp5b0lReVFtOUNRZ0NFeFpTMA?oc=5"
+    "https://news.google.com/articles/CBMibEFVX3lxTE9WOHhPVmpONkxlOXhUWnRseUJzRmQ3ZG5haGdnSGU5YlhNYVVKU2hKSUE0VjVQaG0zZm80bnRWckNWeV9CeFNuNXpuWURwMUMzMVYzYVZvdEVRUnp5b0lReVFtOUNRZ0NFeFpTMA?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTE5teGU3WER6aDlTUQlTVDZWOXZTQnhLRjJVSGppTEdhV2FSaTJMeW5KSlY3bHZCWFB4X2N4SndDWkxIa2JxR1AySTd1eFV0Rzl3VWhGQlJaWWRCTnpuUWhsZk5sRldVa1Y0a3VnXw?oc=5",
+    "https://news.google.com/articles/CBMiV0FVX3lxTE15blBnSkI0TWlwMjFITmZwN3NfcXVnOS1KU2NXZGdJckNBWG0xV1BoVVFYMTlwRlR6ZVZNeUE4Y3pud3R2d2ExU1d2UVRTUTNqd19mQi0tbw?oc=5",
+    "https://news.google.com/articles/CBMif0FVX3lxTFBYU1VVdWpGWGpHTktqcGtWdFoyU3h5WnE1dzNGV2VJTTJGdjRpSTZXT2ZoaFdhUVFBOUt6NEF0aTJFTG5WdXVNakZrU1ktQ2piN1cxS0dweW0yQjHoeG1iSVdIWFZKVkM5dWdETC1jUUFvODZQaHRab0lTUllBbTg?oc=5",
+    "https://news.google.com/articles/CBMijgFBVV95cUxQdURINXJKMk9JTkMwemMzZGthT3BOWHNFQ0VEUmY2V3pvc3Y2UFpFMEdfRFRtdVZnNWJsN19ieHY3THBiVVhfV3o1YkZoMXc2aTdTb1V4ZWtPVVdJNTJUeW8wN2dnbkIzT2JwaFhOZWhhV1VjaDdJMGdCYXNFaHV3VWdRMTJOYzRqODZod01n?oc=5",
+    "https://news.google.com/articles/CBMihwFBVV95cUxQS3JGM2dZUHk2SnprR3JRblFVd1pGeWtUcy01ZnA5c0U1MnRFb3ZKRk5oc2cxM0xLYVVYT00taTB2SUpsV2JyUUZ4X1RuV3U1YlpyeUtzRV9YT0VZOFBkVHNSaFRJZ0hZT25EQ0JfeXR4bjRCR3AtWmxHYS1hNUFCT0ZTSEM5aUk?oc=5"
   ],
   "titles": [
-    "まだまだ伸びしろがありそうなネット保険業界に投資するなら？【坂本慎太郎の街歩き投資ラボ】（週プレNEWS）",
-    "宇宙旅行に「安心」を 三井住友海上、JAXAと保険開発 打ち上げ時のけがの治療を補償",
-    "損保ジャパン、「SOMPOあんしん事故連絡」開始…GPS・写真アップロード機能搭載",
-    "消費者庁「消費者志向経営」に賛同 『組合員・利用者志向自主宣言』実施 ＪＡ共済連",
-    "損保ジャパンとみつばモビリティ、ライドシェア領域で業務提携「公共ライドシェア研修パッケージ」の提供を開始",
     "MONET・損保ジャパンら、補聴器フィッティングが可能な車両「ほちょうきカー」開発 介護施設や患者の自宅付近に車両で訪問",
     "秋田大学と日本生命、健康分野で包括協定 セミナー企画など検討、情報発信を強化",
     "スクープ／金融庁がプル生命HDに立ち入り検査／狙い付けた悪の根源「大物OB」",
@@ -401,6 +396,11 @@
     "マイナ保険証なら「医療費30万円」でも、窓口で払うのは“8万円”だけ!? 40代「年収400万円」ですが、今後“自己負担上限額が増える”って本当ですか？ 制度の仕組みを解説",
     "第一生命、生成AIとクラウド移行で帳票処理を刷新 選んだサービスは？：運用コストを約50％削減",
     "JAL、ライフネット生命 資本業務提携を締結、生命保険にマイル活用",
-    "東京海上がCCSのリスクコンサル 保険開発も視野"
+    "東京海上がCCSのリスクコンサル 保険開発も視野",
+    "バークシャー、保険新トップ指名へ 東京海上提携主導ジェイン氏後任",
+    "「ヒマラヤ行きを勧められ、気づいたら生命保険を17社も…」 日本屈指の登山家とその娘が衝撃エピソードを暴露！",
+    "27歳で年収6000万 元生命保険トップ営業マンが格闘技に挑戦する理由「僕の人生観でもあります」（ENCOUNT）",
+    "“3割負担”を死守したくて「マイナ保険証」に切り替えた私。でも周りでまだ「紙の保険証」を見かけるのはなぜ？ 「3月で完全終了」じゃなかったの!? 今さら聞けない「マイナ保険証」のメリットと最新スケジュールを解説 (ファイナンシャルフィールド)",
+    "損保ジャパン「おうちでスマイルダンスプロジェクト」動画配信のお知らせ"
   ]
 }
