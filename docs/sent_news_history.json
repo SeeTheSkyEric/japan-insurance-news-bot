@@ -1,11 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1UNEpkTnkyRElhTVVaUVhxX3VUTnlXdGJFcU02U2dFV2JZMDE4WFQ4UVVKZGo2T3g1UWpvSE45aXk3UThGeTVCVk0zUzRPdw?oc=5&hl=ja&gl=JP&ceid=JP:ja",
-    "https://news.google.com/rss/articles/CBMiYkFVX3lxTE4tWmpDTDk1am44X1lUbThmNlNKVlZMdC1mT2ctOVZWcnBXOVRHeU1QcW0wUS1qZ2ZnMFNuY1dqV2RqVlBUSmNhYWNfcUQxMlAzdzFhOHFzZmRXSTU1ejN1STZR?oc=5&hl=ja&gl=JP&ceid=JP:ja",
-    "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBjUDQ0TVFiaW9rR3hEZ01yZzNjSzhzZHlLa294T180UmxSeFo0R19ISTk0X0VqZWQxQ1pIcnptQTVJbXdsVk1JRHQ2X0t4cUszakVDaA?oc=5",
-    "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5aRk5UQTdtd2cybUVQYWI3cnhYNFRLNVlVRU95YUI0UzB1b3FzQ1JjTGtHVVhxYlQyRHlpYlRJcEpjanM3N1VxZXlKV2pVUGE0Z3c?oc=5",
-    "https://news.google.com/rss/articles/CBMibEFVX3lxTE9pM0M5YmJFcjlVTDNyaUt5Y05LLVNJTG1LYVdPcmxnVjUyR0JWNlZjcmlmS0dZQmtzLVA0M0l6bmVWbzNraDhCWWtaSnNCWUFHMWI4Y1gtS2llT0U0Z21NUHhjNTZyNElJSkstNg?oc=5",
-    "https://news.google.com/rss/articles/CBMiVEFVX3lxTE8zSldJWFdiWS1DTGF0b3R4OUtld3ZnNzUzUk1GdXhPQXFhaHQxNG1IZlZZN1VGeldMSWpiMlQ4eWdYek9LTHhfOEpjUFNfM241LWVTdQ?oc=5",
     "https://news.google.com/rss/articles/CBMiakFVX3lxTE10ZVhkTjF6NXdLUlpIWjVRTk1BZDRoTHRYSC1Eb09HQ2RnaEtnNVFjbFllZDRMWRzSkxYcWRSeklrQnA4bnBFU3Joa3h0NzJRUFIzNko0R2ZlSGdkQ2VFOHZESVZRVVp6Slp0cENpWEE?oc=5",
     "https://news.google.com/rss/articles/CBMiekFVX3lxTE5UZnVleGp4NHFzaTFoRmx3dE1GRGZMa05RQnJYVFhtSWg2NzlvYUFFWFROUTYyUDQ3dWR4TllvMWpraS0ybEt5LW9BTFJzamg0OTJNSnVfTDdkWTNSZ29yOGY0eTZRSFowTjI2M1lRZ3BxYWpUZmZFOFJ3?oc=5",
     "https://news.google.com/rss/articles/CBMibEFVX3lxTFA3SnRJeDQ1SnpNT1k1cTJIaTRPWTcwV1lsblJjZXF0OWI0LWFPMDZoMnpPdmxVMURCa2dlbHhDMTMybkFOSmtZN0k2WkFoWjJKQ1JRMDctWkp6TXREbmhNU19ZUlBLZVhyNm1WZQ?oc=5",
@@ -199,15 +193,15 @@
     "https://news.google.com/articles/CBMiV0FVX3lxTE15blBnSkI0TWlwMjFITmZwN3NfcXVnOS1KU2NXZGdJckNBWG0xV1BoVVFYMTlwRlR6ZVZNeUE4Y3pud3R2d2ExU1d2UVRTUTNqd19mQi0tbw?oc=5",
     "https://news.google.com/articles/CBMif0FVX3lxTFBYU1VVdWpGWGpHTktqcGtWdFoyU3h5WnE1dzNGV2VJTTJGdjRpSTZXT2ZoaFdhUVFBOUt6NEF0aTJFTG5WdXVNakZrU1ktQ2piN1cxS0dweW0yQjHoeG1iSVdIWFZKVkM5dWdETC1jUUFvODZQaHRab0lTUllBbTg?oc=5",
     "https://news.google.com/articles/CBMijgFBVV95cUxQdURINXJKMk9JTkMwemMzZGthT3BOWHNFQ0VEUmY2V3pvc3Y2UFpFMEdfRFRtdVZnNWJsN19ieHY3THBiVVhfV3o1YkZoMXc2aTdTb1V4ZWtPVVdJNTJUeW8wN2dnbkIzT2JwaFhOZWhhV1VjaDdJMGdCYXNFaHV3VWdRMTJOYzRqODZod01n?oc=5",
-    "https://news.google.com/articles/CBMihwFBVV95cUxQS3JGM2dZUHk2SnprR3JRblFVd1pGeWtUcy01ZnA5c0U1MnRFb3ZKRk5oc2cxM0xLYVVYT00taTB2SUpsV2JyUUZ4X1RuV3U1YlpyeUtzRV9YT0VZOFBkVHNSaFRJZ0hZT25EQ0JfeXR4bjRCR3AtWmxHYS1hNUFCT0ZTSEM5aUk?oc=5"
+    "https://news.google.com/articles/CBMihwFBVV95cUxQS3JGM2dZUHk2SnprR3JRblFVd1pGeWtUcy01ZnA5c0U1MnRFb3ZKRk5oc2cxM0xLYVVYT00taTB2SUpsV2JyUUZ4X1RuV3U1YlpyeUtzRV9YT0VZOFBkVHNSaFRJZ0hZT25EQ0JfeXR4bjRCR3AtWmxHYS1hNUFCT0ZTSEM5aUk?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTFA0TzBaUGxaYVdOdFd6cmVBUU5lOGtuZW9tRGlyai0zTGdHc0x0d1AxWloxUEdsNlg0THB0MHE4Mi1JNk9vTmZGQzZ0ZjNQdjd5RkVvUUgxekRuMTFIMWMxQ1lnVTRrTmNCN1JGQQ?oc=5",
+    "https://news.google.com/articles/CBMiakFVX3lxTE0xVTBUaHUtSVJRdUpDQXo1QjlLOHQ1SkNnU2xoSmdPTk1jVkRTc092MlFUNHhPS2o2TS14VkpnbnhwRGtJQ0UydXI1NHdHeWlsZHpGMmpsbm5FeGlzZEhSdUo1Z2tGY0Utbmc?oc=5",
+    "https://news.google.com/articles/CBMiiAFBVV95cUxQeTlQRDVneHRxRlNpM0ZOYWlCMlRyRlVRYXlSUk12VW9KdTEtcTBnSjlGNnNsU2FXNF92WTV1LUpkb1k5RkU1ajJhck8xd2BNaDB0N29RZmRPeVFKd3hic2tJaGFPQVBRajhiV2Q1bmc0ZFg5anlFd0FoWGNZUGs3TWJHVkpheXdL?oc=5",
+    "https://news.google.com/articles/CBMiS0FVX3lxTFA4aGhIeVJyQjhoelU4QnplZklVX0RtSmxkVUtEcXc1LXVBX1JWaVdUTmJaN3ZUY0s2U3VDZE5ZSGx1eXN5TEZGajZYaw?oc=5",
+    "https://news.google.com/articles/CBMiZEFVX3lxTE1wNUhRRTd2Ny1rVTV3SXV2bjlpZ2MtRDY1TW91WmJla2NGUGpKVWxZS3JoX1ZFTHpsUlI4SEhUZWhybGQxdXFteWNEMDNZYUlnYzdaX2Y2TkJ4M2Jtc1IxWFQyVXM?oc=5",
+    "https://news.google.com/articles/CBMiWEFVX3lxTFAyMHZ3eTJwbklKS2ZvaWExSVNTN0pZeGo2UHJVOEhCMnljeUVsaU53eTZqYUw2TnJYTlQ1czZ3UVdHYnRadkZ0X1cxQWhLdXJibmt6a1pTN1k?oc=5"
   ],
   "titles": [
-    "MONET・損保ジャパンら、補聴器フィッティングが可能な車両「ほちょうきカー」開発 介護施設や患者の自宅付近に車両で訪問",
-    "秋田大学と日本生命、健康分野で包括協定 セミナー企画など検討、情報発信を強化",
-    "スクープ／金融庁がプル生命HDに立ち入り検査／狙い付けた悪の根源「大物OB」",
-    "【独自】プルデンシャル生命保険で新たな不祥事疑惑／支社長がマッチングアプリで金銭トラブル",
-    "生命保険「おすすめ販売」は健全か 「マネードクター」へ便宜供与も",
-    "生命保険会社の元社員による投資詐欺、長野地裁が懲役6年の実刑判決",
     "AI inside、生命保険会社向け診療明細処理ソリューションを提供開始― 診療明細のデータ化から給付金査定システムへの登録まで自動化を実現",
     "THE PHAGE、NEDO PoPフェーズに採択。東京海上日動火災保険株式会社との共創で生体情報×AIヘルスケアの社会実装を加速",
     "期限切れ保険証でも1〜3割負担、7月末まで延長 マイナ移行の特例",
@@ -401,6 +395,12 @@
     "「ヒマラヤ行きを勧められ、気づいたら生命保険を17社も…」 日本屈指の登山家とその娘が衝撃エピソードを暴露！",
     "27歳で年収6000万 元生命保険トップ営業マンが格闘技に挑戦する理由「僕の人生観でもあります」（ENCOUNT）",
     "“3割負担”を死守したくて「マイナ保険証」に切り替えた私。でも周りでまだ「紙の保険証」を見かけるのはなぜ？ 「3月で完全終了」じゃなかったの!? 今さら聞けない「マイナ保険証」のメリットと最新スケジュールを解説 (ファイナンシャルフィールド)",
-    "損保ジャパン「おうちでスマイルダンスプロジェクト」動画配信のお知らせ"
+    "損保ジャパン「おうちでスマイルダンスプロジェクト」動画配信のお知らせ",
+    "改正保険業法、6月施行で規制強化 商慣行の是正は道半ば",
+    "出張整備のアプティ、三井住友海上の損害保険募集代理店として企業総合賠償責任保険を販売開始",
+    "運転手付きマイクロバスは「白バス」＝違法 任意保険が支払われない可能性も 被害者はどうすれば… #エキスパートトピ",
+    "「事故っちゃって自動車保険が高すぎます。入り直せばチャラになりますか？」→やってはいけない“等級隠し” 抜け道はあるのか？",
+    "保険スタートアップCorgiがシリーズBで1億6000万ドルを調達し評価額は13億ドルに達した",
+    "保険業界20年のベテランが語る、デジタル時代に顧客の心をつかむ「透明性」の力"
   ]
 }
