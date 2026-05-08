@@ -1,11 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/rss/articles/CBMiakFVX3lxTE10ZVhkTjF6NXdLUlpIWjVRTk1BZDRoTHRYSC1Eb09HQ2RnaEtnNVFjbFllZDRMWRzSkxYcWRSeklrQnA4bnBFU3Joa3h0NzJRUFIzNko0R2ZlSGdkQ2VFOHZESVZRVVp6Slp0cENpWEE?oc=5",
-    "https://news.google.com/rss/articles/CBMiekFVX3lxTE5UZnVleGp4NHFzaTFoRmx3dE1GRGZMa05RQnJYVFhtSWg2NzlvYUFFWFROUTYyUDQ3dWR4TllvMWpraS0ybEt5LW9BTFJzamg0OTJNSnVfTDdkWTNSZ29yOGY0eTZRSFowTjI2M1lRZ3BxYWpUZmZFOFJ3?oc=5",
-    "https://news.google.com/rss/articles/CBMibEFVX3lxTFA3SnRJeDQ1SnpNT1k1cTJIaTRPWTcwV1lsblJjZXF0OWI0LWFPMDZoMnpPdmxVMURCa2dlbHhDMTMybkFOSmtZN0k2WkFoWjJKQ1JRMDctWkp6TXREbmhNU19ZUlBLZVhyNm1WZQ?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTE9nRkpNaHoyaUpMUm5LRlVZS3lvdV9ZeTZFaUFibENHN3VOZk5UbDNJY3IwQU5XTS12M0hwUUdXXzZIWFhtX2RYVEJDMlhLYVctZFE5TkplWncwUG5ETFJYN2tOOFZHT2xFWmc?oc=5",
-    "https://news.google.com/articles/CBMiTEFVX3lxTE5oYWY3U0hQQWRHYXVPbzVqd2RPQlBKMUljU3JrZWF4a3NlYUpHYkpERGRxTDZxVUIwdDREWjc2enMwUExwSGdrTUtQV3HSAU9BVV95cUxPVmVTMGxvM3pUa3h3UUp5X3hDYVJyUm1TR0F1ckxhUV93REtTQ2VZR0JlUGNuNHB0QUlyTnZaRW9iMkVYajQ4MFBreTFxU1hn?oc=5",
-    "https://news.google.com/articles/CBMiRkFVX3lxTE9ZejZkd0ROeVFOdWUwNGRxUWZEdDRONnc3dmFZTzU3ZkxodUUtekxaNFlzeWJOZFQwc3JzYlBlbUdnMUFTRkE?oc=5",
     "https://news.google.com/articles/CBMiakFVX3lxTE55ck9zZ21BaGszR0pzNnBpeHFMMmREWHpINTR2RzhNVllsanVXRjJ0ZEhBWUZYOUdwZk9yQUVQd0toUkF5LUZ1U0haYjdRWWJMclNHV0NQaU43RlBSMzBtQk5WamN2VEphWlE?oc=5",
     "https://news.google.com/articles/CBMiR0FVX3lxTE9KMjF3VnJ1YjZEdUJFeUYwMmdWajBJanFvMHFHbGVXRE1GYW5xcGUzcmVsZmFycTI1alU4MnN1cGdpdFhyYUFR?oc=5",
     "https://news.google.com/articles/CBMiR0FVX3lxTE01M3FMaEZ3RGlaN21XVUtmZnBpS211R20zT3FGdGZpc2pGdldNdmp2bGZqSnlhcldhOE9KRmlDVlFKaGpQQmtV?oc=5",
@@ -199,15 +193,15 @@
     "https://news.google.com/articles/CBMiiAFBVV95cUxQeTlQRDVneHRxRlNpM0ZOYWlCMlRyRlVRYXlSUk12VW9KdTEtcTBnSjlGNnNsU2FXNF92WTV1LUpkb1k5RkU1ajJhck8xd2BNaDB0N29RZmRPeVFKd3hic2tJaGFPQVBRajhiV2Q1bmc0ZFg5anlFd0FoWGNZUGs3TWJHVkpheXdL?oc=5",
     "https://news.google.com/articles/CBMiS0FVX3lxTFA4aGhIeVJyQjhoelU4QnplZklVX0RtSmxkVUtEcXc1LXVBX1JWaVdUTmJaN3ZUY0s2U3VDZE5ZSGx1eXN5TEZGajZYaw?oc=5",
     "https://news.google.com/articles/CBMiZEFVX3lxTE1wNUhRRTd2Ny1rVTV3SXV2bjlpZ2MtRDY1TW91WmJla2NGUGpKVWxZS3JoX1ZFTHpsUlI4SEhUZWhybGQxdXFteWNEMDNZYUlnYzdaX2Y2TkJ4M2Jtc1IxWFQyVXM?oc=5",
-    "https://news.google.com/articles/CBMiWEFVX3lxTFAyMHZ3eTJwbklKS2ZvaWExSVNTN0pZeGo2UHJVOEhCMnljeUVsaU53eTZqYUw2TnJYTlQ1czZ3UVdHYnRadkZ0X1cxQWhLdXJibmt6a1pTN1k?oc=5"
+    "https://news.google.com/articles/CBMiWEFVX3lxTFAyMHZ3eTJwbklKS2ZvaWExSVNTN0pZeGo2UHJVOEhCMnljeUVsaU53eTZqYUw2TnJYTlQ1czZ3UVdHYnRadkZ0X1cxQWhLdXJibmt6a1pTN1k?oc=5",
+    "https://news.google.com/articles/CBMingFBVV95cUxNMjB1MEtYN25XLUNYUEQ4Qldkd1lYdFlBYWlRa09QU0k0LVFORy0tc19CelRkMk52RjdxZDJ1WkRPSGhvdk90ektseXVCbk1pRTFDUmw3UFRRcDI0VUVGZXdUN2hNdjJndlpqYXJnWGFULTNFQzVkdU5wbC1YR0dJRVl3RG4ycE9WMVFQVVozdHNZeWtqV0x4RDRFTWpnUQ?oc=5",
+    "https://news.google.com/articles/CBMiX0FVX3lxTE1XY1Fad2lua3kxVlpBLW5XMlJIVjEyRFlSVnhiaDlqWmV4R3hOZEFTTUVod0JMbDhyMTlDZ0hzNUNCa0tMMUZOWFpLWnBleW9MTm00R1JQOUx6bTBrR2h3?oc=5",
+    "https://news.google.com/articles/CBMickFVX3lxTE04QXNGaGc2R293anVDS2Nuek9aRm4zVjJ6RFEwTWRET2s1NVdIX2RlZU5hbDhlWU8xVVI1XzExdHhVcDAwSzVjdTBVTFQxdVhkMGRiNW5hdlZkZUNvbFZSWWF2ZW5Ub1JfZTBwRXQzU2M2QQ?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTE9PTlQyczJMN1JiSEF1ZjcyeHVfTmJpVzJHQ1ZNMy1NVVprbHRNcFlsUVB6b0JFdkNkUXAzczJ0eXROMXdROWZpVHFGUnZLLTJKb0k3YzlDUFZFZnRqRlVFcUJnTGxvYzYzbkgwNg?oc=5",
+    "https://news.google.com/articles/CBMiYkFVX3lxTE5QZ1M1Vk1wQmpFeU9ESUtFbDBmdWxfWGVqNnRKaldPdTRhcXNLdEpqbUpqZ0R3NDBPNjI3ODcxSGNFODB4X25mcUh1WkI2VUJabm9TMkNRNFEyV09qODZyNjRn?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTE9Wd1hrZndISjMtWVNBbW5ySnN5Snpnc25zbS1Na21UWDlOYXFQZl9MNG5TejJUdTBuYUFVdG1STHY0bmduYjFNdm9USlI4bXlOLUJQRUM3cFJNUlNyRXdBcnFwQi1yV09ZeWZSRw?oc=5"
   ],
   "titles": [
-    "AI inside、生命保険会社向け診療明細処理ソリューションを提供開始― 診療明細のデータ化から給付金査定システムへの登録まで自動化を実現",
-    "THE PHAGE、NEDO PoPフェーズに採択。東京海上日動火災保険株式会社との共創で生体情報×AIヘルスケアの社会実装を加速",
-    "期限切れ保険証でも1〜3割負担、7月末まで延長 マイナ移行の特例",
-    "火災保険の引き受け抑制、損保の事情とは 築50年超はリスク3倍",
-    "【人気特集】ソニー生命とプルデンシャル生命の金銭不祥事を、どのメディアよりも先に徹底解明！“ライフプランナーモデル”は見直し必至",
-    "信頼回復へ向けた新体制が動き出す！ 日本損害保険協会「代理店業務品質評価本部」",
     "【実態調査】金銭トラブル経験者の約7割が「弁護士費用での赤字（費用倒れ）」を恐れて泣き寝入り。潜在ニーズ86%を誇る、解決の切り札となる日本初の「事後型弁護士保険」とは？",
     "インシュアテックの日本市場（2026年～2034年）、市場規模（自動車、ビジネス、健康、家庭、専門、旅行）・分析レポートを発表",
     "IoT保険の日本市場（2026年～2034年）、市場規模（損害保険、健康保険、生命保険）・分析レポートを発表",
@@ -401,6 +395,12 @@
     "運転手付きマイクロバスは「白バス」＝違法 任意保険が支払われない可能性も 被害者はどうすれば… #エキスパートトピ",
     "「事故っちゃって自動車保険が高すぎます。入り直せばチャラになりますか？」→やってはいけない“等級隠し” 抜け道はあるのか？",
     "保険スタートアップCorgiがシリーズBで1億6000万ドルを調達し評価額は13億ドルに達した",
-    "保険業界20年のベテランが語る、デジタル時代に顧客の心をつかむ「透明性」の力"
+    "保険業界20年のベテランが語る、デジタル時代に顧客の心をつかむ「透明性」の力",
+    "メットライフ生命、出向先代理店36社から2,476件の内部情報を無断持ち出し—国内生保業界で最多規模",
+    "遠州鉄道、保険代理店事業の子会社を設立 サービスの専門性を向上：ニュース",
+    "生保・損保の求人に広がり 30代・40代、管理職候補を積極採用",
+    "「孤独死保険」支払い10年で4倍 原状回復を補償、自治体肩代わりも",
+    "boshu株式会社、保険代理店向けAIアシスト「boshu assist」を進化させる新機能提供開始",
+    "AIネーティブの新人が業務教えます 損保ジャパン、2週間特訓で育成"
   ]
 }
