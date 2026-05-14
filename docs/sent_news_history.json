@@ -1,11 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMijAFBVV95cUxPd0RRcTQxQjRUSmR4ZlgxMXhORU5rVWpYSUlHckNtaWYwSVRVZ2lsajBJMzZpbGdKUXhOYVFRS25lMjlqd2xqUmlEV0szM1RGcU55RkRvVzBlRGhQZE1pU3VOV3lZQ0l5VEVvbnVMUHk4c01SakQ2MmxDbnpBNnV1TkJDS2FCdGs3bEJxOA?oc=5",
-    "https://news.google.com/articles/CBMipgFBVV95cUxNVWVUOTdGWDJsNEZ3VzBfd0lfVTJEOGx0UUJyTGZzTzlXVktYQThFa0lkektzbk1BaUlYaldZQXRQZmN6ZG1aWDZxdUZEcGtvcUowWGN6LWtXYVBjQkp1LUFKN3dDRGhVcG9odllVY2lQVFY0eWMxODVnVWRRbnlSRmhBV2tZMC1mTmdCTVpMUUVzaThzcG90X1NqX0dRNVZES0ctZVdn?oc=5",
-    "https://news.google.com/articles/CBMiY0FVX3lxTE45SlZ4ZmtRMHM0VWViSlRJOGJGa1p5TXN4R3lYaDNxWUFlelZLVEw1Q2pMY3g3eXlFREQxdFMzYzI5aWhrMGN3VjU0amxIRzVYQmdHS1VBVnRFZDR1ZndneDhRUQ?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTE90dVc3Zzk2TWsycWxMRGpzMzRrbnZiTkw4MEcyWXNYU2V2QXo4Q1JWMlNuMVR6OWU1R0lLeV9ZUk5oLUZIUElya3VxdGZfVGYzMUxuTXMxajB3WlRneFRzM1lXVGRYalB3TFE?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTE5nM25ydFFaT0tYY1JySk13cnRDdmF4TndfTWVVaDVMVTdSQlRzaGJhZnVNaUpUWGE2WWljNnJVcDMxak85UW9WR2NrM0stNWlNNlJBOG1fYW9xLTA5ZTlQc2hnZVV5MTAzRHByRg?oc=5",
-    "https://news.google.com/articles/CBMiUkFVX3lxTE1HZzFnWVlfVXhtOGlHaTZVSXJnRGpITHcyLXkyNVR2YjJkSVctUjVsV3hoQ1pvZXJja2R3dVVSbGpTOVVaTkF5OXdsZlVNUExkX1E?oc=5",
     "https://news.google.com/articles/CBMiakFVX3lxTFBiY18yOTV1bzFZcnY1RGZiTWZaVmtBZW5EWkxvQWFWNWUxaFRFRzVWUEoxQUYyWXoyeVBYMHpzUnNidXN4VkN6Mjh0M1FWaHZ2anFvNmNTU1hVSFdDZ0FuemwwUTRfWHhCd2c?oc=5",
     "https://news.google.com/articles/CBMiakFVX3lxTFBKZC1fM3JGWnJFTVZ0NEtfOWV6UklQTDNqUURVb25yYkU1eU1TMWVETjBub0xFMGZ1dHV4ekZoYnd2TVZta1I2ZlRKRjMxR1Y1by00QmNyd3R1bW5rbUU0c1FwZVZzMS13c2c?oc=5",
     "https://news.google.com/articles/CBMiVEFVX3lxTFBxekJMelZfR192ajNVSG15Y2lGeUpmZE9nbkhpZUxwb2Z6T0dCTTEzV2owc3BMZjFnazlweXFRYWlIWGJQOVBsU3BMMmZDWkluRnVubQ?oc=5",
@@ -199,15 +193,15 @@
     "https://news.google.com/articles/CBMiX0FVX3lxTE9Kekt0dklsQnY4NlIyalN3RkdmQmk3cHVZNEJkWEIzV1RXRE9UcUhzQkFBR1VIb1hIdmhaNl9HT1FSX243Nm1FWWlMMVM0clFHV29RVlk3OFhBMG5RakRZ?oc=5",
     "https://news.google.com/articles/CBMiakFVX3lxTE43a21oOVRFeVA4V1dWSzRTTHR3WU5vWEszRFBWazB2bjhWTUNDeFRlS3lyb2JGT3hpR1Y2WTJUNlgzVUlXTWdETWM1OWV0bkNwU2o1ZnU4VWgtR1RReUdzOEtOd1lBTXk1Q0E?oc=5",
     "https://news.google.com/articles/CBMiU0FVX3lxTE40RWlVWXhYWjRwSkxYZUJf0JZcnNDcU50TVNvWUVQNnNPNjZnM1JXS1RxdkwzbG1NUzVDWk9SZE1yazVRVEZFc2FHWmRTV0s2MWNZ?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTFBHc3lodHdna3U2X1VPMGx1VUdNNGs0aTlrRTEyNXQwdw0QVFNHXzJCQ2NuY0RPQmpGYXl5NnN0NXpJRk4wejFJRUNfc3kyZ2Y4MWhwamt4WDEwbENlbmhaa2VXajM3WWlOU0E?oc=5"
+    "https://news.google.com/articles/CBMiakFVX3lxTFBHc3lodHdna3U2X1VPMGx1VUdNNGs0aTlrRTEyNXQwdw0QVFNHXzJCQ2NuY0RPQmpGYXl5NnN0NXpJRk4wejFJRUNfc3kyZ2Y4MWhwamt4WDEwbENlbmhaa2VXajM3WWlOU0E?oc=5",
+    "https://news.google.com/articles/CBMif0FVX3lxTE93bjRZZW1ITHpBMV9yaktRWHJZRUdsZDB3bEFwMk1ST0dzSUhmaWJLa0V2Y0RKZDhYOTNRQTZVZkpkRk9TMUJuYm4xb1dwZDRWQW80bHR4RnBWM0plUjI3YmN0bnV1SWhHaXRCSEZ1Z3ZXNjV6ZjYyTjNhb1ZxN0E?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTE5uU1R1SnFfTFk0OTBuODN1amZ3Sks2ZmNIaU4zd1BpaG9XMHNHWFh1UGpjbkNpbUdnVjNXM284S0xYb2NxRlRpNHNtUGZqWWxLR1k4d3VFU0p4YTlRbENreHQycE56NHRrXzJvdA?oc=5",
+    "https://news.google.com/articles/CBMiakFVX3lxTE02b1FqNGVRN3BXbWRPcWpUcnhLdVlzUkFBNkVoMWNkazFjS2ZvVmJsMmVRYXREMTNYbkNxWHMxNnBsQlBOMjF3MW9MOG9SUEY2Q29RaW9Kb2VYVWNOVWRjMnRGVGphdS1QaWc?oc=5",
+    "https://news.google.com/articles/CBMiW0FVX3lxTE9aZWF3dWhkRklNWS1IN3dXTVZvSTJfNDRXU2Y2ZEhFMzl0UVBMX2ZoS2pRcWtHUDlqenM0NzN4a1JzZUxBRUR0azI5MDV3Y0d4U29FR296cGtvSU0?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTE1DMEhzZzJmUnlrZ0phbHh6azhJZ1JMTFREWHhXak5zY3BzTVFjczAwQzhjSFRSWXBHNjJHaGJQV0tuZEFuT1FzTlVsWWdnSzh0TEFYa2licENQUkZNRU05OWdCNzFhendBX1pJUA?oc=5",
+    "https://news.google.com/articles/CBMiakFVX3lxTE5TbndPcm1xTTJRYnNYOEhGRi1NZGktanZCdDBfdG1UMzlPTUp6Z2tFNEFWUXhsLWpaeF9fZWROcm1xdmF3WXdXemlqVU4xM1A4X2I3NkVjVm55SXR1cTY1dDFpWmlQM01hRHc?oc=5"
   ],
   "titles": [
-    "バークシャー子会社が東京海上に出資、再保険分野やＭ＆Ａで提携",
-    "MS&AD代理店、保険契約額の評価廃止 教育体制重視へ",
-    "アイペット損害保険、WEB保険金請求とAIボイスボットで手続きを革新",
-    "Ｆｉｎａｔｅｘｔホールディングス[4419]：Finatextの保険ビジネスプラットフォーム「Inspire」を活用し、日新火災が「ドコモの火災保険」を販売開始 2026年3月25日(適時開示) ：日経会社情報DIGITAL",
-    "生保の解約金、10〜12月は過去最高3.8兆円 マネー受け皿は投信",
-    "ソニー生命保険｢22億円不祥事｣発覚の舞台裏／同僚からも4億円借金で総額は26億円超に／社内外で強まる隠蔽疑惑",
     "保険代理店の人的ガバナンスを強化する「研修管理機能」をリリース",
     "岡山発の総合保険代理店「エスプランニング」が広島県福山市に進出BCP策定支援・健康経営コンサルで備後エリアの企業を支援する新拠点を4月1日開設",
     "楽天インシュアランスプランニング、生命保険乗合代理店業務品質評価基準の共通項目および基本項目をすべて達成し、認定継続",
@@ -401,6 +395,12 @@
     "東海東京フィナンシャル・ホールディングス、傘下メビウスの保険代理店事業をメビウス準備会社に譲渡",
     "ユームテクノロジージャパン、損保ジャパンと自動車ディーラー代理店の教育DXで協業",
     "慶北創造経済혁신センター、DB損害保険課「DB G-Star Hub」開催…スタートアップ5社選定",
-    "ペット保険データを用いた歯周病リスクに関する大規模研究成果が国際学術誌に掲載"
+    "ペット保険データを用いた歯周病リスクに関する大規模研究成果が国際学術誌に掲載",
+    "iPS製品、初の保険適用 パーキンソン病治療で 中医協（時事通信）",
+    "あいおいニッセイ同和損害保険からの出向者がトヨタ自動車の内部情報を不適切に提供",
+    "マネーキャリア運営のWizleapと中古車買取「ソコカラ」運営のはなまるが業務提携。改正保険業法対応に向けた比較推奨の根拠整理・監査対応を共同で支援。",
+    "東京海上ダイレクト、運転事故 AIが注意促す アプリ機能に追加",
+    "損保ジャパン、車両のひょう被害をAI点検 1日で修理完了",
+    "株式会社hokan、保険業界特化のクラウドシステムとして「SOC2 Type2保証報告書」を取得"
   ]
 }
