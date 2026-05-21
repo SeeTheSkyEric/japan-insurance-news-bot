@@ -1,12 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMibEFVX3lxTFBPV3ZfS3AxdDgybWJVbTQ0REV6UFJRQnRScFZueXdWb2JLNlJqX054SEpQdlFLYkhidjNCRDB1aGtYZU1iT1FPMVVtYjlsemZjcFpLQzh5STVnSmdMSDdQQzFEQVV6MEduZ1FJYQ?oc=5",
-    "https://news.google.com/articles/CBMisgFBVV95cUxQTklrdnpud1F1Um53ZzBmeTVlTmVuZ2FGZUJOQTF1Mk5HYm1mZVdEX0cwTWg1Wml4TElFdFpBVVJveHhnNWVtTjRWV2Y3UWl1OWM5ejZuMm5Cc0hVMmlGRmtsdEZSS0xRZkpyZzI5UFpCX0RQSDIyQmlYN0VLZ3dmWjh5ZGNnMXBEbndXLW1XZXhveEdXUXcyT2tJei1mTzAyUzRlN2Z3dE5CaFJFQTB0RzN3?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTFBndU5ySzV2enlMRS03YlMzc3BwMlNVNzlwb2p3QS1jRTlLUVplUHN0ZnBDY0p5QmFFVVNzWGtiZFYtQmZRMDNkbktEN3VoTWhzVVd4NTlMSDlaeXA4eHY5d0N5SzhPZXBsTGcybA?oc=5",
-    "https://news.google.com/articles/CBMie0FVX3lxTFBsQldBcTFCZUFrbUtidVRqenVOTlNYSG9GSFl5Yy1qZEMxZXpsZmstaUR3dVhCQ1M3UkVPYnZoMWdlSzdWVTktVkhFaWRrS1hOTEh3MXdHdVJyMFJacldNRkc3ZlpKREtYaWdOYld6RkVhbTdCLW9USDJySQ?oc=5",
-    "https://news.google.com/articles/CBMiUkFVX3lxTE93Z2x2SWxjbk0wWVUwS2VRQW1Rc1pZb2NXQ1RVN2M5SEY4eFI1M3V4TnZVSlNIYVJtZmY4MFdEcllfd2w3ZDBKdDdOVm5rajE0NVE?oc=5",
-    "https://news.google.com/articles/CBMiaEFVX3lxTE04alVuaEd2ZndORWRoOHZDeldmSTZVWEk1OFRIaVU3bnVheTlLeEpocWg5dUpHQjlwakZjbC1CTUtUdi1VaUsxSFd1ZWtycm41SFJGM2JQa2twWDBNcnV6V0t0eWNpRWpQ?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTE1VZFZnTGNncWtOMmhDZ3gyQlItcUlTUVpWZkV6Z3BmRlhrLVhPY2lPUmJUTVlHSHZFUFJRRFBjdW85TGZicmtUZDhSS2NxX0k4NDRlSnhEZVduanYzUDhmY25YUXIxdGpsUjg3Sg?oc=5",
     "https://news.google.com/articles/CBMiakFVX3lxTE5fSnN3ZVR3MnJrZi1sbWlmQ2dJWUdhY2c2cWRGWlBmWDF4UFFRWjBnODRhemVIV01jcEF0MEZTWWRucDlnU1YzUUtKLTZqZTFURmktMU9BZXdsZjhaNXhnQ1BfaEdWenZZNkE?oc=5",
     "https://news.google.com/articles/CBMibEFVX3lxTE1oaGk0Z2tlbXM0cDJLZmFlUEV2OGcwcWtudXNHdk1mNHFIWW1aU0NFQkJQb0ZlcWhnLURITTluVUN3N1RxaE43NEkwQ1didzRYQ3JlejE2WkZzalB5eVEteVg5ZU1Xc1lCRVRYOA?oc=5",
     "https://news.google.com/articles/CBMidkFVX3lxTFB0LWxHdnlqcm4zWjJHRnhwM0pSYXBnaGxRWVhQUmdlMWlvd3JsZXBCelZ4dFM1Nmk0SmdZUi16Z0ZwYW5genJsS1o3VmRmTzEtWnZBWTlyaDI0SWFXQ1hYRzZBOVRHQTFKcmQ2SnNkUUxRTWZkbUE?oc=5",
@@ -199,16 +192,16 @@
     "https://news.google.com/articles/CBMidEFVX3lxTE1PcG9RRWRnd3pzR3I1MHVfTDhwYmhfbVV2NXNiaXgwZi1XSkZjUXBVLUVUWDZRZW5MLVhYRlZZX0kyMVhTQU5qS294N0ZVUVpYc094SVlBcnlGYU14LUEzcGxGbHZMS0tScXlyNVZvelE4ZVlY?oc=5",
     "https://news.google.com/articles/CBMibEFVX3lxTE9jUU9keTJuT25SMzU1Rk9Za2FDVm5meG1kcEFPUUwtQkk5bmVMZ2FSRW5zUVl1Y3ZGUnpkSkpFWXllNENvY044eFM4NXUzSEszVk5lRTFja2VCMGNWNEdWYnF5MVFUcUgtQjRnWg?oc=5",
     "https://news.google.com/articles/CBMiYkFVX3lxTE80RlJtQVJBTG1uTnZEYlhNZ2VKZDJjWEpjMENMeTljeUU0OGFPYzdNNE5IZEHtYnka0hmNEt4ckItX0pRdWhGdk81M0ZuZXVYelNXZVI5ZmRRdUNnUmdR?oc=5",
-    "https://news.google.com/articles/CBMiTkFVX3lxTE5sZlJ2TWcwZVpGRUI0aXBYYTRFZW1oV3lJXzFVUngtcTcyTGUyNWVvOWYzZ1c0emx5N09TUHFrcWZfbFo2bkF0S0FkZUs4UQ?oc=5"
+    "https://news.google.com/articles/CBMiTkFVX3lxTE5sZlJ2TWcwZVpGRUI0aXBYYTRFZW1oV3lJXzFVUngtcTcyTGUyNWVvOWYzZ1c0emx5N09TUHFrcWZfbFo2bkF0S0FkZUs4UQ?oc=5",
+    "https://news.google.com/articles/CBMif0FVX3lxTE1SSFhDcXdEdjJZcU1wMHdlcUtsVFNLYnB0c2tXa0ZuZnNzcVBJZllwd0QzbmR0REtXaWFzQS1sSV9sNnZXNE5BUld3WWZPVlpGV2FwQ2VtQnpVUnFscFpaWElOeEhud1Z4ZTkyQ2lQZHE3NnJuekZFdm5rMnAwZkU?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTE5SNzJaLWpHdjVSXzNmMGJzMTBBNzl0WnBFZkJqSjd3YzJRZjVYQ1dyOEQwVTE0YmU4ZC1jMXNGZmhnWFNPd1hvYWNrRXl6WFNST1otWjVmcU9Wd2FKTU9yRzJndTkxdnlScm5xbA?oc=5",
+    "https://news.google.com/articles/CBMiX0FVX3lxTFBKOFptTjBxQ1kyTHBES1ByVnl2VEJ5RFI3YnhINzhZSGxZNlAxaEQtODNKOEoxUnRPSTM3UVlqeThwcWJNRHg5eDhsVERsMlQ2YVA1VTNKQV9PT0Y5c3N3?oc=5",
+    "https://news.google.com/articles/CBMidkFVX3lxTE1ZLUd5Nm81Zmk5T21oZmRLU251WHRMMTAwUkhOS21STVk4WmJCbFJIXzNpcUdZLWR3V1NyTWdLLWI5NG5XNm80SlVoWWE2UFFERG9hZldSQ29FNXhpc3NUalY0VEpHMUc0VTcxQ2t6SkNyNWJPSlE?oc=5",
+    "https://news.google.com/articles/CBMiakFVX3lxTE45aWo5WThRUXgxY3NGLXplRlI1RDZGcW5GVTQ1eUxyc1Y0Y19NSlRQUGpwd0x0VFN5ODVXZVlzR2hkU3ZmNE42blYxZXpuZEt4NmFONmJmMzcyWGs4T0QtUU95RW9mRE9mRkE?oc=5",
+    "https://news.google.com/articles/CBMiaEFVX3lxTE9TNk1rcTZZMjdHdHg2empvWE1xVnRONEExd3VWTGJrbDdYWWVPUzMtd0VzeGEzMkkzRFhlbWphTVk0b21DTVRSWG1vaExNYlQ5Zm1TcDZnSHE1cWdHclRMN3FsTFF2ZlN0?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTE1TUUxKN3ZIR3JTV3c2MDVqMnUyV2UyVExqSU5TTzJQNENDbHM2UEZiTkVqNTRCM1pYclBkTTM1ZnpVN3ZUNjV2WnV5Q1dmU2dnVnpCd2xfQ0RUUE1mTWVaS3NkalotalozWVR2Ug?oc=5"
   ],
   "titles": [
-    "楽天損保、車保険収入5割増 江連社長「会員データ通じた販促強み」",
-    "大規模乗合保険代理店等に関する内閣府令等の改正案の概要",
-    "かんぽ生命、保険見直し本舗に出資 電話営業の知見吸収",
-    "保険見直し本舗グループ、株式会社ETERNALの株式取得のお知らせ",
-    "「完全にカモにされていた…」世帯年収660万円・地方在住40代夫婦が後悔。〈16年間でムダ金340万円〉を招いた身近な保険ショップ",
-    "“ヒト×保険×テクノロジー”「AS platform」登録ユーザー数10,000ID突破！保険募集人向けプラットフォーム、「インフラ」として定着加速",
-    "MS&ADインターリスク総研、損害保険関連企業で初となる気象予報業務の許可を取得",
     "justInCaseTechnologiesがAIによる「離脱者解析」でデジタル保険販売の壁を突破。成約率を最大35%向上させる「joinsure AI保険販売支援シリーズ」の提供を開始",
     "東京海上、兆円規模M&A「上限なし」 バークシャー提携で世界投資",
     "マニュライフ生命でも詐取、営業職員が5000万円超 保険販売偽装、発覚で懲戒解雇",
@@ -401,6 +394,13 @@
     "モーターフォワードが提供する新しいディーラー向け保険体制整備コンサルティングサービスの登場",
     "住友生命、保険金請求漏れ確認にAI活用 内勤職員の業務効率化",
     "ペット＆ファミリー損害保険、新基幹システム稼働で年間2,800時間の業務工数を削減。事業成長を支えるIT基盤を確立し、PayPayアプリ連携を4か月で実現",
-    "ＡＩ活用し観光振興 三井住友海上火災保険 沼津でワークショップ 提案資料作成 体験"
+    "ＡＩ活用し観光振興 三井住友海上火災保険 沼津でワークショップ 提案資料作成 体験",
+    "今後は「第3号被保険者」廃止で、専業主婦でも「年20万円」の保険料負担に!? SNSでは「家事・育児ワンオペなのに」「学童いっぱいで預けれない」と意見が…議論の背景も解説（ファイナンシャルフィールド）",
+    "大手生命保険の営業で急増する中国人 営業所の7割を占める場合も",
+    "車買取「ソコラカ」のはなまる、Wizleapと業務提携…保険代理店向けクラウド「MCエキスパート」の展開を加速",
+    "新車ディーラー・中古車販売店向けに特化した保険体制整備コンサルティングサービスが国内初登場",
+    "【GAINA Automation RPA】自動車保険の煩雑な「見積り作成・更新業務」を完全自動化する新バージョンをリリース",
+    "リードインクス、外貨建て個人年金保険のデジタル販売モデル構築を支援",
+    "MS&AD、合併新会社社長に海山裕氏 損保2社の強み融合へ"
   ]
 }
