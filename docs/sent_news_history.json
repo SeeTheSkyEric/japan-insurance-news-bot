@@ -1,9 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMibEFVX3lxTE83Z2ZXV1pGZTNXOVpCSG5qeDV2Yl9uTVpwOVRsQ24wdGFLZlVra0RHU091d1ZBUHhDRHlkRWVBWk4zYVNsdmZHZGdsQllaWXl1bk9zLWw3QUItQTZVS2V5N3dJcTBHS2Z2VkdRbg?oc=5",
-    "https://news.google.com/articles/CBMiV0FVX3lxTFBKdG9md2JXUVctNUdNRHJQNzQ1bFN0OVZHbjVzXzd4ZVJFajNRU0EwUDlHOHFJenYwbVNZVWk3RTBkZlJheEo0SkVQRHBuZDd4OVd0Yy1Daw?oc=5",
-    "https://news.google.com/articles/CBMiZkFVX3lxTE5hX2lGWFByYVFCTDJFMkNOaC1UWHoxVnFoZExmSXFsbmVkWGQ4M2JXejltdmMweXZKbzh3VDBPMmpkVTQxWnh1YlVpd2FaUmc0YVY1T3VQWWJEWUlGeGxqenlZaGd0dw?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTE9JVnVuazY5LWJHLTZqTUFGSUpBUE9zVXZpVkhIaEo4ZV9rUG잭ckxnX0tSRkhSUm9kWnVRWHR3bmRXbW1wRlBRUnpSN2dFR2xuMjR2QWdpYjlHT2kwbUtXUjZZTDFEZDhaX2c?oc=5",
     "https://news.google.com/articles/CBMibEFVX3lxTFA3Z3kwOW5aM19PbzJlRGRDNG0yR1NnX1IzeE9mZEFVczFqS3RER29yVFRLNEd1UXIzQkR1NVdKYW4xcXRLeWstekRsTU1RZG5pRnVLb0IzbUltdWdQRE5YaVphSEZnNmxqZmZxTw?oc=5",
     "https://news.google.com/articles/CBMiaEFVX3lxTFB6SEMzOWdQZDExUl9qOHRWMThUTkhwbXE5bmd4SGFoQWgyNV9qZC1mRjlzb1Q4UVNWXzY4QU1IelBHcnlJTF9iMWFnV2MzT3BpQjNLd2s0Z1lEM2tnUGfmWTl0NlNT?oc=5",
     "https://news.google.com/articles/CBMiUkFVX3lxTE5RbTBsQVYwOWh0UmUzemdxZElTTTFaaUd1azFIX1NUaGlDbXBDeWVtUFpDNnA2QU9KMGVKRXZIdEx1S3NyY3JOWWhEa2hzZGlncFE?oc=5",
@@ -199,13 +195,13 @@
     "https://news.google.com/articles/CBMigAFBVV95cUxOblB0VlVjQzBsX0U5WWE4WjJrMkc0ZW9NTXNpWWNCeTlidG5GQlhWZjVScnBFNHBlN1NaVUhxVWVIWHFYaWUtd0JxbmRRTHhjWmxqTzBraVJIYmZadS1ndHUzcjNjaldyVHg5ZHRuRnB2UkUtRXpjSkdPdzRyRTh2ZdIBhgFBVV95cUxQcjVnZ1ZsNHpJWHFYWmQ5VS1BQXNGRDYzUVFIejBHUUstUzlJR3BjMDJUbDJ2YjNZTERpSHBGVFFBemhJY0htMFR4VXhTSkpPLTZlUExqSVhJczZLZHAwa3JOYmtQNThTRFR0OUFrR0xsM2o2MVhKWE90VzZ6T3RDNnZBcnh0UQ?oc=5",
     "https://news.google.com/articles/CBMiY0FVX3lxTE4xcjlzbjVjTm9ueGJfOFZXY0prUW1vN05CMmFtaEVfX2JvUE5RYkk5SXB0MlA5TjhwMzRfWkRLTUFwSXJKa0o4U1FrNEhmb2FxcENacGswZEg2XzlVTkVuRGx6RQ?oc=5",
     "https://news.google.com/articles/CBMiakFVX3lxTE4wSmp1aVFVek9mdHFYaThiUHBTMWNocWI2RmxLcG8wTGJaM0xHcm1kTl82Mm92ZmxpU0pjSUZDT3BIOWc4eE9ocEMxWC1TbW15anoyRHpzLVJ6SDdfN3pqcXZKSkRZV1pZaXc?oc=5",
-    "https://news.google.com/articles/CBMiYkFVX3lxTE9GRWNWQldtVzhzbFlmdW9QMGdJcXRrZDU4WnpKWmkwcHh5LXBOU1JCUmdsZXZYQXJlemU4eVUyRTBNeEN4NC1Wc3NlSF9WdXpUOWVyOWl4YklYSEZBN1V5WXBR?oc=5"
+    "https://news.google.com/articles/CBMiYkFVX3lxTE9GRWNWQldtVzhzbFlmdW9QMGdJcXRrZDU4WnpKWmkwcHh5LXBOU1JCUmdsZXZYQXJlemU4eVUyRTBNeEN4NC1Wc3NlSF9WdXpUOWVyOWl4YklYSEZBN1V5WXBR?oc=5",
+    "https://news.google.com/articles/CBMif0FVX3lxTE9fNnJEeXpVNTd6VGxDUk5HSjBLWVJBdWplMzZLQTNlYVB4NW1iRmtTTUQ1Y0FFY0RUalU3aE1PWkhPN0JYZTV5NlU5ZUluRDBiRTUtNlpFeUNCVw0KzRKZm9vTzJMaTltX0hyQmR1ZGRabklaWWdvTnJPOWdYWXRQb2M?oc=5",
+    "https://news.google.com/articles/CBMigAFBVV95cUxQNDZyTGhPRGFySWpucXFtcmYtaWdZd0tXUVJMVk5xcDd4WE1HSXBkQ3FaVVVEODdNWkt2OXUySWRNOXRlbUxKUWRiZHgtOEptVS1pS2xldTN5UFVwdVRDZWZER0pWbi03NFlCSkFKUXJVSExwQXJfZVJRS3VkS1ZsdA?oc=5",
+    "https://news.google.com/articles/CBMiV0FVX3lxTE9BX3kzNmw1dWh6aHBmSzJCYmpiZWlqc20xT2tEMXpoMTNqQXNjV0dYSzhxNnJIdXZDVnNDdVFkSUVtMDdJeGVTekZyVHFNdFZVemNpa01zNA?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTE5ZQk5ZTjVpSmJmaGVYdXA1czFvbnprWnBXLXpFdDVhVTZEVW1TWENZdFpta2d5cjRTMEprM092NWdwU3c1anp2ZkxfNzhyYTQzWW9NV2c3bWxKY21rc2daeWQxYTQ2Yy1UM3dERQ?oc=5"
   ],
   "titles": [
-    "三井住友FGと日本生命、買収融資ファンド検討 5000億円規模視野",
-    "労災保険義務化へ 改正法案を閣議決定 全経営体に適用",
-    "保険業法改正で何が変わる？ 記者が乗合代理店を実際に訪れてみた",
-    "＜茨城県 土浦市＞「保険見直し本舗 土浦イオンモール店」が2026年4月7日火曜日リニューアルオープン",
     "三井住友海上、貨物の保険金支払いをAIで自動化 業務時間8割減",
     "プレスリリース：保険募集人の対話品質向上へ、実践型模擬トレーニング「モクトレAI」正式版提供開始（PR TIMES）",
     "レモリフ、保険販売でAI活用 6月の法改正を見据えて 実用化には知見必要",
@@ -401,6 +397,10 @@
     "保険業法改正どうすべき？AI活用していますか",
     "三菱UFJ銀行、保険営業の実践的な対話力育成に向けロープレ用生成AIサービスを試験導入",
     "ライフネット生命 保険業界で初の「財界 BEST AI 100」に選出",
-    "デジタル保険プラットフォーム市場、AI活用型保険自動化およびモバイル保険アプリ需要拡大を背景に2030年までに3,050億ドル超へ (2026年5月27日掲載)"
+    "デジタル保険プラットフォーム市場、AI活用型保険自動化およびモバイル保険アプリ需要拡大を背景に2030年までに3,050億ドル超へ (2026年5月27日掲載)",
+    "保険客14人から詐取1.2億円 ソニー生命の営業社員4人（共同通信）",
+    "損保ジャパン、火災保険料上げ インフレ対応、ＭＳ＆ＡＤも検討",
+    "生保4社決算 過去最高益相次ぐ 金利上昇で含み損も拡大",
+    "三井住友海上、洋上風力の落雷被害からの復旧短縮へ 売上減少を防ぐ"
   ]
 }
