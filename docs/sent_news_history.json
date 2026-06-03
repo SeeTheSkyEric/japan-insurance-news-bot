@@ -1,11 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMibEFVX3lxTE14Y2U2b1hxNjRpNDNESExHWGZCcjdmLUJ6VXhBeWRXS3JCMVc4N1FrRU14Q0w0S2pseDhlX3pEYnlwT19Mc3NaNFdwRUhMbVM0bEltVXlPOThHanhGRkJVU2RlaEZxQ1BXTEdQVA?oc=5",
-    "https://news.google.com/articles/CBMiR0FVX3lxTE9VNHFqUEpwSjJVUXlLY2VhZmdFWlhfMUgteUtRRGhlZU9nem5Xck4tMlZnQ1dKbGRCZnBxVWtZbGVzTndVR05N?oc=5",
-    "https://news.google.com/articles/CBMiX0FVX3lxTFAtM3hDazBpV3BKZ29rZzBtYkZmNXJURGRQRzh3TWs5eEQtMnFUYkZLSm1CbnQ5WU93UURzTU9wMV9pWVhrQk8xdUk0bXNUV3RJa2xHZ1lzSmJQbHFiOTdn?oc=5",
-    "https://news.google.com/articles/CBMiZ0FVX3lxTE5rTkh1WHg2azk1RjZlZkVBWGVVOFEzNkFhZnoxbDU2dGdQSHdQX2g1TW5JZFpPQ2lJR0k2ZjdZa1UtUTBGR0Z1VmFmU0hBVU1yVTNodEZGRDBpZnZmTGVESUpZM2kza3c?oc=5",
-    "https://news.google.com/articles/CBMid0FVX3lxTE9VXy1uMklaT1NKWS12dzYtNnNsMS1JLVd4SF9FdHlhYkcxYjJ1bDVFcXp0MDZ0OUJJOHNJeEdocXdUaU95N1RVRWkzckFHdWFVcnYzdENWRHU4bTRsOUpLbTFvUTVkdG5Ed3Y5aG9xWDBCQ01IcGo0?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTE5qUHpOcGNiWFUyWF91UTdZdXBtalFQWXFqdGdhQmpvY19iLVdKeWVmakswYkNadW9ZMENjdjV3djRPSXVuZS1DTVZtb1Y5TEg5bWJvczZqbU1uZlZ2RG5TcGZqZ19ERHJ0ZGRNbw?oc=5",
     "https://news.google.com/articles/CBMiX0FVX3lxTE94RUUya3Nyd3RBWFozSmwxb21PelJQWmdJMm0ycFhKQmdvXzJVd3FMZXhVQzY2N0ZJOWM2ZmRFajNHbXZ6ODlldFkxMDlvU0gyUm9aTDJDRlUzb0p5aktR?oc=5",
     "https://news.google.com/articles/CBMickFVX3lxTE9oUHNzM0VuRkkyZzRKTGpuQ1hNQTBLZGdLWVplcnBRRnZ0NzVyX0NkSGZnWUJvUVFCZ3ZwWWUyWkYycUlrZm5IbFhURUhTaktKem4tTmpTRTJpY3d1c0NBZzVHanoyV2x0cTB1ck9OdHVMdw?oc=5",
     "https://news.google.com/articles/CBMif0FVX3lxTE1XYTRXemd1ZUFMMUlzVzJGNE9JYkV3RzZweklMUVJ5RFBmbzBxejBzTU9pTm1oS2xYZ2xqdWlZY1YwSXFPd3hLVkI2QlJ2SllVSTJBZXhfcnN1elA2dXl0MlByNWNaVUdmbmFIUHgzRHRRNloyRjdOTXdrN0ZBbDg?oc=5",
@@ -199,15 +193,15 @@
     "https://news.google.com/articles/CBMiakFVX3lxTE45VGk2b3RmQUlTWEkxX0tOdUlDZDBCN21KUGd3eVNZYTg3WFV6VTFEZ04wY3E3b0xtTXA1b2hiYXFJbGF4ZG5CYjd5eEIzSWhoMElKc0JJbFpMQl82VnV0S19zSENmRmttM2c?oc=5",
     "https://news.google.com/articles/CBMiaEFVX3lxTE5wZ3lLZGV2RG13eVlzcVdlZVdFRHpIN0dxWFhVWDQ1S0FIVE40aHM1SXRfVlQ1SDBzandJaEVGWnpjOHZnZXRIYWV4bWs0UlZyR0lGVzNiZ014bkFoaHVnS2xaaWRKeXRp?oc=5",
     "https://news.google.com/articles/CBMiWkFVX3lxTE9XN1BaNnpPNjJ5c09MYkRyNG52QWMzbDlVT1lzdFNyVFlLXzVWdjhoNTR2aXhGUUwydWhWTENidGdyeWVmZXlnY005NnBVdkJjZVJPa2V1eU84Zw?oc=5",
-    "https://news.google.com/articles/CBMiZ0FVX3lxTE9fMnJySTNyVm1ucWlsVUo5Zy1ScFh2R2lPMm9YNTJocTV4ZWowbWYxeExBRkl6WDRVV2ZYaVo0ckxTU3RqNlE2Yl9iQ25ISTFoaGNySzzV5ZWVzTUhKV3RPYjBxTW9XNTQ?oc=5"
+    "https://news.google.com/articles/CBMiZ0FVX3lxTE9fMnJySTNyVm1ucWlsVUo5Zy1ScFh2R2lPMm9YNTJocTV4ZWowbWYxeExBRkl6WDRVV2ZYaVo0ckxTU3RqNlE2Yl9iQ25ISTFoaGNySzzV5ZWVzTUhKV3RPYjBxTW9XNTQ?oc=5",
+    "https://news.google.com/articles/CBMiV0FVX3lxTFAza2RUaWR2ek1IcWdMMkUtbWdESkdoQWVJV1dLXzQ2UkFrQU1STVdOUjJBZWVGem5CaTgtM3lOWXpweUl6aEFqeUJ3YmE5elYzQXN5YlJOVQ?oc=5",
+    "https://news.google.com/articles/CBMiakFVX3lxTE9ISm14N2Y1Qjh2VEdETlRWWXRDUXBYb1NUT2IxV04tMzZINHlMRUtILTA2TjJuV3RoS1dHUl9TeXZMMFNOM05XVHltamlIcnRwVERCMEJYRkNFM2gySUstbHdNcjlmVTVhZFE?oc=5",
+    "https://news.google.com/articles/CBMihwFBVV95cUxONzdPUTh6Z0JlTXQxN19JQXQ4T1ltUm8xN1c0Nkk5ZV9veHJXMlhUVXFXbkdNaTlOSkNGU0ktUTBuTUpLWHhfTUdJLWs0aWE0Y1F2MUFZZHZYN21GeEhXLVIzeVlYWXY0UzhFMlA0dzUwOXZIc1IycmN0RmR3dmNFNnE2RTdrcmc?oc=5",
+    "https://news.google.com/articles/CBMiakFVX3lxTE1MZllfWmNvODdQVWtTekptWENSVUs4aTVrV2t5SlJ4NWhjTF9yaXNJMnBGRXlmRENGVUk0Vm5ZNm5mbmdNZFUzZWYtWVFZNFZzamtobmdlYXlWVjJuVEZPYW51TFpmU0txZkE?oc=5",
+    "https://news.google.com/articles/CBMihwFBVV95cUxQVURSbTVRNFRYRmFybVRFbnZrQ0xUWW50ZlVIUmViMjUyVXI4SzRiNndXdXhqYVVzZ0g3bGk5bVExUWsya0xqanB6UlZSR1U2c3FZTmJTVGp0d2xaUF9URFh2WDY0X2k3Qnh0VTZ5UnJGcDE0QlZfbnc2T3gweDc3RXppVTlzSnM?oc=5",
+    "https://news.google.com/articles/CBMiV0FVX3lxTE43QU0zaGdnTkltLVg3RDZhXzNtQUZZYmx3MkdsNURBdFo5SWRmblJZNXgtcFVTVC1sQ09LNk1wY25nMGJPS1VZRVlwUkRKbDBVUldxcHh2TQ?oc=5"
   ],
   "titles": [
-    "金融庁、プルデンシャル生命親会社に立ち入り検査へ 金銭詐取巡り",
-    "《生命保険解約ラッシュ》日銀利上げを受けて「この状況では国債に乗り換える人が増えるのは当然」と荻原博子氏指摘 空前の投資ブームも流れを後押し",
-    "T&Dグループでも保険代理店における内部情報持ち出しの｢スパイ活動｣発覚／不祥事の火の手はさらに広がる見通し",
-    "マレーシア：クールジャパン機構、オンライン保険販社に出資 - ashu-aseanstatistics.com",
-    "「WEB保険金請求」と「AIボイスボット」を導入",
-    "OKIと損保ジャパン、運送会社の安全運転支援 29年サービス計画",
     "自動車保険比較ツールのPoC開始、改正保険業法に先行対応…Sasuke Financial Lab",
     "中国で「入院」し日本の保険会社に一時金請求 胃腸炎大半 2年で20倍急増",
     "火災保険料１４７万円をだまし取る 元保険代理店会社の男を逮捕（九州朝日放送）",
@@ -401,6 +395,12 @@
     "中小企業特化の法人保険代理店『株式会社キール』が神奈川県大和市に開業",
     "プレスリリース：AIネイティブな生命保険代理店を運営するFwC株式会社、TRUST SMITH & CAPITALおよびインキュベイトファンドよりプレシードラウンドでの資金調達を実施（PR TIMES）",
     "【独占】Corgiのニコ・ラコアCEO、死の脅迫にも動じず――オフィスでの寝泊まり、最高値での資金調達を拒む理由、そして永続する企業作り",
-    "損保ジャパン、個人向け火災保険料を3%程度引き上げ 10月から"
+    "損保ジャパン、個人向け火災保険料を3%程度引き上げ 10月から",
+    "改正保険業法がきょう施行 ディーラーなど特定大規模乗合代理店は法令順守責任者が必要に",
+    "「保険料の比較」から「補償の本質を見比べる対話」へ ― 顧客本位を貫く保険代理店セフティーが、改正保険業法を“あるべき顧客対応”の仕組み化の機会と捉え boshu assist を本格導入",
+    "「医療保険の改正があり手続き必要」“厚生省職員”からの電話きっかけ…60代女性が約157万円詐欺被害 電話しながら指示に従いATM操作… 秋田",
+    "金融庁、アフラック生命、Anthropicらが登壇！生成AI時代の保険DXを定義する展示会型イベント「保険EXPO 2026」7月23日初開催。本日より優先プレエントリー開始",
+    "三井住友海上、サイバー攻撃の未然防止に注力－ミュトスの脅威に対応(Bloomberg)",
+    "日本生命、医療特化の新興支援拠点 開業セレモニー実施"
   ]
 }
