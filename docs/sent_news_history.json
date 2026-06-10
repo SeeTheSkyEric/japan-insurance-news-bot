@@ -1,9 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMiX0FVX3lxTE5nRmF6WWIzV25FeXdYSXdGWTNMMkJQaE9kR24zREZPeWNOWVJDbWlfOE9iYlFSVm1zeTMzRW54OEE5bHNFaU94ZWJfNENMdVowbkFpaUZ5ejdpWjNhZ25v?oc=5",
-    "https://news.google.com/articles/CBMiX0FVX3lxTE56MXlPUUR1anpFdE9teG5rQlEycDk5aVJDMm9TbU1yMkw3ejBHYXRCLVh4aUtWVFFWSTdEZFFSZW1GYXNGS0c5T3BMRmxVb3FYNEI3RXhRT2RXNTdiVDFr?oc=5",
-    "https://news.google.com/articles/CBMiW0FVX3lxTE54bVBjb3cyVkZISjlfWUw3RklQT1JCX05UenBkdGtPX0V0ZExqWTFsLW1rbmVPa21hc3g2MDFkNkxyMDFvb3hManBZWWRqV3ZQcDV6c1BZZ0R5RDA?oc=5",
-    "https://news.google.com/articles/CBMiT0FVX3lxTFB1UzgycWZQUlNrQV8zV2ZnUXQ0YTJFV2tHWTBCemVYNE8ydUpMbGVPVmpSOHRqVHRxdV84R212RlN5Z3oyNTJrMVdVMzFsVVk?oc=5",
     "https://news.google.com/articles/CBMihwFBVV95cUxQTE5HMlhmbFJDNkxSSE5kWURHeE1sTHUwZHUxWUVfamk4bWY3OVo3UEx2VjNNR0RkaVF2SXFuQ1NPZE15Z0I3dm5mbGdxaEpZYkgxbnRvYUxCODNjdkxtQVM2SnVvTUJ3MEd1UnV6MXN5THh6MWR6dV9QSk9peVg3RlhUSEUxOHc?oc=5",
     "https://news.google.com/articles/CBMiakFVX3lxTE0zS2lDaEFYd2RyMGZaNHBSbmVDbmN6SWZBazczX0k5a0pUTTlIaGc5LW5OODF0M0tPZ3J0R0x0bXRGV3BvcTZoSUZsTVluaG5MMVV5QUFMT0c2T2JlTTJoVjZkRk9uWklwRFE?oc=5",
     "https://news.google.com/articles/CBMiV0FVX3lxTE44VE9MdHByLWFlb29mRHdlRmVNc29LN3BmTTFBc0JNdi1MN0I4VnpFVUJpUU93d0llVjZsYlFVQ0xfMjhueW1YOVBoS0xxTi1fUUFqaG11QQ?oc=5",
@@ -199,13 +195,13 @@
     "https://news.google.com/articles/CBMibEFVVXlxTE9qbVh5aGIydXdhN240ZkZWSnBXQnVQUXZNankyRFl0bU1hTGVYRkJEUkJDdzlla0JSWU5PSV9tV01rNXdwNURvbnMwMnZFbGVJSzRvTkxOeW5vNUIydVdhd2ZHQzdVWDRaMVcwZg?oc=5",
     "https://news.google.com/articles/CBMiigFBVV95cUxQVER6WGY4a21taWRqdVpVTlh0XzUwaVdEb09FSVNpT1dhc3hnMEZ0X2FtWFFKYk1NWk1tRVM5UlJXZkFXTHBzOFZRRHNLMW54dHdXRnpBOGYwQVQwQmpEUXNEbWZLRmJidU9zVk1vQXo5MEJ0SE14YjFfLUNCbUVnS0dfd1A1a1lscUE?oc=5",
     "https://news.google.com/articles/CBMia0FVX3lxTE5vMm9WRE1QYmo3WEk5eFFXNjFyZlRGXzg1SVYtSFdpaW1DdHhrZXBOWnBiZ0x6cXFMLVhDRDc0RTdyN2FqZlQyT2tTSEhBWGRkUHBoNHY2TGhJNUNldGVoRjZXZDg0djIyYjEw0gFwQVVfeXFMTTRNcEhVcjJISmhsSHY2bGp4ekh5Y3FPYzJIMVlfVFp1LThfY3VTQ1F2TFc0Wjg0aVdUUFdWT0x6c19aeTFMT2otNjl1b0NPVjMydWlxVTJfQy0yeHF4ZGNEeHhCU0d1X2NXbEJUTm91NQ?oc=5",
-    "https://news.google.com/articles/CBMibEFVVXlxTE5fYlVxdmNEVFZvYi1ZMFZjTHRnQlBzUW0yUlhtSnVPcWZ6dlZBX183SDZCYWRPakRrbzN6ejdrZ3FGeVh3VlJ2MFM4QUJRMmR2NE5CVmsxRnNWOUlVcUI3QVdidDAwVk1zQUdMTg?oc=5"
+    "https://news.google.com/articles/CBMibEFVVXlxTE5fYlVxdmNEVFZvYi1ZMFZjTHRnQlBzUW0yUlhtSnVPcWZ6dlZBX183SDZCYWRPakRrbzN6ejdrZ3FGeVh3VlJ2MFM4QUJRMmR2NE5CVmsxRnNWOUlVcUI3QVdidDAwVk1zQUdMTg?oc=5",
+    "https://news.google.com/articles/CBMiW0FVX3lxTE1rcS1IU01sblU2dk40dmk4clBNVU5YVFFxRldPRm5rQjBuRGJ1cDZjQWllLTFLQWx6bm5FLU1leVFVckJuM3RZTE55SW9rUU9MYjh0d256cHFHTlE?oc=5",
+    "https://news.google.com/articles/CBMiVkFVX3lxTE5RYUdDZ1d3ODBMRm5pbFV3VzJnWUU1OVEzQ25SdTA3LTF2cll5Yl82SDFqMEQ4R0ZRcmd2NTB0TzBrQUJEZlNjekdzcktPMmxLVW1Va0FB?oc=5",
+    "https://news.google.com/articles/CBMijwFBVV95cUxOMXY4aFVoMFU5Nk1mYWdXREdWWThuZ1F3WXI4Z1BGUkMtLWRUNFJRMU15U1ptQVU0Mmx5NUJtaWs5VDhoamJJT21wNUdJcGMtcFh4M2Nic1BRNzFjTnI1Q0JSNDgxY1VKQVdBZ25IUkRSWW1fM0ZSNU9qZnNkQjR3cHd4MGRieUpKSEJRcWR6VQ?oc=5",
+    "https://news.google.com/articles/CBMie0FVX3lxTE5GVzFqTFdwYVVONTQwNHpuYmFQb2ZqUjN1ekNCc0NyME5mYzRtN1ZUZ293eThWZDBpR3k1WkxiMXg0WVVDV3ZqOG1raU9kRW5hb28yNmw1QXFDUG02S1BwT1RiN2VsRk1HY01nVjVZSHdaS2VZWGE3YXYtbw?oc=5"
   ],
   "titles": [
-    "｢損保vs.代理店｣ 中小代理店を冷遇する手数料ポイント制度をめぐり、激化する攻防戦",
-    "あいおいニッセイ同和損保社長｢手数料ポイント制度を改め､代理店の自立を促す｣。新納啓介氏に聞く",
-    "三井住友海上、全代理店に学習基盤 人材育成を後押し",
-    "第一生命が5年間で4000億円をAI・デジタル投資へ、査定業務や営業支援",
     "ＳＯＭＰＯ－底堅い 英インシュアテック企業のＺｅｇｏに出資(トレーダーズ・ウェブ)",
     "SaMD×保険｜プログラム医療機器の事例から考える保険戦略",
     "金融庁、自賠責保険料の6％引き上げ案を提示 13年ぶり値上げ 2026年11月から適用",
@@ -401,6 +397,10 @@
     "2026年6月保険業法改正に対応、録音するだけで「意向把握・比較推奨販売記録」を自動作成 保険代理店向けAIシステム『保険のキロク』導入事例公開 - tv-tokyo.co.jp",
     "IBVポッドキャスト Deep Dive：第一生命保険隅野氏と考える、AI時代の信頼と人間力",
     "エヌエヌ生命保険 経営者の妻のための情報サイト つぐのわ「夫が社長」妻のつぶやき川柳と調査で判明 10年後に個人資産で“したいこと”は？ もっとお金をかけたい費用は？",
-    "T&DHD株価19年ぶり高値 傘下の生命保険譲渡、自社株買い好感"
+    "T&DHD株価19年ぶり高値 傘下の生命保険譲渡、自社株買い好感",
+    "損保業界の悪しき慣習｢テリトリー制｣廃止に向けて､金融庁が保険販売ルールを大転換／規制の抜け穴めぐる攻防戦が本格化へ",
+    "【動画】住友生命トップが語る「保険の再定義」、独自戦略「WX」とAI投資200億円で挑むウェルビーイングの価値変革",
+    "AI ネイティブな生命保険代理店を目指すFwC、インキュベイトなどがプレシード出資",
+    "『保険のキロク』記録を全文読まなくても問題箇所がわかる集計ダッシュボードを提供開始"
   ]
 }
