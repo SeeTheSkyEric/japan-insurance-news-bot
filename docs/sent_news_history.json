@@ -1,10 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMie0FVX3lxTFBWRUdVOU9PRlVNdkhub3FjdHNZOV9YdVRBdTF3SjFYYUVodURBVy1CWS1wQ3lUNTNGUEMzenNfTDRMam1VQ3VEdjFuV2d1SnUtQXpRajhQV3dHeW12Vkx2Zkdsc3piTE83cW1FM3ltYWtUeUlIdl9xY3FXQQ?oc=5",
-    "https://news.google.com/articles/CBMie0FVX3lxTE5tY0g3eVFaUTFoYkNCRldLX0hhVXdRZXpZUVPadEhTeVhCbFJ0b3l3alAtZFQ2MjdyTmhKcXNnUjZQZzM0b3NKYXlWNDNYcDQ2RHBLRVpubnFsamVRZ0Ffcklpb0JLbFFZczdMZ0I1Q1dFcEhzOUNCRnJJZw?oc=5",
-    "https://news.google.com/articles/CBMiZ0FVX3lxTE8xVnVlQXVjb3VyVHU3ZHc1ZFVBOXZKV25Hb3phOWFnNFQyNUktdHhmVEhXRFZzQmMzV3l1VXpoanJCZWxIeG1tUjlTbUlkWmNpMUxkWUFuWHV5LTQ5NkdLaDhoM2FFVlk?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTE1fUGh5RlNvcGNzYzR0SVRRYlZoRVZEclEwOHVaR0tzbHB5dmRUc2N3UFlfdmQyRTQ4Ymw5MjZKV1dNV2NQY1ZvYndtcVNHMFRqRGJxSDBTM21PeERoYTVFM2s2ZFljdlBVREE?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTE9yeXlhVjdqWjYtRk1DM0Z0cEY1d2tubVMxZUk3S1NTZGcyRzBJU3dEQm5Jb0F2bDlDN1MtbE4xaG1pYXJnUWNHOWk1RTJjWVRULWpmU1pyd3RsOExJYXYwS2VEWnhjMjBfNFE?oc=5",
     "https://news.google.com/articles/CBMiSkFVX3lxTE9jTW9FMHdmNVN6WGNVU0VTbDNVWlZUaVZmQ0NNekVaUlpDUUxKd3JJUkFzaVF5Mm5DZjdwcWtYOHpQWFpoVGFVZi1B?oc=5",
     "https://news.google.com/articles/CBMif0FVX3lxTE0ya0xIR0hUcVlnbWNZb1JfZ0VjSl91VGlFVmtwdmZnWU5POU1PRktDbHZWTnNGTnYwQ2M3Q2d5dGtmRkV4RGR3RXpqdjQwQTBacWtnQ2FmX2FmU0s3TjNTMmI4WG9Zb2NFNXJxNlVYQ2c2ekFpM09FTzdUcEVQVG8?oc=5",
     "https://news.google.com/articles/CBMiVkFVX3lxTE9Sc0hra0pfYndTWWw0XzZ3Q3Q5a0g1RDkxMklKczY5OW1nZ0FpbS1MeVZ1ZFRSZXVVWFJQMmF4TXNsU0l5WDVmajJQT05Dak83RFpjMzJ3?oc=5",
@@ -199,14 +194,14 @@
     "https://news.google.com/articles/CBMiakFVX3lxTE11MGZYUXhLRW0xaC1BMGlFdkZCVG1YWXoyd25CUGhLV3VaQUlxZ2M4S2hZbWIzNks5bXJnTG5SeTY0TGVMYmw5M0UwSExHZDlkRTdCaG4yREZyYTQ0aXBmWjcxU0xVQXZBYUE?oc=5",
     "https://news.google.com/articles/CBMiaEFVX3lxTE55S1pXNERkMmxta0tQNXBoWXN2eHQ5YTVEZEtIR0wzZkRobWtKMms0TEZ0Yi1UbXI4LTMxOUhRb1dZQWdtS1RNYmI3Wi1GcFBOQXlfS0g4MVRYR3M1WUtZZjhjWk9QRFlZ?oc=5",
     "https://news.google.com/articles/CBMiakFVX3lxTE1pSHppS1hoSmZtTUxtYkNDZGNYVUlsMmZta0FuQTlMaGMweVJlSms1VFVoS2kwQTJiWWFHaGl1SUJWem5neXp5UkpxcGFaY1pNNmcyOG1fRmU0V2kwcWNER2RKX3ZGQjBLTnc?oc=5",
-    "https://news.google.com/articles/CBMiVkFVX3lxTE9WT0RfSnZTX3NaYlpYOW04T21XVFFhcDMxajFkZW5COUNSU3luOGR6SGNaWnRFb0RYVkdETmFINGZpSmRLUm9aQl9sb0hPOUlDTUd3Qktn?oc=5"
+    "https://news.google.com/articles/CBMiVkFVX3lxTE9WT0RfSnZTX3NaYlpYOW04T21XVFFhcDMxajFkZW5COUNSU3luOGR6SGNaWnRFb0RYVkdETmFINGZpSmRLUm9aQl9sb0hPOUlDTUd3Qktn?oc=5",
+    "https://news.google.com/articles/CBMiSkFVX3lxTE9vVzVISzh5cWtCeE4yZk9IRFNNRDMwNHVlQTNfaU52dktWMWlrdFM5RGxMSy1hU19KdTllUmhJdTZJR2ZfSVJraUpB?oc=5",
+    "https://news.google.com/articles/CBMif0FVX3lxTFBheTF3WXI5ZlVHSXZadVJCOHNnSllPX1k0bXZsRnk5Q3J0Y3ZvYUpweXR1czVQZEhhUEVKVmMxQTAzbVVDRXVrVkluWGZuZDBmUWZEWm81WWR3SHQ4eERBWDFPZDljbnpYbjRLRy1ldUxOcmhnc213WFh3TDZ6ek0?oc=5",
+    "https://news.google.com/articles/CBMiakFVX3lxTE1MTGViVzQ5ckQ0blFWSlbiekloSUZ0TzhpZHczYkszcUNiUmRjOWdYNXRhR2VNVG1KclZ2NzNfS3ozaGtQRF9RcjFtT2lFbjREdk9tOHJlQWRoZ1NBdE1BYi1hSFlVMUo2OXc?oc=5",
+    "https://news.google.com/articles/CBMidkFVX3lxTE5UeG8wLXYxNENuWHZMYUpBSXZsMVZUQ3Z2eGRHQ3MyNGpzSF9TZzhCY0VhWmdvcUNMWVZQQzhVYUc0SnlkNGxxZHpsLWFHam00REEydDdtU09ZdjFRTTNoZ2dZUTRwaGV3ejhBalQ2c0dBSTh0THc?oc=5",
+    "https://news.google.com/articles/CBMiaEFVX3lxTE9KdTByWTBjMWdIUkpMR0tmQUhFYmV5WVBVUTJmam1uR1VRRnFsZXdRbXViVWZxZDdzaFJQWGR5ckxpYmlxQ0hkbWlOeXZTcnp4T3VFb1d0ZHBTem5NT0xZZkdDWTVIdlA0?oc=5"
   ],
   "titles": [
-    "「マネーキャリア」を運営するWizleapが、株式会社bench.へ「MCエキスパートクラウド」の提供を開始",
-    "総合金融代理店「バリュー・エージェント」が 広報誌『絆ニュース』Vol.36を発行",
-    "社説：保険不正拡大 行き過ぎた成果主義が温床に",
-    "ヘッドウォータース[4011]：第一生命の生成AI活用した新AI-OCRシステム設計・開発を担当し、読み取り精度20％向上と運用コスト約50％削減を実現 2026年4月28日(適時開示) ：日経会社情報DIGITAL",
-    "boshu株式会社、保険代理店向けAIアシストサービス「boshu assist」の導入が10社を突破",
     "【GuardTechコミュニティ／インスウオッチ】金融庁Japan Fintech Week連携イベント「ホケンノミライ2026」を開催！",
     "70代父のうっかりミス〈死亡保険金1000万円〉で大損の危機→相続税をゼロにする「たった1行」の書き換え",
     "がん検診呼びかけに注力 明治安田生命保険北九州支社（北九州市）の谷口努支社長",
@@ -401,6 +396,11 @@
     "犬は「皮膚炎」、猫は「下痢」が最多の結果に【保険金請求が多いペットの傷病ランキング2026】",
     "Upstageとアイリックコーポレーション、生成AI活用による保険業界の業務変革・効率化推進に向け提携（PR TIMES）",
     "日本旅行健康保険組合、加入者の心身のコンディション維持に向けて『ポケットセラピスト』を導入。身体の健康を入口に、メンタルヘルス不調の予防対策を推進",
-    "九州の中小企業と信頼関係築く 大樹生命保険（東京）の中島啓・取締役専務執行役員"
+    "九州の中小企業と信頼関係築く 大樹生命保険（東京）の中島啓・取締役専務執行役員",
+    "バイクの自賠責保険料、2026年11月1日より「引き上げ改定」へ──全車種平均で6.2％の上昇［金融庁発表］",
+    "かつて「生保レディー」、新愛称は「生保ナビゲーターソナエルジュ」（朝日新聞）",
+    "ネット型損保初！マイページログイン専用の「ボイスエージェント」サービスを開始",
+    "日本のインシュアテック市場インテリジェンスレポート2035：売上予測、市場シェア、および戦略的動向",
+    "ペット保険選びは「難しい」が7割！保険料よりも“補償の手厚さ”を重視する傾向に│ペット保険比較のピクシー（PR TIMES）"
   ]
 }
