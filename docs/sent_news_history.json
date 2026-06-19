@@ -1,10 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMiZ0FVX3lxTE51bjhUZFd3MGFJOGNSSTNHOFo1UllWMTZfUGpHdXYyaWN6VHc1MWJtSnk2VUtxdjlVZkhfaUo4SjJrRjBYUG12RTZWOEVlTDRneUJhR1BKZ29peW9PcUg3VF9DMHp5Ums?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTE9QSGdFelU4WjFjSDlzZHo0NVVGT0plUi1adGpSWjBVTFAtU3loQmtWWTlhc0dIc0gzM2FabFVNR1pseTVkYUMtSzM5cGZtaElmbVNLNUVqazFDaFdLbGtkZmhib09OZ0lpb1o1bg?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTFAxeTJheE5kVXU2SmIwMDRnZVRfRkpndE84eFljdHJ1ZTd5RFM2UEQySU1qS19CajZwNzdUMGxIdi1tU0RTNExjQzF2V2pITVhub0R1bmREZEhpTFRIUm1BaVFQbnRWZFMxNlpENg?oc=5",
-    "https://news.google.com/articles/CBMiS0FVX3lxTE5GRjZGQ3hNR29YcTNTdVBUVEVvUmEzNThhUnFsOUstVTRSLXU4MG51dW00bGMwdXJvMWp1RlV0MktnZ0tEbFpzWlcyOA?oc=5",
-    "https://news.google.com/articles/CBMiqgRBVV95cUxQekVKckY3dk5fSUUzc1NLWl8tNnFBNE9IWkFlNGtmZUFxcVN0QmJnREJoUVZwOU5ZZEM0T1NOUHY3TkloLWlWY1BYZFZKUmJERV9LeFlWN01qS05GMEtHRm80RHRpbk9xRjdrclZKWUZxSWx4SWpvamlrclhJT2RIc0ZnZE1CUXppMDZGN1pWbVhLTkp6MUtyNWRyUEUzVkNDR2NOeFM0RGVPSEhPWVcxZWVVdVlYSDdIbFFYVDMxa1otM0YzWTlXYkJJdWd6YnVIN1VXNnV3aWdWbEU0bDlJYkJ6Q0QyYUFXVmZNelhwUFFWbXlqREZuSmlwNEMyV05SQy1aTEpxVWxJWVBLY1RyZWdxVm9ncS0tRjctd0l1cHgxWDRuZVVfVU1TcU1YOVg0Ynpua182YVdOVHd0VXVtc3k0OEZlRjAwWS12ZzRjdDNBZ2JGZzhwOUJSU1lpTUR0Y0JnUlI4b1BzYmtYR1U0b3ZxVmRfcmpBWUs4NGlEbXg4MjA0Q0FfMlB2MWdCcUM1dFpGcnZpZXVMTnhlMVFWaE9RRjJQcmN0cDBlV0xWSzRjVDd2Y3M5a3BaMU5GNTFHSTh2UVFobGN1RHlnYkJRMGM4N29xdUt0UExmUjJBZnRTeDlZZWZ3V3o4MWRaM3YyOERQckVtU3RUOXNEUnBHTmVaX291cWlJVzJWQmlZck1xTXNPYXEzRTZDNFNQWmd5UE5zdVU1MEdLdw?oc=5",
     "https://news.google.com/articles/CBMiW0FVX3lxTE1ROEtNaXVSLUZVdWJ3QWV3TW5yRnpKbmhjS0ZZdmtFMVpGeGl2T2o1bTZqUDhrWlJmVnBuMzBrMF9vQlJ2OHh6ODFKempmNmVoNWpCV3hpR0V1RlU?oc=5",
     "https://news.google.com/articles/CBMiR0FVX3lxTFBuQmFUY2M5eS1qUGQ5dFctV19tNjRBUWwteTBOUWp6NnhvSHFPRXZ1RWVoTnFVb2tfSmZmb0d2SURjWEsxV01v?oc=5",
     "https://news.google.com/articles/CBMiSEFVX3lxTE9hamdPRXg4UjRmOVRvSHNtMkJrQmZXbmFsQkVlSGlmUWIxZThQR1JiNDBnT1RZWVljMGtFbUFHX1ljQ0JxcVZzdg?oc=5",
@@ -199,14 +194,14 @@
     "https://news.google.com/articles/CBMiakFVX3lxTE1qYmZzRjE1YzQzQWxNMk5ZYmpkbVpXTkctMnFobWRZT2tDQnVONkJST1p0V1d0d2RnNmtoMXVHYmtSZE0tZlZUTVRyS0hKYklDX1FyRFZuSllqNUdMbjFDeGNqZ0FQM0Q5RXc?oc=5",
     "https://news.google.com/articles/CBMiakFVX3lxTFBGcmpzcF9MbjNUZXFsQzVqOHpSVFYya052RzhiUGdYeDVNSTYyYkwwc3dlRVl6RExHcHF0ZjhGLWVWWE1zWk9lVVV5LVFza2lHTTBoLTFIZ1g5c3pndURhdXR6bU9TYnVyOUE?oc=5",
     "https://news.google.com/articles/CBMif0FVX3lxTE5vM1l4X3BJemVCX3o0NHlnWGk5RWx3ZUplZGNpM09BRV9hLUVZV3padnZYTE9QejZFcng2VDFqUHcyb3U5RjFfOHZwMzhFcmstUGxIUlpsTDFfc0Y3TXVla1lUZ2NFdVM2VWRnTmV1U0ttbENCQlA1VGVFSnRkTTQ?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTE5aSGQ5OGJtd05NM2lCREZVS1JlWHB4aDcxY3o3dnpuVWJ4anQ1YzB2UlNQNV9ZZW1DZy16a1ROeDN0eVhMWjF3NGFVOHlXd3EzT3B6Yl80OXRuSzJXcUNjd3BOTkhYRlJWV1JGZQ?oc=5"
+    "https://news.google.com/articles/CBMibEFVX3lxTE5aSGQ5OGJtd05NM2lCREZVS1JlWHB4aDcxY3o3dnpuVWJ4anQ1YzB2UlNQNV9ZZW1DZy16a1ROeDN0eVhMWjF3NGFVOHlXd3EzT3B6Yl80OXRuSzJXcUNjd3BOTkhYRlJWV1JGZQ?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTE45Ym5YVlZYRWVmbXV2aDVQcVlsRXBicW4xTXhZMGluYXR2dzhMam5BVTJIWFh4ZEp1REowcklsampDX29iVHhSTEQ1bWh3LTFLTDJLeGQwckpUNmRDM0FkU0puQTd4REdxNDhTLQ?oc=5",
+    "https://news.google.com/articles/CBMiZEFVX3lxTFByckFkRkE2NW1EcHFjUWZrZF9kTVV0OHdZaEpieVpWbGNNUDBHN3NodFBHc2pZYUpNSlVnTXlYTzVpNzlxVElsMkM1RWlPaWRHV080R3ZDdVlOdzhUaEZ0RXh0Z3I?oc=5",
+    "https://news.google.com/articles/CBMiVkFVX3lxTE1jMld6YzdTamhCMFdMNGZfcVo1ZXdIS2FGczdJQnloYlRVWFRLb2t2YXJXT3B4WW9jQU5ueUM4Y1hKeDhKMnJ0eUNkRHJnXzBNQ0tTdGpR?oc=5",
+    "https://news.google.com/articles/CBMiSEFVX3lxTE5XZGNaVjRDY2hBS2xoclJ6ODVuRTI1SzY2SkI4Zl9LNzlRcnJYMG81UDNqWVBtT0M0R1AtQWVPaHdReE1wa3F1dQ?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTE9LU3hwQUI2LTB2TEp0SVFUSE4wWVljWlpzUTFkSlhkQ1o5UTJsdUt2Qnhmd2IwMG9abTk2VWluSnFMVHpUTXJYVXVRNkQyQTZrdk1lWnZwcGI2c0cxQzNoYUw3WFpNNVo5UThDaw?oc=5"
   ],
   "titles": [
-    "自賠責の保険料、6.2%引き上げ決定 13年ぶり、コスト増に対応",
-    "保険代理店「顧客不在」是正道半ば 改正法施行、規制強化に残る課題",
-    "保険代理店への出向者による不適切な情報持ち出し ～ T&Dホールディングス 調査結果 発表",
-    "《ベテラン営業マンは「絶対に署名できません」》プルデンシャル生命保険「退職願兼誓約書」の中身",
-    "Tim Venturesは、保険技術とデジタルアイデンティティ分野への新たな進出を目指すWalllifeに投資した。",
     "ライフネット生命、JALとの戦略提携でマイル活用の生命保険など開発へ 航空・決済・通信で「Embedded」加速へ…",
     "シンガポールオンライン保険市場2035年までに40億757万米ドル到達見通し フィンテック融合で加速する次世代保険成長 CAGR22.53",
     "船社・港湾・保険が板挟み、米中制裁衝突",
@@ -401,6 +396,11 @@
     "弁護士保険比較サイト「弁護士保険STATION」が公式X(旧Twitter)で『法律のお悩み大募集キャンペーン』を6月23日(火)より開催！",
     "“ヒト×保険×テクノロジー”アイリックコーポレーション、Upstageと生成AI活用による保険業界の業務変革・効率化推進に向け提携",
     "日本生命、電話解析AIなどを導入--顧客とのやりとりを記録、分析",
-    "生保販売「営業職員」経由に回帰 契約保険料25%増、銀行窓販を逆転"
+    "生保販売「営業職員」経由に回帰 契約保険料25%増、銀行窓販を逆転",
+    "生保協会、営業職員「ブラックリスト」で監視強化 金銭詐取問題受け",
+    "BYD東福寺厚樹社長、SBI損保の近況報告会でパートナー企業としての協業実績やブランド保険の強みを語る",
+    "「体制」から「態勢」へ、改正保険業法に見る金融庁の着眼点の変化",
+    "明治安田生命保険・永島社長「AI時代の経営は尊厳と信頼が核に」",
+    "損保ジャパン、衛星の宇宙ごみ化リスクを研究 新興コスモブルームと"
   ]
 }
