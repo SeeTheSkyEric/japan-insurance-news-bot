@@ -1,9 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMiS0FVX3lxTE8yMU50VUxjSlp2dEZ1US1IWkwtRERBeGFEYUdsbllQaHYxWEkyZHE0V3V6bE05cFZRRHo4QnFGY3RlRlJ1bjMtY0NSdw?oc=5",
-    "https://news.google.com/articles/CBMiU0FVX3lxTE1fUkVPNUpIb2FQdkpoLUdpQ1dVUVd6ZjlWSGNjcDZnZGVMUE1mUmZVVzBPdHZuc2d3QW4xSi1nV1g2YWxiSHdnak1WYjAyaGZrYmZv?oc=5",
-    "https://news.google.com/articles/CBMijgFBVV95cUxQZEd2UTd3M01QeDAwbVJiZkcyMkFPaEdYanRpbHFXRGN3MlB6VjNma3ZSbWo3SGxRNTZKWjFVMDgyWkFfQklaVlV0bzR0RzhiNm10czNTVkw1dWQ2UGk3T3VFbGNhWWhSel_3MHBIbzk5V0VVdnJxU20yVWFKT2JTSWRVQU9KeUFyVHFLLTV3?oc=5",
-    "https://news.google.com/articles/CBMiYkFVX3lxTE95eS1JRVN6NFVaUVRKYU5xajY2c0R5d1oycmo2NzlaeHV1dFNIclZpcWlzQmkzVzA0Qng5UURuS2RBYkFfMnBuSk1USGNLLUNWR1pFVjJZNU12QlFTcWFrSVpR?oc=5",
     "https://news.google.com/articles/CBMibEFVX3lxTE1ua3pHdlFCVzZzVXYydEVhYVpPU2RZcExxRnVKcmd2UnRzekppLWhsVUFFbzFvU0FnOHEzeC1aUEtaZzVPTk1GVDJPQU5ub2xGQzZTSjlVNG9fcm9iTGtORl9xRVhiWUlSemUxcA?oc=5",
     "https://news.google.com/articles/CBMijgFBVV95cUxNX3prNGVlekdMNGZLQUFoclVISk94bS1qMlNRNlNvejZGc1B4d1ZGeG1DQXVPUzVtRENvLUVlY1JleUhFMGRzTWhUdmpGSm94cmNqVms3b056QjhCUDNhZjV2Q1NZU3h5eWlHdnkxZGtrYVJTVUpnZU5ZdHA2SXdVS0VTNGhJbUplVmhibXFn?oc=5",
     "https://news.google.com/articles/CBMia0FVX3lxTE9vSC1vVmpScnVva21JTTVTVnhzcjhPS2l3eFN2alR0cEJfcXR1TzZueFFnMktpSm5Da1ZnRGFwdndZdEZxZjFBNG15UmRVTG5kN3AtdF9RQ003LXgwcDhjZk9MZDA4SlJmR2M4?oc=5",
@@ -199,13 +195,13 @@
     "https://news.google.com/articles/CBMidEFVX3lxTE5NUFJxY3g3MlNTMXVTQVRMRGdSOFBxcTZIWjhHbmZ4UEhzMklRSW1IeTl5Z09Wa1pkcnFiTVo2ZXJUSTB4WXd3cVc5TWI2aGZGV2loM3Q1VFZKd0VYM1lZWGFHTDEyZWlfSndxYVRURGNOYWgz?oc=5",
     "https://news.google.com/articles/CBMiYkFVX3lxTE9vb2FpN3kycW50aDBuWjhuYm91QVVraTFUQjFJVHBWblVSbGczOE1MQ19oVlA0ZnB2LWtnbEhGb1dYeGI0Q0t0OVMySTZJcnBZcG11UkhzWXhZeVF0TDBDd0lR?oc=5",
     "https://news.google.com/articles/CBMiakFVX3lxTFBQYktDSHNKYzRmV09UbGFLYnhqbjIyaEhNSTREZFF1aUY4cTRER1h4XzVBdU9raXhBOF9VV1RkZDVpR0ctVHNlR0hnWkgtZ3JqN3JJS1VPNWxXZXE0NWRzMnpNMlZZUzFOTmc?oc=5",
-    "https://news.google.com/articles/CBMidEFVX3lxTE5sd3lWQi1nbEJSeS1nbUhYdF9INFppVDItUVc4ZHJkSVU1X01rZnA3VWt1X1A2ZWhDcVBjckpmS0xuZ0xCOEN4ZE05TVV2cUJva29RWTliWndzUGRaQkdoejFjNWoyZXFfVlFKQzBMcFdPYm5z?oc=5"
+    "https://news.google.com/articles/CBMidEFVX3lxTE5sd3lWQi1nbEJSeS1nbUhYdF9INFppVDItUVc4ZHJkSVU1X01rZnA3VWt1X1A2ZWhDcVBjckpmS0xuZ0xCOEN4ZE05TVV2cUJva29RWTliWndzUGRaQkdoejFjNWoyZXFfVlFKQzBMcFdPYm5z?oc=5",
+    "https://news.google.com/articles/CBMiaEFVX3lxTE53TTVaMmVydkMybTZBajVKbnpSVXRYZXVLd3NXWlF3NHpTVHJjUjdvc1FWdkVRX3lIajBONkRkR1FYWThtRmJpamxpYVpsVWJUbFQwNGkyVFZOT0d1Mk9VdEZZTWMxbE8x?oc=5",
+    "https://news.google.com/articles/CBMiV0FVX3lxTFAwdlhsZEIzck90SlYwLXYtb1ptbXZBTWJObVMxbWNtelVFdF9UWVRPaFNYcmR0OV9lbkRDUExscDB5WXo2bVp3akVQYmVZaVgyeUo4bU1aTQ?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTE1CVXhDVkZTQzZ4MTc1YlZkWHZlMnotWkJreTNTN0dTdlpRRTltT3hkNzMxUl9HM0gybDR6TkJGVS1vSlplRThzZndZUWFjOTl1WE9YS3NEdmpvSGYwREN3SDBQQVNnSFpqR2h3aQ?oc=5",
+    "https://news.google.com/articles/CBMiakFVX3lxTE5NdG52Umk2S19scUYyalEtVFlpNDJSaXRGUUxadmJGMWxGdWlwNGtqYUNhSXV6cUxDOC1Ob0tvV1hNdEczVzllZEo5WFZQRWN1R3Q3bWJuejFhTldfMzhRekplVEd2aUI1X3c?oc=5"
   ],
   "titles": [
-    "損保ジャパンなど、脳波測定しフォークリフトの事故抑制するプログラム開発へ",
-    "【ドコモスマート保険ナビ】2026年5月更新 最新版 ■医療保険■がん保険■生命保険 おすすめ人気ランキング公開のお知らせ",
-    "終身医療保険に加入するなら、どこの「ネット保険」が正解？大手5社の商品を徹底比較！",
-    "県民の健康増進 取り組みを支援 本間生保県協会会長",
     "国保の保険料「加入者が偏り負担感」 社労士が解説",
     "マイナ保険証なら「医療費30万円」でも、窓口で払うのは“8万円”だけ!? 40代「年収400万円」ですが、今後“自己負担上限額が増える”って本当ですか？ 制度の仕組みを解説",
     "第一生命、生成AIとクラウド移行で帳票処理を刷新 選んだサービスは？：運用コストを約50％削減",
@@ -401,6 +397,10 @@
     "三井住友海上、代理店評価にAI導入へ 自己点検分析で業務8割削減",
     "生保不正は成果主義の悪弊【上昇気流】",
     "デジタル保険募集システム「Miracraw」の本格展開を開始",
-    "軌道上AIデータセンターに保険の壁、宇宙スタートアップが業界と模索"
+    "軌道上AIデータセンターに保険の壁、宇宙スタートアップが業界と模索",
+    "プレスリリース：hokan、三井住友海上とAIを活用した代理店自己点検の対話支援ツールを開発",
+    "令和7年保険業法改正の概要と実務対応",
+    "不眠、薬物使わぬ治療に保険 アプリで行動や思考を修正",
+    "【会見レポート】miive、ベネフィット・ワン、第一生命の3社が連携 —「日常で使われる福利厚生」の社会実装へ"
   ]
 }
