@@ -1,11 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMiUkFVX3lxTE5INjA2bEZOTXpqRFRlZ21aNERpNUhocDVtaTMzTElxTHNpamV2THo5clN6endHQWFFWlREOW5YQ29MUU5iSXh3bzYzT21lalRPN2c?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTE9iOWdhUHg0LXdMdmpXb0Q2SEMtN3FIN0ZuNmRpNWxpMzhuQTdxZFhMSG9wN2VlQXlQaFNORHhURDJQcGFSQjNqVHo3UzRLZ3NtOFd0ZlFZU1BlUFBNcGc2MGcyMDBvUlctZWlBVg?oc=5",
-    "https://news.google.com/articles/CBMiX0FVX3lxTE9Kekt0dklsQnY4NlIyalN3RkdmQmk3cHVZNEJkWEIzV1RXRE9UcUhzQkFBR1VIb1hIdmhaNl9HT1FSX243Nm1FWWlMMVM0clFHV29RVlk3OFhBMG5RakRZ?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTE43a21oOVRFeVA4V1dWSzRTTHR3WU5vWEszRFBWazB2bjhWTUNDeFRlS3lyb2JGT3hpR1Y2WTJUNlgzVUlXTWdETWM1OWV0bkNwU2o1ZnU4VWgtR1RReUdzOEtOd1lBTXk1Q0E?oc=5",
-    "https://news.google.com/articles/CBMiU0FVX3lxTE40RWlVWXhYWjRwSkxYZUJf0JZcnNDcU50TVNvWUVQNnNPNjZnM1JXS1RxdkwzbG1NUzVDWk9SZE1yazVRVEZFc2FHWmRTV0s2MWNZ?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTFBHc3lodHdna3U2X1VPMGx1VUdNNGs0aTlrRTEyNXQwdw0QVFNHXzJCQ2NuY0RPQmpGYXl5NnN0NXpJRk4wejFJRUNfc3kyZ2Y4MWhwamt4WDEwbENlbmhaa2VXajM3WWlOU0E?oc=5",
     "https://news.google.com/articles/CBMif0FVX3lxTE93bjRZZW1ITHpBMV9yaktRWHJZRUdsZDB3bEFwMk1ST0dzSUhmaWJLa0V2Y0RKZDhYOTNRQTZVZkpkRk9TMUJuYm4xb1dwZDRWQW80bHR4RnBWM0plUjI3YmN0bnV1SWhHaXRCSEZ1Z3ZXNjV6ZjYyTjNhb1ZxN0E?oc=5",
     "https://news.google.com/articles/CBMibEFVX3lxTE5uU1R1SnFfTFk0OTBuODN1amZ3Sks2ZmNIaU4zd1BpaG9XMHNHWFh1UGpjbkNpbUdnVjNXM284S0xYb2NxRlRpNHNtUGZqWWxLR1k4d3VFU0p4YTlRbENreHQycE56NHRrXzJvdA?oc=5",
     "https://news.google.com/articles/CBMiakFVX3lxTE02b1FqNGVRN3BXbWRPcWpUcnhLdVlzUkFBNkVoMWNkazFjS2ZvVmJsMmVRYXREMTNYbkNxWHMxNnBsQlBOMjF3MW9MOG9SUEY2Q29RaW9Kb2VYVWNOVWRjMnRGVGphdS1QaWc?oc=5",
@@ -199,15 +193,15 @@
     "https://news.google.com/articles/CBMiekFVX3lxTE0xbldnX2QtNEtXcTRzYXBtbFRxVFlJNEp2WU5rc21hbjNmMUdhbnUyaVh0VU1kcDhMdjk1Q204dkJuTXcxclBjbUNzT1A5RVBpTEs5WVlYVFlOaERoMFpGTV85X0trOVo1LWllX3p2dTlDcVFJN291QkZ3?oc=5",
     "https://news.google.com/articles/CBMiekFVX3lxTE9kUG5hLWpqcVhQUkpvWm10NlNoa1lJX3U1Rm5hQkFSX3B2bS1qRXhqbTZ0YktOMU54MHdma0JsN3gtdi0wR1h5Zy1aM1czSlNMUWNDbjhIWVBOSFJjZzlGem9CTU96N095RzVNdkExWkNJTVBDRDRKdEVn?oc=5",
     "https://news.google.com/articles/CBMickFVX3lxTE5UcUp1UGpLUUdUWExuSE01QXpFRWZaVTNjUDRPOEs1WkIzRTJvSW03NWt4WlgtR1dEa3pJUmxtS3UwWXB1eXBsVEFBWTFobHZCZlZpUHRkNnYwMmtzUG1mNVlCdGNwQ0ZOQ1E4cE1TZjlUZw?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTFA2ZW1hRWhkcFUyWC1EZmREdk9CVWR6UnBka094YTc4a0c4VzU1M0lPOVhUTVQzODliNEVhblMwSkRnNE5UaW42WkRabUU2YVQtOE0zOTkwUjBvN1RZMlJfeEp4MW4tU2pQbGJLbw?oc=5"
+    "https://news.google.com/articles/CBMibEFVX3lxTFA2ZW1hRWhkcFUyWC1EZmREdk9CVWR6UnBka094YTc4a0c4VzU1M0lPOVhUTVQzODliNEVhblMwSkRnNE5UaW42WkRabUU2YVQtOE0zOTkwUjBvN1RZMlJfeEp4MW4tU2pQbGJLbw?oc=5",
+    "https://news.google.com/articles/CBMickFVX3lxTE9EZmN4Z2c1TzlTVXB1WnBMQ3FmV1Y1QUFHS2RfeGx0c2otX2pfdnBtQ3RtOTBZUUVSLWlUSXptQ0dNYzJpR0pOTzZrNUxsX2tOMEZFVGZnbk83VHo4N3N3SjBHU1dZbzdBeDRmdXRKVHRfQQ?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTFB3YzhsMUIxTTk5WW03ZjRJWVFiVW85ZklKUi00Undzb0tJcHFYak43b0lBdktxT0VEWklOOFE0Sm1qZ1VnbHRPY3k1a01tQ3RuUjBkRkFnTGlDODFXZDl1VWdmM3h3ZXBhbXhIVQ?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTFBWUVZaeHhCcWFzN0Nlb0xmUGl3V3VDSDFqRnlJSVI4VEljWkI3ZWJZUnZidkJnS191el81MU55b1JpR1ZDNFBnemJmLVZPQXVacnFJN3NmLUUzRk5sTkdNVUc0bXdOakdkZW1xRA?oc=5",
+    "https://news.google.com/articles/CBMiogFBVV95cUxPVFN3b3pIUXJBZHlJWDVhSzhnNzlQMDRkbnJXcE41b2hlX29tSzYxRUVXdE9keVB3T3RFM3BkU3JnVVgwS0kyRzQ3eHBmSElkd1NLVEQ3dm90djlBeExlXzBSRFVwbGxMRkt0azVFZjlzNWRiSkdLVVVWVEpJWnJZY3pPUTF0S29NSnd4a0Z2QW9EZFRTZTdYXzlOZktVMnNGc1E?oc=5",
+    "https://news.google.com/articles/CBMiU0FVX3lxTFBhLVQ3R09oaXpURm1FUVNDOEhQU2h0c2hhR1didzJxSThWNnNKSkZ5TEluaHFuZ2Q1QlE5aG5xS0w2M0c1UEx0ZXFYN1Jld0M5WEhF?oc=5",
+    "https://news.google.com/articles/CBMiakFVX3lxTE5IYkw2UFhSbDFxNHN3NzE0SXYtQ01GWTYwTFM1SUlobGhTUWc0dDBaTFY0S0lQWlVreGhrNEpHWjE4eG81bmJRektCenZaY1Rra0NYVVprNnQ3NzA4TGN2SzJ4akF4YnFpd2c?oc=5"
   ],
   "titles": [
-    "顧客接点を「成長の起点」へ。AIコンタクトセンター化が引き出す「人」の真価",
-    "東京海上HD、マレーシア損保と買収交渉 現地子会社と経営統合へ",
-    "東海東京フィナンシャル・ホールディングス、傘下メビウスの保険代理店事業をメビウス準備会社に譲渡",
-    "ユームテクノロジージャパン、損保ジャパンと自動車ディーラー代理店の教育DXで協業",
-    "慶北創造経済혁신センター、DB損害保険課「DB G-Star Hub」開催…スタートアップ5社選定",
-    "ペット保険データを用いた歯周病リスクに関する大規模研究成果が国際学術誌に掲載",
     "iPS製品、初の保険適用 パーキンソン病治療で 中医協（時事通信）",
     "あいおいニッセイ同和損害保険からの出向者がトヨタ自動車の内部情報を不適切に提供",
     "マネーキャリア運営のWizleapと中古車買取「ソコカラ」運営のはなまるが業務提携。改正保険業法対応に向けた比較推奨の根拠整理・監査対応を共同で支援。",
@@ -401,6 +395,12 @@
     "総合商社系企業内保険代理店 豊通保険パートナーズへの「hokan(R)︎」導入が決定",
     "中小企業特化の保険代理店キールが、住所で3分の無料『自然災害リスクチェックツール』を公開",
     "「Excel VBA」「Access」ツールの“乱立”を解消 ペット保険会社はどう実現したのか",
-    "東京海上、船井総研と資本業務提携 中小企業の経営コンサルを強化"
+    "東京海上、船井総研と資本業務提携 中小企業の経営コンサルを強化",
+    "アフラック生命保険 顧客約438万人の情報流出 うち約23万人は銀行口座情報含まれる",
+    "生保の乗り合い代理店、手数料高い保険の販売に傾斜 金融庁調査",
+    "損保協の石川新会長、保険販売者向けの研修制度「28年に導入」",
+    "日本総険グループ、損害保険情報サイト開設",
+    "【保険DXを担うキーパーソン①】AI時代、お客様に選ばれる理由は「人」になる―かんぽ生命保険 中根執行役員 × ブレインパッド 鵜飼上席執行役員",
+    "保険代理店向けシステム「hokan®︎」、「比較推奨運用支援サービス」を2026年秋に提供開始予定"
   ]
 }
