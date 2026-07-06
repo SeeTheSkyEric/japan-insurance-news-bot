@@ -1,10 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMif0FVX3lxTE93bjRZZW1ITHpBMV9yaktRWHJZRUdsZDB3bEFwMk1ST0dzSUhmaWJLa0V2Y0RKZDhYOTNRQTZVZkpkRk9TMUJuYm4xb1dwZDRWQW80bHR4RnBWM0plUjI3YmN0bnV1SWhHaXRCSEZ1Z3ZXNjV6ZjYyTjNhb1ZxN0E?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTE5uU1R1SnFfTFk0OTBuODN1amZ3Sks2ZmNIaU4zd1BpaG9XMHNHWFh1UGpjbkNpbUdnVjNXM284S0xYb2NxRlRpNHNtUGZqWWxLR1k4d3VFU0p4YTlRbENreHQycE56NHRrXzJvdA?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTE02b1FqNGVRN3BXbWRPcWpUcnhLdVlzUkFBNkVoMWNkazFjS2ZvVmJsMmVRYXREMTNYbkNxWHMxNnBsQlBOMjF3MW9MOG9SUEY2Q29RaW9Kb2VYVWNOVWRjMnRGVGphdS1QaWc?oc=5",
-    "https://news.google.com/articles/CBMiW0FVX3lxTE9aZWF3dWhkRklNWS1IN3dXTVZvSTJfNDRXU2Y2ZEhFMzl0UVBMX2ZoS2pRcWtHUDlqenM0NzN4a1JzZUxBRUR0azI5MDV3Y0d4U29FR296cGtvSU0?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTE1DMEhzZzJmUnlrZ0phbHh6azhJZ1JMTFREWHhXak5zY3BzTVFjczAwQzhjSFRSWXBHNjJHaGJQV0tuZEFuT1FzTlVsWWdnSzh0TEFYa2licENQUkZNRU05OWdCNzFhendBX1pJUA?oc=5",
     "https://news.google.com/articles/CBMiakFVX3lxTE5TbndPcm1xTTJRYnNYOEhGRi1NZGktanZCdDBfdG1UMzlPTUp6Z2tFNEFWUXhsLWpaeF9fZWROcm1xdmF3WXdXemlqVU4xM1A4X2I3NkVjVm55SXR1cTY1dDFpWmlQM01hRHc?oc=5",
     "https://news.google.com/articles/CBMifkFVX3lxTFBHOVpmd2ZmUDZLMTBMd3kxbmpPMFhyUllzTjVRaUFxdVNHWDdyZ21uajAzQkVHQVhzQ3VWSk1nYUVldnVGUjZHcnRpZFBWS1pCWmlsNjNZaGRVV1BuaDR2dEQ5LUowVm1odmVNQWlDMEIyb1FCaDR0ZlVxd21DZw?oc=5",
     "https://news.google.com/articles/CBMid0FVX3lxTE5LNXI5b05lcE1Jb3VyVHFaZTVsVnJuTWh6WkExWXQxOGtUQnZEUTdmZFhKc2tESGFKTlJEbnR6R3lUWDBlTlFjTEhzeE9vaUV5UU5XbzRoaFV3OHlYQ1RGNTluYmtqOEg2YnBlY2R1d0FazHY4eURJ?oc=5",
@@ -199,14 +194,14 @@
     "https://news.google.com/articles/CBMibEFVX3lxTFBWUVZaeHhCcWFzN0Nlb0xmUGl3V3VDSDFqRnlJSVI4VEljWkI3ZWJZUnZidkJnS191el81MU55b1JpR1ZDNFBnemJmLVZPQXVacnFJN3NmLUUzRk5sTkdNVUc0bXdOakdkZW1xRA?oc=5",
     "https://news.google.com/articles/CBMiogFBVV95cUxPVFN3b3pIUXJBZHlJWDVhSzhnNzlQMDRkbnJXcE41b2hlX29tSzYxRUVXdE9keVB3T3RFM3BkU3JnVVgwS0kyRzQ3eHBmSElkd1NLVEQ3dm90djlBeExlXzBSRFVwbGxMRkt0azVFZjlzNWRiSkdLVVVWVEpJWnJZY3pPUTF0S29NSnd4a0Z2QW9EZFRTZTdYXzlOZktVMnNGc1E?oc=5",
     "https://news.google.com/articles/CBMiU0FVX3lxTFBhLVQ3R09oaXpURm1FUVNDOEhQU2h0c2hhR1didzJxSThWNnNKSkZ5TEluaHFuZ2Q1QlE5aG5xS0w2M0c1UEx0ZXFYN1Jld0M5WEhF?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTE5IYkw2UFhSbDFxNHN3NzE0SXYtQ01GWTYwTFM1SUlobGhTUWc0dDBaTFY0S0lQWlVreGhrNEpHWjE4eG81bmJRektCenZaY1Rra0NYVVprNnQ3NzA4TGN2SzJ4akF4YnFpd2c?oc=5"
+    "https://news.google.com/articles/CBMiakFVX3lxTE5IYkw2UFhSbDFxNHN3NzE0SXYtQ01GWTYwTFM1SUlobGhTUWc0dDBaTFY0S0lQWlVreGhrNEpHWjE4eG81bmJRektCenZaY1Rra0NYVVprNnQ3NzA4TGN2SzJ4akF4YnFpd2c?oc=5",
+    "https://news.google.com/articles/CBMiZ0FVX3lxTFBUQnhvM0hwcEdSaXplUnpueDBwRVBSemh0QTlEZi1pWWFtOWpfZVVJY2pnbHFoTVh1NWUwTEh2X3lHV09YY1JpMGo5LUlwT0V4a3BSRU1odmVqVkdLZHhTbk8xTEhUb2c?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTE9lR21IaF91SDFyR0dEV0FjNnZ3QzBzWHJuMnF0UHdoQlVoS2tIM3VYMmdyYTNfWUU5SE9CTy1kZEh6MEtsekV6b1pCVlVmUG5ES2ttZWw2VENrcjVBV3lwTHJTYUN3Uno0bHdmZQ?oc=5",
+    "https://news.google.com/articles/CBMiZEFVX3lxTFB5bE9WbVhuWkxabllBX0cxNi1CWmVORnJqVFMtY2xSblAyNDNIZUVGc09iUTgzRURLdi11RHEwN2V4bVBOLWg2U0dVS3p5S1J3Z282MHExWmc0UnUxa0g0RUNTVHE?oc=5",
+    "https://news.google.com/articles/CBMiakFVX3lxTE1ESVpzendCVE9IenV2MG9MRWpmZElvTWtsUnR3RkV1bGdwT1F5Y3lKZmhYTmY3Y3Z6cGQ4VzV2VTR1UXFTdWhDVGZZeHRBalF6LVVQWndHMi1hRkd5WnhacXhsWjVaNHZMbFE?oc=5",
+    "https://news.google.com/articles/CBMiVkFVX3lxTE13dVFOcG56VzdSMmZFX2NxVXJMWGdmYzBBWmRvWEtnSkE0NUdMLWV6S3QzcVhkVHM4RE1XM0VpZ3dyeTh3Zjc0Y0tweEN3V2IzdU4tbEF3?oc=5"
   ],
   "titles": [
-    "iPS製品、初の保険適用 パーキンソン病治療で 中医協（時事通信）",
-    "あいおいニッセイ同和損害保険からの出向者がトヨタ自動車の内部情報を不適切に提供",
-    "マネーキャリア運営のWizleapと中古車買取「ソコカラ」運営のはなまるが業務提携。改正保険業法対応に向けた比較推奨の根拠整理・監査対応を共同で支援。",
-    "東京海上ダイレクト、運転事故 AIが注意促す アプリ機能に追加",
-    "損保ジャパン、車両のひょう被害をAI点検 1日で修理完了",
     "株式会社hokan、保険業界特化のクラウドシステムとして「SOC2 Type2保証報告書」を取得",
     "自賠責保険とは 自動車に乗る全ての人に加入義務、11月に保険料引き上げ",
     "英エーオン、日本企業系保険代理店の買収拡大へ－規制強化で再編機運",
@@ -401,6 +396,11 @@
     "損保協の石川新会長、保険販売者向けの研修制度「28年に導入」",
     "日本総険グループ、損害保険情報サイト開設",
     "【保険DXを担うキーパーソン①】AI時代、お客様に選ばれる理由は「人」になる―かんぽ生命保険 中根執行役員 × ブレインパッド 鵜飼上席執行役員",
-    "保険代理店向けシステム「hokan®︎」、「比較推奨運用支援サービス」を2026年秋に提供開始予定"
+    "保険代理店向けシステム「hokan®︎」、「比較推奨運用支援サービス」を2026年秋に提供開始予定",
+    "金融庁、大規模再編を検討 資産運用・保険監督局新設",
+    "損保の代理店契約解除、金融庁が実態調査 片山金融相「非常に遺憾」",
+    "総合保険代理店のFEA、同業のライフナビパートナーズを吸収合併",
+    "「責任ある生成AI活用」の実践モデルを構築し、査定自動化のシステム実装に着手",
+    "アリアンツと好対照、選択と集中を進め、「共通化」と「現地化」でオペレーションを改革する仏保険大手アクサの戦略"
   ]
 }
