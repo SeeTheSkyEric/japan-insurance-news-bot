@@ -1,11 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMiU0FVX3lxTE9EQ3hpY0pObEQ3ZXRuRjZYcmxDZXBKdmZ0eDNxZ1VJYXJ0dGlkWVVnM3dHN0Q3ZUF0dXNWenRPXzRPZ1JnR0JldzNzbEZjeUo5NGtj?oc=5",
-    "https://news.google.com/articles/CBMieEFVX3lxTE1MZG1xTG5HWnNnZTEyZ2xoN21LTHUwUVItNzVPNVRJZmJWeTdVM05wemdKZ2pKX3NPaHUwQ096aW9fdHRXblBkaERWRm1VOUJIVExNTWw3dkdzOFJzN3dQMm9PWGN2N25QODc3Y3pUTnlTSk43czBfOQ?oc=5",
-    "https://news.google.com/articles/CBMiVEFVX3lxTFBTcEtsNWNUNmpoaXVUVkMwa2VGMDdzZjJSNjVHal9LOXAwZEE5WFJ5YUt5eDFickZ3UjVIckdKMzVaelpVdkQxYlpLRlZJdUo2RVduaA?oc=5",
-    "https://news.google.com/articles/CBMiTEFVX3lxTE5BbE1JeHhyZlpXWUxNU3JQUUxuaU5hcEdoZE94YThuWlFCdHRMcEFvejZPN0lJaDlzLXZHOFJRYnA2d2UtMEdRRDFsd2zSAU9BVV95cUxNam4tb01fdDRxSER6RnlKbnU1c0hyOEVpSHVRbGYyV0l3QVdacjJoTW90RXZ0MHRoRm4xODRjcWdNWG5BMmYxSHVOV1VwWjJF?oc=5",
-    "https://news.google.com/articles/CBMie0FVX3lxTE8zcG9oNFRwalR3eWR1Rjd3VDJfZ2RMRzlCNVZ4YkI4b3p0dEVkX0JFUzNDU0Z2U0Z3VFhLZjVYUlVVd2V1bE83aElOTlBWazFlQ2pBVjYyV3hvc2JQR1lpcFFyaWRZeEVZdWdieHllTGF2YnpWMHFtakw0Yw?oc=5",
-    "https://news.google.com/articles/CBMidEFVX3lxTE1PcG9RRWRnd3pzR3I1MHVfTDhwYmhfbVV2NXNiaXgwZi1XSkZjUXBVLUVUWDZRZW5MLVhYRlZZX0kyMVhTQU5qS294N0ZVUVpYc094SVlBcnlGYU14LUEzcGxGbHZMS0tScXlyNVZvelE4ZVlY?oc=5",
     "https://news.google.com/articles/CBMibEFVX3lxTE9jUU9keTJuT25SMzU1Rk9Za2FDVm5meG1kcEFPUUwtQkk5bmVMZ2FSRW5zUVl1Y3ZGUnpkSkpFWXllNENvY044eFM4NXUzSEszVk5lRTFja2VCMGNWNEdWYnF5MVFUcUgtQjRnWg?oc=5",
     "https://news.google.com/articles/CBMiYkFVX3lxTE80RlJtQVJBTG1uTnZEYlhNZ2VKZDJjWEpjMENMeTljeUU0OGFPYzdNNE5IZEHtYnka0hmNEt4ckItX0pRdWhGdk81M0ZuZXVYelNXZVI5ZmRRdUNnUmdR?oc=5",
     "https://news.google.com/articles/CBMiTkFVX3lxTE5sZlJ2TWcwZVpGRUI0aXBYYTRFZW1oV3lJXzFVUngtcTcyTGUyNWVvOWYzZ1c0emx5N09TUHFrcWZfbFo2bkF0S0FkZUs4UQ?oc=5",
@@ -199,15 +193,15 @@
     "https://news.google.com/articles/CBMibEFVX3lxTE95dEwyTUZRdlVqRm11aC12dkxwc2lTbXNaX1RMT0J2STQzNkN3QnhfZjM2aXk1Y3FaY1BaRGdQMi1NTjg3dDFoVHBHZDFzRnQ4Mkh1ZG5QRUwxQ21DdXBuWklkektsVzJnOC05ZA?oc=5",
     "https://news.google.com/articles/CBMiYAFVX3lxTE9MSkNUZTVtb1VmQzFDLWI4SHV6a0RLaVB0enppam0zQ21ic2JIUXNfdVFsbm1tSmJjelY4am5lNThmMFExZ1FHa01LODM3Q1EyZk00UWlJNkFGZWJwa3piNQ?oc=5",
     "https://news.google.com/articles/CBMiY0FVX3lxTE14N1YtcU5jUDRNWlhoSVhSMGVjSFlSTVEycGFFX1diWGI3TXpHdEZSV1pXQkhvWXJWRy01V2sxOXExYTE2amNjNnRCN0JNeTZzVjRsbzFOV1RucGc2OHVOMjNBNA?oc=5",
-    "https://news.google.com/articles/CBMiVkFVX3lxTE5LZ0ZVbHgzbi1jVDRQYVB6Tm5Sa1ctaTF5OHA2VEFrdWY2MjhUWm5Wc0Rsd21CeDc3VldjVVJob2dyVWlGNDVubFVfVl9vNFRhaFptdTJn?oc=5"
+    "https://news.google.com/articles/CBMiVkFVX3lxTE5LZ0ZVbHgzbi1jVDRQYVB6Tm5Sa1ctaTF5OHA2VEFrdWY2MjhUWm5Wc0Rsd21CeDc3VldjVVJob2dyVWlGNDVubFVfVl9vNFRhaFptdTJn?oc=5",
+    "https://news.google.com/articles/CBMiekFVX3lxTE9HbmZsb1RHNTZDV1pDTzJhNXJ6X2ZZMnJUQWtBVmstZWw4aUZibFhhZ2N6R1FTOVhYTmdGamtMT3RXbzVOd3pCNkxQNUhNUXFNcU0wU09ZTGZ5RVpFdkp4bGF2STFxTmRGNnl5UFd3NktvTWt5Y21Zd1N3?oc=5",
+    "https://news.google.com/articles/CBMihwFBVV95cUxQWjhnOW1QYkdONWQwQnVYeEVaaXdfSkNqbkttRDJlRmlWWHNIUWk2Z3U4elg4N0dabWNxOWJHOHNnOUdMSUNVMkFlMVlzR1pFSTJLQ0pUS3N3MmNFdlA1dzkxbE1HdUFzd01qdlJMZHZpekpUUTR0NndkbEczTUItSENmMlZJZGM?oc=5",
+    "https://news.google.com/articles/CBMiTEFVX3lxTE9yMVQ5UnNaRC1RMnNPbVZuOG9ETF9NOUdBMHJITXpjRWRFTDJfX204R1NMTnRET09naDR2bFd6T0VLNnJoY0pkTTVVMU4?oc=5",
+    "https://news.google.com/articles/CBMie0FVX3lxTE05SW50QVNFSnFUM3NidEFqRWRJbFBwNkFaM3gtUHpwQk5oajFnRGtoLU1LWUpndEZlcjdBMlN0a05ybUd5emtQaTRqREx6cWFLSW40WUUtUjZRb00xM1lUa0FwRWZfX1ZRbE5FLW5tY254U2tLdUloLWVwOA?oc=5",
+    "https://news.google.com/articles/CBMiakFVX3lxTFBIVm5Hc1JLUG1XYjRDczdldFZud1ZhcjR3SG5uTlBGeHo4OWZXY0hnS2ZJV0IyTjlZa2haZHg0UnFnckNVU1B0eDhELTlWMXJfYzRmOXJjRUs4SC13QklYMWxEMVZFeGFmckE?oc=5",
+    "https://news.google.com/articles/CBMic0FVX3lxTE5CM2ctQjY3QW9oS1ZucFZZNFFXcGhrZmVMcVdWU18zV2p3RkdsdDdmTndfMlZSOGNzVmFJdUt4MV9mdEFRcVh5QzJwNF9HUThGb2ZtVzR4RVhwSlVEeG1rOFdLTS1wdGczLVBROEpGMmVnZm8?oc=5"
   ],
   "titles": [
-    "エイチ・エス損保、脱物理サーバーで管理工数大幅削減--「Fileforce」を導入",
-    "市場調査レポート: インシュアテックの世界市場 2026年～2030年",
-    "独占スクープ／「極秘データ」初公開／生保10社「異常極まる販売手数料」",
-    "保険業界に導入された新規制はなぜ「経済価値ベース」なのか？有識者会議で示された「3つの留意点」について専門家が徹底解説",
-    "監査に強い組織へ。保険代理店が「証跡管理」の体制整備を本格化。",
-    "モーターフォワードが提供する新しいディーラー向け保険体制整備コンサルティングサービスの登場",
     "住友生命、保険金請求漏れ確認にAI活用 内勤職員の業務効率化",
     "ペット＆ファミリー損害保険、新基幹システム稼働で年間2,800時間の業務工数を削減。事業成長を支えるIT基盤を確立し、PayPayアプリ連携を4か月で実現",
     "ＡＩ活用し観光振興 三井住友海上火災保険 沼津でワークショップ 提案資料作成 体験",
@@ -401,6 +395,12 @@
     "みずほ系保険代理店の共立、企業向けにリスク調査サービス",
     "地方創生における保険代理店の役割",
     "三井ダイレクト損保、コンタクトセンターに入電増加に備えAIエージェントを導入",
-    "JCB、「推し活キャンセル保険」の販売を開始 国内・海外遠征版を用意"
+    "JCB、「推し活キャンセル保険」の販売を開始 国内・海外遠征版を用意",
+    "一部戦争保険業者、船舶攻撃受けホルムズ航行停止を助言＝関係筋",
+    "経営課題の解決に「連携協定締結」大手生命保険会社と県中小企業団体中央会が連携《長崎》",
+    "生命保険協会函館協会が図書館に児童図書を寄贈【函館】",
+    "損保が代理店の評価にＡＩ導入へ 三井住友海上、負担減狙い",
+    "【ワンタイムやまの保険】登山時に確認できる「デジタル会員証」のご案内",
+    "三井住友海上愛知東支店 「三河地域サステナ会議」創設 産学官金で課題解決 １２月に新プラットフォーム"
   ]
 }
