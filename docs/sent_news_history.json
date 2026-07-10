@@ -1,10 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMibEFVX3lxTE9jUU9keTJuT25SMzU1Rk9Za2FDVm5meG1kcEFPUUwtQkk5bmVMZ2FSRW5zUVl1Y3ZGUnpkSkpFWXllNENvY044eFM4NXUzSEszVk5lRTFja2VCMGNWNEdWYnF5MVFUcUgtQjRnWg?oc=5",
-    "https://news.google.com/articles/CBMiYkFVX3lxTE80RlJtQVJBTG1uTnZEYlhNZ2VKZDJjWEpjMENMeTljeUU0OGFPYzdNNE5IZEHtYnka0hmNEt4ckItX0pRdWhGdk81M0ZuZXVYelNXZVI5ZmRRdUNnUmdR?oc=5",
-    "https://news.google.com/articles/CBMiTkFVX3lxTE5sZlJ2TWcwZVpGRUI0aXBYYTRFZW1oV3lJXzFVUngtcTcyTGUyNWVvOWYzZ1c0emx5N09TUHFrcWZfbFo2bkF0S0FkZUs4UQ?oc=5",
-    "https://news.google.com/articles/CBMif0FVX3lxTE1SSFhDcXdEdjJZcU1wMHdlcUtsVFNLYnB0c2tXa0ZuZnNzcVBJZllwd0QzbmR0REtXaWFzQS1sSV9sNnZXNE5BUld3WWZPVlpGV2FwQ2VtQnpVUnFscFpaWElOeEhud1Z4ZTkyQ2lQZHE3NnJuekZFdm5rMnAwZkU?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTE5SNzJaLWpHdjVSXzNmMGJzMTBBNzl0WnBFZkJqSjd3YzJRZjVYQ1dyOEQwVTE0YmU4ZC1jMXNGZmhnWFNPd1hvYWNrRXl6WFNST1otWjVmcU9Wd2FKTU9yRzJndTkxdnlScm5xbA?oc=5",
     "https://news.google.com/articles/CBMiX0FVX3lxTFBKOFptTjBxQ1kyTHBES1ByVnl2VEJ5RFI3YnhINzhZSGxZNlAxaEQtODNKOEoxUnRPSTM3UVlqeThwcWJNRHg5eDhsVERsMlQ2YVA1VTNKQV9PT0Y5c3N3?oc=5",
     "https://news.google.com/articles/CBMidkFVX3lxTE1ZLUd5Nm81Zmk5T21oZmRLU251WHRMMTAwUkhOS21STVk4WmJCbFJIXzNpcUdZLWR3V1NyTWdLLWI5NG5XNm80SlVoWWE2UFFERG9hZldSQ29FNXhpc3NUalY0VEpHMUc0VTcxQ2t6SkNyNWJPSlE?oc=5",
     "https://news.google.com/articles/CBMiakFVX3lxTE45aWo5WThRUXgxY3NGLXplRlI1RDZGcW5GVTQ1eUxyc1Y0Y19NSlRQUGpwd0x0VFN5ODVXZVlzR2hkU3ZmNE42blYxZXpuZEt4NmFONmJmMzcyWGs4T0QtUU95RW9mRE9mRkE?oc=5",
@@ -199,14 +194,14 @@
     "https://news.google.com/articles/CBMiTEFVX3lxTE9yMVQ5UnNaRC1RMnNPbVZuOG9ETF9NOUdBMHJITXpjRWRFTDJfX204R1NMTnRET09naDR2bFd6T0VLNnJoY0pkTTVVMU4?oc=5",
     "https://news.google.com/articles/CBMie0FVX3lxTE05SW50QVNFSnFUM3NidEFqRWRJbFBwNkFaM3gtUHpwQk5oajFnRGtoLU1LWUpndEZlcjdBMlN0a05ybUd5emtQaTRqREx6cWFLSW40WUUtUjZRb00xM1lUa0FwRWZfX1ZRbE5FLW5tY254U2tLdUloLWVwOA?oc=5",
     "https://news.google.com/articles/CBMiakFVX3lxTFBIVm5Hc1JLUG1XYjRDczdldFZud1ZhcjR3SG5uTlBGeHo4OWZXY0hnS2ZJV0IyTjlZa2haZHg0UnFnckNVU1B0eDhELTlWMXJfYzRmOXJjRUs4SC13QklYMWxEMVZFeGFmckE?oc=5",
-    "https://news.google.com/articles/CBMic0FVX3lxTE5CM2ctQjY3QW9oS1ZucFZZNFFXcGhrZmVMcVdWU18zV2p3RkdsdDdmTndfMlZSOGNzVmFJdUt4MV9mdEFRcVh5QzJwNF9HUThGb2ZtVzR4RVhwSlVEeG1rOFdLTS1wdGczLVBROEpGMmVnZm8?oc=5"
+    "https://news.google.com/articles/CBMic0FVX3lxTE5CM2ctQjY3QW9oS1ZucFZZNFFXcGhrZmVMcVdWU18zV2p3RkdsdDdmTndfMlZSOGNzVmFJdUt4MV9mdEFRcVh5QzJwNF9HUThGb2ZtVzR4RVhwSlVEeG1rOFdLTS1wdGczLVBROEpGMmVnZm8?oc=5",
+    "https://news.google.com/articles/CBMiSkFVX3lxTE1TT1FEalhyMmw1b3Zadk1UX2JfcWx3R3NnMVhBRUN5ZXhVX2tnVEY4cHRuOEtzcmRRM2VWNm5NbWxnYngyNFo5T1Jn?oc=5",
+    "https://news.google.com/articles/CBMiyAJBVV95cUxPQWVzcndvbkdReHhESUN1Tk5WUjE3QnBwOWd6U0pVbUllaTFEUV9XV0RaUklpWkNfaVdaWUluRW9rNWtza2JhdmhLanA4cjVqVE9jWXJycXAzTWF3VVdueDBVLUVOYjZ4YTl5Y3A5T2tDbHNOb2dsRkt2QzdvOERVS3pPR1VmRnEzTGFnN25ZN0NKamVFRWxOWUlHbU5vNFEzQURpODFzNGl3YUZZRklISHFfbGplYTdVc1ZlYTdaV2s4VXd0aWtPcUtMeEtLdTRGakROczYxZWZFdnk4V25QUVptNlUtb1BiMjlNN0xfTTM2V2plOF94RkZKRW94OTh5bzlLdU9zNk55Z0dZYXNvcVlvd1hNNUVNVVJ6UEFsRTRtUS1oMWFTMDFwRi1sZW0tMWZySjJBT1p6d2N4M25RZUdHRmhVeVZM?oc=5",
+    "https://news.google.com/articles/CBMid0FVX3lxTFBPVnB5LVdoelpqOUZEMjFsQ2g2STcwUW9kZUt0OERkN0hpd0lFQ2Jpd0JyNDdZeVdEZkpqNzNqQUp2QldJOEpwR21sdW5Tc1BrWnhTUExEQlFCeUhyNkVlOUJkMnY1WS14YlR2Rnp5X25CNWZ0ZTNJ?oc=5",
+    "https://news.google.com/articles/CBMiVkFVX3lxTFAwaFVBN0FtQXJWSWN4TzdrSmxKT1ZmVFczSUFpUUZzSmFBcFd3YXpmbXNwc2M2SlJnbGZzakVVUEtxbGdzQk9rejFCM2lGUVFRc3FEUkZR?oc=5",
+    "https://news.google.com/articles/CBMiZ0FVX3lxTE9RajJhdWhOSk1hVG5SczlIOGJzRDRDSlNLU2FIeWpzVGtOWEFsdVVucDBDMFh5S01DZTdWbkFoczdHT1FTNGVHTHZrVGduY0I2Y0JjRGVEcDVobVcxTnhteDFfZnM0WHc?oc=5"
   ],
   "titles": [
-    "住友生命、保険金請求漏れ確認にAI活用 内勤職員の業務効率化",
-    "ペット＆ファミリー損害保険、新基幹システム稼働で年間2,800時間の業務工数を削減。事業成長を支えるIT基盤を確立し、PayPayアプリ連携を4か月で実現",
-    "ＡＩ活用し観光振興 三井住友海上火災保険 沼津でワークショップ 提案資料作成 体験",
-    "今後は「第3号被保険者」廃止で、専業主婦でも「年20万円」の保険料負担に!? SNSでは「家事・育児ワンオペなのに」「学童いっぱいで預けれない」と意見が…議論の背景も解説（ファイナンシャルフィールド）",
-    "大手生命保険の営業で急増する中国人 営業所の7割を占める場合も",
     "車買取「ソコラカ」のはなまる、Wizleapと業務提携…保険代理店向けクラウド「MCエキスパート」の展開を加速",
     "新車ディーラー・中古車販売店向けに特化した保険体制整備コンサルティングサービスが国内初登場",
     "【GAINA Automation RPA】自動車保険の煩雑な「見積り作成・更新業務」を完全自動化する新バージョンをリリース",
@@ -401,6 +396,11 @@
     "生命保険協会函館協会が図書館に児童図書を寄贈【函館】",
     "損保が代理店の評価にＡＩ導入へ 三井住友海上、負担減狙い",
     "【ワンタイムやまの保険】登山時に確認できる「デジタル会員証」のご案内",
-    "三井住友海上愛知東支店 「三河地域サステナ会議」創設 産学官金で課題解決 １２月に新プラットフォーム"
+    "三井住友海上愛知東支店 「三河地域サステナ会議」創設 産学官金で課題解決 １２月に新プラットフォーム",
+    "片山さつき大臣「実態調査はじめます」 街のクルマ屋の「保険代理店打ち切り」問題に新局面 ビッグモーター事件の余波に再び切り込む！（1/3 ページ）",
+    "二輪店の「自賠責保険取扱い」などで 自民党・二輪車問題対策PTが会合",
+    "日本生命社長、超長期金利「想定のぎりぎりに」－足元30年債は4%超え",
+    "大手生保、利ざや1％台に回復 国債利回り上昇",
+    "「中国で入院」保険金請求が23倍に それでも簡単ではない実態調査"
   ]
 }
