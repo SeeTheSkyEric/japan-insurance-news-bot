@@ -1,10 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMiX0FVX3lxTFBKOFptTjBxQ1kyTHBES1ByVnl2VEJ5RFI3YnhINzhZSGxZNlAxaEQtODNKOEoxUnRPSTM3UVlqeThwcWJNRHg5eDhsVERsMlQ2YVA1VTNKQV9PT0Y5c3N3?oc=5",
-    "https://news.google.com/articles/CBMidkFVX3lxTE1ZLUd5Nm81Zmk5T21oZmRLU251WHRMMTAwUkhOS21STVk4WmJCbFJIXzNpcUdZLWR3V1NyTWdLLWI5NG5XNm80SlVoWWE2UFFERG9hZldSQ29FNXhpc3NUalY0VEpHMUc0VTcxQ2t6SkNyNWJPSlE?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTE45aWo5WThRUXgxY3NGLXplRlI1RDZGcW5GVTQ1eUxyc1Y0Y19NSlRQUGpwd0x0VFN5ODVXZVlzR2hkU3ZmNE42blYxZXpuZEt4NmFONmJmMzcyWGs4T0QtUU95RW9mRE9mRkE?oc=5",
-    "https://news.google.com/articles/CBMiaEFVX3lxTE9TNk1rcTZZMjdHdHg2empvWE1xVnRONEExd3VWTGJrbDdYWWVPUzMtd0VzeGEzMkkzRFhlbWphTVk0b21DTVRSWG1vaExNYlQ5Zm1TcDZnSHE1cWdHclRMN3FsTFF2ZlN0?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTE1TUUxKN3ZIR3JTV3c2MDVqMnUyV2UyVExqSU5TTzJQNENDbHM2UEZiTkVqNTRCM1pYclBkTTM1ZnpVN3ZUNjV2WnV5Q1dmU2dnVnpCd2xfQ0RUUE1mTWVaS3NkalotalozWVR2Ug?oc=5",
     "https://news.google.com/articles/CBMiVkFVX3lxTE4ydktwa2VEcnZTanB1eGN3dlpIb1U5eW1WV0JKZ181SzBtQ0RJVGZqZjRKVUIyVDhJd3Rfb2ZZRmV4YlFHNGVuUzhGUmNzQ29BdW40Y3J3?oc=5",
     "https://news.google.com/articles/CBMiaEFVV3lxTFBodkFtaWt3cTkxOFBHdFg1MVpLQzNxRVA0ZEhPamk1RDYzOEdtaEtCdVdGRjlMVHlMWndZNWlSX0UzQ1R6TXFtZVlRdzgzMVBsTEo3azh0RGE4Rjd5NS1RZkpCdjUyemZG?oc=5",
     "https://news.google.com/articles/CBMif0FVX3lxTE5ZcDBnLURJMENERVNjQndzckh3UVExUnZmbzZwRkZGd0tDX2tUNUdkeVpjQmdaelZ3Um9GTm5YSUhaQTU5dDJjZ3F1bXQ3a2VmQ3U3TE12VkZYdUM0a2wtcWw3NkxTQnVmZTlNTXgtYjVOZlN3X1c2cXFJbTNoUlE?oc=5",
@@ -199,14 +194,14 @@
     "https://news.google.com/articles/CBMiyAJBVV95cUxPQWVzcndvbkdReHhESUN1Tk5WUjE3QnBwOWd6U0pVbUllaTFEUV9XV0RaUklpWkNfaVdaWUluRW9rNWtza2JhdmhLanA4cjVqVE9jWXJycXAzTWF3VVdueDBVLUVOYjZ4YTl5Y3A5T2tDbHNOb2dsRkt2QzdvOERVS3pPR1VmRnEzTGFnN25ZN0NKamVFRWxOWUlHbU5vNFEzQURpODFzNGl3YUZZRklISHFfbGplYTdVc1ZlYTdaV2s4VXd0aWtPcUtMeEtLdTRGakROczYxZWZFdnk4V25QUVptNlUtb1BiMjlNN0xfTTM2V2plOF94RkZKRW94OTh5bzlLdU9zNk55Z0dZYXNvcVlvd1hNNUVNVVJ6UEFsRTRtUS1oMWFTMDFwRi1sZW0tMWZySjJBT1p6d2N4M25RZUdHRmhVeVZM?oc=5",
     "https://news.google.com/articles/CBMid0FVX3lxTFBPVnB5LVdoelpqOUZEMjFsQ2g2STcwUW9kZUt0OERkN0hpd0lFQ2Jpd0JyNDdZeVdEZkpqNzNqQUp2QldJOEpwR21sdW5Tc1BrWnhTUExEQlFCeUhyNkVlOUJkMnY1WS14YlR2Rnp5X25CNWZ0ZTNJ?oc=5",
     "https://news.google.com/articles/CBMiVkFVX3lxTFAwaFVBN0FtQXJWSWN4TzdrSmxKT1ZmVFczSUFpUUZzSmFBcFd3YXpmbXNwc2M2SlJnbGZzakVVUEtxbGdzQk9rejFCM2lGUVFRc3FEUkZR?oc=5",
-    "https://news.google.com/articles/CBMiZ0FVX3lxTE9RajJhdWhOSk1hVG5SczlIOGJzRDRDSlNLU2FIeWpzVGtOWEFsdVVucDBDMFh5S01DZTdWbkFoczdHT1FTNGVHTHZrVGduY0I2Y0JjRGVEcDVobVcxTnhteDFfZnM0WHc?oc=5"
+    "https://news.google.com/articles/CBMiZ0FVX3lxTE9RajJhdWhOSk1hVG5SczlIOGJzRDRDSlNLU2FIeWpzVGtOWEFsdVVucDBDMFh5S01DZTdWbkFoczdHT1FTNGVHTHZrVGduY0I2Y0JjRGVEcDVobVcxTnhteDFfZnM0WHc?oc=5",
+    "https://news.google.com/articles/CBMiX0FVX3lxTFBvdXYxNGtRRFF3RjFvVzRWc0hzbHI4Ti1GaDRmWUswdi01cEJSZFJzTXVQb2VneEVndG5feDczamxubEh6M0Y5RW45bmdhZXRsVTVyYXlScEZyRTZJelg4?oc=5",
+    "https://news.google.com/articles/CBMiX0FVX3lxTE50TTRza2lCdlNUOEUzMnl3OHBILUs4TU1Oa2NubUg2V0RtRDJuUXg4cmFBSEtldzRYdG9QTUlBQWM0UWZHUGxhR18tWnpDT0lBX1RoUy1jYWhrUjV6bmxN?oc=5",
+    "https://news.google.com/articles/CBMiU0FVX3lxTE1pTkVRb18wa1RMWmFFUlJfdVBldGdpVVlnZjd3MEpjWW9WODBDYkw4ekxXZ3NYbEtkaEM2UWZfLTBGbUctTFZsSVhtTkZCV2FnZWE0?oc=5",
+    "https://news.google.com/articles/CBMiwgFBVV95cUxPaWY2b2NjM2J4bU8xdVI4NEw4SE4zNVRLM0NUYnZWbk43MGpTM3lLRGR2dTU0TFFRWHdyelRreXNjZ0U4QV9qeU1PU1RabGF0cjMySG5sMk50WmZDSzI4bl9obkdpRWhNb3ZZZU9mRTJKcTBacExjTlZlUjFZRW5LUThEeEF6dy1PX29JSHNuV3QxWk1MaEhqZ2ROcFdZNmdXMHROV0tCVG1jb1hUTjd6RjB4V1VoZEhvUXJodlN3OEEzUQ?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTFBKel9CU25FaTlwQ2owaXpjNFdkU1Ayd0YyR2VsS2hhemtKQzQ4NEs0QWt5N3cwWE1qd2dxelJHUUd0aU44Z0IxVjdtUzZjaGlHcldZNW9jelREOFd3c3lQN3N5enM1bWpXQ2FCcA?oc=5"
   ],
   "titles": [
-    "車買取「ソコラカ」のはなまる、Wizleapと業務提携…保険代理店向けクラウド「MCエキスパート」の展開を加速",
-    "新車ディーラー・中古車販売店向けに特化した保険体制整備コンサルティングサービスが国内初登場",
-    "【GAINA Automation RPA】自動車保険の煩雑な「見積り作成・更新業務」を完全自動化する新バージョンをリリース",
-    "リードインクス、外貨建て個人年金保険のデジタル販売モデル構築を支援",
-    "MS&AD、合併新会社社長に海山裕氏 損保2社の強み融合へ",
     "終わりの見えないプルデンシャル問題、ソニー生命にも飛び火…「フルコミッション型」営業が構造的に犯罪を誘発？",
     "scoville、保険代理店に特化し、意向把握・比較推奨販売記録を自動作成する営業支援AIシステム「ほけまる」をリリース",
     "交通事故の保険金詐取の疑いで接骨院院長の男(50)を5回目の逮捕 被害額は累計1200万円超 香川（KSB瀬戸内海放送）",
@@ -401,6 +396,11 @@
     "二輪店の「自賠責保険取扱い」などで 自民党・二輪車問題対策PTが会合",
     "日本生命社長、超長期金利「想定のぎりぎりに」－足元30年債は4%超え",
     "大手生保、利ざや1％台に回復 国債利回り上昇",
-    "「中国で入院」保険金請求が23倍に それでも簡単ではない実態調査"
+    "「中国で入院」保険金請求が23倍に それでも簡単ではない実態調査",
+    "損保ジャパン･石川社長｢収益改善の中核はデータに基づく管理の緻密化､27年度に代理店の手数料体系を抜本改定する｣",
+    "手数料改定がもたらす淘汰の波､金融庁が損保や代理店に見直し圧力､損保各社の手数料改定に代理店が悲鳴を上げ始めた",
+    "【保険DXを担うキーパーソン②】AIに選ばれる保険会社へ―エヌエヌ生命 小橋事業開発部長 × CIEN 毎床ディレクター・森田マネージャー",
+    "郵便局保険アプリ、「実損24」連携で保険金請求を簡便化",
+    "アフラック、情報流出で顧客に通知開始 不正アクセス「AIではない」"
   ]
 }
