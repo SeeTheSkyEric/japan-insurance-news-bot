@@ -1,10 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMibEFVX3lxTE9PNEdlejVLODBaSnl3dUduTnFLUHpUTk4tWG1HcTdxZUhSaFN3Zzk1dU9MMHZ4XzVaTVZVUmo3UUlkaXFwWkxmcG8wcXJPRVZHZ3VwWHRQenBQOHlWWlJvTjg5NjZVNUd3aHVQUA?oc=5",
-    "https://news.google.com/articles/CBMiV0FVX3lxTE9LYTRsSlFIZUZ4TG9rcERrMnllMG11RUpjMHFXU3J5dWVtWGY1V2pKNjgwRWFSdmU0ZXVLNkxWRkRxTFI3N2RyOFFwbkN2S09nLXhnZ2hiUQ?oc=5",
-    "https://news.google.com/articles/CBMif0FVX3lxTFAxVTcwNF9IRmtocGNuVTNJVkg5MmJVdzczNW40TE56MlFXV1hrQ0IyeUJ5dmFjeWJuY0hTd1hoNXA3aUtJSHJVcTc0Ym91WGVUeFdQa2YzQ2RRb0owOU5XSDRoUFBGN21KaUE5S2Zod0hCOHVUN3FNUmVFd2c1XzQ?oc=5",
-    "https://news.google.com/articles/CBMiTEFVX3lxTFBQaWNOOHVmRndiMVEtTjJRVTdDY09Jc2k0Uk5COUxWLVpMbmVSU3VhcVdXQ1RucjZBY2N5bG1PZ1JqeWlYTnFqTEVBT3fSAU9BVV95cUxQS2FWbjlmczY1Wldka3dmTDlxem05ZFVCZ0U3WTJGZ0UtMEhmQk1CcHVmbTJ3OXRTVXVTWlNiZ1h4Ukkzc0hlYVNWOGp2Szln?oc=5",
-    "https://news.google.com/articles/CBMi1wFBVV95cUxNd0VoNUFuYWt6SXhmaUtBZXNpMFNFaEVacVRPd1FlZ3pUaXR0Unh3ZUFGYjhGTVZXYkc1SGVNa3NTV2hTblFkYl9CZGVBWTZ3UUJxUW9nXzlRbmRhZ0JkVjItNlgxZ2lEVGhTWWhqZUVkX1JNWlFhaGFuUTdYMlZOY19Sd2d6bGJ1SFRJWnhuVzhpSFFXQlRwcy1lZXoyOUJ2eGlMZ19KTHFKV2lyaFRuejk2MWMzUG9vdGtEb3Nfc2NRZ1RQVGh6d1pvSlJOa0t2S2U5SXFkTdIBhwFBVV95cUxOdGNlUUFPbEs4VkRrcjZQWXlQTTZ0b1ZvSXQ5NnlaUnIzN20tTFZxVzE2LTdrTmtQNmlGdDgza3UwSWYzbXU4TmtPbm1OQVRDUEk2UVhmOVBGYUFBRnp0ODM4UXhqeUd4WlN3MDlzSkZlaF9FUjl4eWxmLVZlWlN3dV9nT2hOa2M?oc=5",
     "https://news.google.com/articles/CBMiWEFVX3lxTE14T2tESHp1aEVpemZCRWNHanhvaDhRM3VjTXFUTFBsRjk1VzFTUzZfZjVjRHdBMDNxRWZhZUt3SENVU2UtVzNybkFWU3lMQzd4XzVsTHpJNXM?oc=5",
     "https://news.google.com/articles/CBMiYkFVX3lxTE5KSjhmTDBYRDlPdFUyT2FKcnRzRUJvSUlQWk90UjBmY3drNWV5ZlpTUkhHdGxvbjZDLWhJUUs1ZWtQV1ZYVEpPaklna3BjOXdnclpmMFVNVm5yZ1BPWEhUQ2FR?oc=5",
     "https://news.google.com/articles/CBMif0FVX3lxTE9UemNDd2dtVnVvNExpbERFeUMtT0JCdXBfbURtbU5IellMVkVoZEhHbDN3TDBMd0ZPdENZbUNuT1BpRm5mcFJHSkJlM1IyM1ZvWDlpTGc0NzNSNUZkVTVNNzVjaFI1aURWY1VJTG92Z2xwQ3JGbE9LcGw1cWc0UUE?oc=5",
@@ -199,14 +194,14 @@
     "https://news.google.com/articles/CBMiSEFVX3lxTE1EN1lCYVhCQmd6NDlWbXZGTE5XMUFlQnhtSk1uZ01oNDE1UXFmY3JfR3lLQkphZDBkRVFkSVVvRHltTkdrUW81NA?oc=5",
     "https://news.google.com/articles/CBMiUkFVX3lxTE9ZS3FVdXY3WDFSTEd2NGlRcjV3NWxvb29kUWtOTUpHb0xhNnh6bVhRSFBRbEtnaWRON0QzMkdXZ0pRM0ZHYVN1emZhMDF1RldvS2c?oc=5",
     "https://news.google.com/articles/CBMiakFVX3lxTE1DUmRkWVNIdk9yNTkwZThKcEdmbjR2R0E4RUZFdFpUbXMwYjZNc2liYWVTY29KTC0xT1dlUXkyQ2VWaXRBX29fakJjemVDWldQY0ZqdlJtekgwZnRJMEsydFZtM3RqZ0JTN2c?oc=5",
-    "https://news.google.com/articles/CBMicEFVX3lxTE1ZWjJFZTVZcU1LSExXU1YxQzRabVg5RDQtWXJoUWgySXVGaUxNWUVNQXA1YjdxbFUzMkFCN1hNNHlFTzhaUGl5dWduRHZReDhhVF9RWktRQTREbGNKczJrOXdFUUozZk9ybGVkQ1Z6RzQ?oc=5"
+    "https://news.google.com/articles/CBMicEFVX3lxTE1ZWjJFZTVZcU1LSExXU1YxQzRabVg5RDQtWXJoUWgySXVGaUxNWUVNQXA1YjdxbFUzMkFCN1hNNHlFTzhaUGl5dWduRHZReDhhVF9RWktRQTREbGNKczJrOXdFUUozZk9ybGVkQ1Z6RzQ?oc=5",
+    "https://news.google.com/articles/CBMibkFVX3lxTE9ST05wNmlvRGFNLUZabDJTWWZOVEJvbjNlTUl6dmNFVFFQMmdXeTFwMjJ6a2gyMGdlV1BsMExLVzVuTWFlVklZeHFwWW05QUc2aENQSTJpekc5QVctYVpXMDZUUnNWMjl5dmFTRGtn0gFzQVVfeXFMTmpxS0w5ajJvZTZRbE5NWG9FOXFCTkR2WFM4cWhrbG5waTNBM2pkcklteTE2eW9XTDFiYnpIX0pMN1Q4R3YwREJyZDR3b3U2RU5rYUh6SUwtY1k2TTd1eXRnN2RfLVIzRzNrMjd1dklaVE5XOA?oc=5",
+    "https://news.google.com/articles/CBMif0FVX3lxTE9BdnpiN1A2ZzNlNlJfZVNCVkRRZGhOUFpMZUozb2xsX19VU3ZMR1R6VVhZaFJ3Sm5JQmhWcjlmVC1JSlludTNXMjR1c1l1elplb2hjS3VLeE42b1hISlpWeS1NUXVONDhPdzhGMUNhRTdIZ0VuVmdIZDRrNTlETFU?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTE1iUkJsWi1rVVg1ZEVGX1BkQzZfVzdBM2pLdVZvVnV2cDNqZ1AzS1JkTG9hY1U0NDdZWEd6VjhiMmlQMmxBcmVlaGZPTnowNXZMXzdqUzl2b2NkOHVVZTVzRmNMZzlyY3UxSjg5cA?oc=5",
+    "https://news.google.com/articles/CBMibEFVX3lxTFBpS2h4MTFfM0ZfcE9GbUpzbU9WYUtpOUhfdnNjTG5ESTdjSW1JTHR3TmE4MGRjMS04Tk9hcHJ3bTI2YnpiQUZtMVE1MHpTcU5JdTN0bG1ZdVFQZk9iTVY2MGdIQWg3YkpudWJQaQ?oc=5",
+    "https://news.google.com/articles/CBMiakFVX3lxTE40YjFfNDAzbl94cnY0MGY4UWNHNEk5bVJrei1WN1gtWDdkY1F6YkltUVp3U05QczU0V3JRODN0dEFfSEw2QWdFaFlHSW1FcnFwUEk3NkNiRmViY1d1WThndlVfamdjd3dTajE?oc=5"
   ],
   "titles": [
-    "新日本検定協会のランサムウェア被害、東京海上日動火災保険の顧客情報漏えいの可能性",
-    "【倒産】顧客離れが進んだ保険代理店が破産開始決定 負債総額は約3000万円【東京商工リサーチ】",
-    "2026年4月からマイナ制度はどう変わる？ 健康保険証は2026年8月で終了も…「知らない」約4人に1人",
-    "保険・証券・金融業界「3年後の予測年収」32社ランキング【2026年版】東京海上、SOMPO、野村は何位？",
-    "Guidewire ガイドワイア ソフトウェア ジャパン 江端美幸代表がトレンドを公表 国内損害保険業界初のクラウド導入が安定稼働 パートナー企業3倍増 国内向け製品の開発生産性50％増 国内 規制 セキュリティ要件準拠 日本法人社員大幅増員",
     "AI保険の新興Corgi、評価額2067億円で「ユニコーン」に──週7日勤務・会議室に寝泊まり",
     "インシュアテック市場は30.87%のCAGRで拡大し、2034年までに1622億米ドルに達する見込みです (2026年5月19日掲載)",
     "【独自】プルデンシャル生命保険で新たな疑惑、全社員宛てに送信された内部告発メールに書かれた衝撃の中身",
@@ -401,6 +396,11 @@
     "オリックス生命が顧客6,316名分の情報を代理店へ誤送信 「共有すべきでないファイル」を誤添付",
     "富士通、保険給付金請求をオンライン化 アフラック生命とがん研有明病院が採用 2031年度までに約400病院へ導入目指す",
     "【第4弾】保険EXPO2026全セッション公開！明治安田生命×SOMPOホールディングスによるサイバーセキュリティ特別セッションが決定！全14セッションの全貌を遂に発表！",
-    "サイバー攻撃は企業経営の新たなリスク 保険商品の普及を進めたい"
+    "サイバー攻撃は企業経営の新たなリスク 保険商品の普及を進めたい",
+    "【日本】金融庁、保険会社監督指針を改正。再保険のリスク管理や責準不積立でルール強化",
+    "70代女性に架空の保険商品を契約させ1000万円詐取か あいおいニッセイ同和損保の代理店元店長の70歳男逮捕",
+    "損保ジャパン、「AIロープレ」で対話練習 保険金支払いや代理店営業で",
+    "心臓手術にもAI、時間3割縮めたフィリップス 日本は保険適用外",
+    "「GMOサイバー攻撃ネットde診断 ASM」にサイバーリスク保険と無料インシデント初動対応を標準付帯【GMOサイバーセキュリティbyイエラエ】"
   ]
 }
