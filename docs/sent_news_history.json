@@ -1,11 +1,5 @@
 {
   "urls": [
-    "https://news.com/articles/CBMiaEFVX3lxTFBITVdTWWZqR2p6THNhLXhjZ215R2NycjZPenZPcHZ4SWJVUGplMWk4S2xIb0FscGZPMUdKU25BbFFhdXN6M0phRkVyVThwPllYUVJOam1QM1lGRWwxRXFOUHU0X251Vkhi?oc=5",
-    "https://news.google.com/articles/CBMigAFBVV95cUxOblB0VlVjQzBsX0U5WWE4WjJrMkc0ZW9NTXNpWWNCeTlidG5GQlhWZjVScnBFNHBlN1NaVUhxVWVIWHFYaWUtd0JxbmRRTHhjWmxqTzBraVJIYmZadS1ndHUzcjNjaldyVHg5ZHRuRnB2UkUtRXpjSkdPdzRyRTh2ZdIBhgFBVV95cUxQcjVnZ1ZsNHpJWHFYWmQ5VS1BQXNGRDYzUVFIejBHUUstUzlJR3BjMDJUbDJ2YjNZTERpSHBGVFFBemhJY0htMFR4VXhTSkpPLTZlUExqSVhJczZLZHAwa3JOYmtQNThTRFR0OUFrR0xsM2o2MVhKWE90VzZ6T3RDNnZBcnh0UQ?oc=5",
-    "https://news.google.com/articles/CBMiY0FVX3lxTE4xcjlzbjVjTm9ueGJfOFZXY0prUW1vN05CMmFtaEVfX2JvUE5RYkk5SXB0MlA5TjhwMzRfWkRLTUFwSXJKa0o4U1FrNEhmb2FxcENacGswZEg2XzlVTkVuRGx6RQ?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTE4wSmp1aVFVek9mdHFYaThiUHBTMWNocWI2RmxLcG8wTGJaM0xHcm1kTl82Mm92ZmxpU0pjSUZDT3BIOWc4eE9ocEMxWC1TbW15anoyRHpzLVJ6SDdfN3pqcXZKSkRZV1pZaXc?oc=5",
-    "https://news.google.com/articles/CBMiYkFVX3lxTE9GRWNWQldtVzhzbFlmdW9QMGdJcXRrZDU4WnpKWmkwcHh5LXBOU1JCUmdsZXZYQXJlemU4eVUyRTBNeEN4NC1Wc3NlSF9WdXpUOWVyOWl4YklYSEZBN1V5WXBR?oc=5",
-    "https://news.google.com/articles/CBMif0FVX3lxTE9fNnJEeXpVNTd6VGxDUk5HSjBLWVJBdWplMzZLQTNlYVB4NW1iRmtTTUQ1Y0FFY0RUalU3aE1PWkhPN0JYZTV5NlU5ZUluRDBiRTUtNlpFeUNCVw0KzRKZm9vTzJMaTltX0hyQmR1ZGRabklaWWdvTnJPOWdYWXRQb2M?oc=5",
     "https://news.google.com/articles/CBMigAFBVV95cUxQNDZyTGhPRGFySWpucXFtcmYtaWdZd0tXUVJMVk5xcDd4WE1HSXBkQ3FaVVVEODdNWkt2OXUySWRNOXRlbUxKUWRiZHgtOEptVS1pS2xldTN5UFVwdVRDZWZER0pWbi03NFlCSkFKUXJVSExwQXJfZVJRS3VkS1ZsdA?oc=5",
     "https://news.google.com/articles/CBMiV0FVX3lxTE9BX3kzNmw1dWh6aHBmSzJCYmpiZWlqc20xT2tEMXpoMTNqQXNjV0dYSzhxNnJIdXZDVnNDdVFkSUVtMDdJeGVTekZyVHFNdFZVemNpa01zNA?oc=5",
     "https://news.google.com/articles/CBMibEFVX3lxTE5ZQk5ZTjVpSmJmaGVYdXA1czFvbnprWnBXLXpFdDVhVTZEVW1TWENZdFpta2d5cjRTMEprM092NWdwU3c1anp2ZkxfNzhyYTQzWW9NV2c3bWxKY21rc2daeWQxYTQ2Yy1UM3dERQ?oc=5",
@@ -199,15 +193,15 @@
     "https://news.google.com/articles/CBMiU0FVX3lxTE1GU3lTTDJqNmlWdl83RnNyWU5RZVNJUXlzVlNhdkhwUVR4YnEwcEtFdzdQTGRPVjdDTXd0NkdPamMzU0l0MGRKRDdGeXZOUlRObmhJ?oc=5",
     "https://news.google.com/articles/CBMibEFVX3lxTE5OR0FvazNadkhaZmtBSnJiMzVhS081LW9LX09vTmJJWlFPcUJPTVVadTFMUmdobWJ4eVBHZFZfUEEyZHdwTzVLQmotRGFGeGliV0k5WVkwdGw5Rkx3eFVXVjJ0TjVoOEdQdHdwSQ?oc=5",
     "https://news.google.com/articles/CBMiW0FVX3lxTE8tR3Q1NWh0dzBpeWl3c0VxcTdCcG1tbmIyc2g1eTl3OEtKVWpaVkYxUlo2TjN0SWZJQTFENzMxUnNLNEllelpSMnYwZTBlbmlyaENiaDhJMURlWmc?oc=5",
-    "https://news.google.com/articles/CBMiU0FVX3lxTE5YNjJCcURqSmFFeVdUd2MtUHlHOE5JUy1rZG90TFdwOW9uRWRtdWlHMnpKMUw2Y1FtakhTSUV0SzhGvYmVxUjc2cnJKbDl6M2dpV0pn?oc=5"
+    "https://news.google.com/articles/CBMiU0FVX3lxTE5YNjJCcURqSmFFeVdUd2MtUHlHOE5JUy1rZG90TFdwOW9uRWRtdWlHMnpKMUw2Y1FtakhTSUV0SzhGvYmVxUjc2cnJKbDl6M2dpV0pn?oc=5",
+    "https://news.google.com/articles/CBMickFVX3lxTE12bk04VlVSQmVPNVpqUVQzNmFlVjRrMi10TmY1SzFpUU9yNnZ0eGxzVEZGa0FfRFN6MHZsRjF1TXhUT0pVdE9OU0lGdjYtSmh4WmUxQzRaYU5uSGg3ZGU0Z245N1ZUa3RyelJTRVNEcFNGQQ?oc=5",
+    "https://news.google.com/articles/CBMiUkFVX3lxTE44cTI4aWxYb2E5WEpjZVVGZk5TVXBVR3lUVHpaZ18yX2FtbEtsbExMeWJ0MmV6bHRnakRELVZodzVqTWZTMGhmc09mai1VQXN4cVE?oc=5",
+    "https://news.google.com/articles/CBMiakFVX3lxTE1Rck93Z2gtcnA3bVVTTjhrNWtaeDAydmNCUnhzYUFSWHpLSUp6WEgtNWl0RnBvWHZFcGI2aUY0X1BBaU9qSFJiNGRyZzlidGVILVZjaGhsTmdKLUNvb3NtRm0zX2JQbEJpM2c?oc=5",
+    "https://news.google.com/articles/CBMiVkFVX3lxTE4xVDFKTFZkdUxyekcxcGc3MVZQeU9QMXJHcGxSeE5hOE11U2hmaUN0Uk80NFRqaEFPMEs0UWg0RXBsc3h0SHBkak1QVDlLY29iTDc4cFhR?oc=5",
+    "https://news.google.com/articles/CBMidEFVX3lxTFA2Z3NhZmpJTHFsbnNubEVudlI5RllSekM2M3FZS2xmZXV5SUlLZ2h2SDZVaWFtMmlGSUVBZXNvT1k0SWRMMVFwRi0zZXZKUk93djNuVXJLa21NMWcxbEJjVnF0bE1BNWRfaFBpZ0ZzcWJWVW9Y?oc=5",
+    "https://news.google.com/articles/CBMidEFVX3lxTE9WcVU2VkFUT0tBMXZkczdDdGJ1b0lrdFhRbWt0OVNVaTdtb21IZGtZZXNoNlVNTG5VcTR3aXJiX1RzWDgyUmd2bzZ5ZDJzbVdBYkppZ0tfUlYxYmdxTUgzQkRpOUFtdERzZzJqQm9qdklSSld3?oc=5"
   ],
   "titles": [
-    "北海道 苫小牧市＞苫小牧市内 初出店の「保険見直し本舗 イオンモール苫小牧店」が2026年5月29日金曜日オープン",
-    "保険業法改正どうすべき？AI活用していますか",
-    "三菱UFJ銀行、保険営業の実践的な対話力育成に向けロープレ用生成AIサービスを試験導入",
-    "ライフネット生命 保険業界で初の「財界 BEST AI 100」に選出",
-    "デジタル保険プラットフォーム市場、AI活用型保険自動化およびモバイル保険アプリ需要拡大を背景に2030年までに3,050億ドル超へ (2026年5月27日掲載)",
-    "保険客14人から詐取1.2億円 ソニー生命の営業社員4人（共同通信）",
     "損保ジャパン、火災保険料上げ インフレ対応、ＭＳ＆ＡＤも検討",
     "生保4社決算 過去最高益相次ぐ 金利上昇で含み損も拡大",
     "三井住友海上、洋上風力の落雷被害からの復旧短縮へ 売上減少を防ぐ",
@@ -401,6 +395,12 @@
     "保険代理店を装い 1千万円詐欺容疑 町田署、男を逮捕",
     "日本生命が書類審査にAI、年1万時間の業務減 異なる図表も情報照合",
     "三井ダイレクト損保、保険金手続き自動化",
-    "損保ジャパン、社員研修にAIロールプレイングを導入、営業職の実践力を養成"
+    "損保ジャパン、社員研修にAIロールプレイングを導入、営業職の実践力を養成",
+    "保険代理店で“社保逃れ”か 固定給のみで保険料算出 「ごまかす意図なかった」",
+    "岡山発の総合保険代理店「エスプランニング」が広島県福山市に進出BCP策定支援・健康経営コンサルで備後エリアの企業を支援する新拠点を4月1日開設",
+    "改正保険業法への組織的対応をテーマに保険業界のキーパーソンと議論する「InsurTech Startup Meetup#50」にブロードマインド登壇",
+    "詐欺被害防止へ連携 佐賀県警と生命保険協会県協会が連絡協議会 保険制度の悪用対策など確認 佐賀市",
+    "エーオン、データセンター向け保険引受能力を50億ドルに拡大——AIとクラウド需要の急増に対応",
+    "RaonSecure、NH農協損保に量子耐性暗号を供給…金融業界でPQC受注が相次ぐ"
   ]
 }
