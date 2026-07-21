@@ -20,6 +20,10 @@ gemini_client = genai.Client(api_key=GEMINI_API_KEY)
 HISTORY_FILE = "docs/vietnam_sent_history.json"
 MAX_HISTORY  = 500
 
+# ─── 뉴스 최신성(recency) 설정 ────────────────────────────────────────────────
+# 직전 N일 이내 기사만 선정 대상으로 삼는다. (오래된 기사 유입 방지)
+RECENCY_DAYS = 14
+
 # ─── 카테고리 설정 ────────────────────────────────────────────────────────────
 CATS = [
     ("top",       "🔥 오늘의 TOP 뉴스",       "#F59E0B"),
@@ -50,6 +54,21 @@ BVL_QUERIES_EN = [
     "BVL Vietnam insurance",
 ]
 
+# ─── 발행일 최신성 판별 ────────────────────────────────────────────────────────
+def is_recent(published_parsed, days=RECENCY_DAYS):
+    """
+    feedparser의 published_parsed(struct_time)를 기준으로 최근 N일 이내인지 판단.
+    - 날짜 정보가 아예 없으면 True를 반환(보수적 통과). Google News는 when: 필터가
+      1차로 걸러주므로, 날짜 없는 소수 항목까지 버리면 정상 최신 기사를 놓칠 수 있다.
+    """
+    if not published_parsed:
+        return True
+    try:
+        pub_dt = datetime.fromtimestamp(time.mktime(published_parsed))
+        return pub_dt >= (datetime.now() - timedelta(days=days))
+    except Exception:
+        return True
+
 # ─── 중복 방지 ────────────────────────────────────────────────────────────────
 def load_history():
     if os.path.exists(HISTORY_FILE):
@@ -71,19 +90,34 @@ def is_duplicate(title, history, threshold=0.8):
 
 # ─── 뉴스 수집 ────────────────────────────────────────────────────────────────
 
-def fetch_google_news_rss(query, lang="vi", country="VN", max_items=15):
-    encoded_query = requests.utils.quote(query)
+def fetch_google_news_rss(query, lang="vi", country="VN", max_items=15, recency_days=RECENCY_DAYS):
+    # 1차 방어: when:Nd 연산자로 Google News 검색 자체를 최근 N일로 제한
+    full_query    = f"{query} when:{recency_days}d"
+    encoded_query = requests.utils.quote(full_query)
     url = f"https://news.google.com/rss/search?q={encoded_query}&hl={lang}&gl={country}&ceid={country}:{lang}"
     try:
         feed = feedparser.parse(url)
         articles = []
-        for entry in feed.entries[:max_items]:
+        dropped  = 0
+        # 기간 필터로 걸러질 수 있으니 넉넉히 순회
+        for entry in feed.entries[:max_items * 2]:
             title = entry.get("title", "").strip()
             link  = entry.get("link", "").strip()
             pub   = entry.get("published", "")
-            if title and link:
-                articles.append({"title": title, "url": link, "published": pub, "source": "Google News"})
-        print(f"  [Google RSS] '{query}': {len(articles)}건")
+            pub_parsed = entry.get("published_parsed")
+            if not (title and link):
+                continue
+            # 2차 방어: 발행일이 최근 N일 이내인지 재검증
+            if not is_recent(pub_parsed, recency_days):
+                dropped += 1
+                continue
+            articles.append({"title": title, "url": link, "published": pub, "source": "Google News"})
+            if len(articles) >= max_items:
+                break
+        msg = f"  [Google RSS] '{query}': {len(articles)}건"
+        if dropped:
+            msg += f" (기간 초과 {dropped}건 제외)"
+        print(msg)
         return articles
     except Exception as e:
         print(f"  [Google RSS] '{query}' 오류: {e}")
@@ -99,7 +133,7 @@ def fetch_newsapi(query, max_items=15):
         "sortBy": "publishedAt",
         "pageSize": max_items,
         "apiKey": NEWSAPI_KEY,
-        "from": (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d"),
+        "from": (datetime.now() - timedelta(days=RECENCY_DAYS)).strftime("%Y-%m-%d"),
     }
     try:
         resp = requests.get(url, params=params, timeout=15)
@@ -117,6 +151,8 @@ def fetch_newsapi(query, max_items=15):
         return []
 
 def fetch_iav_vn(max_items=20):
+    # 주의: iav.vn은 정적 크롤링이라 개별 기사 발행일을 안정적으로 얻기 어렵다.
+    # 다만 '최신 뉴스(/tin-tuc)' 목록 페이지라 대부분 최근 기사라서 그대로 사용한다.
     url = "https://www.iav.vn/tin-tuc"
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
     try:
@@ -161,19 +197,31 @@ def fetch_thoibaotaichinh(max_items=10):
     try:
         feed = feedparser.parse(url)
         articles = []
-        for entry in feed.entries[:max_items]:
+        dropped  = 0
+        for entry in feed.entries[:max_items * 2]:
             title = entry.get("title", "").strip()
             link  = entry.get("link", "").strip()
-            if title and link:
-                articles.append({"title": title, "url": link, "published": entry.get("published", ""), "source": "thoibaotaichinhvietnam.vn"})
-        print(f"  [thoibaotaichinhvietnam] {len(articles)}건")
+            pub_parsed = entry.get("published_parsed")
+            if not (title and link):
+                continue
+            # 발행일 최신성 검증
+            if not is_recent(pub_parsed):
+                dropped += 1
+                continue
+            articles.append({"title": title, "url": link, "published": entry.get("published", ""), "source": "thoibaotaichinhvietnam.vn"})
+            if len(articles) >= max_items:
+                break
+        msg = f"  [thoibaotaichinhvietnam] {len(articles)}건"
+        if dropped:
+            msg += f" (기간 초과 {dropped}건 제외)"
+        print(msg)
         return articles
     except Exception as e:
         print(f"  [thoibaotaichinhvietnam] 오류: {e}")
         return []
 
 def fetch_bvl_news():
-    """바오비엣라이프(BVL) 전용 뉴스 수집"""
+    """바오비엣라이프(BVL) 전용 뉴스 수집 (Google RSS는 when: 필터가 이미 적용됨)"""
     print("\n  [BVL 전용 수집 시작]")
     bvl_articles = []
     seen_urls = set()
@@ -254,6 +302,9 @@ def select_bvl_news(bvl_articles, history, max_items=3):
 실제로 BVL 또는 바오비엣 그룹과 직접 관련된 뉴스만 최대 {max_items}건 선정해 주세요.
 관련 없는 뉴스는 선정하지 마세요. 뉴스가 없으면 빈 배열을 반환하세요.
 
+[중요] 최근 {RECENCY_DAYS}일 이내의 최신 뉴스만 대상입니다. 제목이나 내용으로 볼 때
+명백히 오래된 기사(수 개월/수 년 전의 과거 사건)로 판단되면 절대 선정하지 마세요.
+
 이미 보낸 뉴스 (중복 제외):
 {history_titles}
 
@@ -291,6 +342,10 @@ def select_and_translate_news(articles, history):
 해빗팩토리는 시그널파이낸셜랩(보험대리점)을 자회사로 두고 있으며, 베트남 보험대리점 인수 및 AI/디지털 역량 활용을 통한 해외 진출을 추진하고 있습니다.
 
 아래 뉴스 목록에서 오늘의 베트남 보험 업계 10대 뉴스를 선정해 주세요.
+
+[중요] 최근 {RECENCY_DAYS}일 이내의 최신 뉴스만 선정 대상입니다.
+제목이나 내용으로 볼 때 명백히 오래된 기사(수 개월/수 년 전의 과거 사건)로 보이면
+절대 선정하지 마세요.
 
 카테고리 구성 (반드시 준수):
 1. top: 그날 가장 중요한 뉴스 1개
@@ -433,7 +488,7 @@ def send_to_slack(news_data, bvl_news, fetch_date, page_url):
 def main():
     fetch_date = datetime.now().strftime("%Y年%m月%d日")
     today_str  = datetime.now().strftime("%Y년 %m월 %d일")
-    print(f"=== 베트남 보험 뉴스봇 시작: {today_str} ===")
+    print(f"=== 베트남 보험 뉴스봇 시작: {today_str} (최근 {RECENCY_DAYS}일 기사 대상) ===")
 
     history = load_history()
     print(f"[히스토리] {len(history)}건 로드")
