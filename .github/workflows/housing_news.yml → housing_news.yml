@@ -25,7 +25,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests feedparser google-genai beautifulsoup4
+          pip install requests feedparser google-genai beautifulsoup4 googlenewsdecoder
 
       - name: Run Japan Housing News Bot
         env:
