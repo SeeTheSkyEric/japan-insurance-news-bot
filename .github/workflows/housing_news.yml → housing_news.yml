@@ -1,0 +1,45 @@
+name: Japan Housing News Bot
+
+on:
+  schedule:
+    # 07:40 KST (평일) = 22:40 UTC 전날 (일~목). 8시 정각 Gemini 혼잡대 회피용.
+    - cron: '40 22 * * 0-4'
+  workflow_dispatch:
+
+jobs:
+  send-housing-news:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests feedparser google-genai beautifulsoup4
+
+      - name: Run Japan Housing News Bot
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
+          SLACK_WEBHOOK_JP_HOUSING: ${{ secrets.SLACK_WEBHOOK_JP_HOUSING }}
+          GITHUB_PAGES_URL: https://seetheskyeric.github.io/japan-insurance-news-bot/japan-housing.html
+        run: |
+          python japan-housing/housing_news.py
+
+      - name: Commit updated files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add docs/japan-housing.html docs/housing_sent_history.json || true
+          git diff --staged --quiet || git commit -m "Update Japan housing news [$(date '+%Y-%m-%d')]"
+          git push || true
