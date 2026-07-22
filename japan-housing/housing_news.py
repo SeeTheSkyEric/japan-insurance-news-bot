@@ -7,6 +7,7 @@ from datetime import datetime, timedelta
 from difflib import SequenceMatcher
 from google import genai
 import re
+from googlenewsdecoder import gnewsdecoder
 
 # ─── 설정 ────────────────────────────────────────────────────────────────────
 GEMINI_API_KEY    = os.environ.get("GEMINI_API_KEY") or ""
@@ -15,6 +16,9 @@ SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_JP_HOUSING") or ""
 GITHUB_PAGES_URL  = os.environ.get("GITHUB_PAGES_URL") or "https://seetheskyeric.github.io/japan-insurance-news-bot/japan-housing.html"
 
 gemini_client = genai.Client(api_key=GEMINI_API_KEY)
+
+# 이이다 그룹 CI (base64 임베드, 흰 배경 합성·폭 300px 최적화)
+IIDA_LOGO_DATA_URI = "data:image/png;base64,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"
 
 HISTORY_FILE = "docs/housing_sent_history.json"
 MAX_HISTORY  = 500
@@ -32,7 +36,7 @@ RECENCY_DAYS = 14
 # proptech : 프롭테크·모기지테크 3개
 CATS = [
     ("top",      "🔥 오늘의 TOP 뉴스",       "#F59E0B"),
-    ("iida",     "🏠 이이다 그룹 관련",       "#DC2626"),
+    ("iida",     "🏠 이이다 그룹 관련",       "#52525B"),
     ("housing",  "🏘️ 주택시장 동향",         "#2E86AB"),
     ("mortgage", "🏦 주택대출·금리",          "#059669"),
     ("proptech", "💡 프롭테크·모기지테크",     "#8B5CF6"),
@@ -68,16 +72,16 @@ IIDA_QUERIES_EN = [
 def is_recent(published_parsed, days=RECENCY_DAYS):
     """
     feedparser의 published_parsed(struct_time)를 기준으로 최근 N일 이내인지 판단.
-    - 날짜 정보가 없으면 True(보수적 통과). Google News는 when: 필터가 1차로
-      걸러주므로, 날짜 없는 소수 항목까지 버리면 정상 최신 기사를 놓칠 수 있다.
+    - 발행일 정보가 없거나 파싱에 실패하면 False(제외). 발행일이 확인되지 않는
+      기사(오래된 PR 기사 등)가 새어 들어오는 것을 막는다.
     """
     if not published_parsed:
-        return True
+        return False
     try:
         pub_dt = datetime.fromtimestamp(time.mktime(published_parsed))
         return pub_dt >= (datetime.now() - timedelta(days=days))
     except Exception:
-        return True
+        return False
 
 # ─── 중복 방지 ────────────────────────────────────────────────────────────────
 def load_history():
@@ -132,17 +136,41 @@ def parse_gemini_json(raw):
     raw = re.sub(r"\s*```$", "", raw)
     return json.loads(raw)
 
-# ─── 뉴스 수집 ────────────────────────────────────────────────────────────────
-def clean_google_news_url(url):
+# ─── URL 변환 (Google News 링크 → 실제 원문 URL) ──────────────────────────────
+def resolve_google_news_url(url):
     """
-    Google News RSS의 '/rss/articles/CBMi...' 링크는 피드리더용이라 브라우저에서
-    직접 열면 '리디렉션 알림 / 잘못된 웹 주소' 오류가 난다. '/articles/' 형태로
-    바꿔 정상적으로 원문으로 이동하도록 한다. (일본 보험봇과 동일한 처리)
+    Google News 링크(news.google.com/.../articles/CBMi...)에는 원문 URL이 직접
+    들어있지 않아, 브라우저에서 열면 '리디렉션 알림 / 잘못된 웹 주소' 오류가 난다.
+    googlenewsdecoder로 실제 원문 URL을 조회해 반환한다. 실패 시 원본을 그대로 둔다.
+    (후보 전체가 아니라 '최종 선정 기사'에만 적용해 호출 수를 줄인다)
     """
-    if "news.google.com/rss/articles/" in url:
-        return url.replace("/rss/articles/", "/articles/")
+    if "news.google.com" not in url:
+        return url
+    try:
+        res = gnewsdecoder(url, interval=1)
+        if res.get("status") and res.get("decoded_url"):
+            return res["decoded_url"]
+        print(f"  [URL 디코드 실패] {res.get('message', '알 수 없음')}")
+    except Exception as e:
+        print(f"  [URL 디코드 오류] {e}")
     return url
 
+def resolve_selected_urls(news_data, iida_news):
+    """최종 선정된 기사들의 Google News 링크만 원문 URL로 변환한다."""
+    print("\n[URL 변환] 선정 기사 링크를 원문으로 변환 중...")
+    top = news_data.get("top")
+    if isinstance(top, dict) and top.get("url"):
+        top["url"] = resolve_google_news_url(top["url"])
+    for key in ["housing", "mortgage", "proptech"]:
+        for item in (news_data.get(key) or []):
+            if item.get("url"):
+                item["url"] = resolve_google_news_url(item["url"])
+    for item in (iida_news or []):
+        if item.get("url"):
+            item["url"] = resolve_google_news_url(item["url"])
+    print("  ✅ URL 변환 완료")
+
+# ─── 뉴스 수집 ────────────────────────────────────────────────────────────────
 def fetch_google_news_rss(query, lang="ja", country="JP", max_items=15, recency_days=RECENCY_DAYS):
     # 1차 방어: when:Nd 연산자로 Google News 검색 자체를 최근 N일로 제한
     full_query    = f"{query} when:{recency_days}d"
@@ -163,7 +191,7 @@ def fetch_google_news_rss(query, lang="ja", country="JP", max_items=15, recency_
             if not is_recent(pub_parsed, recency_days):
                 dropped += 1
                 continue
-            articles.append({"title": title, "url": clean_google_news_url(link), "published": pub, "source": "Google News"})
+            articles.append({"title": title, "url": link, "published": pub, "source": "Google News"})
             if len(articles) >= max_items:
                 break
         msg = f"  [Google RSS] '{query}': {len(articles)}건"
@@ -385,11 +413,13 @@ def build_html(news_data, iida_news, fetch_date, for_web=False):
             continue
 
         rows += f'<tr><td style="background:{color};color:white;padding:10px 16px;font-weight:bold;font-size:15px;">{label}</td></tr>'
+        if key == "iida":
+            rows += f'<tr><td style="background:white;padding:16px 16px 8px;"><img src="{IIDA_LOGO_DATA_URI}" alt="Iida Group Holdings" style="height:30px;display:block;"></td></tr>'
         for item in items:
             title_style = (
                 "color:#D97706;font-weight:bold;font-size:17px;text-decoration:none;line-height:1.5;"
                 if key == "top" else
-                "color:#DC2626;font-weight:bold;font-size:15px;text-decoration:none;line-height:1.5;"
+                "color:#3F3F46;font-weight:bold;font-size:15px;text-decoration:none;line-height:1.5;"
                 if key == "iida" else
                 "color:#1D4ED8;font-weight:bold;font-size:15px;text-decoration:none;line-height:1.5;"
             )
@@ -507,6 +537,9 @@ def main():
     # Gemini: 이이다 그룹 뉴스 선정 (별도 호출)
     print("\n[Gemini] 이이다 그룹 뉴스 선정 중...")
     iida_news = select_iida_news(iida_raw, history, max_items=3)
+
+    # 최종 선정 기사의 Google News 링크를 실제 원문 URL로 변환
+    resolve_selected_urls(news_data, iida_news)
 
     # GitHub Pages HTML 저장
     save_web_page(news_data, iida_news, fetch_date)
