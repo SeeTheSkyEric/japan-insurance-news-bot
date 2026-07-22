@@ -137,22 +137,28 @@ def parse_gemini_json(raw):
     return json.loads(raw)
 
 # ─── URL 변환 (Google News 링크 → 실제 원문 URL) ──────────────────────────────
-def resolve_google_news_url(url):
+def resolve_google_news_url(url, max_attempts=3):
     """
     Google News 링크(news.google.com/.../articles/CBMi...)에는 원문 URL이 직접
     들어있지 않아, 브라우저에서 열면 '리디렉션 알림 / 잘못된 웹 주소' 오류가 난다.
-    googlenewsdecoder로 실제 원문 URL을 조회해 반환한다. 실패 시 원본을 그대로 둔다.
+    googlenewsdecoder로 실제 원문 URL을 조회해 반환한다. 일시적 실패(레이트리밋 등)에
+    대비해 최대 max_attempts회 재시도하고, 그래도 실패하면 원본을 그대로 둔다.
     (후보 전체가 아니라 '최종 선정 기사'에만 적용해 호출 수를 줄인다)
     """
     if "news.google.com" not in url:
         return url
-    try:
-        res = gnewsdecoder(url, interval=1)
-        if res.get("status") and res.get("decoded_url"):
-            return res["decoded_url"]
-        print(f"  [URL 디코드 실패] {res.get('message', '알 수 없음')}")
-    except Exception as e:
-        print(f"  [URL 디코드 오류] {e}")
+    last_msg = "알 수 없음"
+    for attempt in range(max_attempts):
+        try:
+            res = gnewsdecoder(url, interval=1)
+            if res.get("status") and res.get("decoded_url"):
+                return res["decoded_url"]
+            last_msg = res.get("message", "알 수 없음")
+        except Exception as e:
+            last_msg = str(e)
+        if attempt < max_attempts - 1:
+            time.sleep(2)
+    print(f"  [URL 디코드 최종 실패] {last_msg}")
     return url
 
 def resolve_selected_urls(news_data, iida_news):
