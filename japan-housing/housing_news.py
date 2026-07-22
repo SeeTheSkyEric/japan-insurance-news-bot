@@ -137,12 +137,18 @@ def parse_gemini_json(raw):
     return json.loads(raw)
 
 # ─── URL 변환 (Google News 링크 → 실제 원문 URL) ──────────────────────────────
-def resolve_google_news_url(url, max_attempts=3):
+def google_search_url(title):
+    """디코드 최종 실패 시 대체용: 기사 제목으로 구글 검색하는 링크(항상 열림)."""
+    return "https://www.google.com/search?q=" + requests.utils.quote(title)
+
+def resolve_google_news_url(url, title="", max_attempts=3):
     """
     Google News 링크(news.google.com/.../articles/CBMi...)에는 원문 URL이 직접
     들어있지 않아, 브라우저에서 열면 '리디렉션 알림 / 잘못된 웹 주소' 오류가 난다.
-    googlenewsdecoder로 실제 원문 URL을 조회해 반환한다. 일시적 실패(레이트리밋 등)에
-    대비해 최대 max_attempts회 재시도하고, 그래도 실패하면 원본을 그대로 둔다.
+    googlenewsdecoder로 실제 원문 URL을 조회해 반환한다.
+    - throttle을 피하려고 호출 간격(interval=2)을 넉넉히 두고, 실패 시 긴 간격으로 재시도.
+    - 그래도 끝내 실패하면 '깨진 Google 링크'를 그대로 두지 않고, 원문(일본어) 제목으로
+      구글 검색하는 링크로 대체한다. → 오류 페이지 대신 최소한 그 기사를 찾는 검색으로 이동.
     (후보 전체가 아니라 '최종 선정 기사'에만 적용해 호출 수를 줄인다)
     """
     if "news.google.com" not in url:
@@ -150,30 +156,43 @@ def resolve_google_news_url(url, max_attempts=3):
     last_msg = "알 수 없음"
     for attempt in range(max_attempts):
         try:
-            res = gnewsdecoder(url, interval=1)
+            res = gnewsdecoder(url, interval=2)
             if res.get("status") and res.get("decoded_url"):
                 return res["decoded_url"]
             last_msg = res.get("message", "알 수 없음")
         except Exception as e:
             last_msg = str(e)
         if attempt < max_attempts - 1:
-            time.sleep(2)
+            time.sleep(5)
+    # 최종 실패: 오류 페이지 대신 제목 검색 링크로 대체(제목이 없으면 원본 유지)
+    if title:
+        print(f"  [URL 디코드 실패→검색링크 대체] {last_msg}")
+        return google_search_url(title)
     print(f"  [URL 디코드 최종 실패] {last_msg}")
     return url
 
-def resolve_selected_urls(news_data, iida_news):
-    """최종 선정된 기사들의 Google News 링크만 원문 URL로 변환한다."""
+def resolve_selected_urls(news_data, iida_news, url_to_title=None):
+    """
+    최종 선정된 기사들의 Google News 링크만 원문 URL로 변환한다.
+    url_to_title: {google_url: 원문(일본어) 제목} 맵. 디코드 실패 시 검색 링크 대체에 사용.
+    """
+    url_to_title = url_to_title or {}
     print("\n[URL 변환] 선정 기사 링크를 원문으로 변환 중...")
+
+    def _title(item):
+        # 원문(일본어) 제목 우선(검색 정확도↑), 없으면 한국어 번역 제목
+        return url_to_title.get(item.get("url", ""), "") or item.get("title_ko", "")
+
     top = news_data.get("top")
     if isinstance(top, dict) and top.get("url"):
-        top["url"] = resolve_google_news_url(top["url"])
+        top["url"] = resolve_google_news_url(top["url"], _title(top))
     for key in ["housing", "mortgage", "proptech"]:
         for item in (news_data.get(key) or []):
             if item.get("url"):
-                item["url"] = resolve_google_news_url(item["url"])
+                item["url"] = resolve_google_news_url(item["url"], _title(item))
     for item in (iida_news or []):
         if item.get("url"):
-            item["url"] = resolve_google_news_url(item["url"])
+            item["url"] = resolve_google_news_url(item["url"], _title(item))
     print("  ✅ URL 변환 완료")
 
 # ─── 뉴스 수집 ────────────────────────────────────────────────────────────────
@@ -545,7 +564,13 @@ def main():
     iida_news = select_iida_news(iida_raw, history, max_items=3)
 
     # 최종 선정 기사의 Google News 링크를 실제 원문 URL로 변환
-    resolve_selected_urls(news_data, iida_news)
+    # (디코드 실패 시 원문 제목으로 검색 링크 대체를 위해 url→원문제목 맵을 넘긴다)
+    url_to_title = {}
+    for a in filtered:
+        url_to_title[a["url"]] = a["title"]
+    for a in iida_raw:
+        url_to_title[a["url"]] = a["title"]
+    resolve_selected_urls(news_data, iida_news, url_to_title)
 
     # GitHub Pages HTML 저장
     save_web_page(news_data, iida_news, fetch_date)
