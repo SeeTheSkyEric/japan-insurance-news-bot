@@ -133,6 +133,16 @@ def parse_gemini_json(raw):
     return json.loads(raw)
 
 # ─── 뉴스 수집 ────────────────────────────────────────────────────────────────
+def clean_google_news_url(url):
+    """
+    Google News RSS의 '/rss/articles/CBMi...' 링크는 피드리더용이라 브라우저에서
+    직접 열면 '리디렉션 알림 / 잘못된 웹 주소' 오류가 난다. '/articles/' 형태로
+    바꿔 정상적으로 원문으로 이동하도록 한다. (일본 보험봇과 동일한 처리)
+    """
+    if "news.google.com/rss/articles/" in url:
+        return url.replace("/rss/articles/", "/articles/")
+    return url
+
 def fetch_google_news_rss(query, lang="ja", country="JP", max_items=15, recency_days=RECENCY_DAYS):
     # 1차 방어: when:Nd 연산자로 Google News 검색 자체를 최근 N일로 제한
     full_query    = f"{query} when:{recency_days}d"
@@ -153,7 +163,7 @@ def fetch_google_news_rss(query, lang="ja", country="JP", max_items=15, recency_
             if not is_recent(pub_parsed, recency_days):
                 dropped += 1
                 continue
-            articles.append({"title": title, "url": link, "published": pub, "source": "Google News"})
+            articles.append({"title": title, "url": clean_google_news_url(link), "published": pub, "source": "Google News"})
             if len(articles) >= max_items:
                 break
         msg = f"  [Google RSS] '{query}': {len(articles)}건"
