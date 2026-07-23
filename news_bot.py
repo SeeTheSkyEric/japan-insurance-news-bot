@@ -3,7 +3,7 @@
 # HabitFactory 일본 보험뉴스 자동 발송 스크립트
 # 매일 아침 8시(KST) 자동 실행
 # ============================================================
-# pip install google-genai requests beautifulsoup4
+# pip install google-genai requests beautifulsoup4 googlenewsdecoder
 # ============================================================
 import os, json, re, requests, time
 from datetime import datetime, timezone, timedelta
@@ -13,6 +13,7 @@ from xml.etree import ElementTree as ET
 from email.utils import parsedate_to_datetime
 from bs4 import BeautifulSoup
 from google import genai
+from googlenewsdecoder import gnewsdecoder
 
 # ── 환경변수 ────────────────────────────────────────────────
 GEMINI_API_KEY    = os.environ["GEMINI_API_KEY"]
@@ -494,6 +495,53 @@ def send_slack_no_news():
 # ═══════════════════════════════════════════════════════════
 # 메인
 # ═══════════════════════════════════════════════════════════
+# ═══════════════════════════════════════════════════════════
+# URL 변환 (Google News 링크 → 실제 원문 URL)
+# ═══════════════════════════════════════════════════════════
+def google_search_url(title: str) -> str:
+    """디코드 최종 실패 시 대체용: 기사 제목으로 구글 검색하는 링크(항상 열림)."""
+    return "https://www.google.com/search?q=" + quote(title, safe="")
+
+def resolve_google_news_url(url: str, title: str = "", max_attempts=3) -> str:
+    """
+    Google News 링크(news.google.com/.../articles/CBMi...)에는 원문 URL이 직접
+    들어있지 않아, 브라우저에서 열면 '리디렉션 알림 / 잘못된 웹 주소' 오류가 난다.
+    googlenewsdecoder로 실제 원문 URL을 조회해 반환한다.
+      - throttle 회피를 위해 호출 간격(interval=2)을 넉넉히 두고, 실패 시 5초 후 재시도.
+      - 끝내 실패하면 깨진 Google 링크를 그대로 두지 않고, 원문(일본어) 제목으로
+        구글 검색하는 링크로 대체한다. → 오류 페이지 대신 최소한 그 기사를 찾는 검색으로 이동.
+    (후보 전체가 아니라 '최종 선정 기사'에만 적용해 호출 수를 줄인다)
+    """
+    if "news.google.com" not in url:
+        return url
+    last_msg = "알 수 없음"
+    for attempt in range(max_attempts):
+        try:
+            res = gnewsdecoder(url, interval=2)
+            if res.get("status") and res.get("decoded_url"):
+                return res["decoded_url"]
+            last_msg = res.get("message", "알 수 없음")
+        except Exception as e:
+            last_msg = str(e)
+        if attempt < max_attempts - 1:
+            time.sleep(5)
+    if title:
+        print(f"  [URL 디코드 실패→검색링크 대체] {last_msg}")
+        return google_search_url(title)
+    print(f"  [URL 디코드 최종 실패] {last_msg}")
+    return url
+
+def resolve_selected_urls(data: dict):
+    """최종 선정된 기사들의 Google News 링크만 실제 원문 URL로 변환한다."""
+    print("\n🔗 URL 변환: 선정 기사 링크를 원문으로 변환 중...")
+    for n in data.get("news", []):
+        if n.get("url"):
+            # 디코드 실패 시 일본어 원제목으로 검색(정확도↑), 없으면 한국어 제목
+            title = n.get("title_ja") or n.get("title_ko", "")
+            n["url"] = resolve_google_news_url(n["url"], title)
+    print("  ✅ URL 변환 완료")
+
+
 def main():
     print("=" * 55)
     print(f"🇯🇵 일본 보험뉴스 봇 — {datetime.now(JST).strftime('%Y-%m-%d %H:%M')}")
@@ -564,15 +612,9 @@ def main():
         print(f"  {label}: {cnt}건")
     print(f"  합계: {len(data['news'])}건")
 
-    print(f"\n🔗 URL 검증 중...")
-    valid_news = []
-    for n in data["news"]:
-        if "news.google.com" in n.get("url", "") or is_url_alive(n["url"]):
-            valid_news.append(n)
-        else:
-            print(f"  ❌ 제외 (404): {n['title_ja'][:40]}")
-    data["news"] = valid_news
-    print(f"  검증 후: {len(data['news'])}건")
+    # Google News 링크를 실제 원문 URL로 변환 (리디렉션/잘못된 주소 오류 해결)
+    # 실패한 링크는 원문 제목 구글 검색 링크로 대체되므로 별도 404 검증은 하지 않는다.
+    resolve_selected_urls(data)
 
     with open("news_cache.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
