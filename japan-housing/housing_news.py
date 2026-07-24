@@ -107,6 +107,8 @@ def gemini_generate(prompt, max_attempts=5):
     """
     Gemini 호출을 재시도로 감싼다. 8시 KST 전후 글로벌 배치 트래픽 때문에
     503 UNAVAILABLE이 자주 발생하므로, 30~120초 간격으로 최대 5회 시도한다.
+    response_mime_type="application/json"으로 JSON 모드를 강제해, 마크다운 펜스나
+    잡설 없이 유효한 JSON만 나오도록 한다(깨진 JSON 발생률을 크게 낮춤).
     """
     delays = [30, 45, 68, 101, 120]  # 초 단위, 지수적으로 증가(최대 120초)
     last_err = None
@@ -115,6 +117,9 @@ def gemini_generate(prompt, max_attempts=5):
             resp = gemini_client.models.generate_content(
                 model="gemini-2.5-flash",
                 contents=prompt,
+                config=genai.types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                ),
             )
             return resp.text.strip()
         except Exception as e:
@@ -135,6 +140,26 @@ def parse_gemini_json(raw):
     raw = re.sub(r"^```\s*", "", raw)
     raw = re.sub(r"\s*```$", "", raw)
     return json.loads(raw)
+
+def gemini_generate_json(prompt, max_json_attempts=3):
+    """
+    Gemini로 JSON을 받아 파싱한다. Gemini 출력은 비결정적이라 드물게 JSON이 깨질 수
+    있으므로(쉼표 누락 등), 파싱 실패 시 아예 재생성해서 다시 파싱한다.
+    성공 시 파싱된 객체, 최종 실패 시 None을 반환한다.
+    """
+    for attempt in range(max_json_attempts):
+        raw = gemini_generate(prompt)  # API 503 등은 gemini_generate 내부에서 재시도됨
+        if not raw:
+            continue
+        try:
+            return parse_gemini_json(raw)
+        except Exception as e:
+            print(f"  [JSON 파싱 실패] {attempt+1}/{max_json_attempts}회차: {e}")
+            if attempt < max_json_attempts - 1:
+                print("    → 재생성 후 다시 시도")
+                time.sleep(2)
+    print("  [JSON 파싱 최종 실패] 유효한 JSON을 받지 못함")
+    return None
 
 # ─── URL 변환 (Google News 링크 → 실제 원문 URL) ──────────────────────────────
 def google_search_url(title):
@@ -370,7 +395,7 @@ def select_iida_news(iida_articles, history, max_items=3):
 관련 뉴스가 없으면: []"""
 
     try:
-        result = parse_gemini_json(gemini_generate(prompt))
+        result = gemini_generate_json(prompt)
         n = len(result) if isinstance(result, list) else 0
         print(f"[Gemini] 이이다 그룹 뉴스 {n}건 선정")
         return result if isinstance(result, list) else []
@@ -415,7 +440,7 @@ def select_and_translate_news(articles, history):
 {{"top":{{"number":1,"title_ko":"한국어 번역 제목","summary_ko":"3-4문장 한국어 요약","url":"URL","source":"출처","published":""}},"housing":[{{"number":2,"title_ko":"제목","summary_ko":"요약","url":"URL","source":"출처","published":""}},{{"number":3,"title_ko":"제목","summary_ko":"요약","url":"URL","source":"출처","published":""}},{{"number":4,"title_ko":"제목","summary_ko":"요약","url":"URL","source":"출처","published":""}}],"mortgage":[{{"number":5,"title_ko":"제목","summary_ko":"요약","url":"URL","source":"출처","published":""}},{{"number":6,"title_ko":"제목","summary_ko":"요약","url":"URL","source":"출처","published":""}},{{"number":7,"title_ko":"제목","summary_ko":"요약","url":"URL","source":"출처","published":""}}],"proptech":[{{"number":8,"title_ko":"제목","summary_ko":"요약","url":"URL","source":"출처","published":""}},{{"number":9,"title_ko":"제목","summary_ko":"요약","url":"URL","source":"출처","published":""}},{{"number":10,"title_ko":"제목","summary_ko":"요약","url":"URL","source":"출처","published":""}}]}}"""
 
     try:
-        result = parse_gemini_json(gemini_generate(prompt))
+        result = gemini_generate_json(prompt)
         if result:
             print("[Gemini] 10대 뉴스 선정 완료")
         return result
