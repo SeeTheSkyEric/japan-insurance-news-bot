@@ -241,7 +241,15 @@ def fetch_google_news_rss(query, lang="ja", country="JP", max_items=15, recency_
             if not is_recent(pub_parsed, recency_days):
                 dropped += 1
                 continue
-            articles.append({"title": title, "url": link, "published": pub, "source": "Google News"})
+            # 실제 발행일을 YYYY-MM-DD로 정규화해 저장(화면 표시·재검증용)
+            real_date = ""
+            if pub_parsed:
+                try:
+                    real_date = datetime.fromtimestamp(time.mktime(pub_parsed)).strftime("%Y-%m-%d")
+                except Exception:
+                    real_date = ""
+            articles.append({"title": title, "url": link, "published": pub,
+                             "date": real_date, "source": "Google News"})
             if len(articles) >= max_items:
                 break
         msg = f"  [Google RSS] '{query}': {len(articles)}건"
@@ -273,7 +281,10 @@ def fetch_newsapi(query, max_items=15):
             title = a.get("title", "").strip()
             link  = a.get("url", "").strip()
             if title and link and "[Removed]" not in title:
-                articles.append({"title": title, "url": link, "published": a.get("publishedAt", ""), "source": "NewsAPI"})
+                articles.append({"title": title, "url": link,
+                                 "published": a.get("publishedAt", ""),
+                                 "date": (a.get("publishedAt", "") or "")[:10],
+                                 "source": "NewsAPI"})
         print(f"  [NewsAPI] '{query}': {len(articles)}건")
         return articles
     except Exception as e:
@@ -379,6 +390,7 @@ def select_iida_news(iida_articles, history, max_items=3):
 실제로 이이다 그룹 또는 위 계열사와 직접 관련된 뉴스만 최대 {max_items}건 선정하세요.
 'ファミリーライフサービス' 등 일반적인 이름 때문에 딸려온 무관한 회사 뉴스는 제외하세요.
 관련 뉴스가 없으면 빈 배열을 반환하세요.
+같은 사건을 다룬 기사가 여럿이면 하나만 선택하고, 동일 뉴스를 중복 선정하지 마세요.
 
 [중요] 최근 {RECENCY_DAYS}일 이내의 최신 뉴스만 대상입니다. 제목·내용상 명백히 오래된
 기사(수 개월/수 년 전 사건)로 판단되면 절대 선정하지 마세요.
@@ -417,6 +429,10 @@ def select_and_translate_news(articles, history):
 
 아래 뉴스 목록에서 오늘의 일본 주택·대출 시장 10대 뉴스를 선정해 주세요.
 주택시장과 주택대출 시장에 실질적 영향을 주는 뉴스를 중요도 순으로 고르세요.
+
+[중복 금지] 같은 사건·같은 주제를 다루는 기사가 여러 개 있으면, 가장 대표적인 하나만
+선택하세요. 여러 매체가 보도한 동일 뉴스를 서로 다른 카테고리에 중복 선정하지 마세요.
+서로 다른 10개는 각각 별개의 사건/주제여야 합니다.
 
 [중요] 최근 {RECENCY_DAYS}일 이내의 최신 뉴스만 선정 대상입니다. 제목·내용상 명백히
 오래된 기사(수 개월/수 년 전 사건)로 보이면 절대 선정하지 마세요.
@@ -588,13 +604,32 @@ def main():
     print("\n[Gemini] 이이다 그룹 뉴스 선정 중...")
     iida_news = select_iida_news(iida_raw, history, max_items=3)
 
+    # url→(원문제목, 실제 발행일) 맵 (raw Google URL 기준; resolve 전에 만들어 사용)
+    url_to_title, url_to_date = {}, {}
+    for a in (filtered + iida_raw):
+        url_to_title[a["url"]] = a["title"]
+        url_to_date[a["url"]]  = a.get("date", "")
+
+    # 선정 기사에 '실제 발행일'과 '원문 제목'을 주입
+    #  - published: Gemini 추측값 대신 후보의 실제 발행일로 덮어씀 (24년 등 오표기 방지)
+    #  - _orig_title: 중복 기록을 원문(일본어) 제목으로 남기기 위해 보관 (언어 일치 → dedup 정상 작동)
+    def _annotate(item):
+        u = item.get("url", "")
+        rd = url_to_date.get(u, "")
+        if rd:
+            item["published"] = rd
+        item["_orig_title"] = url_to_title.get(u, item.get("title_ko", ""))
+    _top = news_data.get("top")
+    if isinstance(_top, dict):
+        _annotate(_top)
+    for key in ["housing", "mortgage", "proptech"]:
+        for item in (news_data.get(key) or []):
+            _annotate(item)
+    for item in (iida_news or []):
+        _annotate(item)
+
     # 최종 선정 기사의 Google News 링크를 실제 원문 URL로 변환
-    # (디코드 실패 시 원문 제목으로 검색 링크 대체를 위해 url→원문제목 맵을 넘긴다)
-    url_to_title = {}
-    for a in filtered:
-        url_to_title[a["url"]] = a["title"]
-    for a in iida_raw:
-        url_to_title[a["url"]] = a["title"]
+    # (디코드 실패 시 원문 제목으로 검색 링크 대체)
     resolve_selected_urls(news_data, iida_news, url_to_title)
 
     # GitHub Pages HTML 저장
@@ -604,19 +639,20 @@ def main():
     success = send_to_slack(news_data, iida_news, fetch_date, GITHUB_PAGES_URL)
 
     if success:
+        # 중복 기록은 '원문 제목'으로 저장 → 다음날 일본어 후보와 언어가 맞아 dedup가 정상 작동
         new_titles = []
         for section in ["top", "housing", "mortgage", "proptech"]:
             item = news_data.get(section)
             if isinstance(item, dict):
-                new_titles.append(item.get("title_ko", ""))
+                new_titles.append(item.get("_orig_title") or item.get("title_ko", ""))
             elif isinstance(item, list):
                 for i in item:
-                    new_titles.append(i.get("title_ko", ""))
+                    new_titles.append(i.get("_orig_title") or i.get("title_ko", ""))
         for item in iida_news:
-            new_titles.append(item.get("title_ko", ""))
+            new_titles.append(item.get("_orig_title") or item.get("title_ko", ""))
         history.extend([t for t in new_titles if t])
         save_history(history)
-        print(f"[히스토리] {len(new_titles)}건 추가 저장 완료")
+        print(f"[히스토리] {len(new_titles)}건 추가 저장 완료(원문 제목 기준)")
 
     print("=== 완료 ===")
 
