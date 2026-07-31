@@ -1,9 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMie0FVX3lxTE5GVzFqTFdwYVVONTQwNHpuYmFQb2ZqUjN1ekNCc0NyME5mYzRtN1ZUZ293eThWZDBpR3k1WkxiMXg0WVVDV3ZqOG1raU9kRW5hb28yNmw1QXFDUG02S1BwT1RiN2VsRk1HY01nVjVZSHdaS2VZWGE3YXYtbw?oc=5",
-    "https://news.google.com/articles/CBMid0FVX3lxTE9zdmRaSUZmcFhlXzVIY1VMblJ6TzFXMm0yYmFJNjlFVE9YYUhnNjNJWmFFTS1FMlQwN2c1NEZTUUh4cmYwLUtQNHVWcWZXeWpXcjFZTzYzLW9VcUxOX1hDSk13X19iemRpTUJBbW5uQmo2SExLWC1J?oc=5",
-    "https://news.google.com/articles/CBMiqAFBVV95cUxQWldxWnZ1eWFBRk15bU1BcnJ3Z2ZPcFllOTR6QUdKY09aXzhEejhCZzhxUXpuN2QyVVNZVWRzbHhpV2pqTG1PcWpYMi1MSzNZMUZTU1NRVWppSWRXYkxSQmg2R2EwWEpWLVRSYURyQU1wdy1salQ5VlNRa3dXanRNVHlkVUFUOXNGOHkyQzBUa1B5NE52c0tIeWJnTDhWSzFPcncxV2gyZlE?oc=5",
-    "https://news.google.com/articles/CBMiVkFVX3lxTE9YTEc3Q1hzamRQcW9XNVNaMHFVdXh5ZnZ4VWx5TWJXTUhMbFVuY0N3X092QzQ2X3A3YjhZTWd0b29ROUQ0WjlaSV9vbjIyOUdKcERGWXhB?oc=5",
     "https://news.google.com/articles/CBMiVEFVX3lxTE94WTF1VUUzcE9zaTRFMy1uV3h1SkZvRTA1cDlmNHZZY0YzRjJiSFh1NnpFcUxjdWFDOExXMlBGSnd6RjNfQjJCS25aS1VER0Q3TEF6SQ?oc=5",
     "https://news.google.com/articles/CBMibEFVX3lxTE5SdnJUOHVVNkJlbFJVMjZySlVEd1VEM1RYcEN1RW04azJ2WHBscmJUaGR2bDhpb0QyaHoxcnYxSkt0NGJEUHhhYkNVX0N2SDFocGIwVkJLc0hUUHFVbERIa0pvQzNKM1h5YWJhNw?oc=5",
     "https://news.google.com/articles/CBMiUkFVX3lxTE44eUdkVnNiakpXdGJGSVBrRmswbjJSb01pMEVIek43LVRieFhFMVR0WTJuYjJhaDE1eFctaThOcDFsZXliRXExSTB0ZFg4U1N5Nmc?oc=5",
@@ -199,13 +195,13 @@
     "https://rocket-boys.co.jp/security-measures-lab/life-insurance-association-japan-37k-leak-risk/",
     "https://www.nikkei.com/nkd/disclosure/tdnr/20260729501737/",
     "https://www.nikkei.com/article/DGXZQOUB246LO0U6A720C2000000/",
-    "https://scan.netsecurity.ne.jp/article/2026/07/28/55795.html"
+    "https://scan.netsecurity.ne.jp/article/2026/07/28/55795.html",
+    "https://trafficnews.jp/post/692756",
+    "https://www.itmedia.co.jp/news/article/limage/2210/13/1221013161/677667",
+    "https://www.google.com/search?q=%E7%94%9F%E4%BF%9D%E8%A7%A3%E7%B4%84%E3%80%81%E9%87%91%E5%88%A9%E4%B8%8A%E6%98%87%E3%81%A7%E6%8B%8D%E8%BB%8A%20%E8%BF%94%E6%88%BB%E9%87%911%EF%BD%9E5%E6%9C%884%E5%89%B2%E5%A2%97%E3%80%81%E6%9C%80%E9%AB%98%E3%83%9A%E3%83%BC%E3%82%B9%20%E9%AB%98%E5%88%A9%E5%9B%9E%E3%82%8A%E3%81%AE%E6%8A%95%E4%BF%A1%E3%81%AB%E3%82%B7%E3%83%95%E3%83%88",
+    "https://www.kankyo-news.co.jp/news/3a357dcd-00b9-49d2-96a6-14fac9506da2"
   ],
   "titles": [
-    "『保険のキロク』記録を全文読まなくても問題箇所がわかる集計ダッシュボードを提供開始",
-    "アポロがT&Dとオリックス傘下の生保買収を検討、金融庁が難色－報道",
-    "住友生命、代理店に外貨建て健康増進保険 販売支援体制も見直し",
-    "住友生命、保険ショップで出張授業 学生に保険業界を解説",
     "クラウド型プラットフォームとAI活用の保険金請求管理が損害保険ソフトウェア市場の成長を牽引",
     "LINEが保険販売、まず熱中症治療とコロナ薬 対象は拡大",
     "金融庁、自賠責保険料の6％引き上げ案を提示 13年ぶり値上げ 2026年11月から適用",
@@ -401,6 +397,10 @@
     "生命保険協会の契約照会システムで約3万7,000件の個人情報漏洩の恐れ、WEB申請を停止",
     "Ｆｉｎａｔｅｘｔホールディングス[4419]：Finatext、東京海上アシスタンスのロードアシスタンス向けWeb請求システムを構築 2026年7月29日(適時開示) ：日経会社情報DIGITAL",
     "膨らむ生保解約、返戻金は半期最高ペース マネーは高利回り求め投信へ",
-    "アフラック生命保険に不正アクセス、保険料振替口座が漏えいしたことを踏まえ金融機関と連携"
+    "アフラック生命保険に不正アクセス、保険料振替口座が漏えいしたことを踏まえ金融機関と連携",
+    "「無保険車」増加を懸念 街のクルマ屋の「保険代理店打ち切り問題」国交省も動く 保険会社は「あり得ない」と否定",
+    "三井住友カード、ライフネット生命、ライフネットみらいとオンライン保険で協業（画像）（1/2枚目）",
+    "生保解約、金利上昇で拍車 返戻金1～5月4割増、最高ペース 高利回りの投信にシフト",
+    "工場火災をＩｏＴで予防 三井住友海上火災"
   ]
 }
