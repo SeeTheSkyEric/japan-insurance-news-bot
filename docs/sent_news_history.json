@@ -1,11 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMiVkFVX3lxTFBGUTNEZVZoVkEyYXkxa2c4QWlxckhGM0NfT0VpNVF1WnBvdzZRUUJjRWt0RGpDWUZhMkZ3UXNfWkdIX095UXZDSjE1VVNSY1FwajdrcVN3?oc=5",
-    "https://news.google.com/articles/CBMiZkFVX3lxTFBJdFRZOW9kQTZHY090TGdoeUI2bFIxQ0JYeDlKU3FwRzdEa0g2TmNZakE0OHU4dFBNZk5pWXk4SDBPNk1DZW9XbjlyQWx6NFZpUDJ3cVJ1REJYMnR1dXFVZTFJRXBJUQ?oc=5",
-    "https://news.google.com/articles/CBMiUkFVX3lxTE00d0VOQ0lRNmtaUmM5YXZtWmp0enJFYzJPQ25GSUR5NEtBQjV1aWNiUVZRZFRMcEwxQjB6amVDalpDNUVHT1pmalZhNGNJWWVCZEE?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTFBtZ3FQV21CNThhRjhDVHN6VWFWOWMyTzk4NVpnOW1GakhlSGtxb2FSRzZILXBFN1VUakVmanF6U3liMmZud1RLWDdwbmxIV2c4Z1hKTjJoWHcxcFVtQ0Vsank3c0tleGI0WU80bg?oc=5",
-    "https://news.google.com/articles/CBMiX0FVX3lxTE9SZElZZjkyYUxrQkM3aUNjdE83QnE5U3d3RHNxMWZldUVudnNISjZyRW1BaW1nMW5OVGlESUUzQ3NnVTluUXUzRFJ5LWlBXy1naUpxeDBIQXQ0V0FHektv?oc=5",
-    "https://news.google.com/articles/CBMiU0FVX3lxTE5scFNxbk1LS0NfZXpyNjZZTjMyVDZJUTZ2ODZjOEdScjIzOU8yeTM0cEpFTUxQSkYtWC0zT0EtTzhoZU9KQ0Q5QnJHNEVWbFRkc0s4?oc=5",
     "https://news.google.com/articles/CBMiYkFVX3lxTE51VWpVSkdZdGd2aWhHdUZKUS1Sa1g4Mk9JR2JTZ3o1aDNPajZfQS1LM3lZdDNETVdIWTR1ZU94TkRnY0lVRE0tTFl0OE9UUzI3MG9uTGlWTmlmTWYyNmMtV1lB?oc=5",
     "https://news.google.com/articles/CBMiZEFVX3lxTE9FM2d0aEU3RzNiQjRtblVhMTFTQnVCT2NZQmRhMWJoZldySkY0M2ZOUWh3M1V5YnppWnRyNFB3ZkMyaEZPV1d5NWhIX3R1U2VEYjZTY3h1RzVad2lDRGl5R2Zjc0U?oc=5",
     "https://news.google.com/articles/CBMiUkFVX3lxTE4wUHlBSjJEelBtcE90c0lYSm1oVW1CaDM4Rk85WW1Dd2VSU3U5WkV5YXFUU3Uwb1VJeXhyWTM1dW9Ec3NwbURDWUs4NHlkajBaTEE?oc=5",
@@ -199,15 +193,15 @@
     "https://online.logi-biz.com/148215/",
     "https://www.nikkan.co.jp/articles/view/00788486",
     "https://www.asahi.com/and/pressrelease/16621954",
-    "https://www.asahi.com/articles/ASV7R3RGJV7RULFA007M.html"
+    "https://www.asahi.com/articles/ASV7R3RGJV7RULFA007M.html",
+    "https://toyokeizai.net/articles/-/953703?display=b",
+    "http://www.kobe-np.co.jp/news/jiken/202608/0020669485.shtml",
+    "https://www.google.com/search?q=%E8%88%B9%E4%BA%95%E7%B7%8F%E7%A0%94%E3%81%82%E3%81%8C%E3%81%9FFAS%E3%80%81%E4%BF%9D%E9%99%BA%E4%BB%A3%E7%90%86%E5%BA%97%E5%90%91%E3%81%91%E3%80%8CM%26A%E6%88%A6%E7%95%A5%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC%E3%80%8D%E3%82%929%E6%9C%88%E3%83%BB10%E6%9C%88%E3%81%AB%E9%96%8B%E5%82%AC%E3%80%82%E6%89%8B%E6%95%B0%E6%96%99%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E5%88%B6%E5%BA%A6%E3%81%AE%E6%BF%80%E5%A4%89%E3%81%B8%E3%81%AE%E5%AF%BE%E5%BF%9C%E7%AD%96%E3%82%92%E8%A7%A3%E8%AA%AC",
+    "https://it.impress.co.jp/articles/-/29650",
+    "https://www.asahi.com/articles/ASV8430Z4V84ULFA01CM.html",
+    "https://www.google.com/search?q=2025%E5%B9%B4%E5%BA%A6%E7%94%9F%E5%91%BD%E4%BF%9D%E9%99%BA%E6%B1%BA%E7%AE%97%E3%81%AE%E6%A6%82%E8%A6%81%EF%BC%8D%E5%88%A9%E5%B7%AE%E7%9B%8A%E5%A2%97%E3%81%AB%E3%82%88%E3%82%8A%E5%9F%BA%E7%A4%8E%E5%88%A9%E7%9B%8A%E3%81%AF%E5%A2%97%E5%8A%A0%E3%80%82ESR%E3%81%AE%E9%96%8B%E7%A4%BA%E3%81%8C%E5%A7%8B%E3%81%BE%E3%82%8B%E3%80%82"
   ],
   "titles": [
-    "大手損保、自動車保険引き上げ相次ぐ インフレ影響重く",
-    "スマホで保険比較・相談・申込みまで完結する「ほけんポケット」2026年6月15日サービス開始 - at-s.com",
-    "＜山口県下関市＞「保険見直し本舗 シーモール下関店」が2026年4月3日金曜日オープン",
-    "損保ジャパン、保険加入システムの基盤を提供 EC事業者向け",
-    "香港保険業監督局のAI計画に大手生命保険3社が新たに参画、マニュライフ、中銀人寿、中国人寿が「責任あるAI」を推進",
-    "【ニッセイ情報テクノロジー 木下氏インタビュー】保険DXの未来を創る「InsurTech 3.0」と2035年への長期IT戦略",
     "【６月16日大臣会見】「保険除外の対象は薬剤限定」 将来の解釈修正は想定しない",
     "新会長に小野氏選出 県損害保険代理業協会",
     "「どうにかしてよ！」84歳母を看取った56歳娘の絶叫。〈死亡保険金1,000万円〉を巡る“保険ショップのグレーな説明”を信じた親子の誤算",
@@ -401,6 +395,12 @@
     "三井住友海上、traevoの車両動態管理システム利用者向けに中継輸送や共同輸送時のトラブルカバーする専用保険開始 - LOGI-BIZ online",
     "インタビュー／三井ダイレクト損害保険社長・佐久間美奈子氏 AI駆使 稼ぐ体制に",
     "株式会社Xpotential、シンカ社・オーウェン社と連携し、改正保険業法を踏まえたAIサービス「カイクラAI保険コーチ powered by Xpotential」の提供を開始",
-    "運用取引で2億円近く取り損ね？ かんぽ生命、現場で起きた激論とは"
+    "運用取引で2億円近く取り損ね？ かんぽ生命、現場で起きた激論とは",
+    "ビッグモーターと同じ轍か､損保各社が相次ぎ中古車販売大手ネクステージと代理店委託契約で危うい再出発",
+    "偽造書類で車の修理費用約38万円詐取した疑い 自動車保険代理店に勤務の男逮捕 下請けの整備会社に指示か",
+    "船井総研あがたFAS、保険代理店向け「M&A戦略セミナー」を9月・10月に開催。手数料ポイント制度の激変への対応策を解説",
+    "三井住友海上とあいおい損保、保険金支払業務にAI画像検知機能を導入、不正請求対策を強化",
+    "ソニー生命、金銭詐取また判明 顧客の保険を解約させ遊興費などに",
+    "2025年度生命保険決算の概要－利差益増により基礎利益は増加。ESRの開示が始まる。"
   ]
 }
