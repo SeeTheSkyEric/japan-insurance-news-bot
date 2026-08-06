@@ -1,10 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMiYkFVX3lxTE51VWpVSkdZdGd2aWhHdUZKUS1Sa1g4Mk9JR2JTZ3o1aDNPajZfQS1LM3lZdDNETVdIWTR1ZU94TkRnY0lVRE0tTFl0OE9UUzI3MG9uTGlWTmlmTWYyNmMtV1lB?oc=5",
-    "https://news.google.com/articles/CBMiZEFVX3lxTE9FM2d0aEU3RzNiQjRtblVhMTFTQnVCT2NZQmRhMWJoZldySkY0M2ZOUWh3M1V5YnppWnRyNFB3ZkMyaEZPV1d5NWhIX3R1U2VEYjZTY3h1RzVad2lDRGl5R2Zjc0U?oc=5",
-    "https://news.google.com/articles/CBMiUkFVX3lxTE4wUHlBSjJEelBtcE90c0lYSm1oVW1CaDM4Rk85WW1Dd2VSU3U5WkV5YXFUU3Uwb1VJeXhyWTM1dW9Ec3NwbURDWUs4NHlkajBaTEE?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTE11MGZYUXhLRW0xaC1BMGlFdkZCVG1YWXoyd25CUGhLV3VaQUlxZ2M4S2hZbWIzNks5bXJnTG5SeTY0TGVMYmw5M0UwSExHZDlkRTdCaG4yREZyYTQ0aXBmWjcxU0xVQXZBYUE?oc=5",
-    "https://news.google.com/articles/CBMiaEFVX3lxTE55S1pXNERkMmxta0tQNXBoWXN2eHQ5YTVEZEtIR0wzZkRobWtKMms0TEZ0Yi1UbXI4LTMxOUhRb1dZQWdtS1RNYmI3Wi1GcFBOQXlfS0g4MVRYR3M1WUtZZjhjWk9QRFlZ?oc=5",
     "https://news.google.com/articles/CBMiakFVX3lxTE1pSHppS1hoSmZtTUxtYkNDZGNYVUlsMmZta0FuQTlMaGMweVJlSms1VFVoS2kwQTJiWWFHaGl1SUJWem5neXp5UkpxcGFaY1pNNmcyOG1fRmU0V2kwcWNER2RKX3ZGQjBLTnc?oc=5",
     "https://news.google.com/articles/CBMiVkFVX3lxTE9WT0RfSnZTX3NaYlpYOW04T21XVFFhcDMxajFkZW5COUNSU3luOGR6SGNaWnRFb0RYVkdETmFINGZpSmRLUm9aQl9sb0hPOUlDTUd3Qktn?oc=5",
     "https://news.google.com/articles/CBMiSkFVX3lxTE9vVzVISzh5cWtCeE4yZk9IRFNNRDMwNHVlQTNfaU52dktWMWlrdFM5RGxMSy1hU19KdTllUmhJdTZJR2ZfSVJraUpB?oc=5",
@@ -199,14 +194,14 @@
     "https://www.google.com/search?q=%E8%88%B9%E4%BA%95%E7%B7%8F%E7%A0%94%E3%81%82%E3%81%8C%E3%81%9FFAS%E3%80%81%E4%BF%9D%E9%99%BA%E4%BB%A3%E7%90%86%E5%BA%97%E5%90%91%E3%81%91%E3%80%8CM%26A%E6%88%A6%E7%95%A5%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC%E3%80%8D%E3%82%929%E6%9C%88%E3%83%BB10%E6%9C%88%E3%81%AB%E9%96%8B%E5%82%AC%E3%80%82%E6%89%8B%E6%95%B0%E6%96%99%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E5%88%B6%E5%BA%A6%E3%81%AE%E6%BF%80%E5%A4%89%E3%81%B8%E3%81%AE%E5%AF%BE%E5%BF%9C%E7%AD%96%E3%82%92%E8%A7%A3%E8%AA%AC",
     "https://it.impress.co.jp/articles/-/29650",
     "https://www.asahi.com/articles/ASV8430Z4V84ULFA01CM.html",
-    "https://www.google.com/search?q=2025%E5%B9%B4%E5%BA%A6%E7%94%9F%E5%91%BD%E4%BF%9D%E9%99%BA%E6%B1%BA%E7%AE%97%E3%81%AE%E6%A6%82%E8%A6%81%EF%BC%8D%E5%88%A9%E5%B7%AE%E7%9B%8A%E5%A2%97%E3%81%AB%E3%82%88%E3%82%8A%E5%9F%BA%E7%A4%8E%E5%88%A9%E7%9B%8A%E3%81%AF%E5%A2%97%E5%8A%A0%E3%80%82ESR%E3%81%AE%E9%96%8B%E7%A4%BA%E3%81%8C%E5%A7%8B%E3%81%BE%E3%82%8B%E3%80%82"
+    "https://www.google.com/search?q=2025%E5%B9%B4%E5%BA%A6%E7%94%9F%E5%91%BD%E4%BF%9D%E9%99%BA%E6%B1%BA%E7%AE%97%E3%81%AE%E6%A6%82%E8%A6%81%EF%BC%8D%E5%88%A9%E5%B7%AE%E7%9B%8A%E5%A2%97%E3%81%AB%E3%82%88%E3%82%8A%E5%9F%BA%E7%A4%8E%E5%88%A9%E7%9B%8A%E3%81%AF%E5%A2%97%E5%8A%A0%E3%80%82ESR%E3%81%AE%E9%96%8B%E7%A4%BA%E3%81%8C%E5%A7%8B%E3%81%BE%E3%82%8B%E3%80%82",
+    "https://www.jiji.com/jc/article?k=000000021.000171467&g=prt",
+    "https://business.nikkei.com/atcl/gen/19/00304/073100255/",
+    "https://www.google.com/search?q=%E3%83%89%E3%83%A9%E3%83%AC%E3%82%B3%E3%81%A7%E8%B8%8F%E3%81%BF%E9%96%93%E9%81%95%E3%81%88%E3%82%84%E3%80%8C%E3%81%AA%E3%81%8C%E3%82%89%E9%81%8B%E8%BB%A2%E3%80%8D%E6%A4%9C%E7%9F%A5%20%E6%9D%B1%E4%BA%AC%E6%B5%B7%E4%B8%8A%E3%81%8C%E6%A5%AD%E7%95%8C%E5%88%9D%E3%81%AE%E6%A9%9F%E8%83%BD",
+    "https://www.nikkei.com/article/DGXZRSP710856_V00C26A8000000/",
+    "https://www.google.com/search?q=%E3%82%BD%E3%83%8B%E3%83%BC%E7%94%9F%E5%91%BD%20%E7%A4%BE%E5%93%A1%E3%81%8C%E9%A1%A7%E5%AE%A2%E3%81%AE%E8%A7%A3%E7%B4%84%E8%BF%94%E6%88%BB%E9%87%91%E3%82%92%E8%A9%90%E5%8F%96%20%E8%A2%AB%E5%AE%B3%E3%81%8C%E4%BB%96%E3%81%AE%E9%A1%A7%E5%AE%A2%E3%81%B8%E3%81%AE%E6%B3%A2%E5%8F%8A%E3%81%99%E3%82%8B%E5%8F%AF%E8%83%BD%E6%80%A7%E3%82%82"
   ],
   "titles": [
-    "【６月16日大臣会見】「保険除外の対象は薬剤限定」 将来の解釈修正は想定しない",
-    "新会長に小野氏選出 県損害保険代理業協会",
-    "「どうにかしてよ！」84歳母を看取った56歳娘の絶叫。〈死亡保険金1,000万円〉を巡る“保険ショップのグレーな説明”を信じた親子の誤算",
-    "犬は「皮膚炎」、猫は「下痢」が最多の結果に【保険金請求が多いペットの傷病ランキング2026】",
-    "Upstageとアイリックコーポレーション、生成AI活用による保険業界の業務変革・効率化推進に向け提携（PR TIMES）",
     "日本旅行健康保険組合、加入者の心身のコンディション維持に向けて『ポケットセラピスト』を導入。身体の健康を入口に、メンタルヘルス不調の予防対策を推進",
     "九州の中小企業と信頼関係築く 大樹生命保険（東京）の中島啓・取締役専務執行役員",
     "バイクの自賠責保険料、2026年11月1日より「引き上げ改定」へ──全車種平均で6.2％の上昇［金融庁発表］",
@@ -401,6 +396,11 @@
     "船井総研あがたFAS、保険代理店向け「M&A戦略セミナー」を9月・10月に開催。手数料ポイント制度の激変への対応策を解説",
     "三井住友海上とあいおい損保、保険金支払業務にAI画像検知機能を導入、不正請求対策を強化",
     "ソニー生命、金銭詐取また判明 顧客の保険を解約させ遊興費などに",
-    "2025年度生命保険決算の概要－利差益増により基礎利益は増加。ESRの開示が始まる。"
+    "2025年度生命保険決算の概要－利差益増により基礎利益は増加。ESRの開示が始まる。",
+    "保険代理店向け記録システム『保険のキロク』、ザイラス社の営業支援システム「LIPSAS Neo」との連携に向け業務提携",
+    "金銭詐取の保険営業、ブラックリストに20年 生保協会長「行動変容で再発防ぐ」",
+    "ドラレコで踏み間違えや「ながら運転」検知 東京海上が業界初の機能",
+    "日本生命、「トークラボKIBIT」を活用し契約の維持管理に関する手続き時のコミュニケーションを支援する実証実験を開始",
+    "ソニー生命 社員が顧客の解約返戻金を詐取 被害が他の顧客への波及する可能性も"
   ]
 }
