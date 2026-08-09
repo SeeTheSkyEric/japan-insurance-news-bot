@@ -1,12 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMiaEFVX3lxTE9KdTByWTBjMWdIUkpMR0tmQUhFYmV5WVBVUTJmam1uR1VRRnFsZXdRbXViVWZxZDdzaFJQWGR5ckxpYmlxQ0hkbWlOeXZTcnp4T3VFb1d0ZHBTem5NT0xZZkdDWTVIdlA0?oc=5",
-    "https://news.google.com/articles/CBMiVEFVX3lxTFBKTEdtbFluUnBISUV3M0ZUOVJHSTd4cFZGMnFDUFJRWEhPcURjalU3dXkyYVBfSjZLaUpoVlAxeDBoVk5CWGNCcFhmR1hZeUxYd0ZTQg?oc=5",
-    "https://news.google.com/articles/CBMi3gJBVV95cUxPTEhxemwyeFZvX1Fwbm05eVV6NFZseldUZ0xZTzNtWExDQmpjMmRXdEFsVFVjeFE3MFpGNlRiZDdWNEhtWTIwLVdrX0Jia2Rkenl6T3hUNTZSUE9XLWhfbXJ6SWRGWEtwNVlaRU0tQjZoT3E4UmZNNHVWZnd6V0VvQmVta3Q5OVlPWVlqRndaajU0bVdXNVMwTzBtY1ZCOTMwTFhYZjZKbTVSQlZmekJEeV9QbjVzYV81VDNNXy1KRWhDeF85QzdDcjNBTExKZE5NVW5BRE9MVGI5NmE5VV9tWTJrUEVQVDE1bDV3a2JWdEs4VmRZQ2VQd010SnBSeDBnUmZCSmFzT1p6aDJaeGdkSDNuWTQ4ZEVydzExeERuRkkxeXBxQ3hKTVFab3RyRnRxXy15Y3JESUN4U2Y2RUE4WVFSbWtDSHIzaHhLdFpPUG4yQTFuS3FHZWl4WTZfZw?oc=5",
-    "https://news.google.com/articles/CBMiUkFVX3lxTFAzR2swX1NRb285djY0VDRKaW5fRGE2OHhsOGdhTEJEaUpRTnI2WkZaamJUbjk2MVQxak1SZkZ5SXZEaUxaTjlpWTlEVU41NElHcXc?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTE1qYmZzRjE1YzQzQWxNMk5ZYmpkbVpXTkctMnFobWRZT2tDQnVONkJST1p0V1d0d2RnNmtoMXVHYmtSZE0tZlZUTVRyS0hKYklDX1FyRFZuSllqNUdMbjFDeGNqZ0FQM0Q5RXc?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTFBGcmpzcF9MbjNUZXFsQzVqOHpSVFYya052RzhiUGdYeDVNSTYyYkwwc3dlRVl6RExHcHF0ZjhGLWVWWE1zWk9lVVV5LVFza2lHTTBoLTFIZ1g5c3pndURhdXR6bU9TYnVyOUE?oc=5",
-    "https://news.google.com/articles/CBMif0FVX3lxTE5vM1l4X3BJemVCX3o0NHlnWGk5RWx3ZUplZGNpM09BRV9hLUVZV3padnZYTE9QejZFcng2VDFqUHcyb3U5RjFfOHZwMzhFcmstUGxIUlpsTDFfc0Y3TXVla1lUZ2NFdVM2VWRnTmV1U0ttbENCQlA1VGVFSnRkTTQ?oc=5",
     "https://news.google.com/articles/CBMibEFVX3lxTE5aSGQ5OGJtd05NM2lCREZVS1JlWHB4aDcxY3o3dnpuVWJ4anQ1YzB2UlNQNV9ZZW1DZy16a1ROeDN0eVhMWjF3NGFVOHlXd3EzT3B6Yl80OXRuSzJXcUNjd3BOTkhYRlJWV1JGZQ?oc=5",
     "https://news.google.com/articles/CBMibEFVX3lxTE45Ym5YVlZYRWVmbXV2aDVQcVlsRXBicW4xTXhZMGluYXR2dzhMam5BVTJIWFh4ZEp1REowcklsampDX29iVHhSTEQ1bWh3LTFLTDJLeGQwckpUNmRDM0FkU0puQTd4REdxNDhTLQ?oc=5",
     "https://news.google.com/articles/CBMiZEFVX3lxTFByckFkRkE2NW1EcHFjUWZrZF9kTVV0OHdZaEpieVpWbGNNUDBHN3NodFBHc2pZYUpNSlVnTXlYTzVpNzlxVElsMkM1RWlPaWRHV080R3ZDdVlOdzhUaEZ0RXh0Z3I?oc=5",
@@ -199,16 +192,16 @@
     "https://news.webike.net/bikenews/574341/",
     "https://finance.biggo.jp/news/ef9377ab-9f47-494e-a2a3-8120d93e6165",
     "https://www.nikkan.co.jp/articles/view/00788897",
-    "https://digitalpr.jp/r/140888"
+    "https://digitalpr.jp/r/140888",
+    "https://www.projectdesign.jp/articles/news/436b0597-14b4-498d-a8cf-fc5e3ed3feb6",
+    "https://gentosha-go.com/articles/-/77906",
+    "https://www.zenshoren.or.jp/2026/08/03/post-46833",
+    "https://finance.biggo.jp/news/c0ee7f24-0c21-4db0-a950-f48496fc4f49",
+    "https://www.ey.com/ja_jp/insights/financial-services/how-can-japan-us-comparisons-inform-insurance-transformation",
+    "https://prtimes.jp/main/html/rd/p/000000012.000043955.html",
+    "https://prtimes.jp/main/html/rd/p/000000629.000012138.html"
   ],
   "titles": [
-    "ペット保険選びは「難しい」が7割！保険料よりも“補償の手厚さ”を重視する傾向に│ペット保険比較のピクシー（PR TIMES）",
-    "金融庁が「アクサ生命」にブチ切れ／アコギな手数料改定の見本／「Xデー」は近い",
-    "体制整備と営業の両輪大切 津で損保代理店セミナー、成島氏が講演 三重",
-    "損保ジャパン、ディーラー代理店に不正請求防止のワークショップ 保険料の簡易試算システムも提供へ",
-    "弁護士保険比較サイト「弁護士保険STATION」が公式X(旧Twitter)で『法律のお悩み大募集キャンペーン』を6月23日(火)より開催！",
-    "“ヒト×保険×テクノロジー”アイリックコーポレーション、Upstageと生成AI活用による保険業界の業務変革・効率化推進に向け提携",
-    "日本生命、電話解析AIなどを導入--顧客とのやりとりを記録、分析",
     "生保販売「営業職員」経由に回帰 契約保険料25%増、銀行窓販を逆転",
     "生保協会、営業職員「ブラックリスト」で監視強化 金銭詐取問題受け",
     "BYD東福寺厚樹社長、SBI損保の近況報告会でパートナー企業としての協業実績やブランド保険の強みを語る",
@@ -401,6 +394,13 @@
     "【怒】「ビッグモーター問題」が飛び火！ 損保会社からの圧力で、保険代理店を辞めさせられるバイクショップが激増中",
     "【独占】馬雲氏の雲鋒基金、初の米国投資 AI保険スタートアップCorgiをリード、評価額40億ドルに急騰",
     "損保ジャパン、代理店支援をAIで高度化 客観的に改善提案",
-    "【オリックス生命保険】業界初※、加入初日からすべての保障を開始 「がん保険Canvas」を発売"
+    "【オリックス生命保険】業界初※、加入初日からすべての保障を開始 「がん保険Canvas」を発売",
+    "金融庁、暗号資産扱う課など5課新設",
+    "ふるさと納税・不動産投資・法人保険の「賞味期限」…制度改正とキャッシュの観点から見た、従来型節税の限界【公認会計士が解説】",
+    "損保代理店の役割発揮へ 「代理店問題を考える会」が院内集会",
+    "生保各社、予定利率を大幅引き上げ 住友生命が業界最高2.25%に、新NISA対抗で競争激化",
+    "保険業界のDX・AI活用はどこへ向かうのか――日米比較で見る保険市場の変革動向",
+    "BIZナレッジ、保険業界向けAI活用パッケージの提供を開始",
+    "Finatext、東京海上日動パートナーズの法人営業支援システム「TNP Navi」の開発を支援"
   ]
 }
