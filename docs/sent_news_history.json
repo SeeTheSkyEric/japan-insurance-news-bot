@@ -1,11 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMibEFVX3lxTE5aSGQ5OGJtd05NM2lCREZVS1JlWHB4aDcxY3o3dnpuVWJ4anQ1YzB2UlNQNV9ZZW1DZy16a1ROeDN0eVhMWjF3NGFVOHlXd3EzT3B6Yl80OXRuSzJXcUNjd3BOTkhYRlJWV1JGZQ?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTE45Ym5YVlZYRWVmbXV2aDVQcVlsRXBicW4xTXhZMGluYXR2dzhMam5BVTJIWFh4ZEp1REowcklsampDX29iVHhSTEQ1bWh3LTFLTDJLeGQwckpUNmRDM0FkU0puQTd4REdxNDhTLQ?oc=5",
-    "https://news.google.com/articles/CBMiZEFVX3lxTFByckFkRkE2NW1EcHFjUWZrZF9kTVV0OHdZaEpieVpWbGNNUDBHN3NodFBHc2pZYUpNSlVnTXlYTzVpNzlxVElsMkM1RWlPaWRHV080R3ZDdVlOdzhUaEZ0RXh0Z3I?oc=5",
-    "https://news.google.com/articles/CBMiVkFVX3lxTE1jMld6YzdTamhCMFdMNGZfcVo1ZXdIS2FGczdJQnloYlRVWFRLb2t2YXJXT3B4WW9jQU5ueUM4Y1hKeDhKMnJ0eUNkRHJnXzBNQ0tTdGpR?oc=5",
-    "https://news.google.com/articles/CBMiSEFVX3lxTE5XZGNaVjRDY2hBS2xoclJ6ODVuRTI1SzY2SkI4Zl9LNzlRcnJYMG81UDNqWVBtT0M0R1AtQWVPaHdReE1wa3F1dQ?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTE9LU3hwQUI2LTB2TEp0SVFUSE4wWVljWlpzUTFkSlhkQ1o5UTJsdUt2Qnhmd2IwMG9abTk2VWluSnFMVHpUTXJYVXVRNkQyQTZrdk1lWnZwcGI2c0cxQzNoYUw3WFpNNVo5UThDaw?oc=5",
     "https://news.google.com/articles/CBMiS0FVX3lxTE1XbFRZaml3aHdodzZ3SXVBN3JzS1lSOHhYQlNGaUhsWVZmNHo1TENseGt1UkNnRWRwOWRBc2ZvMjZQLVVwM1dkbEJlVQ?oc=5",
     "https://news.google.com/articles/CBMiZEFVX3lxTE9oSmk3OU93ZnMxaWJGOXBZSE9rWG95bnlPa05iZ0NadzdOd3luT3hsRWdWQi1xVjctNWFuWktSYmprekticlBTa1JfOTJiYnRVVjVtMGpUUmptQkF5M3ZpaDE2a2Q?oc=5",
     "https://news.google.com/articles/CBMidEFVX3lxTE5NUFJxY3g3MlNTMXVTQVRMRGdSOFBxcTZIWjhHbmZ4UEhzMklRSW1IeTl5Z09Wa1pkcnFiTVo2ZXJUSTB4WXd3cVc5TWI2aGZGV2loM3Q1VFZKd0VYM1lZWGFHTDEyZWlfSndxYVRURGNOYWgz?oc=5",
@@ -199,15 +193,15 @@
     "https://finance.biggo.jp/news/c0ee7f24-0c21-4db0-a950-f48496fc4f49",
     "https://www.ey.com/ja_jp/insights/financial-services/how-can-japan-us-comparisons-inform-insurance-transformation",
     "https://prtimes.jp/main/html/rd/p/000000012.000043955.html",
-    "https://prtimes.jp/main/html/rd/p/000000629.000012138.html"
+    "https://prtimes.jp/main/html/rd/p/000000629.000012138.html",
+    "https://usfl.com/news/139864",
+    "https://www.google.com/search?q=%E3%80%8C%E4%BA%BA%E9%96%93%E3%81%8C%E9%80%83%E3%81%92%E3%82%8B%E3%80%8D%E9%9B%A3%E8%A7%A3%E3%81%AA%E4%BF%9D%E9%99%BA%E5%A5%91%E7%B4%84%E3%82%92%E7%8B%99%E3%81%86%20%E7%B1%B3%E7%99%BAAI%E3%83%8D%E3%82%A4%E3%83%86%E3%82%A3%E3%83%96%E4%BF%9D%E9%99%BA%E3%83%96%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%AE%E6%88%A6%E7%95%A5",
+    "https://www.nikkei.com/article/DGXZQOUB190CC0Z10C26A6000000/",
+    "https://www.nikkei.com/article/DGXZQOUB190A40Z10C26A6000000/",
+    "https://kumanichi.com/articles/2024074",
+    "https://prtimes.jp/main/html/rd/p/000000374.000024618.html"
   ],
   "titles": [
-    "生保販売「営業職員」経由に回帰 契約保険料25%増、銀行窓販を逆転",
-    "生保協会、営業職員「ブラックリスト」で監視強化 金銭詐取問題受け",
-    "BYD東福寺厚樹社長、SBI損保の近況報告会でパートナー企業としての協業実績やブランド保険の強みを語る",
-    "「体制」から「態勢」へ、改正保険業法に見る金融庁の着眼点の変化",
-    "明治安田生命保険・永島社長「AI時代の経営は尊厳と信頼が核に」",
-    "損保ジャパン、衛星の宇宙ごみ化リスクを研究 新興コスモブルームと",
     "プルデンシャル生命保険の不祥事、「週刊文春」が報じた“新たな問題”「退職金不支給」誓約書、ペットボトル投げつけ事件、極秘資料、ソニー生命との違い…いま大手生保で何が起きているのか",
     "保険業法改正について保険代理店・募集人が知るべき改正ポイントとは？実務への対応も解説",
     "三井住友海上、代理店評価にAI導入へ 自己点検分析で業務8割削減",
@@ -401,6 +395,12 @@
     "生保各社、予定利率を大幅引き上げ 住友生命が業界最高2.25%に、新NISA対抗で競争激化",
     "保険業界のDX・AI活用はどこへ向かうのか――日米比較で見る保険市場の変革動向",
     "BIZナレッジ、保険業界向けAI活用パッケージの提供を開始",
-    "Finatext、東京海上日動パートナーズの法人営業支援システム「TNP Navi」の開発を支援"
+    "Finatext、東京海上日動パートナーズの法人営業支援システム「TNP Navi」の開発を支援",
+    "ステイト・ファームが推進中の人工知能活用拡大に不満噴出 〜 保険代理店と顧客らから厳しい反響",
+    "「人間が逃げる」難解な保険契約を狙う 米発AIネイティブ保険ブローカーの戦略",
+    "データセンター保険、世界で生まれる1.6兆円市場 鉱脈もリスク山積",
+    "米新興が競うAI保険、大手損保は尻込み 訴訟増加で補償ニーズ",
+    "地震保険「迅速な支払いを」 被災家屋で査定本格化 損保会社、デジタル技術活用 ＜2026年熊本地震",
+    "【8/26 Web開催決定】\"伝わる\"制度案内で、加入率・業務効率Up～新時代（改正保険業法下）のWEB保険募集システム活用セミナー～"
   ]
 }
