@@ -1,10 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMiS0FVX3lxTE1XbFRZaml3aHdodzZ3SXVBN3JzS1lSOHhYQlNGaUhsWVZmNHo1TENseGt1UkNnRWRwOWRBc2ZvMjZQLVVwM1dkbEJlVQ?oc=5",
-    "https://news.google.com/articles/CBMiZEFVX3lxTE9oSmk3OU93ZnMxaWJGOXBZSE9rWG95bnlPa05iZ0NadzdOd3luT3hsRWdWQi1xVjctNWFuWktSYmprekticlBTa1JfOTJiYnRVVjVtMGpUUmptQkF5M3ZpaDE2a2Q?oc=5",
-    "https://news.google.com/articles/CBMidEFVX3lxTE5NUFJxY3g3MlNTMXVTQVRMRGdSOFBxcTZIWjhHbmZ4UEhzMklRSW1IeTl5Z09Wa1pkcnFiTVo2ZXJUSTB4WXd3cVc5TWI2aGZGV2loM3Q1VFZKd0VYM1lZWGFHTDEyZWlfSndxYVRURGNOYWgz?oc=5",
-    "https://news.google.com/articles/CBMiYkFVX3lxTE9vb2FpN3kycW50aDBuWjhuYm91QVVraTFUQjFJVHBWblVSbGczOE1MQ19oVlA0ZnB2LWtnbEhGb1dYeGI0Q0t0OVMySTZJcnBZcG11UkhzWXhZeVF0TDBDd0lR?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTFBQYktDSHNKYzRmV09UbGFLYnhqbjIyaEhNSTREZFF1aUY4cTRER1h4XzVBdU9raXhBOF9VV1RkZDVpR0ctVHNlR0hnWkgtZ3JqN3JJS1VPNWxXZXE0NWRzMnpNMlZZUzFOTmc?oc=5",
     "https://news.google.com/articles/CBMidEFVX3lxTE5sd3lWQi1nbEJSeS1nbUhYdF9INFppVDItUVc4ZHJkSVU1X01rZnA3VWt1X1A2ZWhDcVBjckpmS0xuZ0xCOEN4ZE05TVV2cUJva29RWTliWndzUGRaQkdoejFjNWoyZXFfVlFKQzBMcFdPYm5z?oc=5",
     "https://news.google.com/articles/CBMiaEFVX3lxTE53TTVaMmVydkMybTZBajVKbnpSVXRYZXVLd3NXWlF3NHpTVHJjUjdvc1FWdkVRX3lIajBONkRkR1FYWThtRmJpamxpYVpsVWJUbFQwNGkyVFZOT0d1Mk9VdEZZTWMxbE8x?oc=5",
     "https://news.google.com/articles/CBMiV0FVX3lxTFAwdlhsZEIzck90SlYwLXYtb1ptbXZBTWJObVMxbWNtelVFdF9UWVRPaFNYcmR0OV9lbkRDUExscDB5WXo2bVp3akVQYmVZaVgyeUo4bU1aTQ?oc=5",
@@ -199,14 +194,14 @@
     "https://www.nikkei.com/article/DGXZQOUB190CC0Z10C26A6000000/",
     "https://www.nikkei.com/article/DGXZQOUB190A40Z10C26A6000000/",
     "https://kumanichi.com/articles/2024074",
-    "https://prtimes.jp/main/html/rd/p/000000374.000024618.html"
+    "https://prtimes.jp/main/html/rd/p/000000374.000024618.html",
+    "https://www.nikkinonline.com/article/414104",
+    "https://que.dailyshincho.jp/node/20331/",
+    "https://www.kknews.co.jp/news/20260811o04",
+    "https://wellness-news.co.jp/posts/%E6%97%A5%E6%9C%AC%E7%94%9F%E5%91%BD%E3%81%8Cai%E6%B4%BB%E7%94%A8%E3%80%80%E3%80%8C%E3%83%88%E3%83%BC%E3%82%AF%E3%83%A9%E3%83%9Ckibit%E3%80%8D%E3%81%A7%E6%84%8F%E6%80%9D%E7%A2%BA%E8%AA%8D%E6%94%AF/",
+    "https://www.yomiuri.co.jp/local/chubu/news/20260809-GYTNT00088/"
   ],
   "titles": [
-    "プルデンシャル生命保険の不祥事、「週刊文春」が報じた“新たな問題”「退職金不支給」誓約書、ペットボトル投げつけ事件、極秘資料、ソニー生命との違い…いま大手生保で何が起きているのか",
-    "保険業法改正について保険代理店・募集人が知るべき改正ポイントとは？実務への対応も解説",
-    "三井住友海上、代理店評価にAI導入へ 自己点検分析で業務8割削減",
-    "生保不正は成果主義の悪弊【上昇気流】",
-    "デジタル保険募集システム「Miracraw」の本格展開を開始",
     "軌道上AIデータセンターに保険の壁、宇宙スタートアップが業界と模索",
     "プレスリリース：hokan、三井住友海上とAIを活用した代理店自己点検の対話支援ツールを開発",
     "令和7年保険業法改正の概要と実務対応",
@@ -401,6 +396,11 @@
     "データセンター保険、世界で生まれる1.6兆円市場 鉱脈もリスク山積",
     "米新興が競うAI保険、大手損保は尻込み 訴訟増加で補償ニーズ",
     "地震保険「迅速な支払いを」 被災家屋で査定本格化 損保会社、デジタル技術活用 ＜2026年熊本地震",
-    "【8/26 Web開催決定】\"伝わる\"制度案内で、加入率・業務効率Up～新時代（改正保険業法下）のWEB保険募集システム活用セミナー～"
+    "【8/26 Web開催決定】\"伝わる\"制度案内で、加入率・業務効率Up～新時代（改正保険業法下）のWEB保険募集システム活用セミナー～",
+    "金融庁、試される「監督のための検査」 政策重視に潜むリスク",
+    "「悪質すぎる保険営業が横行」「認知症女性の貯金が尽きるまで保険料を…」 内部の「絶望」を描いた『ブラック郵便局』3万字分一挙公開",
+    "SBI損保が教員研修を実施 生成AI体験やリスク管理など現場に生かす実践学ぶ",
+    "日本生命がAI活用 「トークラボKIBIT」で意思確認支援へ",
+    "損保ジャパン、三重県警と包括連携協定…サイバー犯罪、交通事故防止に向け：地域ニュース"
   ]
 }
