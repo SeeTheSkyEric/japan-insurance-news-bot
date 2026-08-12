@@ -1,12 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMidEFVX3lxTE5sd3lWQi1nbEJSeS1nbUhYdF9INFppVDItUVc4ZHJkSVU1X01rZnA3VWt1X1A2ZWhDcVBjckpmS0xuZ0xCOEN4ZE05TVV2cUJva29RWTliWndzUGRaQkdoejFjNWoyZXFfVlFKQzBMcFdPYm5z?oc=5",
-    "https://news.google.com/articles/CBMiaEFVX3lxTE53TTVaMmVydkMybTZBajVKbnpSVXRYZXVLd3NXWlF3NHpTVHJjUjdvc1FWdkVRX3lIajBONkRkR1FYWThtRmJpamxpYVpsVWJUbFQwNGkyVFZOT0d1Mk9VdEZZTWMxbE8x?oc=5",
-    "https://news.google.com/articles/CBMiV0FVX3lxTFAwdlhsZEIzck90SlYwLXYtb1ptbXZBTWJObVMxbWNtelVFdF9UWVRPaFNYcmR0OV9lbkRDUExscDB5WXo2bVp3akVQYmVZaVgyeUo4bU1aTQ?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTE1CVXhDVkZTQzZ4MTc1YlZkWHZlMnotWkJreTNTN0dTdlpRRTltT3hkNzMxUl9HM0gybDR6TkJGVS1vSlplRThzZndZUWFjOTl1WE9YS3NEdmpvSGYwREN3SDBQQVNnSFpqR2h3aQ?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTE5NdG52Umk2S19scUYyalEtVFlpNDJSaXRGUUxadmJGMWxGdWlwNGtqYUNhSXV6cUxDOC1Ob0tvV1hNdEczVzllZEo5WFZQRWN1R3Q3bWJuejFhTldfMzhRekplVEd2aUI1X3c?oc=5",
-    "https://news.google.com/articles/CBMif0FVX3lxTE9uQW00WkxaLVpJTTlHSld1OE9kcmdXdWhSSTlfdy1fZnN5aFRDY2FOTFBhM1JLd1ItVnZ0RUU1U09kQ2pQdl9LZXo4SUVZRFhzbF9KTVphNWpVYVh2WWFlcjl1YS02YjZqcFYzT3prQXlZdk5EY3paZm9PREUtcVk?oc=5",
-    "https://news.google.com/articles/CBMicEFVX3lxTE9yZGIzUFZFSUJTNDV4dEp2bXBXOXA0X3VULUp1Zy1ETEpuejhwVHI1cDFkempLTnhVZ1FlZ0VWNjlkb2dwY1RUcUdwVTZNWU1ueFlISFd3ZFQ3Z01qczVIWTc1X1VJX3dadjZJVm16dkk?oc=5",
     "https://news.google.com/articles/CBMidEFVX3lxTFBUTzA3dUNWMDZ4YWw5UGRvZHp0Y0JlVWlXVkxkLUNodFJFZFV6ZlVNcjRJRGItX05EMGc3Z1RpQmNyNFRpZXVZSjdET3JvVWs5MkdybTdwY1VUSDg1aHM5RzJlUW5JRmxoQ25tR1pUdGZrQ0c4?oc=5",
     "https://news.google.com/articles/CBMieEFVX3lxTE1pZzBLdHQya2RCX0RvNFo5QkxaSFpxYWlxVjFJc2M1VF9lYmdzMnJUWlNHZkxVNDJZQXZZZUZjd19KbFhBTzNEZFZhUW5zQUwtYmhZSzc1cTFVLTlNZ1hmVHpkLUJ2eVVqVmRmNHpuNjI5SnRnY1FkRg?oc=5",
     "https://news.google.com/articles/CBMie0FVX3lxTE9jajh0dzZ5MVAwVW5TZ1ZWeHgzTV9kTjNGTGNhczdFVjV3b3VMb2wzTFppM1plSlgyLWFHWm1DckdCaGR2ODMydUhKb0JtZnVRTFRpcElfSUdGamhGQ2poSDVrbDlDZ253VWhEQklfX3ZIT2g0SlJ1c202aw?oc=5",
@@ -199,16 +192,16 @@
     "https://que.dailyshincho.jp/node/20331/",
     "https://www.kknews.co.jp/news/20260811o04",
     "https://wellness-news.co.jp/posts/%E6%97%A5%E6%9C%AC%E7%94%9F%E5%91%BD%E3%81%8Cai%E6%B4%BB%E7%94%A8%E3%80%80%E3%80%8C%E3%83%88%E3%83%BC%E3%82%AF%E3%83%A9%E3%83%9Ckibit%E3%80%8D%E3%81%A7%E6%84%8F%E6%80%9D%E7%A2%BA%E8%AA%8D%E6%94%AF/",
-    "https://www.yomiuri.co.jp/local/chubu/news/20260809-GYTNT00088/"
+    "https://www.yomiuri.co.jp/local/chubu/news/20260809-GYTNT00088/",
+    "https://www.google.com/search?q=%E9%87%91%E8%9E%8D%E5%BA%81%E3%80%81%E9%8A%80%E8%A1%8C%E3%83%BB%E7%94%9F%E4%BF%9D%E3%81%AE%E3%80%8C%E9%98%B2%E8%A1%9B%E3%83%9E%E3%83%8D%E3%83%BC%E3%80%8D%E5%AE%9F%E6%85%8B%E8%AA%BF%E6%9F%BB%20%E6%88%A6%E7%95%A5%E6%8A%95%E8%9E%8D%E8%B3%87%E3%81%AE%E4%B8%8B%E5%9C%B0%E3%81%AB",
+    "https://diamond.jp/articles/-/394766",
+    "https://www.sbbit.jp/article/fj/186481",
+    "https://prtimes.jp/main/html/rd/p/000000272.000059559.html",
+    "https://www.nikkei.com/article/DGKKZO98113580S6A810C2EE9000/",
+    "https://newsdig.tbs.co.jp/articles/withbloomberg/2867337",
+    "https://www.digitaltoday.co.kr/jp/view/92316/toss-kyobo-life-digital-asset-cooperation-financial-services-poc"
   ],
   "titles": [
-    "軌道上AIデータセンターに保険の壁、宇宙スタートアップが業界と模索",
-    "プレスリリース：hokan、三井住友海上とAIを活用した代理店自己点検の対話支援ツールを開発",
-    "令和7年保険業法改正の概要と実務対応",
-    "不眠、薬物使わぬ治療に保険 アプリで行動や思考を修正",
-    "【会見レポート】miive、ベネフィット・ワン、第一生命の3社が連携 —「日常で使われる福利厚生」の社会実装へ",
-    "自動車保険料値上げへ 目安は過去最大14％引き上げ（共同通信）",
-    "【藤沢市】テラスモール湘南の保険テラスがちょこっとセカンドオピニオンを開始！スキマ時間に20分で保険相談",
     "SOCAR、AXA損保と提携…走行データ基盤のカスタマイズ保険を提供へ",
     "『ワンタイムやまの保険』 AIチャットボットをHP問合せフォーム、マイページ、商品LPに導入",
     "エヌエヌ生命保険株式会社、営業担当者の暗黙知を実装した「ナレッジワークAI営業ロープレ」を導入",
@@ -401,6 +394,13 @@
     "「悪質すぎる保険営業が横行」「認知症女性の貯金が尽きるまで保険料を…」 内部の「絶望」を描いた『ブラック郵便局』3万字分一挙公開",
     "SBI損保が教員研修を実施 生成AI体験やリスク管理など現場に生かす実践学ぶ",
     "日本生命がAI活用 「トークラボKIBIT」で意思確認支援へ",
-    "損保ジャパン、三重県警と包括連携協定…サイバー犯罪、交通事故防止に向け：地域ニュース"
+    "損保ジャパン、三重県警と包括連携協定…サイバー犯罪、交通事故防止に向け：地域ニュース",
+    "金融庁、銀行・生保の「防衛マネー」実態調査 戦略投融資の下地に",
+    "なぜプルデンシャル生命で100人超の不正は起きたのか？エリート営業を追い詰めた構造",
+    "金融庁レポートで判明、なぜ「同じ条件で火災保険に入れない」企業が増えるのか ｜FinTech Journal",
+    "全国の保険代理店が集う「第71回 結心会定例会」にて、ブロードマインド登壇。業界が注目する「固定給」による顧客本位の相談モデルについて講演",
+    "異次元リスク 挑む損保（中）「AI保険」、米新興が競う 訴訟増加で補償ニーズ リスク変動、大手は二の足",
+    "AIデータセンターで保険需要急増、引き受け余力は「限界」－AIGのCEO",
+    "Toss、Kyobo Life Insuranceと提携 保険分野でデジタル資産活用を検証"
   ]
 }
