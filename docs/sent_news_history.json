@@ -1,11 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMiW0FVX3lxTE1nNVdtbGozdmlJWGFRd1ZzS28yZ0V3bFZDQjBJb1kzRERkbEVaSW1pdDJXTkRIV0RfSmdzbDJlQ3lkYW5rR0YxLVU2Z1dQN19VQkNUMmFkQ3V0NXM?oc=5",
-    "https://news.google.com/articles/CBMiZ0FVX3lxTFB6NjZONlRJMXRCbk4zVXZJRlVYbWswZXU3RnVLMUhsT0tnVEtoVXRQWFRsVHdRUnBuWmIxX1NPUmFXUmtXOWxkWk40d3BaOTA1dXdCc0VCQ0E4SzFHekhfRXQ5RE1qaXM?oc=5",
-    "https://news.google.com/articles/CBMiX0FVX3lxTE8tOVU3VVpVOUh1bll6LWRGX1lVTmNKeXJlMGRZMVJIS0txNmd5N0x2MWFVbl90MGoxZ2w1ZGd2OXl6MU5fMElYYXpKaEpYZzZ6enIxRE1Zck14dmdLRk0w?oc=5",
-    "https://news.google.com/articles/CBMiUkFVX3lxTE5CUnNKNUIxVi0zYlZxbUR3T1RsT1N5VnMyUWM5MktvQ21zWmQzNkR0bWYxc3hLYTdCRkJqbC1GTTJLYjJEUkgzNTgzZW16NW83Mnc?oc=5",
-    "https://news.google.com/articles/CBMiaEFVX3lxTE9FVG8tN3RtQ053LTNDTkwxLXY1Zkp6cEMyU0pmaXhxVUZVck9KQkdkdmdKc2tCb091ZkZlR3BNWFBrTnRSTjBPRWNyZ2RXc01SVVpiSnVPWXJKMzBjdGNFc3M4bWFFSDQx?oc=5",
-    "https://news.google.com/articles/CBMiZ0FVX3lxTFB1MHJwaksyRFhHU2l2YUE3RVRMd1lDbFptMTNjOFkzRUVrMVdlQWE4RXAyRGM0ZnFlWldYX0hKNnlNanhTeHRrRFY2blp5eERPbWVfbkZ5ekd2aVk4OGstTDNNWVRObWs?oc=5",
     "https://news.google.com/articles/CBMibEFVX3lxTFB1ZEtna0RwX25IZzZuSjM1NTFtenlyd0NnSE1Gb0ZiZkRmVDdoU1l2b011dUVjMTJMT1RWcnI0eEtzRjg0ZGZHanptU3lXWVZIWkxDMS1JTUdUMW1DdllkVmZzNWFoMGxEUFFfaA?oc=5",
     "https://news.google.com/articles/CBMidEFVX3lxTE45MTI3T2xmenpWUUk1NkMtRERpWnEwZFBEbG1zMHd2Vm5aV2ViZEFyOWhzYXpLSm55aU5FZEZKWUo1NDdmV3ZGSzlQQnJ5Nmx6aG9kU1piQVVsLWlTbVFCRUMza1pvWDZmNkZSMlp3TXgwcWFO?oc=5",
     "https://news.google.com/articles/CBMiT0FVX3lxTE5xaUJDbU0zc0s1b2U1dEtFZWxoZm5LMTQzcFY3MGtLQ1gyMFFmcFFiQXJoSGNhdTEyUkZwREF3R3R3c2wtU2ZQT2VkU24wSjg?oc=5",
@@ -199,15 +193,15 @@
     "https://www.dreamnews.jp/press/0000359057",
     "https://www.nikkinonline.com/report-toushin/article/413305",
     "https://www.nikkei.com/article/DGXZQOUB132DB0T10C26A8000000/",
-    "https://prtimes.jp/main/html/rd/p/000000273.000028421.html"
+    "https://prtimes.jp/main/html/rd/p/000000273.000028421.html",
+    "https://www.nikkei.com/article/DGXZQOUA141VR0U6A810C2000000/",
+    "https://jbpress.ismedia.jp/articles/-/96457",
+    "https://www.google.com/search?q=%E7%9B%A3%E6%9F%BB%E6%A4%9C%E8%A8%8E%E4%BA%8B%E9%A0%8525%2F09%EF%BC%9D%E3%82%A2%E3%83%89%E3%82%AF%E3%83%AA%E3%82%A8%E3%82%A4%E3%83%88%EF%BC%88%E8%A8%82%E5%A0%B1%EF%BC%89%EF%BC%88%E5%B0%86%E6%9D%A5%E4%BF%9D%E9%99%BA%E4%BB%A3%E7%90%86%E5%BA%97%E6%89%8B%E6%95%B0%E6%96%99%E5%8F%8E%E5%85%A5%E3%81%AB%E5%9F%BA",
+    "https://www.google.com/search?q=%E5%9C%B0%E9%9C%87%E4%BF%9D%E9%99%BA%E9%87%91%E3%81%AE%E6%94%AF%E6%89%95%E3%81%84%E3%80%81%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E6%8A%80%E8%A1%93%E3%81%A7%E6%80%A5%E3%81%90%20%E6%90%8D%E4%BF%9D%E5%90%84%E7%A4%BE%E3%80%81%E6%97%A9%E6%9C%9F%E5%BE%A9%E8%88%88%E3%81%B8%E4%B8%80%E5%8A%A9%20%5B%E7%86%8A%E6%9C%AC%E7%9C%8C%5D%20%5B2026%E5%B9%B4%E7%86%8A%E6%9C%AC%E5%9C%B0%E9%9C%87%5D",
+    "https://www.sbbit.jp/fj/document/sp/24262",
+    "https://www.nikkinonline.com/report-toushin/article/415107"
   ],
   "titles": [
-    "日生、iPhoneのマイナ対応を本人確認に活用 生保契約時",
-    "OTC類似薬の追加負担に民間保険? 自民改革案「有効な領域」 [高市早苗首相][自由民主党（自民党）][日本維新の会]",
-    "東京海上日動パートナーズ、全国8エリアの代理店を一社化…7月に新会社「TNP」発足",
-    "三井住友海上、アドバンスクラブは2026年度で解散へ 損保と代理店の関係見直し 現会員向けサービス継続も検討",
-    "生命保険業界初*となるマルチAIエージェントを組み込んだ新契約査定システム「New Business 2.0」を導入",
-    "Federato、実績あるAI ネイティブ保険プラットフォームをアジア太平洋地域および日本へ展開",
     "住友生命、一時払い終身保険の予定利率0.5%引き上げ 2.25%に",
     "[単独] 新韓金融グループ、ロッテ損保買収を推進…JKLと1兆ウォン（約1,100億円）の身代金で綱引き",
     "がんばってます・五味 勇人（ごみ はやと）さん（３８歳）／田辺市南新町 総合保険代理店ＫＲＣ田辺支店",
@@ -401,6 +395,12 @@
     "2人以上世帯の年間払込保険料は平均35.3万円 ── 老後・医療・死亡の備えで6割が「自助努力志向」、物価高下の家計に重み",
     "【保険窓販情報】損保ジャパン、AIロープレツールを導入",
     "東京海上、企業への災害発生通知で新サービス 早期対応を支援",
-    "アニコム損保、公式ホームページのトップページをリニューアル"
+    "アニコム損保、公式ホームページのトップページをリニューアル",
+    "危険地域運航の原油タンカーの再保険、国が保険金肩代わり 新法検討",
+    "iDeCo改革は保険ショップの失敗に学べ！個別商品推奨や選択肢拡大という愚策、このままではうまくいかない",
+    "監査検討事項25/09＝アドクリエイト（訂報）（将来保険代理店手数料収入に基",
+    "地震保険金の支払い、デジタル技術で急ぐ 損保各社、早期復興へ一助 [熊本県] [2026年熊本地震]",
+    "【11社 徹底比較】自動車保険の「AIチャットボット対応」、浮上した5つの共通課題とは？",
+    "【保険窓販情報】三井住友海上あいおい生命、AIチャットボットを提供開始"
   ]
 }
