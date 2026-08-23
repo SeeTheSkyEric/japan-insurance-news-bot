@@ -1,11 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMibEFVX3lxTE9lR21IaF91SDFyR0dEV0FjNnZ3QzBzWHJuMnF0UHdoQlVoS2tIM3VYMmdyYTNfWUU5SE9CTy1kZEh6MEtsekV6b1pCVlVmUG5ES2ttZWw2VENrcjVBV3lwTHJTYUN3Uno0bHdmZQ?oc=5",
-    "https://news.google.com/articles/CBMiZEFVX3lxTFB5bE9WbVhuWkxabllBX0cxNi1CWmVORnJqVFMtY2xSblAyNDNIZUVGc09iUTgzRURLdi11RHEwN2V4bVBOLWg2U0dVS3p5S1J3Z282MHExWmc0UnUxa0g0RUNTVHE?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTE1ESVpzendCVE9IenV2MG9MRWpmZElvTWtsUnR3RkV1bGdwT1F5Y3lKZmhYTmY3Y3Z6cGQ4VzV2VTR1UXFTdWhDVGZZeHRBalF6LVVQWndHMi1hRkd5WnhacXhsWjVaNHZMbFE?oc=5",
-    "https://news.google.com/articles/CBMiVkFVX3lxTE13dVFOcG56VzdSMmZFX2NxVXJMWGdmYzBBWmRvWEtnSkE0NUdMLWV6S3QzcVhkVHM4RE1XM0VpZ3dyeTh3Zjc0Y0tweEN3V2IzdU4tbEF3?oc=5",
-    "https://news.google.com/articles/CBMiTEFVX3lxTFBiaFNUSU11QlBCNTlRbnB4Tl9BSmI4UHdPMDh0Q3J1a2ZaQ01UWW5PZHd6a0s1YU92Q3REWmo1TzYzNGxXMTItYjBBMkzSAU9BVV95cUxPT3lKdFdBWWZidEJWTDB0R2ZSYTM2eDVGT01EeGxjd1R5WDU1MFpSY18yMkV3WWlKNUpTa3l2NERXcWNTeENGQ1ZUT0tFM200?oc=5",
-    "https://news.google.com/articles/CBMiaEFVX3lxTE1sZzZ2SmI5TWJsb1R2aWRDeDdoVXMyMWl4MlpiUEF3T200ak1hVjB1RTViU2pOaTQ3b0NNRGJtN3hqcmFDSldUYU9DalVLODROY2VLQzdDdHFfNDYwY3RuazF6ekQ3X2FF?oc=5",
     "https://news.google.com/articles/CBMiZEFVX3lxTE5rMy1KRkdfc01mRXJWSDI0M1AxSFZEaDVWR2N2MmNBOGRoR0dvd2drQ0NnTlNCYmwtekZiU0xCckFsWGVkU3huZ05aYnQ4NzhsRzVHZ2U2aFlNWVpOaTV0blc0dEM?oc=5",
     "https://news.google.com/articles/CBMiXkFVX3lxTE5WUjZEM0pWVFZWRWpGS1ZULWVydGhmM3FnNHBnbmNpOS0tUkpJWFVwVWg0SnNZcVZEcW5KZnY1dGtsMTVPWW5qV0JLNUdMLXh1YzBoMWg5N1VrcFhKZmc?oc=5",
     "https://news.google.com/articles/CBMiZ0FVX3lxTE9rUV8wX29EX0ZfY0RiSVJIaF9fWmlnTEI0aE1DV1JhXzVzSlZoNE5icVV3M1VWS2JEYXN0QU9DMDhsU3RQUVJOMGVDdHowLTBVWERPMHpVN1ViS0RuY3JHMmVCZWtUbXM?oc=5",
@@ -199,15 +193,15 @@
     "https://prtimes.jp/main/html/rd/p/000000663.000005541.html",
     "https://goodway.co.jp/report/33162",
     "https://goodway.co.jp/report/33127",
-    "https://www.sbbit.jp/article/sp/186208"
+    "https://www.sbbit.jp/article/sp/186208",
+    "https://news.yahoo.co.jp/articles/2a82865cb99742f187402f46b4d0d1ef0d46e375",
+    "https://www.google.com/search?q=%E6%98%8E%E6%B2%BB%E5%AE%89%E7%94%B0%E7%94%9F%E5%91%BD%E3%80%81%E4%BF%9D%E9%99%BA%E4%BB%A3%E7%90%86%E5%BA%97%E3%81%AE%E5%96%B6%E6%A5%AD%E6%94%AF%E6%8F%B4%E5%BC%B7%E5%8C%96%EF%BC%9D%E5%87%BA%E5%90%91%E5%BB%83%E6%AD%A2%E5%BE%8C%E3%82%82%E8%B2%A9%E5%A3%B2%E5%8A%9B%E7%B6%AD%E6%8C%81",
+    "https://www.asahi.com/articles/ASV8N1SP1V8NONFB00BM.html",
+    "https://prtimes.jp/main/html/rd/p/000000237.000069919.html",
+    "https://www.google.com/search?q=%E5%8D%83%E8%91%89%E8%B1%AA%E9%9B%A8%E3%81%AE%E6%B0%B4%E6%B2%A1%E8%BB%8A%E3%80%81%E6%90%8D%E4%BF%9D%E5%90%84%E7%A4%BE%E3%81%8C%E8%BF%85%E9%80%9F%E3%81%AB%E6%90%8D%E5%AE%B3%E6%9F%BB%E5%AE%9A%E2%80%A6%E3%80%8C%E3%83%A4%E3%83%BC%E3%83%89%E3%80%8D%E3%81%AB%E9%9B%86%E3%82%81%E3%81%A6%E4%B8%80%E6%8B%AC%E6%9F%BB%E5%AE%9A%E3%83%BB%E6%9C%80%E7%9F%AD%EF%BC%91%E9%80%B1%E9%96%93%E3%81%A7%E4%BF%9D%E9%99%BA%E9%87%91",
+    "https://finance.yahoo.co.jp/quote/7157.T/forum"
   ],
   "titles": [
-    "損保の代理店契約解除、金融庁が実態調査 片山金融相「非常に遺憾」",
-    "総合保険代理店のFEA、同業のライフナビパートナーズを吸収合併",
-    "「責任ある生成AI活用」の実践モデルを構築し、査定自動化のシステム実装に着手",
-    "アリアンツと好対照、選択と集中を進め、「共通化」と「現地化」でオペレーションを改革する仏保険大手アクサの戦略",
-    "保険業界各社が2025年度決算で「新規制ESR」を公表…生保間で開示内容にばらつき、問われる経営姿勢",
-    "合同会社デルタクリエイト代表・佐藤舞（サトマイ）、国内最大規模の保険業界向けセミナー「第27回",
     "【顔】県損害保険代理業協会会長を務める 小野 嘉一郎さん",
     "シンプレクスが、ライフネット生命の団体信用生命保険事業の拡大に伴う、団信システムの大規模拡張を実施",
     "基幹システム刷新で年間2800時間の業務削減、T＆D系ペット保険会社が効果",
@@ -401,6 +395,12 @@
     "一時払終身保険「サニーガーデン」シリーズ、累計販売件数100万件",
     "【保険EXPO2026】金融IT基盤と最新AIの融合—FITAブースツアーで捉えるコンタクトセンター・データプラットフォーム・次世代接客の未来",
     "【保険EXPO2026】AI・データ活用で挑む保険DX—FDUAブースツアーで体感する現場改革の最前線",
-    "東京海上HDは“セキュリティ格差”をどう埋めた？40人で24社を守る「バーチャル要員」"
+    "東京海上HDは“セキュリティ格差”をどう埋めた？40人で24社を守る「バーチャル要員」",
+    "「サイバー保険」攻撃備え検討を 重要インフラ防護へ150項目 政府指針案（時事通信）",
+    "明治安田生命、保険代理店の営業支援強化＝出向廃止後も販売力維持",
+    "大手損保や金融機関が撤退の過疎地…あえて保険代理店が進出する狙い",
+    "ライフネット生命、保険金・給付金の「最短当日支払い」開始から1年 直近の平均支払日数は0.58日、請求当日の着金を実現",
+    "千葉豪雨の水没車、損保各社が迅速に損害査定…「ヤード」に集めて一括査定・最短１週間で保険金",
+    "ライフネット生命保険(株)【7157】：掲示板"
   ]
 }
