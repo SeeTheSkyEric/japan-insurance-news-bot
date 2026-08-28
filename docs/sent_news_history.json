@@ -1,12 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMiZEFVX3lxTE5rMy1KRkdfc01mRXJWSDI0M1AxSFZEaDVWR2N2MmNBOGRoR0dvd2drQ0NnTlNCYmwtekZiU0xCckFsWGVkU3huZ05aYnQ4NzhsRzVHZ2U2aFlNWVpOaTV0blc0dEM?oc=5",
-    "https://news.google.com/articles/CBMiXkFVX3lxTE5WUjZEM0pWVFZWRWpGS1ZULWVydGhmM3FnNHBnbmNpOS0tUkpJWFVwVWg0SnNZcVZEcW5KZnY1dGtsMTVPWW5qV0JLNUdMLXh1YzBoMWg5N1VrcFhKZmc?oc=5",
-    "https://news.google.com/articles/CBMiZ0FVX3lxTE9rUV8wX29EX0ZfY0RiSVJIaF9fWmlnTEI0aE1DV1JhXzVzSlZoNE5icVV3M1VWS2JEYXN0QU9DMDhsU3RQUVJOMGVDdHowLTBVWERPMHpVN1ViS0RuY3JHMmVCZWtUbXM?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTE1NckRJeVFwYWNZZlhCeXhyeDdrbV90cFBSSmhNbjNzX2FHRlBoTHJJdmE2cTVsNVNBS1VKZ3RWbmtEV2pFU05JQWs2YlZ3WEhsZUw3THdoRkVQbW5zRlhaOVVMS0NHT1hlUTBLSA?oc=5",
-    "https://news.google.com/articles/CBMiT0FVX3lxTFBLQzl5QXR5Y04zSXB6T3lxTVlEOFZhQnBwc2NzeXBiRm5Fc09UdWgyTVVVSTNiRmROZ1hOUzhOVmdrbldwUnp1NUhNbFJwUmM?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTE95dEwyTUZRdlVqRm11aC12dkxwc2lTbXNaX1RMT0J2STQzNkN3QnhfZjM2aXk1Y3FaY1BaRGdQMi1NTjg3dDFoVHBHZDFzRnQ4Mkh1ZG5QRUwxQ21DdXBuWklkektsVzJnOC05ZA?oc=5",
-    "https://news.google.com/articles/CBMiYAFVX3lxTE9MSkNUZTVtb1VmQzFDLWI4SHV6a0RLaVB0enppam0zQ21ic2JIUXNfdVFsbm1tSmJjelY4am5lNThmMFExZ1FHa01LODM3Q1EyZk00UWlJNkFGZWJwa3piNQ?oc=5",
     "https://news.google.com/articles/CBMiY0FVX3lxTE14N1YtcU5jUDRNWlhoSVhSMGVjSFlSTVEycGFFX1diWGI3TXpHdEZSV1pXQkhvWXJWRy01V2sxOXExYTE2amNjNnRCN0JNeTZzVjRsbzFOV1RucGc2OHVOMjNBNA?oc=5",
     "https://news.google.com/articles/CBMiVkFVX3lxTE5LZ0ZVbHgzbi1jVDRQYVB6Tm5Sa1ctaTF5OHA2VEFrdWY2MjhUWm5Wc0Rsd21CeDc3VldjVVJob2dyVWlGNDVubFVfVl9vNFRhaFptdTJn?oc=5",
     "https://news.google.com/articles/CBMiekFVX3lxTE9HbmZsb1RHNTZDV1pDTzJhNXJ6X2ZZMnJUQWtBVmstZWw4aUZibFhhZ2N6R1FTOVhYTmdGamtMT3RXbzVOd3pCNkxQNUhNUXFNcU0wU09ZTGZ5RVpFdkp4bGF2STFxTmRGNnl5UFd3NktvTWt5Y21Zd1N3?oc=5",
@@ -199,16 +192,16 @@
     "https://www.asahi.com/articles/ASV8N1SP1V8NONFB00BM.html",
     "https://prtimes.jp/main/html/rd/p/000000237.000069919.html",
     "https://www.google.com/search?q=%E5%8D%83%E8%91%89%E8%B1%AA%E9%9B%A8%E3%81%AE%E6%B0%B4%E6%B2%A1%E8%BB%8A%E3%80%81%E6%90%8D%E4%BF%9D%E5%90%84%E7%A4%BE%E3%81%8C%E8%BF%85%E9%80%9F%E3%81%AB%E6%90%8D%E5%AE%B3%E6%9F%BB%E5%AE%9A%E2%80%A6%E3%80%8C%E3%83%A4%E3%83%BC%E3%83%89%E3%80%8D%E3%81%AB%E9%9B%86%E3%82%81%E3%81%A6%E4%B8%80%E6%8B%AC%E6%9F%BB%E5%AE%9A%E3%83%BB%E6%9C%80%E7%9F%AD%EF%BC%91%E9%80%B1%E9%96%93%E3%81%A7%E4%BF%9D%E9%99%BA%E9%87%91",
-    "https://finance.yahoo.co.jp/quote/7157.T/forum"
+    "https://finance.yahoo.co.jp/quote/7157.T/forum",
+    "https://www.nikkei.com/article/DGXZQOUB271SZ0X20C26A8000000/",
+    "https://news.infoseek.co.jp/article/prtimes_000000022_000171467/",
+    "https://prtimes.jp/main/html/rd/p/000001058.000001256.html",
+    "https://minkabu.jp/news/4603745",
+    "https://prtimes.jp/main/html/rd/p/000000323.000035597.html",
+    "https://xtech.nikkei.com/atcl/nxt/column/18/03730/082100003/",
+    "https://www.nikkan.co.jp/articles/view/721377"
   ],
   "titles": [
-    "【顔】県損害保険代理業協会会長を務める 小野 嘉一郎さん",
-    "シンプレクスが、ライフネット生命の団体信用生命保険事業の拡大に伴う、団信システムの大規模拡張を実施",
-    "基幹システム刷新で年間2800時間の業務削減、T＆D系ペット保険会社が効果",
-    "SOMPO、米労災保険会社を買収 300億〜500億円規模",
-    "ChatGPTがあれば…保険比較サイト・仲介業者いらない？それでも残る“超注目10社”",
-    "みずほ系保険代理店の共立、企業向けにリスク調査サービス",
-    "地方創生における保険代理店の役割",
     "三井ダイレクト損保、コンタクトセンターに入電増加に備えAIエージェントを導入",
     "JCB、「推し活キャンセル保険」の販売を開始 国内・海外遠征版を用意",
     "一部戦争保険業者、船舶攻撃受けホルムズ航行停止を助言＝関係筋",
@@ -401,6 +394,13 @@
     "大手損保や金融機関が撤退の過疎地…あえて保険代理店が進出する狙い",
     "ライフネット生命、保険金・給付金の「最短当日支払い」開始から1年 直近の平均支払日数は0.58日、請求当日の着金を実現",
     "千葉豪雨の水没車、損保各社が迅速に損害査定…「ヤード」に集めて一括査定・最短１週間で保険金",
-    "ライフネット生命保険(株)【7157】：掲示板"
+    "ライフネット生命保険(株)【7157】：掲示板",
+    "金融庁、28年3月から保険商品の提案ルール厳格に 顧客本位促す",
+    "『保険のキロク』、現役代理店が開発した「MIC-ViewSystem（ビューシステム）」と業務提携--面談記録と顧客・契約情報ををつなぐ",
+    "“ヒト×保険×テクノロジー” アイリックコーポレーション、保険代理店向けシステム「AS SYSTEM」「AS-BOX」に【証跡管理機能】を提供開始",
+    "アイリックコーポレーション、来店型保険ショップ「保険クリニック」拡大で売上高が過去最高 27年6月期は増収増益予想",
+    "「オンライン診断書連携サービス」の利用開始について",
+    "JPKIを応用した「デジタル逝去判定」、保険金の請求漏れ対策やSNSの削除に",
+    "損害保険、アプリで即日加入 りそなHDが取り扱い開始"
   ]
 }
