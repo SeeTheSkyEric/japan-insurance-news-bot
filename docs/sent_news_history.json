@@ -1,11 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMiY0FVX3lxTE14N1YtcU5jUDRNWlhoSVhSMGVjSFlSTVEycGFFX1diWGI3TXpHdEZSV1pXQkhvWXJWRy01V2sxOXExYTE2amNjNnRCN0JNeTZzVjRsbzFOV1RucGc2OHVOMjNBNA?oc=5",
-    "https://news.google.com/articles/CBMiVkFVX3lxTE5LZ0ZVbHgzbi1jVDRQYVB6Tm5Sa1ctaTF5OHA2VEFrdWY2MjhUWm5Wc0Rsd21CeDc3VldjVVJob2dyVWlGNDVubFVfVl9vNFRhaFptdTJn?oc=5",
-    "https://news.google.com/articles/CBMiekFVX3lxTE9HbmZsb1RHNTZDV1pDTzJhNXJ6X2ZZMnJUQWtBVmstZWw4aUZibFhhZ2N6R1FTOVhYTmdGamtMT3RXbzVOd3pCNkxQNUhNUXFNcU0wU09ZTGZ5RVpFdkp4bGF2STFxTmRGNnl5UFd3NktvTWt5Y21Zd1N3?oc=5",
-    "https://news.google.com/articles/CBMihwFBVV95cUxQWjhnOW1QYkdONWQwQnVYeEVaaXdfSkNqbkttRDJlRmlWWHNIUWk2Z3U4elg4N0dabWNxOWJHOHNnOUdMSUNVMkFlMVlzR1pFSTJLQ0pUS3N3MmNFdlA1dzkxbE1HdUFzd01qdlJMZHZpekpUUTR0NndkbEczTUItSENmMlZJZGM?oc=5",
-    "https://news.google.com/articles/CBMiTEFVX3lxTE9yMVQ5UnNaRC1RMnNPbVZuOG9ETF9NOUdBMHJITXpjRWRFTDJfX204R1NMTnRET09naDR2bFd6T0VLNnJoY0pkTTVVMU4?oc=5",
-    "https://news.google.com/articles/CBMie0FVX3lxTE05SW50QVNFSnFUM3NidEFqRWRJbFBwNkFaM3gtUHpwQk5oajFnRGtoLU1LWUpndEZlcjdBMlN0a05ybUd5emtQaTRqREx6cWFLSW40WUUtUjZRb00xM1lUa0FwRWZfX1ZRbE5FLW5tY254U2tLdUloLWVwOA?oc=5",
     "https://news.google.com/articles/CBMiakFVX3lxTFBIVm5Hc1JLUG1XYjRDczdldFZud1ZhcjR3SG5uTlBGeHo4OWZXY0hnS2ZJV0IyTjlZa2haZHg0UnFnckNVU1B0eDhELTlWMXJfYzRmOXJjRUs4SC13QklYMWxEMVZFeGFmckE?oc=5",
     "https://news.google.com/articles/CBMic0FVX3lxTE5CM2ctQjY3QW9oS1ZucFZZNFFXcGhrZmVMcVdWU18zV2p3RkdsdDdmTndfMlZSOGNzVmFJdUt4MV9mdEFRcVh5QzJwNF9HUThGb2ZtVzR4RVhwSlVEeG1rOFdLTS1wdGczLVBROEpGMmVnZm8?oc=5",
     "https://news.google.com/articles/CBMiSkFVX3lxTE1TT1FEalhyMmw1b3Zadk1UX2JfcWx3R3NnMVhBRUN5ZXhVX2tnVEY4cHRuOEtzcmRRM2VWNm5NbWxnYngyNFo5T1Jn?oc=5",
@@ -199,15 +193,15 @@
     "https://minkabu.jp/news/4603745",
     "https://prtimes.jp/main/html/rd/p/000000323.000035597.html",
     "https://xtech.nikkei.com/atcl/nxt/column/18/03730/082100003/",
-    "https://www.nikkan.co.jp/articles/view/721377"
+    "https://www.nikkan.co.jp/articles/view/721377",
+    "https://www.asahi.com/articles/ASV8Z2662V8ZULFA002M.html",
+    "https://kabu-ir.com/article/521455157.html",
+    "https://prtimes.jp/main/html/rd/p/000000015.000168875.html",
+    "https://jp.reuters.com/economy/6XDPIH6VVFLGFEXWYJ3JFHLE2Q-2026-08-28/",
+    "https://www.microsoft.com/ja-jp/customers/story/27072-daiichi-life-insurance-co-ltd-microsoft-foundry",
+    "https://www.sbbit.jp/article/sp/186369"
   ],
   "titles": [
-    "三井ダイレクト損保、コンタクトセンターに入電増加に備えAIエージェントを導入",
-    "JCB、「推し活キャンセル保険」の販売を開始 国内・海外遠征版を用意",
-    "一部戦争保険業者、船舶攻撃受けホルムズ航行停止を助言＝関係筋",
-    "経営課題の解決に「連携協定締結」大手生命保険会社と県中小企業団体中央会が連携《長崎》",
-    "生命保険協会函館協会が図書館に児童図書を寄贈【函館】",
-    "損保が代理店の評価にＡＩ導入へ 三井住友海上、負担減狙い",
     "【ワンタイムやまの保険】登山時に確認できる「デジタル会員証」のご案内",
     "三井住友海上愛知東支店 「三河地域サステナ会議」創設 産学官金で課題解決 １２月に新プラットフォーム",
     "片山さつき大臣「実態調査はじめます」 街のクルマ屋の「保険代理店打ち切り」問題に新局面 ビッグモーター事件の余波に再び切り込む！（1/3 ページ）",
@@ -401,6 +395,12 @@
     "アイリックコーポレーション、来店型保険ショップ「保険クリニック」拡大で売上高が過去最高 27年6月期は増収増益予想",
     "「オンライン診断書連携サービス」の利用開始について",
     "JPKIを応用した「デジタル逝去判定」、保険金の請求漏れ対策やSNSの削除に",
-    "損害保険、アプリで即日加入 りそなHDが取り扱い開始"
+    "損害保険、アプリで即日加入 りそなHDが取り扱い開始",
+    "ソニー生命に立ち入り検査へ 不祥事で金融庁、プルデンシャルに続き",
+    "セーフィー、佐渡島商事を完全子会社化、取得総額２．４２億円、「映像×ＡＩ」と保険融合へ - kabu-ir.com",
+    "boshu株式会社、保険代理店向けAIアシストサービス 「boshu assist」の導入が25社を突破",
+    "アングル：ＡＩエージェントの「暴走リスク」現実に、見直し迫られるサイバー保険",
+    "第一生命が生涯設計デザイナーの働き方を Azure ベースの AI で変革。そのために構築された「デジタルバディ」の開発プロセスと効果とは？",
+    "「モデル学習」はたった1割…損保ジャパンが語る、AI開発自動化を左右する“設計力”"
   ]
 }
