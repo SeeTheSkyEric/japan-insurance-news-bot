@@ -1,11 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMiakFVX3lxTFBIVm5Hc1JLUG1XYjRDczdldFZud1ZhcjR3SG5uTlBGeHo4OWZXY0hnS2ZJV0IyTjlZa2haZHg0UnFnckNVU1B0eDhELTlWMXJfYzRmOXJjRUs4SC13QklYMWxEMVZFeGFmckE?oc=5",
-    "https://news.google.com/articles/CBMic0FVX3lxTE5CM2ctQjY3QW9oS1ZucFZZNFFXcGhrZmVMcVdWU18zV2p3RkdsdDdmTndfMlZSOGNzVmFJdUt4MV9mdEFRcVh5QzJwNF9HUThGb2ZtVzR4RVhwSlVEeG1rOFdLTS1wdGczLVBROEpGMmVnZm8?oc=5",
-    "https://news.google.com/articles/CBMiSkFVX3lxTE1TT1FEalhyMmw1b3Zadk1UX2JfcWx3R3NnMVhBRUN5ZXhVX2tnVEY4cHRuOEtzcmRRM2VWNm5NbWxnYngyNFo5T1Jn?oc=5",
-    "https://news.google.com/articles/CBMiyAJBVV95cUxPQWVzcndvbkdReHhESUN1Tk5WUjE3QnBwOWd6U0pVbUllaTFEUV9XV0RaUklpWkNfaVdaWUluRW9rNWtza2JhdmhLanA4cjVqVE9jWXJycXAzTWF3VVdueDBVLUVOYjZ4YTl5Y3A5T2tDbHNOb2dsRkt2QzdvOERVS3pPR1VmRnEzTGFnN25ZN0NKamVFRWxOWUlHbU5vNFEzQURpODFzNGl3YUZZRklISHFfbGplYTdVc1ZlYTdaV2s4VXd0aWtPcUtMeEtLdTRGakROczYxZWZFdnk4V25QUVptNlUtb1BiMjlNN0xfTTM2V2plOF94RkZKRW94OTh5bzlLdU9zNk55Z0dZYXNvcVlvd1hNNUVNVVJ6UEFsRTRtUS1oMWFTMDFwRi1sZW0tMWZySjJBT1p6d2N4M25RZUdHRmhVeVZM?oc=5",
-    "https://news.google.com/articles/CBMid0FVX3lxTFBPVnB5LVdoelpqOUZEMjFsQ2g2STcwUW9kZUt0OERkN0hpd0lFQ2Jpd0JyNDdZeVdEZkpqNzNqQUp2QldJOEpwR21sdW5Tc1BrWnhTUExEQlFCeUhyNkVlOUJkMnY1WS14YlR2Rnp5X25CNWZ0ZTNJ?oc=5",
-    "https://news.google.com/articles/CBMiVkFVX3lxTFAwaFVBN0FtQXJWSWN4TzdrSmxKT1ZmVFczSUFpUUZzSmFBcFd3YXpmbXNwc2M2SlJnbGZzakVVUEtxbGdzQk9rejFCM2lGUVFRc3FEUkZR?oc=5",
     "https://news.google.com/articles/CBMiZ0FVX3lxTE9RajJhdWhOSk1hVG5SczlIOGJzRDRDSlNLU2FIeWpzVGtOWEFsdVVucDBDMFh5S01DZTdWbkFoczdHT1FTNGVHTHZrVGduY0I2Y0JjRGVEcDVobVcxTnhteDFfZnM0WHc?oc=5",
     "https://news.google.com/articles/CBMiX0FVX3lxTFBvdXYxNGtRRFF3RjFvVzRWc0hzbHI4Ti1GaDRmWUswdi01cEJSZFJzTXVQb2VneEVndG5feDczamxubEh6M0Y5RW45bmdhZXRsVTVyYXlScEZyRTZJelg4?oc=5",
     "https://news.google.com/articles/CBMiX0FVX3lxTE50TTRza2lCdlNUOEUzMnl3OHBILUs4TU1Oa2NubUg2V0RtRDJuUXg4cmFBSEtldzRYdG9QTUlBQWM0UWZHUGxhR18tWnpDT0lBX1RoUy1jYWhrUjV6bmxN?oc=5",
@@ -199,15 +193,15 @@
     "https://prtimes.jp/main/html/rd/p/000000015.000168875.html",
     "https://jp.reuters.com/economy/6XDPIH6VVFLGFEXWYJ3JFHLE2Q-2026-08-28/",
     "https://www.microsoft.com/ja-jp/customers/story/27072-daiichi-life-insurance-co-ltd-microsoft-foundry",
-    "https://www.sbbit.jp/article/sp/186369"
+    "https://www.sbbit.jp/article/sp/186369",
+    "https://www.nikkinonline.com/article/419725",
+    "https://finance.biggo.jp/news/8a391574-a674-4119-8183-ee8a8450199e",
+    "https://www.nikkei.com/nkd/disclosure/tdnr/20260831528762/",
+    "https://prtimes.jp/main/html/rd/p/000000187.000028337.html",
+    "https://techtarget.itmedia.co.jp/tt/article/limage/2001/20/220012004/956638",
+    "https://www.google.com/search?q=%E3%82%BB%E3%83%BC%E3%83%95%E3%82%A3%E3%83%BC%E3%80%81%E4%BF%9D%E9%99%BA%E4%BB%A3%E7%90%86%E5%BA%97%E3%82%92%E5%AE%8C%E5%85%A8%E5%AD%90%E4%BC%9A%E7%A4%BE%E5%8C%96"
   ],
   "titles": [
-    "【ワンタイムやまの保険】登山時に確認できる「デジタル会員証」のご案内",
-    "三井住友海上愛知東支店 「三河地域サステナ会議」創設 産学官金で課題解決 １２月に新プラットフォーム",
-    "片山さつき大臣「実態調査はじめます」 街のクルマ屋の「保険代理店打ち切り」問題に新局面 ビッグモーター事件の余波に再び切り込む！（1/3 ページ）",
-    "二輪店の「自賠責保険取扱い」などで 自民党・二輪車問題対策PTが会合",
-    "日本生命社長、超長期金利「想定のぎりぎりに」－足元30年債は4%超え",
-    "大手生保、利ざや1％台に回復 国債利回り上昇",
     "「中国で入院」保険金請求が23倍に それでも簡単ではない実態調査",
     "損保ジャパン･石川社長｢収益改善の中核はデータに基づく管理の緻密化､27年度に代理店の手数料体系を抜本改定する｣",
     "手数料改定がもたらす淘汰の波､金融庁が損保や代理店に見直し圧力､損保各社の手数料改定に代理店が悲鳴を上げ始めた",
@@ -401,6 +395,12 @@
     "boshu株式会社、保険代理店向けAIアシストサービス 「boshu assist」の導入が25社を突破",
     "アングル：ＡＩエージェントの「暴走リスク」現実に、見直し迫られるサイバー保険",
     "第一生命が生涯設計デザイナーの働き方を Azure ベースの AI で変革。そのために構築された「デジタルバディ」の開発プロセスと効果とは？",
-    "「モデル学習」はたった1割…損保ジャパンが語る、AI開発自動化を左右する“設計力”"
+    "「モデル学習」はたった1割…損保ジャパンが語る、AI開発自動化を左右する“設計力”",
+    "金融庁、成長投資へ規制緩和検討、専属保険会社の創設も 金融審に作業部会",
+    "保険代理店に「比較推奨」義務付け 28年3月から新規制適用、金融庁",
+    "アドバンスクリエイト[8798]：株式会社エージェント・インシュアランス・グループとの保険代理店事業における連携強化及び一部保険契約承継に関するお知らせ 2026年8月31日(適時開示) ：日経会社情報DIGITAL",
+    "hokan、改正比較推奨販売ルールへの実務対応を支援する 「比較推奨運用支援サービス」を2026年9月より本格提供開始",
+    "SOMPOグループが保険代理店向けシステムを「Heroku」に移行した理由（画像）（1/3枚目）",
+    "セーフィー、保険代理店を完全子会社化"
   ]
 }
