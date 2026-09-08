@@ -1,11 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMiakFVX3lxTE40YjFfNDAzbl94cnY0MGY4UWNHNEk5bVJrei1WN1gtWDdkY1F6YkltUVp3U05QczU0V3JRODN0dEFfSEw2QWdFaFlHSW1FcnFwUEk3NkNiRmViY1d1WThndlVfamdjd3dTajE?oc=5",
-    "https://news.google.com/articles/CBMiX0FVX3lxTE9mNEJieDlieUhJaXdCZEZaN1VkcnpDQTFEUjlYdThQdFhMU2F5cjVEZ1lUckxqRmtTZjA5ZTJCbUlsc0lLZ3VGdU8wQTR4Yk4tU0ZFSDgxUjNkb2U4VDdV?oc=5",
-    "https://news.google.com/articles/CBMiW0FVX3lxTE9pWW4yMldiMm5QT3BKQ05vbkVnSTRibUliVU9kQkhjUTZraTBmUFdOSHBCb2pVWFpKRUxOVG9KTERzRlRiRlFkeG9oZUNKSU1HcXZpVkJzMHlFUDg?oc=5",
-    "https://news.google.com/articles/CBMiWEFVX3lxTE1KR1NKNUFxSDNCV0NuaDRybjNDZXRqWFhMV043NVRqOWVZMGRhNU9GSUhQUnQtMVp4TVU0X053S1NSOXlxMnZ0NXk0NlZiWWRDdUdKNjVlYnU?oc=5",
-    "https://news.google.com/articles/CBMiX0FVX3lxTE1xMkNsSjNYZXBBay1BRWFTZ1dxbHp6dG1GNEx2V09BVVZTYWFsdFoxX0tZQnZDRU9YTUlKUUdtck5CaDUtMnVSaGo1cGptNGsxc1FFcXRqVElRNnF1Tnpz?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTE1JTk1tdVZQcDZLUlZpU0dDVko5VjZLYmlIaUcyUEF0MFUyWEdWY1RXOGdIQ1pWdjg1Ulg4Y1ZTVGVFUklKSTVHT3Z1cnEtMTFDQ0VNMjBPaWdqY1RXQWxxOU5BbUFfUjNhOWc?oc=5",
     "https://news.google.com/articles/CBMibEFVX3lxTE9lNWFjZDNldnhVbXNhVnpxWGRVYmRLLXZQZmtrQnNzdEliaWZ2RzhmM3V4UFhsZ2NzcFI2SGFzdHBNMmhNNzNoRjlNMVBzRGdhRFFIVU1WTWFmVTMxNUM3cFBHNUhqbVI3SS1WTw?oc=5",
     "https://news.google.com/articles/CBMiVEFVX3lxTE9aSXI5OGdGa3BQc3M5LWhrM1hvQUpac2ppOXlaWmd5WFgzUHJLM1hIbDlMV1A3VnJTZGF1TlR1YmsyMTYxejJvc0hlX2pvTUEtX3IxYQ?oc=5",
     "https://news.google.com/articles/CBMiU0FVX3lxTE1GU3lTTDJqNmlWdl83RnNyWU5RZVNJUXlzVlNhdkhwUVR4YnEwcEtFdzdQTGRPVjdDTXd0NkdPamMzU0l0MGRKRDdGeXZOUlRObmhJ?oc=5",
@@ -199,15 +193,15 @@
     "https://response.jp/article/2026/09/02/416013.html",
     "https://www.google.com/search?q=%E3%80%8C%E9%A1%A7%E5%AE%A2%E3%81%AEAI%E3%81%8C%E4%BF%9D%E9%99%BA%E4%BC%9A%E7%A4%BE%E3%82%92%E9%81%B8%E3%81%B6%E6%99%82%E4%BB%A3%E3%81%AB%E3%80%8D%20%E7%AC%AC%E4%B8%80%E3%83%A9%E3%82%A4%E3%83%95CDAO%E3%83%BB%E3%82%A6%E3%83%AB%E3%82%B2%E3%83%B3%E6%B0%8F",
     "https://active.nikkeibp.co.jp/atcl/act/19/00798/080300004/",
-    "https://news.yahoo.co.jp/articles/13e1f2585f830bd2c7e6d6a09968006fd726e320"
+    "https://news.yahoo.co.jp/articles/13e1f2585f830bd2c7e6d6a09968006fd726e320",
+    "https://www.google.com/search?q=%E4%BF%9D%E9%99%BA%E8%B2%A9%E5%A3%B2%E3%81%A7%E5%A7%8B%E3%81%BE%E3%82%8B%E3%80%8C%E6%AF%94%E8%BC%83%E6%8E%A8%E5%A5%A8%E3%80%8D%2028%E5%B9%B4%E3%81%AB%E6%96%B0%E3%83%AB%E3%83%BC%E3%83%AB%E3%80%81%E4%BB%A3%E7%90%86%E5%BA%97%E6%B7%98%E6%B1%B0%E3%81%AE%E5%B0%8E%E7%81%AB%E7%B7%9A%E3%81%AB",
+    "https://mag-x.jp/2026/09/08/33511/",
+    "https://prtimes.jp/main/html/rd/p/000000016.000168875.html",
+    "https://it.impress.co.jp/articles/-/29759",
+    "https://www.google.com/search?q=%E6%97%A5%E6%9C%AC%E7%94%9F%E5%91%BD%E3%80%81AI%E4%BD%BF%E3%81%A3%E3%81%9F%E6%A5%AD%E5%8B%99%E6%94%B9%E5%96%84%E3%82%92%E5%8A%A0%E9%80%9F%20%E5%B9%B4%E5%BA%A6%E6%9C%AB%E3%81%BE%E3%81%A7%E3%81%AB200%E4%BB%B6%E7%9B%AE%E6%A8%99",
+    "https://www.nikkei.com/article/DGXZRSP712223_X00C26A9000000/"
   ],
   "titles": [
-    "「GMOサイバー攻撃ネットde診断 ASM」にサイバーリスク保険と無料インシデント初動対応を標準付帯【GMOサイバーセキュリティbyイエラエ】",
-    "生保｢埋蔵金｣課税の悪夢､金融庁が保険会計の見直しを検討､利益増による課税膨張を懸念する一部の大手生保が反発",
-    "東京海上日動、船井総研HDと研修・人材育成で協業 中小の再成長支援",
-    "福井 警察と生命保険会社が特殊詐欺の被害防止を呼びかけ",
-    "アフラック生命とがん研有明病院が、富士通の診断書連携サービスを採用し、保険給付金請求手続きをオンラインで完結",
-    "株式会社Hokanグループ、「TECHBEAT Shizuoka 2026」に出展",
     "保険代理店で「社保逃れ」横行の疑い 業界団体が一斉点検を要請へ",
     "「アクサ生命保険」の社員だった男が営業秘密に当たる契約者情報を保険代理店に転職した元同僚に漏らした疑い 元同僚はその情報をもとに保険の乗り換えを勧誘した疑いで逮捕",
     "保険代理店を装い 1千万円詐欺容疑 町田署、男を逮捕",
@@ -401,6 +395,12 @@
     "東京海上HD、英国の商業用自動車保険代理店DCLを買収",
     "「顧客のAIが保険会社を選ぶ時代に」 第一ライフCDAO・ウルゲン氏",
     "東京海上日動火災保険がAI駆動開発を導入、10件以上の本番案件で検証",
-    "熊本、保険金査定にデジタル活用 地震で損保各社、住宅被害6万件"
+    "熊本、保険金査定にデジタル活用 地震で損保各社、住宅被害6万件",
+    "保険販売で始まる「比較推奨」 28年に新ルール、代理店淘汰の導火線に",
+    "善良な小規模代理店に寄り添わぬ大手生損保 金融庁指導に乗じた大手代理店偏重を許すな",
+    "boshu株式会社、保険代理店向けAIアシストサービス「boshuAssist」で比較推奨支援機能の正式版をリリース",
+    "SBI損保、社内ヘルプデスクをAIで高度化、検索とチャットを使い分け",
+    "日本生命、AI使った業務改善を加速 年度末までに200件目標",
+    "三井住友海上など、遠隔監視および走行前後のリスク・安全性評価による自動運転の運行支援体制を構築"
   ]
 }
