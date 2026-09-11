@@ -1,9 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMiUkFVX3lxTE44cTI4aWxYb2E5WEpjZVVGZk5TVXBVR3lUVHpaZ18yX2FtbEtsbExMeWJ0MmV6bHRnakRELVZodzVqTWZTMGhmc09mai1VQXN4cVE?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTE1Rck93Z2gtcnA3bVVTTjhrNWtaeDAydmNCUnhzYUFSWHpLSUp6WEgtNWl0RnBvWHZFcGI2aUY0X1BBaU9qSFJiNGRyZzlidGVILVZjaGhsTmdKLUNvb3NtRm0zX2JQbEJpM2c?oc=5",
-    "https://news.google.com/articles/CBMiVkFVX3lxTE4xVDFKTFZkdUxyekcxcGc3MVZQeU9QMXJHcGxSeE5hOE11U2hmaUN0Uk80NFRqaEFPMEs0UWg0RXBsc3h0SHBkak1QVDlLY29iTDc4cFhR?oc=5",
-    "https://news.google.com/articles/CBMidEFVX3lxTFA2Z3NhZmpJTHFsbnNubEVudlI5RllSekM2M3FZS2xmZXV5SUlLZ2h2SDZVaWFtMmlGSUVBZXNvT1k0SWRMMVFwRi0zZXZKUk93djNuVXJLa21NMWcxbEJjVnF0bE1BNWRfaFBpZ0ZzcWJWVW9Y?oc=5",
     "https://news.google.com/articles/CBMidEFVX3lxTE9WcVU2VkFUT0tBMXZkczdDdGJ1b0lrdFhRbWt0OVNVaTdtb21IZGtZZXNoNlVNTG5VcTR3aXJiX1RzWDgyUmd2bzZ5ZDJzbVdBYkppZ0tfUlYxYmdxTUgzQkRpOUFtdERzZzJqQm9qdklSSld3?oc=5",
     "https://news.google.com/articles/CBMibEFVX3lxTE8waDJXNmhsblQ5RjRCMVB3ZUhLeURZei1jcjJHMzhRNjk0S3NURHNSN1pLVmRGcnZadWtySUd6SGZMWWVWaHE5RWRSMjlSb1lDYlFFNjBjVUtaMWdQakF2Q2tKdGM2cGJHR3pJdQ?oc=5",
     "https://news.google.com/articles/CBMif0FVX3lxTE1LOWd2TkdzUHRNREZ3dGZqc2k3OTJHZ3dkdW5QT0dRZEtTNTFqcVNQTUxmNG1GTDZVLVU1NmN2b2h6X1RWWkxVVl9HcnpOVDJ3YUUzVFNzcXBpQkxqeDBGTXQzczVyRzM4bUFCRVBockdnMGl3RXpjZHJpNG9STmM?oc=5",
@@ -199,13 +195,13 @@
     "https://www.google.com/search?q=%E5%A4%89%E3%82%8F%E3%82%8B%E3%81%8B%20%E4%BF%9D%E9%99%BA%E4%BB%A3%E7%90%86%E5%BA%97%EF%BC%88%E4%B8%8B%EF%BC%89%E6%90%8D%E4%BF%9D%E3%81%AE%E5%AF%BE%E5%BF%9C%E4%B8%80%E5%A4%89%E3%81%A7%E4%B8%8D%E4%BF%A1%E6%84%9F%20%E4%B8%8D%E6%AD%A3%E3%81%AE%E5%8E%9F%E5%9B%A0%E3%80%8C%E3%81%AA%E3%82%8C%E5%90%88%E3%81%84%E3%80%8D%E6%98%AF%E6%AD%A3%E3%81%A7%E4%BA%80%E8%A3%82%20%E9%A1%A7%E5%AE%A2%E6%9C%AC%E4%BD%8D%E3%81%AE%E5%AE%9F%E7%8F%BE%E9%81%A0%E3%81%8F",
     "https://www.asahi.com/articles/DA3S16542881.html",
     "https://www.unite.ai/ja/ai-in-insurance-practical-impact-operating-models/",
-    "https://jp.wsj.com/articles/the-next-big-opportunity-in-data-centers-insuring-them-1887646b"
+    "https://jp.wsj.com/articles/the-next-big-opportunity-in-data-centers-insuring-them-1887646b",
+    "https://prtimes.jp/main/html/rd/p/000000082.000025296.html",
+    "https://enterprisezine.jp/news/detail/25024",
+    "https://www.nikkei.com/article/DGXZQOUB192P90Z10C26A8000000/",
+    "https://www.nikkei.com/article/DGXZQOUB033ZJ0T00C26A9000000/"
   ],
   "titles": [
-    "岡山発の総合保険代理店「エスプランニング」が広島県福山市に進出BCP策定支援・健康経営コンサルで備後エリアの企業を支援する新拠点を4月1日開設",
-    "改正保険業法への組織的対応をテーマに保険業界のキーパーソンと議論する「InsurTech Startup Meetup#50」にブロードマインド登壇",
-    "詐欺被害防止へ連携 佐賀県警と生命保険協会県協会が連絡協議会 保険制度の悪用対策など確認 佐賀市",
-    "エーオン、データセンター向け保険引受能力を50億ドルに拡大——AIとクラウド需要の急増に対応",
     "RaonSecure、NH農協損保に量子耐性暗号を供給…金融業界でPQC受注が相次ぐ",
     "マイナ保険証9443万人、スマホ搭載は800万人 「紙」は7月末終了",
     "【山形】保険代理店の元社員4人を逮捕 損害保険会社の顧客情報を不正に入手した疑い（YTS山形テレビ）",
@@ -401,6 +397,10 @@
     "変わるか 保険代理店（下）損保の対応一変で不信感 不正の原因「なれ合い」是正で亀裂 顧客本位の実現遠く",
     "地震保険金、アプリで査定 デジタル活用、支払い急ぐ 損保各社",
     "保険業界はAIについて何年も語り続けてきたが、今年は実際に活用した",
-    "データセンター建設ブーム、次の巨大商機は「保険」"
+    "データセンター建設ブーム、次の巨大商機は「保険」",
+    "保険代理店の業務品質評価・セキュリティ対策・IT資産管理までを一元化、ランサムウェア対策も4層に強化！",
+    "SBI損害保険、PKSHA FAQ土台に社内ナレッジを「作る・貯める・引き出す」循環を実現",
+    "生保、インフレ下で不動産投資拡大 明治安田は残高2兆円に倍増へ",
+    "来店客の迷惑行為への対応費用など補償 東京海上が専用保険"
   ]
 }
