@@ -1,12 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMidEFVX3lxTE9WcVU2VkFUT0tBMXZkczdDdGJ1b0lrdFhRbWt0OVNVaTdtb21IZGtZZXNoNlVNTG5VcTR3aXJiX1RzWDgyUmd2bzZ5ZDJzbVdBYkppZ0tfUlYxYmdxTUgzQkRpOUFtdERzZzJqQm9qdklSSld3?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTE8waDJXNmhsblQ5RjRCMVB3ZUhLeURZei1jcjJHMzhRNjk0S3NURHNSN1pLVmRGcnZadWtySUd6SGZMWWVWaHE5RWRSMjlSb1lDYlFFNjBjVUtaMWdQakF2Q2tKdGM2cGJHR3pJdQ?oc=5",
-    "https://news.google.com/articles/CBMif0FVX3lxTE1LOWd2TkdzUHRNREZ3dGZqc2k3OTJHZ3dkdW5QT0dRZEtTNTFqcVNQTUxmNG1GTDZVLVU1NmN2b2h6X1RWWkxVVl9HcnpOVDJ3YUUzVFNzcXBpQkxqeDBGTXQzczVyRzM4bUFCRVBockdnMGl3RXpjZHJpNG9STmM?oc=5",
-    "https://news.google.com/articles/CBMiZEFVX3lxTFBRQ1U4ZTlkRldwVFBOSGN1RjE0dW1XdEk4dTUzZGtrTFdXWnlRUmJHQVE1UHJsMm1kSEs0RzBYSGExZzVVM05zdkZvd05tSndYdElqSG5NamJHUHRMOXBGd3FGajA?oc=5",
-    "https://news.google.com/articles/CBMiaEFVX3lxTE9hWE1OTDBWckllbjRiMjZLUEpHeWFocmpOaWJFaW5CbTlwR3FrNHJZaXZSMXRLNl9xVHRaTUFFUHAyNjJFMlV6eFQ0SFVlMmptYVQ3QUxDQXV5U0RYRTh6anVpSVc3WVBv?oc=5",
-    "https://news.google.com/articles/CBMickFVX3lxTE9odDJRVHdSOHVXbGtKNGhCS3V0UE9DcHF6SkQ0bEZleHNzYzF4TnVuMXZKdkRfWVlBR09EUFpBeE9vNWZIVy1sVUNOMnNzYm9wSVZpWm1oV19GTzVjQ1RyVEpJeVVlTHI4QUY3LUI2cmN3QQ?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTE13em5pR3RUcml5cmZnRnd0QnNYdTVsQUVOdnd2V1ZLRzlNS0FlQmZqR25PU24xOV9jajFjUXYyc0JEcFpORTE5VnhldU92bVVTcDd0YWtTZ0JzejJTUWR6eXNQeUtpanFmc2FSXw?oc=5",
     "https://news.google.com/articles/CBMiR0FVX3lxTE5pV2dEMXJIR3RjaDA1aG9tdkl5TGd0Y2Frd0Q5elBycUhlUFVER2lpcHFaMFNLYk9Cd2JQVEFROUlkSmJ5V3ow?oc=5",
     "https://news.google.com/articles/CBMiV0FVX3lxTFBGTDFsb0VNdEVua0JyTU90RlUyX0VKU2NERlV3aEZPTWU1VUJITXdoOFczdDlINFozVl9tNHlPcGlVSkNkLXdDblMwN21HdjlRUmllVGdiUQ?oc=5",
     "https://news.google.com/articles/CBMiZkFVX3lxTE9Hc1ZkYnF4NmdaM043Q3Q2OF9ERElWbTVSVThuUklqSVV1RkVsdWpYczIxQ3JjOE14NEd3SURtSmRvTll3Njdxc3ZrN0oyUFVrRnRQVWpUa2hKa29fZ3lIX1FQZ21qdw?oc=5",
@@ -199,16 +192,16 @@
     "https://prtimes.jp/main/html/rd/p/000000082.000025296.html",
     "https://enterprisezine.jp/news/detail/25024",
     "https://www.nikkei.com/article/DGXZQOUB192P90Z10C26A8000000/",
-    "https://www.nikkei.com/article/DGXZQOUB033ZJ0T00C26A9000000/"
+    "https://www.nikkei.com/article/DGXZQOUB033ZJ0T00C26A9000000/",
+    "https://www.nna.jp/news/2966193",
+    "https://gentosha-go.com/articles/-/81526",
+    "https://kabutan.jp/news/marketnews/?b=n202609110716",
+    "https://jikayosha.jp/2026/09/14/330435/",
+    "https://cloud.watch.impress.co.jp/docs/news/2139909.html",
+    "https://roushikyo-digital.com/news/20276/",
+    "https://media.shaho.co.jp/n/nb30b8945a511"
   ],
   "titles": [
-    "RaonSecure、NH農協損保に量子耐性暗号を供給…金融業界でPQC受注が相次ぐ",
-    "マイナ保険証9443万人、スマホ搭載は800万人 「紙」は7月末終了",
-    "【山形】保険代理店の元社員4人を逮捕 損害保険会社の顧客情報を不正に入手した疑い（YTS山形テレビ）",
-    "損害保険募集代理店の福島商事、不動産仲介業務などの東邦土地建物及び東邦ビルを吸収合併",
-    "プレスリリース：［JAF徳島］あいおいニッセイ同和損害保険株式会社徳島支店と地方創生に関する連携協定を7月28日に締結します！（PR TIMES）",
-    "オリックス生命保険、AIとの共創で組織・人材をマネジメント ビジネス変革加速",
-    "三井住友海上、工場火災を電子機器データで予防 企業の保険料を抑制",
     "日本工営、東京海上日動火災保険／空飛ぶクルマ商用化へスカイドライブと連携協定",
     "iPS細胞心筋シート「リハート」医療保険の適用を了承 心不全の治療用",
     "損害保険の顧客情報５０００件を不正に持ち出した容疑、男女４人逮捕…データ取得後に競合会社に転職",
@@ -401,6 +394,13 @@
     "保険代理店の業務品質評価・セキュリティ対策・IT資産管理までを一元化、ランサムウェア対策も4層に強化！",
     "SBI損害保険、PKSHA FAQ土台に社内ナレッジを「作る・貯める・引き出す」循環を実現",
     "生保、インフレ下で不動産投資拡大 明治安田は残高2兆円に倍増へ",
-    "来店客の迷惑行為への対応費用など補償 東京海上が専用保険"
+    "来店客の迷惑行為への対応費用など補償 東京海上が専用保険",
+    "東京海上、豪保険大手買収へ調査本格化か",
+    "話し相手が欲しかった…年金月15万円の69歳独居父、毎日通った保険ショップで加入した「500万円の保険」。42歳娘が激怒したワケ｜資産形成ゴールドオンライン",
+    "ユーソナー---三井住友海上の代理店向け営業支援システムに法人データベース「LBC」を導入",
+    "「車検も保険も全部コミコミ」でプロボックスに乗れる！KINTOが商用車解禁で打ち出した太っ腹プランの全貌",
+    "三菱電機デジタルイノベーション、AI技術で薬局業務を支援する「保険薬局向けオールインワンプラットフォーム」を発表",
+    "介護保険資格確認等WEBサービスのAPI標準仕様書、第1.0版を公開",
+    "厚労省、DX関連政策を政策統括官の下に集約 保険データ企画室の所掌事務を移管（2026年8月7日）"
   ]
 }
