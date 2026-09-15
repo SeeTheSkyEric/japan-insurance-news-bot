@@ -1,12 +1,5 @@
 {
   "urls": [
-    "https://news.google.com/articles/CBMiR0FVX3lxTE5pV2dEMXJIR3RjaDA1aG9tdkl5TGd0Y2Frd0Q5elBycUhlUFVER2lpcHFaMFNLYk9Cd2JQVEFROUlkSmJ5V3ow?oc=5",
-    "https://news.google.com/articles/CBMiV0FVX3lxTFBGTDFsb0VNdEVua0JyTU90RlUyX0VKU2NERlV3aEZPTWU1VUJITXdoOFczdDlINFozVl9tNHlPcGlVSkNkLXdDblMwN21HdjlRUmllVGdiUQ?oc=5",
-    "https://news.google.com/articles/CBMiZkFVX3lxTE9Hc1ZkYnF4NmdaM043Q3Q2OF9ERElWbTVSVThuUklqSVV1RkVsdWpYczIxQ3JjOE14NEd3SURtSmRvTll3Njdxc3ZrN0oyUFVrRnRQVWpUa2hKa29fZ3lIX1FQZ21qdw?oc=5",
-    "https://news.google.com/articles/CBMiYAFVX3lxTFA3UXpINEhoOFZILUdQSV96dEttcGdmVDVDTlZGV0M4MEJsNGJaRVM4MnE4VE82TVdyQ0ozYWw1TEliaDFhZ1BCcTQ5c3dVZ01CNXFmUlVyOUFLVGxINXlpbw?oc=5",
-    "https://news.google.com/articles/CBMiwAFBVV95cUxPT01pdFJEZkptRG9jcHU2YjlsZHdxcE5BQ0lOQjJRSV9HR09lQ2JvSnNqdURXVGF6ME1uUFRRTklrZEI2TmFBRjY4Y25KYlgzSUJuQ2ZNNFFyeTQ5RmdWU2ZuWmJhdEdzejUxbXU0VVhudG92Tjd5UlpWdGVwdGVnM3J5YlNGNUthWHNUUGRMVEpOWS0zN0p1OHp2Z3llemExajdnTDQ1OHdxWk5qMXRlcW9uNUtTOVBCcEpfMVxkMVHSAXBBVV95cUxQQVRuN2xCRkFYY2R1RENhY3lIM0oxdk5vV1NDdlhDcWFoelUwS25KRmlZc2VfcW1vcDMtMlBGNDJwMFZwSzhHanNVYUZFT3VZUTVYUy1aVi1LU3lERHY1emJ3Q2NDbndTMWlHeXpYYU1p?oc=5",
-    "https://news.google.com/articles/CBMibEFVX3lxTE9QLU5DOGY0eG9IbnNjbkhTSGs1ZHBiMjFMVE5vZEFIUnpJMmM1X1BiUk9USzdZMmgtOU5ISDI2dzNzLXVRSTc3cVBXVG9QYzdueVZlUEVWT3dyRVQtRW95WjV0azViMUVNbnRmWQ?oc=5",
-    "https://news.google.com/articles/CBMiakFVX3lxTFA4OTVvOVhRVjJBTUgzT3p1Zm1rODZYTEhpZTUwSjUtVTJqS0cwT3BlTk50QzdGQVBCanBfRjZHMHRpNFFBU1lrRW5Md0FtbWZfVXE3czBXT1IxUU9hRnhyaXZ0YzB1SU50N1E?oc=5",
     "https://www.asahi.com/articles/DA3S16509682.html",
     "https://prtimes.jp/main/html/rd/p/000000027.000007242.html",
     "https://news.nicovideo.jp/watch/nw19573061",
@@ -199,16 +192,16 @@
     "https://jikayosha.jp/2026/09/14/330435/",
     "https://cloud.watch.impress.co.jp/docs/news/2139909.html",
     "https://roushikyo-digital.com/news/20276/",
-    "https://media.shaho.co.jp/n/nb30b8945a511"
+    "https://media.shaho.co.jp/n/nb30b8945a511",
+    "https://www.nikkei.com/article/DGXZQOUB147TJ0U6A910C2000000/",
+    "https://prtimes.jp/main/html/rd/p/000000173.000086366.html",
+    "https://mainichi.jp/articles/20260914/pr1/00m/020/276000c",
+    "https://www.tokyo-np.co.jp/article/515526",
+    "https://gigazine.net/news/20260915-data-selling-car/",
+    "https://prtimes.jp/main/html/rd/p/000000080.000004795.html",
+    "사가현 토스시에서 후기고령자 의료 보험료를 산정하는 프로그램에 오류가 발생하여 보험료가 잘못 계산되었습니다. 이로 인해 일부 고령자들이 과도하거나 부족한 보험료를 납부하게 되는 문제가 발생했습니다. 비록 공공 보험 시스템의 사례이지만, 디지털 기술을 활용한 보험료 산정 시스템의 정확성과 신뢰성이 보험업계 전반에 얼마나 중요한지를 보여주는 사건입니다. 보험사 및 인슈어테크 기업들은 시스템 개발 및 운영 시 엄격한 검증 절차와 철저한 품질 관리가 필수적임을 다시 한번 인지해야 합니다."
   ],
   "titles": [
-    "日本工営、東京海上日動火災保険／空飛ぶクルマ商用化へスカイドライブと連携協定",
-    "iPS細胞心筋シート「リハート」医療保険の適用を了承 心不全の治療用",
-    "損害保険の顧客情報５０００件を不正に持ち出した容疑、男女４人逮捕…データ取得後に競合会社に転職",
-    "生き残りのために規模を求めて 保険代理店のM&Aは重要な戦略｜ライオン社長マガジン",
-    "LINE で保険の加入から保険金請求まで完結する「Yahoo!ほけん」提供開始 専用アプリやログインなど不要 月額200円から／1日100円 「熱中症お見舞い金」ぜんぶ LINE で◎",
-    "旅行や保険をAIに相談「過半数」 電通デジタル調査",
-    "日本生命、フィールドセールス向けAIエージェント「UPWARD」を採用",
     "不祥事を防ぐ指針「形骸化」 生保協会長、実効性高める考え",
     "イプラ、国内大手損害保険会社の全国代理店ネットワーク向けに数万本規模のNFCキーホルダーを提供開始",
     "双日テックイノベーション、 『保険会社のバックオフィス業務実態調査』を公開",
@@ -401,6 +394,13 @@
     "「車検も保険も全部コミコミ」でプロボックスに乗れる！KINTOが商用車解禁で打ち出した太っ腹プランの全貌",
     "三菱電機デジタルイノベーション、AI技術で薬局業務を支援する「保険薬局向けオールインワンプラットフォーム」を発表",
     "介護保険資格確認等WEBサービスのAPI標準仕様書、第1.0版を公開",
-    "厚労省、DX関連政策を政策統括官の下に集約 保険データ企画室の所掌事務を移管（2026年8月7日）"
+    "厚労省、DX関連政策を政策統括官の下に集約 保険データ企画室の所掌事務を移管（2026年8月7日）",
+    "生保協会、個人情報3万8000件漏洩 参照権限の付与ミスで",
+    "SOMPOひまわり生命保険株式会社との業務提携契約を締結しました。",
+    "プレスリリース：SBI プリズム少短、ペット保険保有契約件数が 15 万件を突破！（PR TIMES）",
+    "心臓弁膜症 高齢者10人に1人発症 広がる選択肢、負担少なく 三尖弁カテーテル治療、保険適用",
+    "自動車メーカーが集めた運転データを第三者に販売、保険料に影響したとの報告も",
+    "日々の\"できごと・気持ち”を記録・振り返るアプリへ 自分らしいウェルビーイングを育む「シアフル」のデザイン・機能を全面リニューアル",
+    "後期高齢者医療、保険料を誤算定 鳥栖市、プログラムにミス"
   ]
 }
