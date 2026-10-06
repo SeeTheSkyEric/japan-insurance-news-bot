@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: 패키지 설치
-        run: pip install google-genai requests beautifulsoup4 googlenewsdecoder
+        run: pip install google-genai requests beautifulsoup4 googlenewsdecoder selectolax==0.3.30
       - name: 뉴스봇 실행
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
