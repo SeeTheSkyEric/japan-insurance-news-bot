@@ -1,9 +1,5 @@
 {
   "urls": [
-    "https://www.zenshoren.or.jp/2026/08/03/post-46833",
-    "https://finance.biggo.jp/news/c0ee7f24-0c21-4db0-a950-f48496fc4f49",
-    "https://www.ey.com/ja_jp/insights/financial-services/how-can-japan-us-comparisons-inform-insurance-transformation",
-    "https://prtimes.jp/main/html/rd/p/000000012.000043955.html",
     "https://prtimes.jp/main/html/rd/p/000000629.000012138.html",
     "https://usfl.com/news/139864",
     "https://www.google.com/search?q=%E3%80%8C%E4%BA%BA%E9%96%93%E3%81%8C%E9%80%83%E3%81%92%E3%82%8B%E3%80%8D%E9%9B%A3%E8%A7%A3%E3%81%AA%E4%BF%9D%E9%99%BA%E5%A5%91%E7%B4%84%E3%82%92%E7%8B%99%E3%81%86%20%E7%B1%B3%E7%99%BAAI%E3%83%8D%E3%82%A4%E3%83%86%E3%82%A3%E3%83%96%E4%BF%9D%E9%99%BA%E3%83%96%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%AE%E6%88%A6%E7%95%A5",
@@ -199,13 +195,13 @@
     "https://prtimes.jp/main/html/rd/p/000000139.000136132.html",
     "https://aismiley.co.jp/ai_news/finatext-sumitomolife-irrc/",
     "https://dcross.impress.co.jp/docs/usecase/004870.html",
-    "https://www.dreamnews.jp/press/0000364592"
+    "https://www.dreamnews.jp/press/0000364592",
+    "https://www.nishinippon.co.jp/item/1547033/",
+    "https://kn.itmedia.co.jp/kn/article/2610/09/2000002145/",
+    "https://prtimes.jp/main/html/rd/p/000000025.000129778.html",
+    "https://prtimes.jp/main/html/rd/p/000001069.000001256.html"
   ],
   "titles": [
-    "損保代理店の役割発揮へ 「代理店問題を考える会」が院内集会",
-    "生保各社、予定利率を大幅引き上げ 住友生命が業界最高2.25%に、新NISA対抗で競争激化",
-    "保険業界のDX・AI活用はどこへ向かうのか――日米比較で見る保険市場の変革動向",
-    "BIZナレッジ、保険業界向けAI活用パッケージの提供を開始",
     "Finatext、東京海上日動パートナーズの法人営業支援システム「TNP Navi」の開発を支援",
     "ステイト・ファームが推進中の人工知能活用拡大に不満噴出 〜 保険代理店と顧客らから厳しい反響",
     "「人間が逃げる」難解な保険契約を狙う 米発AIネイティブ保険ブローカーの戦略",
@@ -401,6 +397,10 @@
     "＜東京都 大田区＞「保険見直し本舗 グランデュオ蒲田店」が2026年10月9日 金曜日オープン",
     "Finatext・住友生命・アイリックコーポレーション、乗合保険代理店向けデジタル支援ソリューションを共同開発を開始",
     "第一生命、営業担当者約3万5000人に提案を助言する生成AIアプリを展開",
-    "日本インシュアテック市場：AIを活用した引受審査、保険金請求の自動化、保険デジタル化がテクノロジー事業者に新たな機会を創出"
+    "日本インシュアテック市場：AIを活用した引受審査、保険金請求の自動化、保険デジタル化がテクノロジー事業者に新たな機会を創出",
+    "プルデンシャル生命保険、不正は52億円に 社員ら157人を処分 発表調査報告書も公表、「顧客軽視し詐取多発」",
+    "損保ジャパン､2万人の「Gemini活用」どう管理？ 推進者が語る「リスク回避」の仕組み",
+    "「LINE」から保険に加入できる「Yahoo!ほけん」の「インフルエンザお見舞い金」の開発を支援",
+    "“ヒト×保険×テクノロジー” 生命保険の現状把握分析システム 『AS SYSTEM(エーエス システム)』を北日本銀行が利用開始"
   ]
 }
