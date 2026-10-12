@@ -1,12 +1,5 @@
 {
   "urls": [
-    "https://prtimes.jp/main/html/rd/p/000000629.000012138.html",
-    "https://usfl.com/news/139864",
-    "https://www.google.com/search?q=%E3%80%8C%E4%BA%BA%E9%96%93%E3%81%8C%E9%80%83%E3%81%92%E3%82%8B%E3%80%8D%E9%9B%A3%E8%A7%A3%E3%81%AA%E4%BF%9D%E9%99%BA%E5%A5%91%E7%B4%84%E3%82%92%E7%8B%99%E3%81%86%20%E7%B1%B3%E7%99%BAAI%E3%83%8D%E3%82%A4%E3%83%86%E3%82%A3%E3%83%96%E4%BF%9D%E9%99%BA%E3%83%96%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%AE%E6%88%A6%E7%95%A5",
-    "https://www.nikkei.com/article/DGXZQOUB190CC0Z10C26A6000000/",
-    "https://www.nikkei.com/article/DGXZQOUB190A40Z10C26A6000000/",
-    "https://kumanichi.com/articles/2024074",
-    "https://prtimes.jp/main/html/rd/p/000000374.000024618.html",
     "https://www.nikkinonline.com/article/414104",
     "https://que.dailyshincho.jp/node/20331/",
     "https://www.kknews.co.jp/news/20260811o04",
@@ -199,16 +192,16 @@
     "https://www.nishinippon.co.jp/item/1547033/",
     "https://kn.itmedia.co.jp/kn/article/2610/09/2000002145/",
     "https://prtimes.jp/main/html/rd/p/000000025.000129778.html",
-    "https://prtimes.jp/main/html/rd/p/000001069.000001256.html"
+    "https://prtimes.jp/main/html/rd/p/000001069.000001256.html",
+    "https://www.nikkei.com/article/DGXZQOUB074B80X01C26A0000000/",
+    "https://www.google.com/search?q=%E6%97%A5%E6%9C%AC%E3%81%AE%E4%BF%9D%E9%99%BA%E8%B2%A9%E5%A3%B2%E3%81%8C%E6%8A%B1%E3%81%88%E3%82%8B%E8%AA%B2%E9%A1%8C%E2%80%A6%E5%8B%9F%E9%9B%86%E4%BA%BA%E3%81%B8%E3%81%AE%E8%A6%8F%E5%88%B6%E3%81%A7%E3%81%AF%E9%83%A8%E5%88%86%E7%9A%84%E3%81%AA%EF%BD%A2%E5%8E%B3%E6%A0%BC%E3%81%95%EF%BD%A3%E3%81%AF%E3%81%82%E3%82%8B%E3%82%82%E3%81%AE%E3%81%AE%EF%BD%A4%E4%B8%80%E9%83%A8%E3%81%A7%E3%81%AF%EF%BD%A2%E8%A6%8F%E5%88%B6%E3%81%AE%E4%B8%8D%E5%9C%A8%EF%BD%A3%E3%82%82",
+    "https://news.yahoo.co.jp/articles/8ceb23beb9c66e51e6b93ff0d6ed10659e9ae6e1",
+    "https://topics.smt.docomo.ne.jp/article/yomiuri/business/20261011-567-GYT1T00067",
+    "https://news.nicovideo.jp/watch/nw19860174",
+    "https://www.google.com/search?q=%E7%94%9F%E4%BF%9D%E5%B9%B9%E9%83%A8%E3%80%8C%E6%9C%80%E3%82%82%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA%E3%80%8D%E9%87%91%E8%9E%8D%E5%BA%81%E3%81%8C%E3%82%B8%E3%83%96%E3%83%A9%E3%83%AB%E3%82%BF%E3%81%AB%E3%82%82%E5%81%9C%E6%AD%A2%E5%91%BD%E4%BB%A4%E3%81%AE%E8%83%8C%E6%99%AF",
+    "https://www.asahi.com/articles/ASVB83W4HVB8ULFA02VM.html"
   ],
   "titles": [
-    "Finatext、東京海上日動パートナーズの法人営業支援システム「TNP Navi」の開発を支援",
-    "ステイト・ファームが推進中の人工知能活用拡大に不満噴出 〜 保険代理店と顧客らから厳しい反響",
-    "「人間が逃げる」難解な保険契約を狙う 米発AIネイティブ保険ブローカーの戦略",
-    "データセンター保険、世界で生まれる1.6兆円市場 鉱脈もリスク山積",
-    "米新興が競うAI保険、大手損保は尻込み 訴訟増加で補償ニーズ",
-    "地震保険「迅速な支払いを」 被災家屋で査定本格化 損保会社、デジタル技術活用 ＜2026年熊本地震",
-    "【8/26 Web開催決定】\"伝わる\"制度案内で、加入率・業務効率Up～新時代（改正保険業法下）のWEB保険募集システム活用セミナー～",
     "金融庁、試される「監督のための検査」 政策重視に潜むリスク",
     "「悪質すぎる保険営業が横行」「認知症女性の貯金が尽きるまで保険料を…」 内部の「絶望」を描いた『ブラック郵便局』3万字分一挙公開",
     "SBI損保が教員研修を実施 生成AI体験やリスク管理など現場に生かす実践学ぶ",
@@ -401,6 +394,13 @@
     "プルデンシャル生命保険、不正は52億円に 社員ら157人を処分 発表調査報告書も公表、「顧客軽視し詐取多発」",
     "損保ジャパン､2万人の「Gemini活用」どう管理？ 推進者が語る「リスク回避」の仕組み",
     "「LINE」から保険に加入できる「Yahoo!ほけん」の「インフルエンザお見舞い金」の開発を支援",
-    "“ヒト×保険×テクノロジー” 生命保険の現状把握分析システム 『AS SYSTEM(エーエス システム)』を北日本銀行が利用開始"
+    "“ヒト×保険×テクノロジー” 生命保険の現状把握分析システム 『AS SYSTEM(エーエス システム)』を北日本銀行が利用開始",
+    "金融庁、プルデンシャル生命に業務停止命令 金銭詐取問題で3カ月",
+    "日本の保険販売が抱える課題…募集人への規制では部分的な｢厳格さ｣はあるものの､一部では｢規制の不在｣も",
+    "金融庁、損保に代理店評価の改善要請へ（共同通信）",
+    "プルデンシャル、来年２月から一部生命保険の営業再開…全面再開には最長１年半",
+    "テラデータ、医療・保険分野におけるAI活用と疾病予測などの成果を発表",
+    "生保幹部「最もサプライズ」金融庁がジブラルタにも停止命令の背景",
+    "岩手銀や四国銀、損保ジャパンでも情報漏洩か 関係先に不正アクセス"
   ]
 }
