@@ -1,11 +1,5 @@
 {
   "urls": [
-    "https://www.nikkinonline.com/article/414104",
-    "https://que.dailyshincho.jp/node/20331/",
-    "https://www.kknews.co.jp/news/20260811o04",
-    "https://wellness-news.co.jp/posts/%E6%97%A5%E6%9C%AC%E7%94%9F%E5%91%BD%E3%81%8Cai%E6%B4%BB%E7%94%A8%E3%80%80%E3%80%8C%E3%83%88%E3%83%BC%E3%82%AF%E3%83%A9%E3%83%9Ckibit%E3%80%8D%E3%81%A7%E6%84%8F%E6%80%9D%E7%A2%BA%E8%AA%8D%E6%94%AF/",
-    "https://www.yomiuri.co.jp/local/chubu/news/20260809-GYTNT00088/",
-    "https://www.google.com/search?q=%E9%87%91%E8%9E%8D%E5%BA%81%E3%80%81%E9%8A%80%E8%A1%8C%E3%83%BB%E7%94%9F%E4%BF%9D%E3%81%AE%E3%80%8C%E9%98%B2%E8%A1%9B%E3%83%9E%E3%83%8D%E3%83%BC%E3%80%8D%E5%AE%9F%E6%85%8B%E8%AA%BF%E6%9F%BB%20%E6%88%A6%E7%95%A5%E6%8A%95%E8%9E%8D%E8%B3%87%E3%81%AE%E4%B8%8B%E5%9C%B0%E3%81%AB",
     "https://diamond.jp/articles/-/394766",
     "https://www.sbbit.jp/article/fj/186481",
     "https://prtimes.jp/main/html/rd/p/000000272.000059559.html",
@@ -199,15 +193,15 @@
     "https://topics.smt.docomo.ne.jp/article/yomiuri/business/20261011-567-GYT1T00067",
     "https://news.nicovideo.jp/watch/nw19860174",
     "https://www.google.com/search?q=%E7%94%9F%E4%BF%9D%E5%B9%B9%E9%83%A8%E3%80%8C%E6%9C%80%E3%82%82%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA%E3%80%8D%E9%87%91%E8%9E%8D%E5%BA%81%E3%81%8C%E3%82%B8%E3%83%96%E3%83%A9%E3%83%AB%E3%82%BF%E3%81%AB%E3%82%82%E5%81%9C%E6%AD%A2%E5%91%BD%E4%BB%A4%E3%81%AE%E8%83%8C%E6%99%AF",
-    "https://www.asahi.com/articles/ASVB83W4HVB8ULFA02VM.html"
+    "https://www.asahi.com/articles/ASVB83W4HVB8ULFA02VM.html",
+    "https://news.infoseek.co.jp/article/toyokeizai_20261009_960810/",
+    "https://www.google.com/search?q=%E3%82%A8%E3%83%BC%E3%82%B6%E3%82%A4%E3%80%81%E4%B8%89%E4%BA%95%E4%BD%8F%E5%8F%8B%E6%B5%B7%E4%B8%8A%E3%81%82%E3%81%84%E3%81%8A%E3%81%84%E7%94%9F%E5%91%BD%E3%81%A8%E4%BB%8B%E8%AD%B7%E3%83%BB%E8%AA%8D%E7%9F%A5%E7%97%87%E3%81%B8%E3%81%AE%E5%82%99%E3%81%88%E3%82%92%E5%BA%83%E3%81%92%E3%82%8B%E7%94%9F%E5%91%BD%E4%BF%9D%E9%99%BA%E5%8B%9F%E9%9B%86%E4%BA%BA%E6%95%99%E8%82%B2%E3%81%A7%E5%8D%94%E6%A5%AD",
+    "https://weekly-economist.mainichi.jp/articles/20261005/se1/00m/020/001000d",
+    "https://prtimes.jp/main/html/rd/p/000000191.000028337.html",
+    "https://thebridge.jp/2026/10/the-phage-raises-570-million-yen-in-series-a-first-round-for-glucose-foundation-model",
+    "https://www.nikkinonline.com/article/430235"
   ],
   "titles": [
-    "金融庁、試される「監督のための検査」 政策重視に潜むリスク",
-    "「悪質すぎる保険営業が横行」「認知症女性の貯金が尽きるまで保険料を…」 内部の「絶望」を描いた『ブラック郵便局』3万字分一挙公開",
-    "SBI損保が教員研修を実施 生成AI体験やリスク管理など現場に生かす実践学ぶ",
-    "日本生命がAI活用 「トークラボKIBIT」で意思確認支援へ",
-    "損保ジャパン、三重県警と包括連携協定…サイバー犯罪、交通事故防止に向け：地域ニュース",
-    "金融庁、銀行・生保の「防衛マネー」実態調査 戦略投融資の下地に",
     "なぜプルデンシャル生命で100人超の不正は起きたのか？エリート営業を追い詰めた構造",
     "金融庁レポートで判明、なぜ「同じ条件で火災保険に入れない」企業が増えるのか ｜FinTech Journal",
     "全国の保険代理店が集う「第71回 結心会定例会」にて、ブロードマインド登壇。業界が注目する「固定給」による顧客本位の相談モデルについて講演",
@@ -401,6 +395,12 @@
     "プルデンシャル、来年２月から一部生命保険の営業再開…全面再開には最長１年半",
     "テラデータ、医療・保険分野におけるAI活用と疾病予測などの成果を発表",
     "生保幹部「最もサプライズ」金融庁がジブラルタにも停止命令の背景",
-    "岩手銀や四国銀、損保ジャパンでも情報漏洩か 関係先に不正アクセス"
+    "岩手銀や四国銀、損保ジャパンでも情報漏洩か 関係先に不正アクセス",
+    "プルデンシャル生命､ジブラルタ生命保険に金融庁が一部業務停止命令､保険募集管理体制などに重大な欠陥",
+    "エーザイ、三井住友海上あいおい生命と介護・認知症への備えを広げる生命保険募集人教育で協業",
+    "毎日新聞「経済プレミア」より：更新ラッシュ到来「値上げ続く火災保険」水災補償の考え方 渡辺精一",
+    "hokanと三井物産インシュアランス、AI電話一次受付システム構築に向けた共同実証実験を開始",
+    "食後の血糖変動をAIで予測するザ・ファージ、5.7億円を調達——東京海上と資本業務提携",
+    "金融庁、プルデンシャル生命に一部業務停止命令 不適切な保険募集4000件も認定"
   ]
 }
