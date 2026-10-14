@@ -1,12 +1,5 @@
 {
   "urls": [
-    "https://diamond.jp/articles/-/394766",
-    "https://www.sbbit.jp/article/fj/186481",
-    "https://prtimes.jp/main/html/rd/p/000000272.000059559.html",
-    "https://www.nikkei.com/article/DGKKZO98113580S6A810C2EE9000/",
-    "https://newsdig.tbs.co.jp/articles/withbloomberg/2867337",
-    "https://www.digitaltoday.co.kr/jp/view/92316/toss-kyobo-life-digital-asset-cooperation-financial-services-poc",
-    "https://www.google.com/search?q=%E4%B8%BB%E8%A6%81%E7%94%9F%E4%BF%9D11%E7%A4%BE%E3%80%81%E5%81%A5%E5%85%A8%E6%80%A7%E3%81%AE%E6%96%B0%E6%8C%87%E6%A8%99%E3%80%8C%E5%90%88%E6%A0%BC%E3%80%8D%20%E9%87%91%E5%88%A9%E4%B8%8A%E6%98%87%E3%83%BB%E8%A7%A3%E7%B4%84%E5%A2%97%E3%81%A7%E6%82%AA%E5%8C%96%E3%83%AA%E3%82%B9%E3%82%AF",
     "https://www.watch.impress.co.jp/docs/topic/2131822.html",
     "https://www.nikkei.com/article/DGXZQOFH122VX0S6A810C2000000/",
     "https://www.dreamnews.jp/press/0000359057",
@@ -199,16 +192,16 @@
     "https://weekly-economist.mainichi.jp/articles/20261005/se1/00m/020/001000d",
     "https://prtimes.jp/main/html/rd/p/000000191.000028337.html",
     "https://thebridge.jp/2026/10/the-phage-raises-570-million-yen-in-series-a-first-round-for-glucose-foundation-model",
-    "https://www.nikkinonline.com/article/430235"
+    "https://www.nikkinonline.com/article/430235",
+    "https://toyokeizai.net/articles/-/960961?display=b",
+    "https://www.nikkei.com/article/DGXZQOUB131MW0T11C26A0000000/",
+    "https://www.sankei.com/article/20261009-VF4U6Y4NRFMMDLVSUYZU4G5W2U/",
+    "https://news.yahoo.co.jp/articles/074dcd069c83c3460564c4747a1872534234c5f5",
+    "https://finance.biggo.jp/news/b8b626e1-d45f-4452-a003-c10bed576fd1",
+    "https://news.nicovideo.jp/watch/nw19873739?news_ref=watch_20_nw19223133",
+    "https://diamond.jp/articles/-/401058"
   ],
   "titles": [
-    "なぜプルデンシャル生命で100人超の不正は起きたのか？エリート営業を追い詰めた構造",
-    "金融庁レポートで判明、なぜ「同じ条件で火災保険に入れない」企業が増えるのか ｜FinTech Journal",
-    "全国の保険代理店が集う「第71回 結心会定例会」にて、ブロードマインド登壇。業界が注目する「固定給」による顧客本位の相談モデルについて講演",
-    "異次元リスク 挑む損保（中）「AI保険」、米新興が競う 訴訟増加で補償ニーズ リスク変動、大手は二の足",
-    "AIデータセンターで保険需要急増、引き受け余力は「限界」－AIGのCEO",
-    "Toss、Kyobo Life Insuranceと提携 保険分野でデジタル資産活用を検証",
-    "主要生保11社、健全性の新指標「合格」 金利上昇・解約増で悪化リスク",
     "「海外旅行保険はクレカでOK」は終わった? 「利用付帯」は旅行前に注意を",
     "自動車保険相次ぐ値上げ、家計の負担抑えるには 動画でクイック解説",
     "2人以上世帯の年間払込保険料は平均35.3万円 ── 老後・医療・死亡の備えで6割が「自助努力志向」、物価高下の家計に重み",
@@ -401,6 +394,13 @@
     "毎日新聞「経済プレミア」より：更新ラッシュ到来「値上げ続く火災保険」水災補償の考え方 渡辺精一",
     "hokanと三井物産インシュアランス、AI電話一次受付システム構築に向けた共同実証実験を開始",
     "食後の血糖変動をAIで予測するザ・ファージ、5.7億円を調達——東京海上と資本業務提携",
-    "金融庁、プルデンシャル生命に一部業務停止命令 不適切な保険募集4000件も認定"
+    "金融庁、プルデンシャル生命に一部業務停止命令 不適切な保険募集4000件も認定",
+    "＜衝撃＞ジブラルタ生命に初の｢検査なしの業務停止命令｣､金融庁が鉄鎚を下した顧客軽視の経営実態",
+    "金融庁と国交省、損保協に代理店評価制度の運用点検要請",
+    "激震の保険業界…不正拡大防げぬ「育成庁」の綻び 監督機能強化が急務の金融庁",
+    "【2026年最新／20〜40代女性303名調査】保険は「見直した回数」で満足度が変わる（株式会社ほけんのぜんぶ）",
+    "TmaxSoft、日本の損保ジャパンでメインフレームのクラウド移行を完了",
+    "ランサムウェア被害の約6割は中小企業。那由他保険テクノロジーズ、サイバーセキュリティ保険の専用サイトを公開",
+    "生保で広がる「資産集約型再保険」、バミューダ籍の再保険会社に巨額の国内生保マネーが流入する真の理由とは？《再配信》"
   ]
 }
