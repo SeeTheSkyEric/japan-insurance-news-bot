@@ -1,10 +1,5 @@
 {
   "urls": [
-    "https://www.watch.impress.co.jp/docs/topic/2131822.html",
-    "https://www.nikkei.com/article/DGXZQOFH122VX0S6A810C2000000/",
-    "https://www.dreamnews.jp/press/0000359057",
-    "https://www.nikkinonline.com/report-toushin/article/413305",
-    "https://www.nikkei.com/article/DGXZQOUB132DB0T10C26A8000000/",
     "https://prtimes.jp/main/html/rd/p/000000273.000028421.html",
     "https://www.nikkei.com/article/DGXZQOUA141VR0U6A810C2000000/",
     "https://jbpress.ismedia.jp/articles/-/96457",
@@ -199,14 +194,14 @@
     "https://news.yahoo.co.jp/articles/074dcd069c83c3460564c4747a1872534234c5f5",
     "https://finance.biggo.jp/news/b8b626e1-d45f-4452-a003-c10bed576fd1",
     "https://news.nicovideo.jp/watch/nw19873739?news_ref=watch_20_nw19223133",
-    "https://diamond.jp/articles/-/401058"
+    "https://diamond.jp/articles/-/401058",
+    "https://news.yahoo.co.jp/articles/282e4c2b4c17cad1881a688c1d6211ce61d115af",
+    "https://msrweb.jp/article/10309/",
+    "https://prtimes.jp/main/html/rd/p/000000655.000012138.html",
+    "https://www.nikkei.com/article/DGXZQOUB121C40S6A011C2000000/",
+    "https://www.google.com/search?q=%E7%AC%AC%E4%B8%80%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%A8%E7%AC%AC%E4%B8%80%E7%94%9F%E5%91%BD%E4%BF%9D%E9%99%BA%E3%81%AE%E4%BA%BA%E4%BA%8B%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AB%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%80%81%E7%B4%8412%E4%B8%87%E5%90%8D%E3%81%AE%E5%BE%93%E6%A5%AD%E5%93%A1%E6%83%85%E5%A0%B1%E3%81%8C%E6%B5%81%E5%87%BA%E3%81%97%E3%81%9F%E5%8F%AF%E8%83%BD%E6%80%A7"
   ],
   "titles": [
-    "「海外旅行保険はクレカでOK」は終わった? 「利用付帯」は旅行前に注意を",
-    "自動車保険相次ぐ値上げ、家計の負担抑えるには 動画でクイック解説",
-    "2人以上世帯の年間払込保険料は平均35.3万円 ── 老後・医療・死亡の備えで6割が「自助努力志向」、物価高下の家計に重み",
-    "【保険窓販情報】損保ジャパン、AIロープレツールを導入",
-    "東京海上、企業への災害発生通知で新サービス 早期対応を支援",
     "アニコム損保、公式ホームページのトップページをリニューアル",
     "危険地域運航の原油タンカーの再保険、国が保険金肩代わり 新法検討",
     "iDeCo改革は保険ショップの失敗に学べ！個別商品推奨や選択肢拡大という愚策、このままではうまくいかない",
@@ -401,6 +396,11 @@
     "【2026年最新／20〜40代女性303名調査】保険は「見直した回数」で満足度が変わる（株式会社ほけんのぜんぶ）",
     "TmaxSoft、日本の損保ジャパンでメインフレームのクラウド移行を完了",
     "ランサムウェア被害の約6割は中小企業。那由他保険テクノロジーズ、サイバーセキュリティ保険の専用サイトを公開",
-    "生保で広がる「資産集約型再保険」、バミューダ籍の再保険会社に巨額の国内生保マネーが流入する真の理由とは？《再配信》"
+    "生保で広がる「資産集約型再保険」、バミューダ籍の再保険会社に巨額の国内生保マネーが流入する真の理由とは？《再配信》",
+    "「街のクルマ屋と保険大手を一緒にするな」金融庁＆国交省が異例の“要請” 損保の「代理店切り捨て問題」実態調査を踏まえて一喝！",
+    "整備工場の保険代理店業務に追い風か、金融庁・国土交通省が損保各社に対し「ていねいな対話」を要請",
+    "Finatext、メディケア生命にて、保険金請求の不正検知におけるAI活用の実証実験（PoC）を開始",
+    "東京海上日動、7年ぶり社債2000億円調達へ 環境対応の本社建て替えに",
+    "第一ライフグループと第一生命保険の人事システムに不正アクセス、約12万名の従業員情報が流出した可能性"
   ]
 }
