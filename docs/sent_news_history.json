@@ -1,12 +1,5 @@
 {
   "urls": [
-    "https://prtimes.jp/main/html/rd/p/000000663.000005541.html",
-    "https://goodway.co.jp/report/33162",
-    "https://goodway.co.jp/report/33127",
-    "https://www.sbbit.jp/article/sp/186208",
-    "https://news.yahoo.co.jp/articles/2a82865cb99742f187402f46b4d0d1ef0d46e375",
-    "https://www.google.com/search?q=%E6%98%8E%E6%B2%BB%E5%AE%89%E7%94%B0%E7%94%9F%E5%91%BD%E3%80%81%E4%BF%9D%E9%99%BA%E4%BB%A3%E7%90%86%E5%BA%97%E3%81%AE%E5%96%B6%E6%A5%AD%E6%94%AF%E6%8F%B4%E5%BC%B7%E5%8C%96%EF%BC%9D%E5%87%BA%E5%90%91%E5%BB%83%E6%AD%A2%E5%BE%8C%E3%82%82%E8%B2%A9%E5%A3%B2%E5%8A%9B%E7%B6%AD%E6%8C%81",
-    "https://www.asahi.com/articles/ASV8N1SP1V8NONFB00BM.html",
     "https://prtimes.jp/main/html/rd/p/000000237.000069919.html",
     "https://www.google.com/search?q=%E5%8D%83%E8%91%89%E8%B1%AA%E9%9B%A8%E3%81%AE%E6%B0%B4%E6%B2%A1%E8%BB%8A%E3%80%81%E6%90%8D%E4%BF%9D%E5%90%84%E7%A4%BE%E3%81%8C%E8%BF%85%E9%80%9F%E3%81%AB%E6%90%8D%E5%AE%B3%E6%9F%BB%E5%AE%9A%E2%80%A6%E3%80%8C%E3%83%A4%E3%83%BC%E3%83%89%E3%80%8D%E3%81%AB%E9%9B%86%E3%82%81%E3%81%A6%E4%B8%80%E6%8B%AC%E6%9F%BB%E5%AE%9A%E3%83%BB%E6%9C%80%E7%9F%AD%EF%BC%91%E9%80%B1%E9%96%93%E3%81%A7%E4%BF%9D%E9%99%BA%E9%87%91",
     "https://finance.yahoo.co.jp/quote/7157.T/forum",
@@ -199,16 +192,16 @@
     "https://www.google.com/search?q=%E3%80%90%E6%A5%AD%E5%8B%99%E5%81%9C%E6%AD%A23%E3%82%AB%E6%9C%88%E8%B6%85%E3%80%91%E3%83%97%E3%83%AB%E3%83%87%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E3%80%8C%E5%AE%8C%E5%85%A8%E6%AD%A9%E5%90%88%E5%88%B6%E3%80%8D%E3%81%AE%E5%8A%9F%E7%BD%AA%E2%80%A6%E7%AC%AC%E4%B8%80%E7%94%9F%E5%91%BD%E3%80%81%E6%97%A5%E6%9C%AC%E7%94%9F%E5%91%BD%E3%81%A8%E6%AF%94%E8%BC%83%20%EF%BD%9CFinTech%20Journal",
     "https://www.google.com/search?q=%E3%82%A2%E3%83%95%E3%83%A9%E3%83%83%E3%82%AF%E7%94%9F%E5%91%BD%E4%BF%9D%E9%99%BA%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%80%81%E5%A5%91%E7%B4%84%E8%80%85%E5%B0%82%E7%94%A8%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E5%86%8D%E9%96%8B",
     "https://weathernews.jp/news/202610/210101/",
-    "https://www.google.com/search?q=iPS%E7%B4%B0%E8%83%9E%E3%81%A7%E3%81%AE%E7%A7%BB%E6%A4%8D%E6%89%8B%E8%A1%93%E6%88%90%E5%8A%9F%20%E4%BF%9D%E9%99%BA%E9%81%A9%E7%94%A8%E3%81%A8%E3%81%97%E3%81%A6%E3%81%AF%E4%B8%96%E7%95%8C%E5%88%9D"
+    "https://www.google.com/search?q=iPS%E7%B4%B0%E8%83%9E%E3%81%A7%E3%81%AE%E7%A7%BB%E6%A4%8D%E6%89%8B%E8%A1%93%E6%88%90%E5%8A%9F%20%E4%BF%9D%E9%99%BA%E9%81%A9%E7%94%A8%E3%81%A8%E3%81%97%E3%81%A6%E3%81%AF%E4%B8%96%E7%95%8C%E5%88%9D",
+    "https://www.sanyonews.jp/article/2008911",
+    "https://www.google.com/search?q=%E5%A4%A7%E6%89%8B%E7%94%9F%E4%BF%9D%E3%80%81%E3%80%8C%E5%85%B1%E5%90%8C%E5%8B%9F%E9%9B%86%E3%80%8D%E7%85%A9%E9%9B%91%E5%8C%96%20%E6%A5%AD%E6%B3%95%E6%94%B9%E6%AD%A3%E3%81%A7%E6%8F%90%E6%A1%88%E8%B2%A0%E6%8B%85%E5%A2%97%E3%82%82",
+    "https://news.nicovideo.jp/watch/nw19908080?news_ref=watch_20_nw19722711",
+    "https://news.nicovideo.jp/watch/nw19907388?news_ref=20_20",
+    "https://straightpress.jp/company_news/detail?pr=000000190.000118298",
+    "https://prtimes.jp/main/html/rd/p/000000439.000003638.html",
+    "https://media.shaho.co.jp/n/n38f8139118a9"
   ],
   "titles": [
-    "一時払終身保険「サニーガーデン」シリーズ、累計販売件数100万件",
-    "【保険EXPO2026】金融IT基盤と最新AIの融合—FITAブースツアーで捉えるコンタクトセンター・データプラットフォーム・次世代接客の未来",
-    "【保険EXPO2026】AI・データ活用で挑む保険DX—FDUAブースツアーで体感する現場改革の最前線",
-    "東京海上HDは“セキュリティ格差”をどう埋めた？40人で24社を守る「バーチャル要員」",
-    "「サイバー保険」攻撃備え検討を 重要インフラ防護へ150項目 政府指針案（時事通信）",
-    "明治安田生命、保険代理店の営業支援強化＝出向廃止後も販売力維持",
-    "大手損保や金融機関が撤退の過疎地…あえて保険代理店が進出する狙い",
     "ライフネット生命、保険金・給付金の「最短当日支払い」開始から1年 直近の平均支払日数は0.58日、請求当日の着金を実現",
     "千葉豪雨の水没車、損保各社が迅速に損害査定…「ヤード」に集めて一括査定・最短１週間で保険金",
     "ライフネット生命保険(株)【7157】：掲示板",
@@ -401,6 +394,13 @@
     "【業務停止3カ月超】プルデンシャル「完全歩合制」の功罪…第一生命、日本生命と比較 ｜FinTech Journal",
     "アフラック生命保険への不正アクセス、契約者専用サイトのサービス再開",
     "PR 【HIKESHI ACTIONS！】損保ジャパン×ウェザーニューズ 当たり前を守る「インフラ」と「サプライチェーン」",
-    "iPS細胞での移植手術成功 保険適用としては世界初"
+    "iPS細胞での移植手術成功 保険適用としては世界初",
+    "プルデンシャル 組織風土 抜本的に改革を",
+    "大手生保、「共同募集」煩雑化 業法改正で提案負担増も",
+    "＜愛知県 西尾市＞「保険見直し本舗 ヴェルサウォーク西尾店」が2026年10月23日 金曜日オープン",
+    "＜大阪府 枚方市＞「保険見直し本舗 アル・プラザ枚方店」が2026年10月23日 金曜日オープン",
+    "【TechSuite株式会社】【業界特化調査 第25弾】AI検索パートナーズ、法人保険代理店選びのAI検索対策（LLMO/AIO/GEO/AEO）調査を実施｜観測された会社・代理店は95件に上る",
+    "ソニー生命、株式会社Staywayと業務提携し、「補助金クラウド」を活用した法人向け補助金支援サービスを開始",
+    "介護事故の報告を全国で一元化へ 厚労省、2027年４月頃の新システム稼働に向け報告様式の見直し案を提示（2026年10月21日）"
   ]
 }
