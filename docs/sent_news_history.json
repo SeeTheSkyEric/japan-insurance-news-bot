@@ -1,12 +1,5 @@
 {
   "urls": [
-    "https://prtimes.jp/main/html/rd/p/000000237.000069919.html",
-    "https://www.google.com/search?q=%E5%8D%83%E8%91%89%E8%B1%AA%E9%9B%A8%E3%81%AE%E6%B0%B4%E6%B2%A1%E8%BB%8A%E3%80%81%E6%90%8D%E4%BF%9D%E5%90%84%E7%A4%BE%E3%81%8C%E8%BF%85%E9%80%9F%E3%81%AB%E6%90%8D%E5%AE%B3%E6%9F%BB%E5%AE%9A%E2%80%A6%E3%80%8C%E3%83%A4%E3%83%BC%E3%83%89%E3%80%8D%E3%81%AB%E9%9B%86%E3%82%81%E3%81%A6%E4%B8%80%E6%8B%AC%E6%9F%BB%E5%AE%9A%E3%83%BB%E6%9C%80%E7%9F%AD%EF%BC%91%E9%80%B1%E9%96%93%E3%81%A7%E4%BF%9D%E9%99%BA%E9%87%91",
-    "https://finance.yahoo.co.jp/quote/7157.T/forum",
-    "https://www.nikkei.com/article/DGXZQOUB271SZ0X20C26A8000000/",
-    "https://news.infoseek.co.jp/article/prtimes_000000022_000171467/",
-    "https://prtimes.jp/main/html/rd/p/000001058.000001256.html",
-    "https://minkabu.jp/news/4603745",
     "https://prtimes.jp/main/html/rd/p/000000323.000035597.html",
     "https://xtech.nikkei.com/atcl/nxt/column/18/03730/082100003/",
     "https://www.nikkan.co.jp/articles/view/721377",
@@ -199,16 +192,16 @@
     "https://news.nicovideo.jp/watch/nw19907388?news_ref=20_20",
     "https://straightpress.jp/company_news/detail?pr=000000190.000118298",
     "https://prtimes.jp/main/html/rd/p/000000439.000003638.html",
-    "https://media.shaho.co.jp/n/n38f8139118a9"
+    "https://media.shaho.co.jp/n/n38f8139118a9",
+    "https://www.nikkei.com/article/DGXZQOUB22BBS0S6A021C2000000/",
+    "https://prtimes.jp/main/html/rd/p/000000700.000016549.html",
+    "https://diamond.jp/articles/-/401777",
+    "https://news.yahoo.co.jp/articles/b6165f95bcabbcee893679dfb4ab9386584244f5/images/000",
+    "https://www.nikkei.com/article/DGXZQOUB121560S6A011C2000000/",
+    "https://www.sbbit.jp/article/fj/187594",
+    "https://kabutan.jp/news/marketnews/?b=n202610260231"
   ],
   "titles": [
-    "ライフネット生命、保険金・給付金の「最短当日支払い」開始から1年 直近の平均支払日数は0.58日、請求当日の着金を実現",
-    "千葉豪雨の水没車、損保各社が迅速に損害査定…「ヤード」に集めて一括査定・最短１週間で保険金",
-    "ライフネット生命保険(株)【7157】：掲示板",
-    "金融庁、28年3月から保険商品の提案ルール厳格に 顧客本位促す",
-    "『保険のキロク』、現役代理店が開発した「MIC-ViewSystem（ビューシステム）」と業務提携--面談記録と顧客・契約情報ををつなぐ",
-    "“ヒト×保険×テクノロジー” アイリックコーポレーション、保険代理店向けシステム「AS SYSTEM」「AS-BOX」に【証跡管理機能】を提供開始",
-    "アイリックコーポレーション、来店型保険ショップ「保険クリニック」拡大で売上高が過去最高 27年6月期は増収増益予想",
     "「オンライン診断書連携サービス」の利用開始について",
     "JPKIを応用した「デジタル逝去判定」、保険金の請求漏れ対策やSNSの削除に",
     "損害保険、アプリで即日加入 りそなHDが取り扱い開始",
@@ -401,6 +394,13 @@
     "＜大阪府 枚方市＞「保険見直し本舗 アル・プラザ枚方店」が2026年10月23日 金曜日オープン",
     "【TechSuite株式会社】【業界特化調査 第25弾】AI検索パートナーズ、法人保険代理店選びのAI検索対策（LLMO/AIO/GEO/AEO）調査を実施｜観測された会社・代理店は95件に上る",
     "ソニー生命、株式会社Staywayと業務提携し、「補助金クラウド」を活用した法人向け補助金支援サービスを開始",
-    "介護事故の報告を全国で一元化へ 厚労省、2027年４月頃の新システム稼働に向け報告様式の見直し案を提示（2026年10月21日）"
+    "介護事故の報告を全国で一元化へ 厚労省、2027年４月頃の新システム稼働に向け報告様式の見直し案を提示（2026年10月21日）",
+    "生保破綻時の安全網、恒久化へ 保険業法改正で金融庁案",
+    "保険相談サービス「えらべる」累計契約者数1万人を突破！",
+    "保険の比較推奨販売「ロ方式」、金融庁が監督指針に込めた“真意”とは？パブコメで書き換わった3カ所と「提示」「推奨」の決定的な違い【前編】",
+    "保険ショップで勧められた保険。複数社を扱う代理店は「勧める理由」を説明する (マネーの達人)",
+    "東京海上が国内初フィジカルAI保険 ロボット修理費補償、大市場に先手",
+    "【保存版】もう保険の相談窓口は不要？凄すぎる…「AI版FPサービス注目5社」徹底解説",
+    "東京海上が４日続伸、フィジカルＡＩ向け保険を販売開始と報じられる"
   ]
 }
