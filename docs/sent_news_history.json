@@ -1,12 +1,5 @@
 {
   "urls": [
-    "https://prtimes.jp/main/html/rd/p/000000323.000035597.html",
-    "https://xtech.nikkei.com/atcl/nxt/column/18/03730/082100003/",
-    "https://www.nikkan.co.jp/articles/view/721377",
-    "https://www.asahi.com/articles/ASV8Z2662V8ZULFA002M.html",
-    "https://kabu-ir.com/article/521455157.html",
-    "https://prtimes.jp/main/html/rd/p/000000015.000168875.html",
-    "https://jp.reuters.com/economy/6XDPIH6VVFLGFEXWYJ3JFHLE2Q-2026-08-28/",
     "https://www.microsoft.com/ja-jp/customers/story/27072-daiichi-life-insurance-co-ltd-microsoft-foundry",
     "https://www.sbbit.jp/article/sp/186369",
     "https://www.nikkinonline.com/article/419725",
@@ -199,16 +192,16 @@
     "https://news.yahoo.co.jp/articles/b6165f95bcabbcee893679dfb4ab9386584244f5/images/000",
     "https://www.nikkei.com/article/DGXZQOUB121560S6A011C2000000/",
     "https://www.sbbit.jp/article/fj/187594",
-    "https://kabutan.jp/news/marketnews/?b=n202610260231"
+    "https://kabutan.jp/news/marketnews/?b=n202610260231",
+    "https://www.sbbit.jp/article/fj/187489",
+    "https://www.jiji.com/jc/article?k=2026102001035&g=eco",
+    "https://www.nikkei.com/article/DGXZQOUB233CW0T21C26A0000000/",
+    "https://www.nagoyatv.com/news/?id=037747",
+    "https://www.asahi.com/articles/ASVBV2TB5VBVULFA00ZM.html",
+    "https://www.google.com/search?q=%E3%82%A2%E3%83%B3%E3%82%BD%E3%83%AD%E3%83%94%E3%83%83%E3%82%AF%E3%80%81%EF%BC%A1%EF%BC%A9%E5%A4%A7%E4%BA%8B%E6%95%85%E3%81%B8%E3%81%AE%E4%BF%9D%E9%99%BA%E5%AF%BE%E5%BF%9C%E3%81%AB%E8%AD%A6%E5%91%8A%20%E3%80%8C%E5%BC%95%E5%8F%97%E8%83%BD%E5%8A%9B%E4%B8%8D%E8%B6%B3%E3%82%82%E3%80%8D",
+    "https://news.yahoo.co.jp/articles/26cdb23e1d50cb2822b161170c5d77ee1f23bd01"
   ],
   "titles": [
-    "「オンライン診断書連携サービス」の利用開始について",
-    "JPKIを応用した「デジタル逝去判定」、保険金の請求漏れ対策やSNSの削除に",
-    "損害保険、アプリで即日加入 りそなHDが取り扱い開始",
-    "ソニー生命に立ち入り検査へ 不祥事で金融庁、プルデンシャルに続き",
-    "セーフィー、佐渡島商事を完全子会社化、取得総額２．４２億円、「映像×ＡＩ」と保険融合へ - kabu-ir.com",
-    "boshu株式会社、保険代理店向けAIアシストサービス 「boshu assist」の導入が25社を突破",
-    "アングル：ＡＩエージェントの「暴走リスク」現実に、見直し迫られるサイバー保険",
     "第一生命が生涯設計デザイナーの働き方を Azure ベースの AI で変革。そのために構築された「デジタルバディ」の開発プロセスと効果とは？",
     "「モデル学習」はたった1割…損保ジャパンが語る、AI開発自動化を左右する“設計力”",
     "金融庁、成長投資へ規制緩和検討、専属保険会社の創設も 金融審に作業部会",
@@ -401,6 +394,13 @@
     "保険ショップで勧められた保険。複数社を扱う代理店は「勧める理由」を説明する (マネーの達人)",
     "東京海上が国内初フィジカルAI保険 ロボット修理費補償、大市場に先手",
     "【保存版】もう保険の相談窓口は不要？凄すぎる…「AI版FPサービス注目5社」徹底解説",
-    "東京海上が４日続伸、フィジカルＡＩ向け保険を販売開始と報じられる"
+    "東京海上が４日続伸、フィジカルＡＩ向け保険を販売開始と報じられる",
+    "不祥事連発で“信頼失墜”…金融庁が保険業界に迫る「AI・代理店・再保険」3つの改革 ｜FinTech Journal",
+    "ソニー生命親会社に立ち入り検査へ 元社員による金銭詐取巡り―金融庁",
+    "プルデンシャル、未曽有の金融不祥事 「ゴリラ」部隊の素顔に迫る",
+    "生命保険申込書を偽造した疑いで逮捕の男女3人を、同居男性(当時58歳）への傷害致死容疑で再逮捕 三重",
+    "「AIロボット保険」11月発売 国内初、誤作動リスクなどに備え",
+    "アンソロピック、ＡＩ大事故への保険対応に警告 「引受能力不足も」",
+    "大和証券、シチズン、損保ジャパン、東武鉄道、オリックス生命――5社に影響した不正アクセス、狙われた「同じ委託先」（＠IT）"
   ]
 }
