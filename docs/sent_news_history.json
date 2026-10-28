@@ -1,10 +1,5 @@
 {
   "urls": [
-    "https://www.microsoft.com/ja-jp/customers/story/27072-daiichi-life-insurance-co-ltd-microsoft-foundry",
-    "https://www.sbbit.jp/article/sp/186369",
-    "https://www.nikkinonline.com/article/419725",
-    "https://finance.biggo.jp/news/8a391574-a674-4119-8183-ee8a8450199e",
-    "https://www.nikkei.com/nkd/disclosure/tdnr/20260831528762/",
     "https://prtimes.jp/main/html/rd/p/000000187.000028337.html",
     "https://techtarget.itmedia.co.jp/tt/article/limage/2001/20/220012004/956638",
     "https://www.google.com/search?q=%E3%82%BB%E3%83%BC%E3%83%95%E3%82%A3%E3%83%BC%E3%80%81%E4%BF%9D%E9%99%BA%E4%BB%A3%E7%90%86%E5%BA%97%E3%82%92%E5%AE%8C%E5%85%A8%E5%AD%90%E4%BC%9A%E7%A4%BE%E5%8C%96",
@@ -199,14 +194,14 @@
     "https://www.nagoyatv.com/news/?id=037747",
     "https://www.asahi.com/articles/ASVBV2TB5VBVULFA00ZM.html",
     "https://www.google.com/search?q=%E3%82%A2%E3%83%B3%E3%82%BD%E3%83%AD%E3%83%94%E3%83%83%E3%82%AF%E3%80%81%EF%BC%A1%EF%BC%A9%E5%A4%A7%E4%BA%8B%E6%95%85%E3%81%B8%E3%81%AE%E4%BF%9D%E9%99%BA%E5%AF%BE%E5%BF%9C%E3%81%AB%E8%AD%A6%E5%91%8A%20%E3%80%8C%E5%BC%95%E5%8F%97%E8%83%BD%E5%8A%9B%E4%B8%8D%E8%B6%B3%E3%82%82%E3%80%8D",
-    "https://news.yahoo.co.jp/articles/26cdb23e1d50cb2822b161170c5d77ee1f23bd01"
+    "https://news.yahoo.co.jp/articles/26cdb23e1d50cb2822b161170c5d77ee1f23bd01",
+    "https://diamond.jp/articles/-/402001",
+    "https://prtimes.jp/main/html/rd/p/000000465.000073883.html",
+    "https://www.asahi.com/articles/ASVBW5170VBWULFA02DM.html",
+    "https://active.nikkeibp.co.jp/atcl/act/19/00811/090300003/",
+    "https://pando.life/article/4743776"
   ],
   "titles": [
-    "第一生命が生涯設計デザイナーの働き方を Azure ベースの AI で変革。そのために構築された「デジタルバディ」の開発プロセスと効果とは？",
-    "「モデル学習」はたった1割…損保ジャパンが語る、AI開発自動化を左右する“設計力”",
-    "金融庁、成長投資へ規制緩和検討、専属保険会社の創設も 金融審に作業部会",
-    "保険代理店に「比較推奨」義務付け 28年3月から新規制適用、金融庁",
-    "アドバンスクリエイト[8798]：株式会社エージェント・インシュアランス・グループとの保険代理店事業における連携強化及び一部保険契約承継に関するお知らせ 2026年8月31日(適時開示) ：日経会社情報DIGITAL",
     "hokan、改正比較推奨販売ルールへの実務対応を支援する 「比較推奨運用支援サービス」を2026年9月より本格提供開始",
     "SOMPOグループが保険代理店向けシステムを「Heroku」に移行した理由（画像）（1/3枚目）",
     "セーフィー、保険代理店を完全子会社化",
@@ -401,6 +396,11 @@
     "生命保険申込書を偽造した疑いで逮捕の男女3人を、同居男性(当時58歳）への傷害致死容疑で再逮捕 三重",
     "「AIロボット保険」11月発売 国内初、誤作動リスクなどに備え",
     "アンソロピック、ＡＩ大事故への保険対応に警告 「引受能力不足も」",
-    "大和証券、シチズン、損保ジャパン、東武鉄道、オリックス生命――5社に影響した不正アクセス、狙われた「同じ委託先」（＠IT）"
+    "大和証券、シチズン、損保ジャパン、東武鉄道、オリックス生命――5社に影響した不正アクセス、狙われた「同じ委託先」（＠IT）",
+    "東京海上日動トップが語る代理店改革の本音…委託解消は「目的では全くない」、「ハ方式」廃止後に選ばれる新たな代理店像とは？",
+    "株式会社エレメント、年間取扱保険料20億円突破！非対面型のデジタル保険代理店として成長",
+    "「サイバー保険」契約企業、無料リスク診断 12月からサーバーなど [情報漏洩・個人情報流出の最新ニュース]",
+    "JPKIを応用した「デジタル逝去判定」、保険金の請求漏れ対策やSNSの削除に",
+    "日本のインシュアテック市場規模と動向"
   ]
 }
