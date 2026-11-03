@@ -1,10 +1,5 @@
 {
   "urls": [
-    "https://www.trucknews.biz/article/s090235/",
-    "https://www.nikkinonline.com/report-toushin/article/421160",
-    "https://response.jp/article/2026/09/02/416013.html",
-    "https://www.google.com/search?q=%E3%80%8C%E9%A1%A7%E5%AE%A2%E3%81%AEAI%E3%81%8C%E4%BF%9D%E9%99%BA%E4%BC%9A%E7%A4%BE%E3%82%92%E9%81%B8%E3%81%B6%E6%99%82%E4%BB%A3%E3%81%AB%E3%80%8D%20%E7%AC%AC%E4%B8%80%E3%83%A9%E3%82%A4%E3%83%95CDAO%E3%83%BB%E3%82%A6%E3%83%AB%E3%82%B2%E3%83%B3%E6%B0%8F",
-    "https://active.nikkeibp.co.jp/atcl/act/19/00798/080300004/",
     "https://news.yahoo.co.jp/articles/13e1f2585f830bd2c7e6d6a09968006fd726e320",
     "https://www.google.com/search?q=%E4%BF%9D%E9%99%BA%E8%B2%A9%E5%A3%B2%E3%81%A7%E5%A7%8B%E3%81%BE%E3%82%8B%E3%80%8C%E6%AF%94%E8%BC%83%E6%8E%A8%E5%A5%A8%E3%80%8D%2028%E5%B9%B4%E3%81%AB%E6%96%B0%E3%83%AB%E3%83%BC%E3%83%AB%E3%80%81%E4%BB%A3%E7%90%86%E5%BA%97%E6%B7%98%E6%B1%B0%E3%81%AE%E5%B0%8E%E7%81%AB%E7%B7%9A%E3%81%AB",
     "https://mag-x.jp/2026/09/08/33511/",
@@ -199,14 +194,14 @@
     "https://finance.biggo.jp/news/1cccfd5c-c282-4126-a4d0-b8c14745e5d8",
     "https://www.lnews.jp/2026/10/s1030705.html",
     "https://internet.watch.impress.co.jp/docs/news/2152315.html",
-    "https://www.ryoko-net.co.jp/?p=174979"
+    "https://www.ryoko-net.co.jp/?p=174979",
+    "https://www.nikkinonline.com/article/436350",
+    "https://www.fnn.jp/articles/-/1143144",
+    "https://digital-construction.jp/news/4168",
+    "https://www.nikkei.com/article/DGXZQOUB296YF0Z21C26A0000000/",
+    "https://www.viet-jo.com/news/nikkei/261031110335.html"
   ],
   "titles": [
-    "あいおいニッセイ同和損害保険／トラックの適切な管理から売却までサポート「トラめぐり」提供",
-    "金融庁、保険の「売れ筋」勧誘禁止 商品比較妨げる恐れ【ニッキンONLINE】",
-    "東京海上HD、英国の商業用自動車保険代理店DCLを買収",
-    "「顧客のAIが保険会社を選ぶ時代に」 第一ライフCDAO・ウルゲン氏",
-    "東京海上日動火災保険がAI駆動開発を導入、10件以上の本番案件で検証",
     "熊本、保険金査定にデジタル活用 地震で損保各社、住宅被害6万件",
     "保険販売で始まる「比較推奨」 28年に新ルール、代理店淘汰の導火線に",
     "善良な小規模代理店に寄り添わぬ大手生損保 金融庁指導に乗じた大手代理店偏重を許すな",
@@ -401,6 +396,11 @@
     "旧ビッグモーター系ウィーカーズ、自賠責保険の代理店登録 金融庁が認可",
     "X mile／損害保険ジャパンと交通事故削減に向け業務提携、物流事業者へロジポケ導入を優遇",
     "TrendAI、損保ジャパンのサイバー保険契約者向けにIT資産管理・脆弱性管理サービス提供",
-    "エイチ・エス損害保険、海外旅行保険の広告掲出 スマホをかざしてネット保険にアクセス"
+    "エイチ・エス損害保険、海外旅行保険の広告掲出 スマホをかざしてネット保険にアクセス",
+    "金融庁、生保破綻時の保護見直し 恒久化、業界負担増条件に",
+    "火災保険「水災補償」に入ってる？保険代理店が教える浸水・水没への備え",
+    "東京海上日動、国内初の「AIロボット保険」を11月提供開始。ロボットが止まったら、代替人材の人件費も補償",
+    "サイバー保険問い合わせ3倍 高まる危機感、GMO問題で保険料上昇懸念",
+    "朝日生命、地場生命保険会社の買収完了 新体制で経営開始［日系］"
   ]
 }
