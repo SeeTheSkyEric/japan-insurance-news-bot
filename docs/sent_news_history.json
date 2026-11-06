@@ -1,12 +1,5 @@
 {
   "urls": [
-    "https://www.nikkei.com/article/DGKKZO98630740X00C26A9EE9000/",
-    "https://www.google.com/search?q=%E4%BF%9D%E9%99%BA%E4%BB%A3%E7%90%86%E5%BA%97%E3%81%AB%E5%95%8F%E3%82%8F%E3%82%8C%E3%82%8B%E4%BD%93%E5%88%B6%E6%95%B4%E5%82%99%E3%81%AE%E3%80%8C%E5%AE%9F%E5%8A%B9%E6%80%A7%E3%80%8D%E3%81%A8%E3%81%AF%EF%BC%9F%E5%A4%9A%E3%81%99%E3%81%8E%E3%82%8B%E9%81%B8%E6%8A%9E%E8%82%A2%E3%81%A8%E7%AE%A1%E7%90%86%E3%83%AB%E3%83%BC%E3%83%AB%E5%BD%A2%E9%AA%B8%E5%8C%96%E3%81%AE%E7%BD%A0%E3%82%92%E5%85%83%E9%87%91%E8%9E%8D%E5%BA%81%E6%A4%9C%E6%9F%BB%E5%AE%98%E3%81%8C%E8%A7%A3%E8%AA%AC",
-    "https://www.nikkei.com/article/DGXZQOUB219LV0R20C26A8000000/",
-    "https://www.google.com/search?q=%E5%A4%89%E3%82%8F%E3%82%8B%E3%81%8B%20%E4%BF%9D%E9%99%BA%E4%BB%A3%E7%90%86%E5%BA%97%EF%BC%88%E4%B8%8B%EF%BC%89%E6%90%8D%E4%BF%9D%E3%81%AE%E5%AF%BE%E5%BF%9C%E4%B8%80%E5%A4%89%E3%81%A7%E4%B8%8D%E4%BF%A1%E6%84%9F%20%E4%B8%8D%E6%AD%A3%E3%81%AE%E5%8E%9F%E5%9B%A0%E3%80%8C%E3%81%AA%E3%82%8C%E5%90%88%E3%81%84%E3%80%8D%E6%98%AF%E6%AD%A3%E3%81%A7%E4%BA%80%E8%A3%82%20%E9%A1%A7%E5%AE%A2%E6%9C%AC%E4%BD%8D%E3%81%AE%E5%AE%9F%E7%8F%BE%E9%81%A0%E3%81%8F",
-    "https://www.asahi.com/articles/DA3S16542881.html",
-    "https://www.unite.ai/ja/ai-in-insurance-practical-impact-operating-models/",
-    "https://jp.wsj.com/articles/the-next-big-opportunity-in-data-centers-insuring-them-1887646b",
     "https://prtimes.jp/main/html/rd/p/000000082.000025296.html",
     "https://enterprisezine.jp/news/detail/25024",
     "https://www.nikkei.com/article/DGXZQOUB192P90Z10C26A8000000/",
@@ -199,16 +192,16 @@
     "https://diamond.jp/list/feature/p-insurance2026",
     "https://www.google.com/search?q=%E4%B8%89%E4%BA%95%E4%BD%8F%E5%8F%8B%E3%82%AB%E3%83%BC%E3%83%89%E3%80%8COlive%E3%80%8D%E3%81%A7%E3%82%A4%E3%83%B3%E3%83%95%E3%83%AB%E3%82%A8%E3%83%B3%E3%82%B6%E4%BF%9D%E9%99%BA%E3%82%92%E8%BF%91%E6%97%A5%E6%8F%90%E4%BE%9B%E3%81%B8%20%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E8%A8%BA%E7%99%82%E3%81%A8%E9%80%A3%E6%90%BA%E3%80%81%E5%8C%BB%E7%99%82%E3%83%87%E3%83%BC%E3%82%BF%E3%81%8B%E3%82%89%E8%A6%8B%E3%82%8B%E6%84%9F%E6%9F%93%E3%83%AA%E3%82%B9%E3%82%AF%E3%82%82",
     "https://startuplog.com/n/ncda3dc18889c",
-    "https://thebridge.jp/2026/11/mylily-cyberagentcapital-insight"
+    "https://thebridge.jp/2026/11/mylily-cyberagentcapital-insight",
+    "https://news.yahoo.co.jp/pickup/6601346",
+    "https://diamond.jp/articles/-/402582",
+    "https://diamond.jp/articles/-/402443",
+    "https://www.yomiuri.co.jp/local/kansai/news/20261105-GYO1T00047/",
+    "https://mainichi.jp/articles/20261105/k00/00m/020/265000c",
+    "https://www.nikkinonline.com/article/437127",
+    "https://www.tradingview.com/news/reuters.com,2026:newsml_L3N46M0SR:0/"
   ],
   "titles": [
-    "変わるか 保険代理店（上）商品、比較し販売を徹底 28年春から新ルール ビジネスモデル激変、淘汰の引き金にも",
-    "保険代理店に問われる体制整備の「実効性」とは？多すぎる選択肢と管理ルール形骸化の罠を元金融庁検査官が解説",
-    "損保と代理店、「なれ合い」是正の販売改革で亀裂 遠のく顧客本位",
-    "変わるか 保険代理店（下）損保の対応一変で不信感 不正の原因「なれ合い」是正で亀裂 顧客本位の実現遠く",
-    "地震保険金、アプリで査定 デジタル活用、支払い急ぐ 損保各社",
-    "保険業界はAIについて何年も語り続けてきたが、今年は実際に活用した",
-    "データセンター建設ブーム、次の巨大商機は「保険」",
     "保険代理店の業務品質評価・セキュリティ対策・IT資産管理までを一元化、ランサムウェア対策も4層に強化！",
     "SBI損害保険、PKSHA FAQ土台に社内ナレッジを「作る・貯める・引き出す」循環を実現",
     "生保、インフレ下で不動産投資拡大 明治安田は残高2兆円に倍増へ",
@@ -401,6 +394,13 @@
     "保険 激震！ 生保・損保・代理店",
     "三井住友カード「Olive」でインフルエンザ保険を近日提供へ オンライン診療と連携、医療データから見る感染リスクも",
     "損害保険向けクラウドプラットフォームを提供するGuidewireがAI保険引受プラットフォームを提供するhyperexponentialを買収",
-    "保険適用の更年期専門オンライン診療「MYLILY」／Monthly Pitch! スタートアップの扉"
+    "保険適用の更年期専門オンライン診療「MYLILY」／Monthly Pitch! スタートアップの扉",
+    "金融庁、ソニーFGに立ち入り検査 ソニー生命の金銭詐取問題めぐり",
+    "保険代理店の「社保逃れ」是正に生保と損保で温度差、再委託問題で「正直者が馬鹿を見る」構造を元金融庁検査官が解説",
+    "損保ジャパン社長「代理店に光を当て、われわれは黒子に」比較推奨販売「ハ方式」廃止後の勝ち筋と“現代の火消し”構想を開陳",
+    "意向確認せず保険を解約・かんぽに乗り換えさせる、懲戒解雇された元保険営業が日本郵便を提訴…「会社のルールにのっとっていたのに」",
+    "経済プラス：生成AIの偽画像を見破れ！保険金不正請求に損保業界が対応強化",
+    "住友生命、「Olive」にインフルエンザ保険提供 デジタルで相談から請求まで",
+    "AI保険スタートアップのカレパ、4億7000万ドル評価額で資金調達"
   ]
 }
