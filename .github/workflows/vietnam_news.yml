@@ -2,7 +2,7 @@ name: Vietnam Insurance News Bot
 
 on:
   schedule:
-    - cron: '0 23 * * 0-4'
+      - cron: '25 22 * * 0-4'   # 평일 KST 07:25 (UTC 22:25, 일~목)
   workflow_dispatch:
 
 jobs:
