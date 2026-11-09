@@ -1,12 +1,5 @@
 {
   "urls": [
-    "https://prtimes.jp/main/html/rd/p/000000082.000025296.html",
-    "https://enterprisezine.jp/news/detail/25024",
-    "https://www.nikkei.com/article/DGXZQOUB192P90Z10C26A8000000/",
-    "https://www.nikkei.com/article/DGXZQOUB033ZJ0T00C26A9000000/",
-    "https://www.nna.jp/news/2966193",
-    "https://gentosha-go.com/articles/-/81526",
-    "https://kabutan.jp/news/marketnews/?b=n202609110716",
     "https://jikayosha.jp/2026/09/14/330435/",
     "https://cloud.watch.impress.co.jp/docs/news/2139909.html",
     "https://roushikyo-digital.com/news/20276/",
@@ -199,16 +192,16 @@
     "https://www.yomiuri.co.jp/local/kansai/news/20261105-GYO1T00047/",
     "https://mainichi.jp/articles/20261105/k00/00m/020/265000c",
     "https://www.nikkinonline.com/article/437127",
-    "https://www.tradingview.com/news/reuters.com,2026:newsml_L3N46M0SR:0/"
+    "https://www.tradingview.com/news/reuters.com,2026:newsml_L3N46M0SR:0/",
+    "https://www.google.com/search?q=%EF%BC%BB%E7%8B%AC%E8%87%AA%EF%BC%BD%E3%83%97%E3%83%AB%E3%83%87%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E4%B8%8D%E6%AD%A3%E3%80%81%E8%AA%BF%E6%9F%BB%E5%A7%94%E5%93%A1%E3%81%AE%E5%8D%8A%E6%95%B0%E3%81%8C%E6%B3%95%E5%8B%99%E3%83%88%E3%83%83%E3%83%97%E3%81%AE%E5%85%83%E5%90%8C%E5%83%9A%20%E7%8B%AC%E7%AB%8B%E6%80%A7%E3%81%AB%E7%96%91%E5%BF%B5",
+    "https://www.google.com/search?q=%E5%8A%A9%E5%A4%AA%E5%88%80%E3%80%81%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%81%8B%E3%82%93%E3%81%BD%E7%94%9F%E5%91%BD%E4%BF%9D%E9%99%BA%E3%81%A8%E6%A5%AD%E5%8B%99%E6%8F%90%E6%90%BA%E3%82%92%E9%96%8B%E5%A7%8B",
+    "https://finance.biggo.jp/news/5f4047e0-66ab-4e5e-a2a5-c28170508bea",
+    "https://news.yahoo.co.jp/articles/4ece752c2fb37c655a011ef89078f19c1d1ee230",
+    "https://www.google.com/search?q=%E4%B8%AD%E5%9B%BD%E5%88%9D%E3%81%AEAI%E3%83%AA%E3%82%B9%E3%82%AF%E5%8C%85%E6%8B%AC%E4%BF%9D%E9%99%BA%E3%83%97%E3%83%A9%E3%83%B3%20%E9%87%91%E8%9E%8D%E8%A1%97%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A9%E3%83%A0%E3%81%A7%E7%99%BA%E8%A1%A8",
+    "https://cloud.google.com/blog/ja/topics/customers/sompo-japan-promotes-the-use-of-gemini-enterprise",
+    "https://www.vietnam.vn/ja/quy-dinh-giao-dich-dien-tu-trong-linh-vuc-bao-hiem-xa-hoi-thuoc-bo-quoc-phong"
   ],
   "titles": [
-    "保険代理店の業務品質評価・セキュリティ対策・IT資産管理までを一元化、ランサムウェア対策も4層に強化！",
-    "SBI損害保険、PKSHA FAQ土台に社内ナレッジを「作る・貯める・引き出す」循環を実現",
-    "生保、インフレ下で不動産投資拡大 明治安田は残高2兆円に倍増へ",
-    "来店客の迷惑行為への対応費用など補償 東京海上が専用保険",
-    "東京海上、豪保険大手買収へ調査本格化か",
-    "話し相手が欲しかった…年金月15万円の69歳独居父、毎日通った保険ショップで加入した「500万円の保険」。42歳娘が激怒したワケ｜資産形成ゴールドオンライン",
-    "ユーソナー---三井住友海上の代理店向け営業支援システムに法人データベース「LBC」を導入",
     "「車検も保険も全部コミコミ」でプロボックスに乗れる！KINTOが商用車解禁で打ち出した太っ腹プランの全貌",
     "三菱電機デジタルイノベーション、AI技術で薬局業務を支援する「保険薬局向けオールインワンプラットフォーム」を発表",
     "介護保険資格確認等WEBサービスのAPI標準仕様書、第1.0版を公開",
@@ -401,6 +394,13 @@
     "意向確認せず保険を解約・かんぽに乗り換えさせる、懲戒解雇された元保険営業が日本郵便を提訴…「会社のルールにのっとっていたのに」",
     "経済プラス：生成AIの偽画像を見破れ！保険金不正請求に損保業界が対応強化",
     "住友生命、「Olive」にインフルエンザ保険提供 デジタルで相談から請求まで",
-    "AI保険スタートアップのカレパ、4億7000万ドル評価額で資金調達"
+    "AI保険スタートアップのカレパ、4億7000万ドル評価額で資金調達",
+    "［独自］プルデンシャル不正、調査委員の半数が法務トップの元同僚 独立性に疑念",
+    "助太刀、株式会社かんぽ生命保険と業務提携を開始",
+    "子育て世帯の生命保険料控除、上限6万円に増額 23歳未満扶養で令和8年度改正",
+    "生命保険料控除で税金はいくら減らせる？年間の保険料2万円～12万円まで試算した結果、ボーダーラインは8万円【試算一覧】",
+    "中国初のAIリスク包括保険プラン 金融街フォーラムで発表",
+    "損害保険ジャパン:「正しく使われる」ための運用設計で、約 2 万ユーザーの Gemini Enterprise 活用を推進",
+    "国防省管轄下の社会保険分野における電子取引に関する規則"
   ]
 }
