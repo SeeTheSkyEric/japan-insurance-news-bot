@@ -1,7 +1,7 @@
 name: 일본 보험뉴스 자동 발송  # 파일명: news_bot.yml
 on:
   schedule:
-    - cron: '0 23 * * 0-4'   # 평일 KST 08:00 (UTC 23:00, 일~목)
+      - cron: '10 22 * * 0-4'   # 평일 KST 07:10 (UTC 22:10, 일~목)
   workflow_dispatch:
 jobs:
   send-news:
